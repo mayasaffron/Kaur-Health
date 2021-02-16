@@ -61,7 +61,7 @@ This image is created with [ami.responsivedesign]().
 # UX
 ## Project Goals
 ### Target Audience
-- People who are intersted in support with; intuitive eating; menstrual health; natural family planning.
+- People who are interested in gaining support with; intuitive eating; menstrual health; natural family planning and natural skin care.
 - People who want to learn more about any of these topics. 
 - People who want to read interesting blog articles about intuitive eating; menstrual health; natural family planning.
 - People who seek Juspreets services for a loved one struggling with any of the issues. 
@@ -70,15 +70,15 @@ This image is created with [ami.responsivedesign]().
 ### Visitor / User Goals
 - Purchase services and products in a smooth and secure way
 - Get informed on the services/products before buying, with product reviews / product information
-- Gain interesting knowledge about intuitive eating; menstrual health; natural family planning, from blog articles and leave a comment on blog articles
-- have login details which provide me with access to the site and saved information, to save time.
+- Gain interesting knowledge about iintuitive eating; menstrual health; natural family planning and natural skin care, from blog articles and leave a comment on blog articles
+- have login details which provide them with prefilled forms with their information, to save time.
 
 ### Business Goals (Site Owner's Goals)
 - Provide customers with a secure and safe ecommerce shop
 - Establish Kaur health as a credible brand
-- Expand their business effectively
+- Expand Kaur health effectively
 - Make profit from selling products / services
-- client retention, providing a login and special benefits as a result
+- Increasing client retention by providing a login and special benefits as a result
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
@@ -90,7 +90,7 @@ This image is created with [ami.responsivedesign]().
 | ----------- | ----------- | ----------- |
 | Site User/ Client | access the website with any devices | Use the website anytime and anywhere |
 | Potential Client | Easily see what services are offered | Find the service I want to use |  
-| Client | All the important services are accesible from nav bar| Don't need to scroll to find important information |
+| Client | have everything i need accesible from nav bar| find important information without scrolling |
 | Client | Have a shopping cart icon on nav bar | Always check the current order and checkout when I want |
 | Site owner | Have all of my credentials and brand story easily accesible to brands | Be a reputable option for brand endorsement and affiliations |
 
@@ -105,7 +105,7 @@ This image is created with [ami.responsivedesign]().
 | Site User | View my order history | Purchase the same product again in the next order |
 | Site User | Easily recover my password in case I forget it | Recover access to my account |
 | Site User | Receive an email confirmation after registering | Verify that my account registration was successful |
-| Site Owner | Post a blog about fertility facts | Give site visitors interesting information about how their diet can affect their production of cervical mucus |
+| Site Owner | Post a blog about any of my areas of expertise | Provide site visitors interesting information and hopefully make a sale as a result |
 | Site Owner | Let the site users log in when they leave comments/reviews | Track who left comments/reviews |
 | Site User | Add comments to the blog posts | Write down my thoughts on the post |
 | Site User | Have the ability to remove unsavoury comments | Protect my brand and the site visitors' experince |
