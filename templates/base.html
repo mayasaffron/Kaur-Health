@@ -17,7 +17,8 @@
 
 {% block corecss %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&family=Nunito:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 {% endblock %}
 
@@ -43,7 +44,7 @@
 <body>
 <header class="container-fluid fixed-top">
 <div class="row bg-white pt-lg-2 d-none d-lg-flex" id="topnav">
-    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left"> <a href="#" class="nav-link main-logo-link"><h2 class="logo-font text-black my-0"><strong> Kaur </strong>Health</h2></a></div>
+    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left"> <a href="{% url 'home' %}" class="nav-link main-logo-link"><h2 class="logo-font text-black my-0"><strong> Kaur </strong>Health</h2></a></div>
     <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <form method="GET" action="#">
             <div class="input-group w-100">
@@ -80,6 +81,20 @@
             {% endif %}
         </div>
     </li>
+    <li class="list-inline-item">
+        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="#">
+                    <div class="text-center">
+                        <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                        <p class="my-0">
+                            {% if grand_total %}
+                                ${{ grand_total|floatformat:2 }}
+                            {% else %}
+                                $0.00
+                            {% endif %}
+                        </p>
+                    </div>
+                </a>
+    </li>
         </ul>
     </div>
   
@@ -99,27 +114,13 @@ mobile-top-header.html'
 
 </header>
 
-{% if messages %}
+
 <div class="message-container">
-    {% for message in messages %}
-    <!--
-{% with message.level as level %}
-            {% if level == 40 %}
-                {% include 'includes/toasts/toast_errors.html' %}
-            {% elif level == 30 %}
-                {% include 'includes/toasts/toast_warnings.html' %}
-            {% elif level == 25 %}
-                {% include 'includes/toasts/toast_success.html' %}
-            {% else %}
-                {% include 'includes/toasts/toast_info.html' %}
-            {% endif %}
-        {% endwith %}
-    -->
-        
-    {% endfor %}
+
+
 
 </div>
-{% endif %}
+
 
 
 {% block page_header %}

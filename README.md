@@ -5,10 +5,10 @@
 Link to [Deployed Site]()
 
 Juspreet Kaur is a health coach specialising in the following areas of female health; 
-- Intuitive eating 
-- Healthy menstruation patterns and natural pain management 
-- Natural family planning 
-- Herbal, natural and dietary skin care solutions 
+
+- Health coaching for women to improve general attitude toward food
+- Natural Family Planning for couples to conceive  or avoid pregnancy (natural, non-medical contraception)
+- DIY cheimcal-free skin care products
 
 [Kaur Health]() is the colation of Juspreets services, which offers the opportunity for potential clients to learn a little more about her and herjourney and how she can potentially hekp them on theirs. 
 The site also publishes blog posts about relevant topics, where the site visitors can leave a comment.
