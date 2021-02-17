@@ -149,15 +149,15 @@ You can find the wireframes [here]()
 - Values: 1. Female Health - Improving a womans understanding of her bodyily functions and how they relate to her fertility, menstrual cycle, physical appearance and ultimately mental health. 2. 
 
 ### Color Scheme
-Color scheme is important as this is one of the first things site visitors notice when visiting the site. I chose  for the site's primary colors because these colors . In addition to that, for the secondary colors of the site, I wanted to create . For the secondary colors, I used [Coolors.co](https://coolors.co/) to create a color pallet, which you can find below.
+Color scheme is important as this is one of the first things site visitors notice when visiting the site. I chose persian indigo and avacado for the site's primary colors because these colors are bold and strong, not typically 'female' but statistically, very inticing for women . In addition to that, for the secondary colors of the site, I wanted to create a balance of bold to calm, whilst providing continuity in the colours too . For the secondary colour i chose medium slate blue. I used [Coolors.co](https://coolors.co/) to create a color pallet, which you can find below.
 
-
+[This article](https://neilpatel.com/blog/psychology-of-color-and-conversions/) explained the importance of recognising the effect of colurs on your audiences mood. the article explains that "35% of women said blue was their favorite color, followed by purple (23%) and green (14%). 33% of women confessed that orange was their least favorite color, followed by brown (33%) and gray (17%)." as the content of this site will appeal mainly to women, i decided i needed colours that would be most inviting to them. 
 
 [This pallet] ()
- collects , which the shop aims to have as their brand image. The `` and `` colors give the site an elegant and vibrant atmosphere while keeping . The `` fills the gap between colors, while giving calmer shades.
+totally enages and appeals to women, whilst not being sterotypically 'girly and therefore offputtting to men! 
 
 ### Typography
-To reflect the kaur Helath's brand identity, the typeface `x` by  that falls under serif font family was chosen for the website unless there is any additional specific font setting. `x` falls under a classic typography called 'serif' font family which is great to use when you want your brand to appear trustworthy and traditional. `x` font has a mood of  which matches the shop's branding. [This article]() by Mana Habibian says “Playfair Display is a classical typeface with a modern feeling that will give designs the elegance they need.”
+To reflect the kaur Helath's brand identity, the typeface chosen for main headings was Mulish, (formerly known as Muli) and I coupled this with Nunito for the body text, both of these fonts fall under the sans serif family. I chose this duo, after doing some research and realising that I needed the font to reflect; strength; empowerment; practicality and most importantly readability. Due to the nature of the sites content, being quite woman centric, i was tempted to select a playful font, such as Oleo script, however i decided this woud take away from the profesional feel i was aiming to achieve. [This article]("https://piktochart.com/blog/fonts-and-colors/#:~:text=For%20subheadings%20and%20body%20text,partially%20for%20titles%20or%20headlines") by Natasya Sunarto was very insightful, as it compared a range of industries and i was able to work out where Kaur Health fits within the examples and make an informed decision about which typeface would be most fitting. 
 
 - Icon: [kaur Health]() is used for the main icon library accross the site.
 - Favicon: I got the favicon by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/).
