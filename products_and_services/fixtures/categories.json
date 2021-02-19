@@ -1,0 +1,3 @@
+[{"pk": 1, "model": "products_and_services.category", "fields": {"name": "natural_family_planning", "friendly_name": "Natural Family Planning"}}, 
+    {"pk": 2, "model": "products_and_services.category", "fields": {"name": "female_health", "friendly_name": "Female Health"}}, 
+    {"pk": 3, "model": "products_and_services.category", "fields": {"name": "skincare", "friendly_name": "Chemical Free Skincare"}}]

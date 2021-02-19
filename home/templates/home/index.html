@@ -10,40 +10,88 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-<div class="row h-100 my-5">
-    <div class="col h-100">
-        <p class="intro mt-5">
-            Hi! I'm Juspreet Kaur, a Health Coach and Natural Family Planning (NFP) teacher. I am passionate about female health, nutrition and fertility.
+    <!-- about section -->
+<section class="page-section" id="about">
+    <div class="container">
+        <div class="row h-100 my-5">
+            <div class="col h-100">
+                <p class="intro mt-5">
+                    Hi! I'm Juspreet Kaur, a Health Coach and Natural Family Planning (NFP) teacher. I am passionate about female health, nutrition and fertility.
 
-            Through Health Coaching, I help women achieve their goals by making small, manageable dietary changes. And through NFP, I help couples track their fertility and achieve/avoid pregnancy using non-invasive holistic methods.
-
-        </p>
+                    Through Health Coaching, I help women achieve their goals by making small, manageable dietary changes. And through NFP, I help couples track their fertility and achieve/avoid pregnancy using non-invasive holistic methods.
+                </p>
         <a href="" class="cta-button">Click here to download my latest ebook!</a>
+            </div>
 
-    </div>
-
-    <div class="col h-100 mt-5">
+        <div class="col h-100 mt-5">
         <img class="img-fluid" src="/media/welcome.png" alt="Juspreet Kaur">
+        </div>
+        </div>
     </div>
+</section>
+
+    <!-- info on specialisms section -->
+    <section class="page-section" id="specialisms">
+        <div class="container">
+            <div class="row h-100 my-5">
+                <div class="col-sm-4">
+  <div class="card">
+    <div class="image">
+      <img class="img-fluid" src="/media/thermometer.jpg" alt="Thermometer">
+    </div>
+    <div class="card-inner">
+      <div class="header">
+        <h2>Natural family Planning</h2>
+    </div>
+    <div class="content">
+      <p>Natural family Planning is ....... good for ....... </p>
+    </div>
+      </div>
+  </div>
+</div>
+<div class="col-sm-4">
+  <div class="card">
+    <div class="image">
+      <img class="img-fluid" src="/media/periods.jpg" alt="Periods">
+    </div>
+    <div class="card-inner">
+      <div class="header">
+        <h2>Female health</h2>
+    </div>
+    <div class="content">
+      <p>Female health i cover.... and will help with .. </p>
+    </div>
+      </div>
+  </div>
+</div>
+<div class="col-sm-4">
+  <div class="card">
+    <div class="image">
+      <img class="img-fluid" src="/media/skin.jpg" alt="DIY Skincare setup">
+    </div>
+    <div class="card-inner">
+      <div class="header">
+        <h2>DIY Skincare</h2>
+    </div>
+    <div class="content">
+      <p>DIY Skincare good for.....</p>
+    </div>
+      </div>
+  </div>
 </div>
 
-<div class="row">
-    <div class="col-4">
-        <h1 class="uppercase">NFP</h1>
-    </div>
-    <div class="col-4">
-        <h1 class="uppercase">female health</h1>
-    </div>
-    <div class="col-4">
-        <h1 class="uppercase">DIY skincare</h1>
-    </div>
-</div>
 
-<div class="row">
-    <div class="col">
-        <h1>Testimonies</h1>
+                </div>
+                </div>
 
+    </section>
+
+<!-- testimonies section -->   
+    <section class="page-section" id="testimonies">
+        <div class="container">
+            <div class="row h-100 my-5">
+                <div class="col h-100">
+                <h1>Testimonies</h1>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -65,17 +113,20 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-</div>
-    </div>
 
-<!-- Contact -->
-<section class="page-section bg-contact" id="contact">
+                </div>
+                </div>
+        </div>
+    </section>
+
+<!-- contact section -->  
+<section class="page-section" id="contact">
     <div class="container">
         <div class="row mb-5 mx-2 mx-sm-0">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="mt-3 mb-4 text-center">
-                    <h1>Something on your mind? Drop me a line!</h1>
+                    <h1>Drop me a line</h1>
                 </div>
                 <form method="POST" action="{% url 'contactform' %}">
                     {% csrf_token %}
@@ -91,5 +142,6 @@
         </div>
     </div>
 </section>
+
 
 {% endblock %}

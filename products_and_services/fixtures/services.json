@@ -1,0 +1,90 @@
+[{"pk": 1, "model": "products.service", "fields": {
+    "name": "The basics of Natural family planning", 
+    "description": "2 hour workshop\" It can so terrifying when you come off hormonal contraception and are trying to avoid pregnancy. It can be equally as overwhelming, when you are trying to conceive, but have no idea how to find your fertile window. In this workshop I go through the do's and dont's and get you started on your journey", 
+    "price": 100, 
+    "category": 1, 
+    "rating": 5, 
+    "product_image": "canva_basics.JPG",
+    "purchased_with":"vital signs journal"}},
+     
+    {"pk": 2, "model": "products.service", "fields": {
+    "name": "His and her fertility windows", 
+    "description": "2 hour workshop\" Have you ever noticed that we spend a lot of time talking about how women should control/ slow/ speed and preserve their fertility, but almost nothing on the guys? In this workshop I break it down for him and her!", 
+    "price": 150, 
+    "category": 1, 
+    "rating": 5, 
+    "product_image": "canva_his_her.JPG",
+    "purchased_with":""}},
+    
+    {"pk": 3, "model": "products.service", "fields": {
+    "name": "Lets talk about cervical mucus", 
+    "description": "2 hour workshop\" What we grew up learning as 'discharge' is actually; cervical mucus. A fluid which helps preserve sperm and transport it to eggs! But what does it look like? How should it look? How do yu look out for it? Join me in this workshop to find out!", 
+    "price": 50, 
+    "category": 1, 
+    "rating": 5, 
+    "product_image": "canva_CM.JPG",
+    "purchased_with":""}},
+
+    {"pk": 4, "model": "products.service", "fields": {
+    "name": "BBT and the rules of recording it", 
+    "description": "1 hour workshop\" Basal Body Temperature is a crucial piece of data that you need to collect from yourself every day, in orer to successfully manage your fertilty. However, there are rules! A slight change can throw your recordings off and lead to an unwanted situation. Join me in this quick workshap where you can get to grips with the rules!", 
+    "price": 50, 
+    "category": 1, 
+    "rating": 5, 
+    "product_image": "canva_bbt.JPG",
+    "purchased_with":""}},
+
+    {"pk": 5, "model": "products.service", "fields": {
+    "name": "Period tracking and its value", 
+    "description": "30 minute workshop\" The majority of women are told to track their periods, very flippantly, and rarely told why its important to do so. Especially in terms of NFP, period tracking can be so valuable. I explain all in this super quick 30 minute workshop", 
+    "price": 40, 
+    "category": 2, 
+    "rating": 5, 
+    "product_image": "canva_period_tracking.JPG",
+    "purchased_with":""}},
+
+    {"pk": 6, "model": "products.service", "fields": {
+    "name": "hormone triggered food cravings and how to manage them", 
+    "description": "1 hour workshop\" Every month, many of our diets are governed by what feels like a powerful superhuman addiction or craving for sugary/ high fat foods, which rarely leave us feeling satisfied or in any better state to tackle our period pains! In this workshop i explain the hows whys and why nots, which will hopefully be helpful for your next aunt flo!", 
+    "price": 40, 
+    "category": 2, 
+    "rating": 5, 
+    "product_image": "canva_hormonal_eating.JPG",
+    "purchased_with":""}},
+
+    {"pk": 2, "model": "products.service", "fields": {
+    "name": "herbs to heal the pms", 
+    "description": "2 hour virtual DIY workshop\" Equipment and products needed included and sent prior to the workshop\" I send you and walk you through how to prepare some amazing herbs, that can be used to naturally keep pms at bay!", 
+    "price": 100, 
+    "category": 2, 
+    "rating": 5, 
+    "product_image": "canva_herbs_pms.JPG",
+    "purchased_with":""}},
+
+    {"pk": 2, "model": "products.service", "fields": {
+    "name": "reusable pads", 
+    "description": "", 
+    "price": 30, 
+    "category": 2, 
+    "rating": 5, 
+    "product_image": "pads.JPG",
+    "purchased_with":""}},
+
+    {"pk": 2, "model": "products.service", "fields": {
+    "name": "His and her fertility windows", 
+    "description": "2 hour workshop\" Have you ever noticed that we spend a lot of time talking about how women should control/ slow/ speed and preserve their fertility, but almost nothing on the guys? In this workshop I break it down for him and her!", 
+    "price": 150, 
+    "category": 1, 
+    "rating": 5, 
+    "product_image": "canva_his_her.JPG",
+    "purchased_with":""}}
+
+
+
+
+
+
+
+
+
+]

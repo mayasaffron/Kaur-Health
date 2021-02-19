@@ -1,0 +1,65 @@
+[{"pk": 1, "model": "products_and_services.product", "fields": {
+    "name": "Fennel Oil", 
+    "description": "Fennel essential oil\" 110ml\" Fennel Oil comprises potent anti-inflammatory compounds, which, when used topically, can do wonders for your skin. Whether it’s a puffy complexion, under-eye bags or even rosacea, Fennel Oil can help to soothe and calm your skin to help it look healthier and happier.", 
+    "price": 19.99, 
+    "category": 1, 
+    "rating": 4.6, 
+    "product_image": "fennel_oil.JPG",
+    "purchased_with":""}},
+     
+    {"pk": 2, "model": "products_and_services.product", "fields": {
+    "name": "Vital signs journal", 
+    "description": "Journal\" 100 pages of information and 100 pages of blank charting space\" Natural family planning is only effective if you efficiently track your vital signs and know what to look for!\" In this journal I break it down and give you plenty of room to start jotting down all of your signs! ", 
+    "price": 19.99, 
+    "category": 1, 
+    "rating": 4.6, 
+    "product_image": "journal.JPG",
+    "purchased_with":""}},
+
+    {"pk": 3, "model": "products_and_services.product", "fields": {
+    "name": "Thermometer", 
+    "description": "Thermometer\" 2 per pack, because life happens!\" I've used a few thermometers in my time and hardly any of them really cater to measuring yur BBT daily! This thermometer has a smooth grip and flexible meausuring point", 
+    "price": 19.99, 
+    "category": 1, 
+    "rating": 4.6, 
+    "product_image": "thermometer.JPG",
+    "purchased_with":""}},
+
+    {"pk": 5, "model": "products_and_services.product", "fields": {
+    "name": "Wrap around hot water bottle", 
+    "description": "", 
+    "price": 15, 
+    "category": 2, 
+    "rating": 5, 
+    "product_image": "yuyu.JPG",
+    "purchased_with":""}},
+
+    {"pk": 6, "model": "products_and_services.product", "fields": {
+    "name": "fennel press", 
+    "description": "", 
+    "price": 15, 
+    "category": 2, 
+    "rating": 5, 
+    "product_image": "fennel_press.JPG",
+    "purchased_with":""}},
+
+    {"pk": 2, "model": "products_and_services.product", "fields": {
+    "name": "magnesium oil", 
+    "description": "", 
+    "price": 19.99, 
+    "category": 1, 
+    "rating": 5, 
+    "product_image": "magnesium.JPG",
+    "purchased_with":""}},
+
+    {"pk": 2, "model": "products_and_services.product", "fields": {
+    "name": "reusable pads", 
+    "description": "", 
+    "price": 30, 
+    "category": 2, 
+    "rating": 5, 
+    "product_image": "pads.JPG",
+    "purchased_with":""}}
+
+
+]

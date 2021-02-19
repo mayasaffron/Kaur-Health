@@ -5,7 +5,13 @@ from django.core.mail import send_mail, BadHeaderError
 
 
 def index(request):
-    return render(request, 'home/index.html')
+    contact_form = ContactForm(request.POST)
+    response = 'home/contact_response.html'
+    context = {
+        'contact_form': contact_form,
+        'response': response,
+    }
+    return render(request, 'home/index.html', context)
 
 
 def contactform(request):
@@ -28,5 +34,13 @@ def contactform(request):
             )
         except BadHeaderError:
             return HttpResponse('Invalid header found.')
+    return redirect('contact_response')
+    # else:
+    # return
 
-    return redirect('thankyou_page')
+
+def contact_response(request):
+    """
+    A view to render thank you page after site visitors send a contact form
+    """
+    return render(request, 'home/contact_response.html')

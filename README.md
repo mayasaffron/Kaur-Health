@@ -88,11 +88,11 @@ This image is created with [ami.responsivedesign]().
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
-| Site User/ Client | access the website with any devices | Use the website anytime and anywhere |
-| Potential Client | Easily see what services are offered | Find the service I want to use |  
-| Client | have everything i need accesible from nav bar| find important information without scrolling |
-| Client | Have a shopping cart icon on nav bar | Always check the current order and checkout when I want |
-| Site owner | Have all of my credentials and brand story easily accesible to brands | Be a reputable option for brand endorsement and affiliations |
+| Site User | Access the website on both larger and smaller screened devices | Access the website on my phone and PC |
+| Site User | Easily navigate to the Products and services available | Find the product or service I want to purchase |  
+| Site User | Read all content clearly | Enjoy using the site. |
+| Site User | See a shopping cart icon on nav bar | Always check the current order and checkout when I want |
+| Site User | Be able to easily access information about Juspreet and the services she offers | Trust the validity of her and her services. |
 
 
 <br/>
@@ -101,12 +101,11 @@ This image is created with [ami.responsivedesign]().
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
-| Site User | Easily register for an account | Have a personal account where I can edit my information |  
+| Site User | Easily register for an account | Have a personal account where I can edit my information and access blog articles |  
 | Site User | View my order history | Purchase the same product again in the next order |
 | Site User | Easily recover my password in case I forget it | Recover access to my account |
 | Site User | Receive an email confirmation after registering | Verify that my account registration was successful |
-| Site Owner | Post a blog about any of my areas of expertise | Provide site visitors interesting information and hopefully make a sale as a result |
-| Site Owner | Let the site users log in when they leave comments/reviews | Track who left comments/reviews |
+| Site User | Post a blog about any of my areas of expertise | Provide site visitors interesting information and hopefully make a sale as a result |
 | Site User | Add comments to the blog posts | Write down my thoughts on the post |
 | Site User | Have the ability to remove unsavoury comments | Protect my brand and the site visitors' experince |
 <br/>
@@ -115,12 +114,11 @@ This image is created with [ami.responsivedesign]().
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
-| Shopper | Search a product with keywords | Find the most appropriate products |
-| Shopper | View individual product pages that have prices, descriptions, sizes, etc | Get detailed information about the product before purchasing |
-| Shopper | Filter by a specific category | Easily find products in a specific category |
-| Shopper/Site Owner | Leave/View product reviews with scores | Understand which products are popular with other customers |
-| Site Owner | Easily add a new product | Make sure the online site has the latest catalogue |
-| Site Owner | Easily remove a product | Make sure the online site has the latest catalogue |
+| Site User | View individual product pages that have prices and descriptions | Get detailed information about the product before purchasing |
+| Site User| Filter by a specific category | Easily find products in a specific category |
+| Site User | Leave/View product reviews with scores | Understand which products are popular with other customers |
+| Site User | Easily add a new product | Make sure the online site has the latest catalogue |
+| Site User | Easily remove a product | Make sure the online site has the latest catalogue |
 
 <br/>
 
@@ -128,10 +126,10 @@ This image is created with [ami.responsivedesign]().
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
-| Shopper | Easily select the quantity (if applicable) of a product after adding a product to a cart | Ensure I don't accidentally select the wrong product and the quantity | 
-| Shopper | The delivery information is prefilled if logged in | Smoothly proceed with my purchase | 
-| Shopper | Automatically suggest to log in if I did not log in | Smoothly proceed with my purchase | 
-| Shopper | Prompted with a product I may alos want, based on my current order | Purchase everything I want in one go | 
+| Site User | Easily select the quantity (if applicable) of a product after adding a product to a cart | Ensure I don't accidentally select the wrong product and the quantity | 
+| Site User | Have my delivery information is prefilled if logged in | Smoothly proceed with my purchase | 
+| Site User | Be reminded to log in if I did not log in | Smoothly proceed with my purchase and prefilled form | 
+
 
 <br/>
 
