@@ -4,8 +4,8 @@
     "price": 19.99, 
     "category": 1, 
     "rating": 4.6, 
-    "product_image": "fennel_oil.JPG",
-    "purchased_with":""}},
+    "product_image": "fennel_oil.JPG"
+    }},
      
     {"pk": 2, "model": "products_and_services.product", "fields": {
     "name": "Vital signs journal", 
@@ -13,53 +13,87 @@
     "price": 19.99, 
     "category": 1, 
     "rating": 4.6, 
-    "product_image": "journal.JPG",
-    "purchased_with":""}},
+    "product_image": "journal.JPG"
+    }},
 
     {"pk": 3, "model": "products_and_services.product", "fields": {
     "name": "Thermometer", 
-    "description": "Thermometer\" 2 per pack, because life happens!\" I've used a few thermometers in my time and hardly any of them really cater to measuring yur BBT daily! This thermometer has a smooth grip and flexible meausuring point", 
+    "description": "Thermometer\" 2 per pack, because life happens!\" I've used a few thermometers in my time and hardly any of them cater to measuring your BBT daily! \" This thermometer has a smooth grip and flexible measuring point", 
     "price": 19.99, 
     "category": 1, 
     "rating": 4.6, 
-    "product_image": "thermometer.JPG",
-    "purchased_with":""}},
+    "product_image": "thermometer.JPG"
+    }},
+
+    {"pk": 4, "model": "products_and_services.product", "fields": {
+    "name": "Wrap around hot water bottle", 
+    "description": "Heat on your uterus area can help relieve painful cramps when you are menstruating. The Yuyu bottle is a unique shape, which can easily be placed across your stomach and lower back to lessen your pains in the entire region!", 
+    "price": 15, 
+    "category": 2, 
+    "rating": 5, 
+    "product_image": "yuyu.JPG"
+    }},
 
     {"pk": 5, "model": "products_and_services.product", "fields": {
-    "name": "Wrap around hot water bottle", 
-    "description": "", 
-    "price": 15, 
+    "name": "magnesium oil", 
+    "description": "Magnesium oil\" 110ml\" MOnumnetal in regulating nerve and muscle function; supporting healthy pregnancy and lactation; maintaining healthy blood sugar levels; maintaining optimum blood pressure levels; manufacturing and supporting protein, bone, and DNA health", 
+    "price": 19.99, 
     "category": 2, 
     "rating": 5, 
-    "product_image": "yuyu.JPG",
-    "purchased_with":""}},
+    "product_image": "magnesium.JPG"
+    }},
 
     {"pk": 6, "model": "products_and_services.product", "fields": {
-    "name": "fennel press", 
-    "description": "", 
-    "price": 15, 
-    "category": 2, 
-    "rating": 5, 
-    "product_image": "fennel_press.JPG",
-    "purchased_with":""}},
-
-    {"pk": 2, "model": "products_and_services.product", "fields": {
-    "name": "magnesium oil", 
-    "description": "", 
-    "price": 19.99, 
-    "category": 1, 
-    "rating": 5, 
-    "product_image": "magnesium.JPG",
-    "purchased_with":""}},
-
-    {"pk": 2, "model": "products_and_services.product", "fields": {
     "name": "reusable pads", 
-    "description": "", 
+    "description": "3 per pack\" I created these pads with women in mind, These are a great alternative to disposable pads because they will save you money and increase your comfort. \" Wash after every use; Hand wash in cold water or machine wash on the cold setting.", 
     "price": 30, 
     "category": 2, 
     "rating": 5, 
-    "product_image": "pads.JPG",
-    "purchased_with":""}}
+    "product_image": "pads.JPG"
+    }},
 
+    {"pk": 7, "model": "products_and_services.product", "fields": {
+    "name": "Fertility facts ebook", 
+    "description": "There are a lot of misconceptions around fertility and reproductive physiology, so here is a basic introduction to some simple fertility facts. ", 
+    "price": 25.99, 
+    "category": 1, 
+    "rating": 5, 
+    "product_image": "fertility_facts_ebook.JPG"
+    }},
+
+    {"pk": 8, "model": "products_and_services.product", "fields": {
+    "name": "Kaur Health Food Diary", 
+    "description": "The Kaur Health Food Diary will help you track your diet, identify any food intolerances and stay on top of your emotional eating habits. I've also given you space to track & celebrate your accomplishments, set tomorrows intentions, and balance your primary foods.", 
+    "price": 25.99, 
+    "category": 2, 
+    "rating": 5, 
+    "product_image": "food_diary.JPG"
+    }},
+
+    {"pk": 9, "model": "products_and_services.product", "fields": {
+    "name": "Coconut scrub", 
+    "description": "110 ml\" Ingredients: pink salt, coconut oil and lavendar\" Rub into skin after a shower to exfoliate dry skin, whilst replenishing the skins natural oil balance, particularly in the winter!", 
+    "price": 12, 
+    "category": 3, 
+    "rating": 5, 
+    "product_image": "salt_scrub.JPG"
+    }},
+
+    {"pk": 10, "model": "products_and_services.product", "fields": {
+    "name": "Oat and hibiscus face mask", 
+    "description": "110 ml\" Ingredients: Oats, hibiscus, shea butter\" Apply to clean face, rubbing into your face in a circular motion. \" Leave on face for 15-30 minutes, wash off with warm water and apply light moisturiser! ", 
+    "price": 12, 
+    "category": 3, 
+    "rating": 5, 
+    "product_image": "oat_hibiscus_face_mask.JPG"}},
+
+    {"pk": 11, "model": "products_and_services.product", "fields": {
+    "name": "Witch hazel and hibiscus face wipes", 
+    "description": "25\" Ingredients: 100% cotton wool pads, soaked in; Witch hazel, tea tree EO\" Use as 'toner' or 'cleansing' part of your daily skincare routine.\" Avoid direct contact with eyes. ", 
+    "price": 12, 
+    "category": 3, 
+    "rating": 5, 
+    "product_image": "face_wipes.JPG"
+    }}
 
 ]
