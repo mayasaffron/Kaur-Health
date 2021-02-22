@@ -526,11 +526,13 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"
 - This project was developed refering to the Boutique Ado Django mini-project from Code Institute course materials. The codes are customized and modified to fit the purpose of this milestone project.
 
 ### Images & Media
-
+- https://www.healthline.com/health/magnesium-oil-benefits
+- medlife.com/blog/5-natural-ways-relieve-menstrual-cramps/#:~:text=2.-,Fennel,honey%20and%20mix%20it%20well.
+- template tags : https://engineertodeveloper.com/a-better-way-to-route-back-to-a-section-ids-in-django/
 
 ### Acknowledgements
 - Thanks to: my Code Institute Mentor  advice throughout the development process.
 - Code Institute Slack Community that gave me a light when I was stuck in my coding.
 
 ### Disclaimer
-This website is created for educational purpose only.
+This website is created for educational purpose only. content entirely fictional. 
