@@ -8,6 +8,15 @@ body{
     font-family: "Nunito", sans-serif;
 }
 
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: lavender;
+	z-index: -1;
+}
 /* home app */
 .page-section {
     padding: 4rem 0;
@@ -49,6 +58,13 @@ body{
     margin-top: 50%;
 }
 
+/* product app */
+.all-items-container{
+
+}
+.item{
+    height: 480px;
+}
 /* from Bulma */
 .icon {
     align-items: center;
