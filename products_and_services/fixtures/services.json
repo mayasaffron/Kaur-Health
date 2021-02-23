@@ -1,4 +1,4 @@
-[{"pk": 1, "model": "products_and_services.service", "fields": {
+[{"pk": 12, "model": "products_and_services.service", "fields": {
     "name": "The basics of Natural family planning", 
     "description": "2-hour workshop\" It can so terrifying when you come off hormonal contraception and are trying to avoid pregnancy. It can be equally as overwhelming, when you are trying to conceive, but have no idea how to find your fertile window. In this workshop, I go through the do's and do not's of natural family planning to help get you started on your journey", 
     "price": 100, 
@@ -71,7 +71,7 @@
     "product_image": "canva_decolonising_diet.JPG"
     }},
 
-    {"pk": 8, "model": "products_and_services.service", "fields": {
+    {"pk": 9, "model": "products_and_services.service", "fields": {
     "name": "Skin - the underrated organ ", 
     "description": "2-hour workshop\" Did you know that your skin absorbs 90% of whatever you put on it?\" In this workshop, I dive into the effects of chemicals on your skin and simple lifestyle and product changes you can make to reduce harmful effects of chemical absorption.", 
     "price": 90, 
@@ -80,7 +80,7 @@
     "product_image": "canva_skin_absorption.JPG"
     }},
 
-    {"pk": 8, "model": "products_and_services.service", "fields": {
+    {"pk": 10, "model": "products_and_services.service", "fields": {
     "name": "Period shame and how to overcome it", 
     "description": "2-hour workshop\" I feel that I speak for all women when I say; we all have at least 5 traumatic period stories.\" In this workshop, I examine how the messaging we have been given, about period-related issues, has negatively impacted us and propose some changes we can make, to help undo some of the damage!", 
     "price": 150, 

@@ -17,7 +17,7 @@
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Products and Services</h2>
                 {% for c in current_categories %}
-                    <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                    <a class="category-badge text-decoration-none" href="{% url 'all_items' %}?category={{ c.name }}">
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
                     </a>
                 {% endfor %}
@@ -68,11 +68,11 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
                                 {% if product.product_image.url %}
-                                <a href="#">
+                                <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid item" src="{{ product.product_image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
-                                <a href="#">
+                                <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
@@ -137,17 +137,17 @@
                     {% for service in services %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
-                                {% if service.product_image %}
-                                <a href="#">
-                                    <img class="card-img-top img-fluid" src="{{ product.product_image }}" alt="{{ product.name }}">
+                                {% if service.product_image.url %}
+                                <a href="{% url 'service_detail' service.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ service.product_image.url }}" alt="{{ service.name }}">
                                 </a>
                                 {% else %}
-                                <a href="#">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                <a href="{% url 'service_detail' service.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ service.name }}">
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ service.name }}</p>
+                                    <p class="mb-0">{{ service.name }} {{ service.id }}</p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
@@ -155,7 +155,7 @@
                                             <p class="lead mb-0 text-left font-weight-bold">${{ service.price }}</p>
                                             {% if service.category %}
                                             <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'all_items' %}?category={{ product.category.name }}">
+                                                <a class="text-muted" href="{% url 'all_items' %}?category={{ service.category.name }}">
                                                     <i class="fas fa-tag mr-1"></i>{{ service.category.friendly_name }}
                                                 </a>
                                             </p>
@@ -207,41 +207,4 @@
             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
         </a>	
     </div>
-{% endblock %}
-
-{% block postloadjs %}
-    {{ block.super }}
-
-    <script type="text/javascript">
-    $('.btt-link').click(function(e){
-        window.scrollTo(0,0)
-    })
-    </script>
-
-    <script type="text/javascript">
-    $('#sort-selector').change(function(){
-        var selector = $(this);
-        var currentUrl = new URL(window.location);
-
-        var selectedVal = selector.val();
-
-        if(selectedVal != 'reset'){
-            var sort = selectedVal.split("_")[0]
-            var direction = selectedVal.split("_")[1]
-
-            currentUrl.searchParams.set("sort", sort);
-            currentUrl.searchParams.set("direction", direction);
-
-            window.location.replace(currentUrl);
-        } else{
-        currentUrl.searchParams.delete("sort", sort);  
-        currentUrl.searchParams.delete("direction", direction);
-
-        window.location.replace(currentUrl);
-        }
-
-    })
-
-    </script>
-
 {% endblock %}

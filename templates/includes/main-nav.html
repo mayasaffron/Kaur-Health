@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" aria-haspopup="true" aria-expanded="false">
                 About
             </a>
         </li>
@@ -11,9 +11,10 @@
                 Products & Services
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="#">
-                <a href="#" class="dropdown-item">NFP</a>
-                <a href="#"class="dropdown-item">DIY SKIN</a>
-                <a href="#" class="dropdown-item">female health</a>
+                <a href="{% url 'all_items' %}?category=natural_family_planning" class="dropdown-item">Natural Family Planning</a>
+                <a href="{% url 'all_items' %}?category=female_health"  class="dropdown-item">Female health</a>
+                <a href="{% url 'all_items' %}?category=skincare" class="dropdown-item">Chemical free skincare</a>
+                <a href="{% url 'all_items' %}" class="dropdown-item">All Products and Services</a>
             </div>
         </li>
 
@@ -24,7 +25,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'contactform' %}" aria-haspopup="true" aria-expanded="false">
                 Contact
             </a>
         </li>
