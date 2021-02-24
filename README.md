@@ -314,8 +314,32 @@ Following is Entity Relationship Diagram of this project. I created this diagram
 When I designed this ERD, I referred to [this article](https://launchschool.com/books/sql/read/table_relationships). 
 <p align="center"><img src = "https://github.com/AsunaMasuda/FloweryDays/blob/master/readme_materials/Entity_Relationship_Diagrams.png?raw=true" width=900></p>
 
+# Bugs discovered
 
-
+Service details not showing up 
+Solution: Correct the URLs for the app
+- I have three models categories, services and products. Products and services, rely on the categories model. 
+- When i built the template for the product and service details, the product detail worked fine, but the service details would not. 
+- if i clicked on a service, i would be taken to the details of a product with the same pk as the service i had clicked on. 
+- I thought it was an issue with the primary keys, but i couldnt work out what the issue was, because the primary keys were from different models. 
+- In an attempt to rule this out, I displayed the ids (primary keys) of each service using 
+``` {{ service.id }} ```
+- Then i changed the pk of one of my services to a number that was entirely different to any of the pk values of the products or services. 
+- when i clicked on this service, i got an error.
+![bug1](readme-materials/bug_screenshots/bug_1.png)
+- This told me, the service details were reliant on the product id's. The new pk of the service i had tried to access, was out of range of the current product ids.
+- this led me to check the link path of the items when they were clicked. this revealed all items were following the ``` all_items/<pk_value> ``` path. 
+- this in turn led me to change my products and services app urls from 
+``` path('<int:product_id>/', ```
+```        views.product_detail, name='product_detail'), ```
+``` path('<int:service_id>/', ```
+```        views.service_detail, name='service_detail'), ```
+ to 
+``` path('product_detail/<int:product_id>/', ```
+```        views.product_detail, name='product_detail'), ```
+``` path('service_detail/<int:service_id>/', ```
+```        views.service_detail, name='service_detail'), ```
+- this solved the issue
 ### Product App
 
 
@@ -361,7 +385,7 @@ The main frontend development was created using HTML, CSS, JavaScript and their 
 - [PostgreSQL](https://www.postgresql.org/) - database used for production.
 
 # Testing
-Testing was conducted and recorded in a different file: [Testing.md](https://github.com/AsunaMasuda/FloweryDays/blob/master/readme_materials/testing.md).
+Testing was conducted and recorded in a different file: [Testing.md]().
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
