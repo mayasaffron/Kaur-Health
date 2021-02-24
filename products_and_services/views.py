@@ -8,8 +8,15 @@ def all_items(request):
     products = Product.objects.all()
     services = Service.objects.all()
     query = None
+    categories = None
 
     if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            products = products.filter(category__name__in=categories)
+            services = services.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -25,6 +32,7 @@ def all_items(request):
         'products': products,
         'services': services,
         'search_term': query,
+        'current_categories': categories,
 
     }
     return render(request, 'products_and_services/all_items.html', context)
