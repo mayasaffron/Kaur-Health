@@ -7,12 +7,26 @@ from .models import Product, Service, Category
 def all_items(request):
     products = Product.objects.all()
     services = Service.objects.all()
+    query = None
+
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request,
+                               "You didn't enter any search criteria!")
+                return redirect(reverse('all_items'))
+
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            products = products.filter(queries)
+            services = services.filter(queries)
 
     context = {
         'products': products,
         'services': services,
-    }
+        'search_term': query,
 
+    }
     return render(request, 'products_and_services/all_items.html', context)
 
 
