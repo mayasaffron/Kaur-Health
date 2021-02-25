@@ -28,7 +28,7 @@
                     <thead class="text-black">
                         <tr>
                             <th scope="col">Product Info</th>
-                            <th scope="col"></th>
+                            <th scope="col">Name</th>
                             <th scope="col">Price</th>
                             <th scope="col">Qty</th>
                             <th scope="col">Subtotal</th>
@@ -36,7 +36,54 @@
                     </thead>
 
                     {% for item in bag_items %}
-                    
+                    <!--products in the bag -->
+                        <tr>
+                            <td class="p-3 w-25">
+                                {% if item.product.image %}
+                                <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                <img class="w-100" src="{{ item.service.image.url }}" alt="{{ item.service.name }}">
+                                {% else %}
+                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.service.name }}">
+                                {% endif %}
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">£{{ item.product.price }} </p>
+                            </td>
+                            <td class="py-3 w-25">
+                                <p class="my-0">{{ item.quantity }}</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">£{{ item.product.price }} </p>
+                            </td>
+
+                        </tr>
+                        <!--services in the bag -->
+                        <tr>
+                            <td class="p-3 w-25">
+                                {% if item.product.image %}
+                                <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.service.name }}">
+                                {% else %}
+                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.service.name }}">
+                                {% endif %}
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0"><strong>{{ item.service.name }}</strong></p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">£{{ item.service.price }}</p>
+                            </td>
+                            <td class="py-3 w-25">
+                                <p class="my-0">{{ item.quantity }}</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">£{{ item.service.price }}</p>
+                            </td>
+                        </tr>
+                        
                     {% endfor %}
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
