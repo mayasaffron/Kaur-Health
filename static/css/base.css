@@ -21,7 +21,9 @@ body{
 .text-black {
     color: #000 !important;
 }
-.scroll-up-link{
+.scroll-up-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 .scroll-up-button{

@@ -22,6 +22,7 @@ This image is created with [ami.responsivedesign]().
 1. [UX](#ux)
     - [Project Goals](#project-goals)
     - [User Stories](#user-stories)
+    - [Personas](#personas)
     - [Design](#design)
 
 2. [Features](#features)
@@ -134,6 +135,36 @@ This image is created with [ami.responsivedesign]().
 <br/>
 
 <div><a href="#table-of-contents">Back to top</a></div>
+
+<!-- fill this in w/ updated stuff and make into table -->
+## Personas 
+- 'Someone at work has recently tested positive for covid-19, we must self isolate and track our symptoms (if any), I spend all day on my laptop if only there was an app where I could record my symptoms and the date I started feeling the symptoms too!' (Evelyn, 31, mother of 2 children under 5)
+
+- 'It's so frustrating when patients come to me saying that they feel ill and they think they have COVID, but no note of when they started feeling ill! I wish they would bring me more information' (Jocelyn, 55, Nurse) 
+
+- 'I feel terrible, but I don't know if it is just ...the flu I want to know if my symptoms are from COVID or something else. I'm conscious of all the fear-mongering and fake news out there..' (Luke, 28, Marketing manager)
+
+## UX Design process
+
+### UX Research 
+<!-- fill this in w/ updated stuff-->
+Initially, I had the idea to make an app which I would use in my career as a Personal Trainer, however, with the help of my wonderful [mentor](https://github.com/SinCron) I recognised that my emotional investment in the fruition of this project idea, was blocking my ability to see the importance of the functionality. It was also an idea, which required the user to already be aware of other such apps/ technology and was therefore not as accessible as the current idea I have run with. 
+
+I went for a COVID test and in the booking stages, I was being asked about what symptoms I have had to make me think that I may have contracted the virus. 
+
+This triggered my idea, I thought that the average person, may not be able to accurately track when they started experiencing symptoms and unless faced with a format that asked you the right questions, the person may not recognise the severity of their symptoms. 
+
+I used the easy to understand the format of the [official gov- NHS site](https://www.gov.uk/get-coronavirus-test) and understood that user accessibility was of the utmost importance. 
+
+I knew that I wanted to create an app that would:
+- Relieve the average person of the task of remembering what exactly their symptoms were and when they developed. 
+- Provide a mechanism so that these symptoms could be updated/ deleted and created EASILY.
+- Ensure that my design would tell users that this site is for functional use, but also that this is a tool to hopefully serve for a good outcome. 
+- I was also adamant that I didn't want the site to be inundated with 'news' or 'information' forced upon the user. As we all know, the pandemic is a very emotional topic and causes unease for much of the population. 
+
+I based my simplistic functional aspect of the app on the module-[mini-project-task-application]() expertly delivered by [code Institute](). Everything in this project is entirely fictionally and all content was created by me. 
+
+
 
 ## Design
 ### Wireframes
