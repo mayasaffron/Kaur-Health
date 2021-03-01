@@ -4,7 +4,7 @@
     "price": 100, 
     "category": 1, 
     "rating": 5, 
-    "product_image": "canva_nfp_basics.JPG"
+    "product_image": "canva_nfp_basics.png"
     }},
      
     {"pk":101, "model": "products_and_services.service", "fields": {
@@ -13,7 +13,7 @@
     "price": 150, 
     "category": 1, 
     "rating": 5, 
-    "product_image": "canva_nfp_his_her.JPG"
+    "product_image": "canva_nfp_his_her.png"
     }},
     
     {"pk":102, "model": "products_and_services.service", "fields": {
@@ -22,7 +22,7 @@
     "price": 50, 
     "category": 1, 
     "rating": 5, 
-    "product_image": "canva_nfp_cm.JPG"
+    "product_image": "canva_nfp_cm.png"
     }},
 
     {"pk":103, "model": "products_and_services.service", "fields": {
@@ -31,7 +31,7 @@
     "price": 50, 
     "category": 1, 
     "rating": 5, 
-    "product_image": "canva_nfp_bbt.JPG"
+    "product_image": "canva_nfp_bbt.png"
     }},
 
     {"pk":104, "model": "products_and_services.service", "fields": {
@@ -40,7 +40,7 @@
     "price": 40, 
     "category": 2, 
     "rating": 5, 
-    "product_image": "canva_period_tracking.JPG"
+    "product_image": "canva_period_tracking.png"
     }},
 
     {"pk":105, "model": "products_and_services.service", "fields": {
@@ -49,7 +49,7 @@
     "price": 40, 
     "category": 2, 
     "rating": 5, 
-    "product_image": "canva_hormonal_eating.JPG"
+    "product_image": "canva_hormonal_eating.png"
     }},
 
     {"pk":106, "model": "products_and_services.service", "fields": {
@@ -58,7 +58,7 @@
     "price": 100, 
     "category": 2, 
     "rating": 5, 
-    "product_image": "canva_herbs_pms.JPG"
+    "product_image": "canva_herbs_pms.png"
     }},
 
 
@@ -68,7 +68,7 @@
     "price": 80, 
     "category": 2, 
     "rating": 5, 
-    "product_image": "canva_decolonising_diet.JPG"
+    "product_image": "canva_decolonising_diet.png"
     }},
 
     {"pk":108, "model": "products_and_services.service", "fields": {
@@ -77,7 +77,7 @@
     "price": 90, 
     "category": 3, 
     "rating": 5, 
-    "product_image": "canva_skin_absorption.JPG"
+    "product_image": "canva_skin_absorption.png"
     }},
 
     {"pk": 109, "model": "products_and_services.service", "fields": {
@@ -86,7 +86,7 @@
     "price": 150, 
     "category": 1, 
     "rating": 5, 
-    "product_image": "canva_period_shame.JPG"
+    "product_image": "canva_period_shame.png"
     }}
 
 ]

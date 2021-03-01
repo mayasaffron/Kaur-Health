@@ -8,6 +8,7 @@ from .models import Product, Service, Category
 def all_items(request):
     products = Product.objects.all()
     services = Service.objects.all()
+    categories = Category.objects.all()
     query = None
     categories = None
     sort = None
