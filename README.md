@@ -136,13 +136,17 @@ This image is created with [ami.responsivedesign]().
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
-<!-- fill this in w/ updated stuff and make into table -->
+
 ## Personas 
-- 'Someone at work has recently tested positive for covid-19, we must self isolate and track our symptoms (if any), I spend all day on my laptop if only there was an app where I could record my symptoms and the date I started feeling the symptoms too!' (Evelyn, 31, mother of 2 children under 5)
 
-- 'It's so frustrating when patients come to me saying that they feel ill and they think they have COVID, but no note of when they started feeling ill! I wish they would bring me more information' (Jocelyn, 55, Nurse) 
+| MY NAME IS    | I AM.. | KAUR HEALTH SERVES ME BECAUSE.. |
+| ----------- | ----------- | ----------- |
+| Evelyn,  | 31, mother of 2 children under 5 | I do not want ANY more children, but hormonal contraception does not agree with my body. I need to learn how to naturally manage my fertility. |
+| Luke | 28, skincare influencer | People rely on my to tell them which brands have the best skincare products available. I have been in the industry long enough to know, DIY skincare is always better than anything shop bought, I just need to know what to do and how to do it, so that I can share with my followers! |  
+| Jocelyn | 23, University graduate | I have suffered with period pain my entire life and recently read some research about how foods can trigger PMS. There is so little out there, I want to read relevant articles/ opinions on the topic.  |
+| Kaya | 28, teacher in a committed relationship | My partner and I are trying for a baby and could really use some assistance. I want to speak to a profesional about when I am most fertile and how to navigate ovulation windows. |
 
-- 'I feel terrible, but I don't know if it is just ...the flu I want to know if my symptoms are from COVID or something else. I'm conscious of all the fear-mongering and fake news out there..' (Luke, 28, Marketing manager)
+
 
 ## UX Design process
 
@@ -203,11 +207,19 @@ Logo design is the cornerstone in your brand identity and presents a company's n
 This website is composed of 6 applications: `home`, `blog`, `cart`, `checkout`, `products`, `services`, `profiles`.
 
 ## Landing Page
-Landing Page is designed as a single page website to provide site visitors with enough information so they can understand what the business is about of this site. This page has minimal content; merely an explanation of who juspreet is and the brand kaur health. This is to let the site visitors take next actions. The page compose of `Navbar`, `Carousel`, `About`, `x`, `testimonials` and `Contact Form` section. 
+Landing Page is designed as a single page website to provide site visitors with all the information they need, in one place! This pages content consists of; an explanation of who juspreet is and the brand kaur health, Juspreets areas of expertise, testimonies about each of these areas and a call to action to drop her a line on the contact form. This is to let the site visitors take next actions. The page has a `Navbar` and consists of the following sections; `About`, `info on specialisms` and `testimonies`. 
 
 ### Navbar
 Navbar is fixed at the top of pages across the site, so that the site visitors easily navigate the whole site.  Navbar contains  `Brand Logo`, `Search Box`, `Site Menu`, `My Account dropdown` and `Cart icon`.
-- Search box: This search box function allows the visitors to search the products on online shop with keywords. The keywords are searched over `name` and `description` field of Product Model, `name` and `description` field of Service Model.(Details of these models will be described at the [Information Architecture](#information-architecture)) This function uses "" condition not "" when searching the keywords, meaning, if the search query was "", the search result shows the product found using the keyword . Searching with "" condition is chosen in order 
+- Search box: This search box function allows the visitors to search the products on online shop with keywords. The keywords are searched over `name` and `description` field of Product Model, `name` and `description` field of Service Model.(Details of these models will be described at the [Information Architecture](#information-architecture)) This function uses "or" condition not when searching the keywords, meaning, if the search query was "blood", the function will sesrch the names and descriptions of the products and services and return results where the search term was found in either the name or description. 
+<br>
+![search term 'blood'](readme_materials/logic_screenshots/search-logic(1).png)
+<br>
+!['blood' in description](readme_materials/logic_screenshots/search-logic(2).png)
+<br>
+I chose this logic because, the nature of the tooics on this site, mean that there is likley to be some overlap in name and description of products and services and category that a particular item falls into. 
+
+
 - Site Menu & My Account dropdown: The site menu collapses to toggle icon less than 992px width. My Account dropdown is included to toggle menu for smaller screen.
 - Cart icon: The number next to the cart icon shows the total of items added to the cart.
 
@@ -226,36 +238,27 @@ Navbar for authenticated users
 
 ### About me
 `About me` section explains who Juspreet is to the site visitor.
-<div align="center"><img src = "" width=700></div>
 
-`Kaur Health` section showcases three sales points of the shop with icons representing each one.
-Those two sections use the color of `` and `` from the color pallete for its background color that seamlessly matches the next section's background.
-<div align="center"><img src = "" width=700></div>
+### info on specialisms
+`info on specialisms` section showcases Juspreets areas of expertise, i provide 3 cards each with a picture and body, comprising of a title and expalanation. 
+This is to give the site visitor an insight into the nature and scope of Juspreets work. i was tempted to make the text show up on hover, however, i was aware that on smaller dervices this can be difficult to function and also, lilkely to cause bugs and dely which is bad ux. i deceided to simply have cards with and images and body. i have learnt through this experience that its important to remember, KISS!!
 
 ### Testimonial
-A customer testimonial section can contribute to building the trust of potential customers and also explain the benefits of your products or services. This section displays different customer's testimonials with smooth carousel auto-animation effects.
-<div align="center"><img src = "" width=700></div>
-
-### Contact Form
-A simple contact form is placed at the end of the landing page. The email address field is prefilled if the users are logged into their account. Site visitors will fill out fields `name`, `email`, `subject` and `message` when they submit the form. An email with the inquiry from the form will be sent to the admin of the website (handling by django send_mail() functionality).
-<div align="center"><img src = "" width=700></div>
+`Testimonies ` section has a carousel of 3 testimonies, one from each area of exepertise. Testimonials can contribute to building the trust of potential customers and also explain the benefits of your products or services.
 
 ### Footer
 The footer section is just links to Social Media with their icons. In this milestone project, Social Media icons are linked to Juspreets personal social media accounts, as her brand is consistent on her social media.
-<div align="center"><img src = "" width=700></div>
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
-## Product Page
+## Product and services Page
 ### Online Shop Page
-By clicking 'products/services' on the site menu, you can go to the online shop page. This page is filtered with 'natural family planning' category as a default as the shop owner wants to promote products that fall under natural family planning category that has higher profit. However, the site visitor can adjust the filter condition very easily.  
-- Product Filter: There is a filter section at the left side of the online shop page, and you can filter products with `categories`. You can also select multiple choices within the same filter option and use several filters to get the results.(e.g. you can choose skincare and intuitive eating. In this case, the result will show the products that fall under () AND ().) I designed the filter this way in order not to narrow down the products the potential customers are looking for.
-<div align="center"><img src = "" width=250></div>
+By clicking 'products and services' on the site menu, you are given a dropdown to the different categories of profucts and services and an option for all products and services. I thought that the dropdown would provide better user experience than a direct link, which takes you to a page where you then have to sift through the categores that you are interested in. The nature of this site, is such that, as a user you are prpbably well aware of what you are looking and therefore which category to find it. Or, if you are new to the sites content, i felt it would be less overwhelming if you have some filtering control and could navigate to the category you were most interested in. 
+By doing this I satisfy the ease of navihation in my user stories and adhere to my wireframes. Initially I had planned to have a sorting tab and functionlaity on the left side of the page, where the user could filter to the category they were interested in, however this way is more effeicient. 
 
-- Result Number: It's shown above the product cards. Customers can see how many results were found in total at a glance.
-<div align="center"><img src = "" width=350></div>
+- when a user chooses a catrgory from the dropdown, when clicked, they arrive on a page with product at the top and services beneath. there is also and products and service count, which shows jsers how many of each there are in this category. 
 
-- Product Card: The products are displayed in cards that have `Product/ Service Name`, `Price`, `Unit`, and `View Details` button when hovering ove the product image. `Add to Cart` button addes the product with 1 quantity to the cart and this button only appears for products, because the services are monthly subscription/ phonecalls. If the user is logged in as a superuser, Edit / Delete option is also shown on each card.
+- Product Card: The products are displayed in cards that have `Product/ Service Name`, `Price`, `rating`. When the product image is pressed, the user will be taken to the respective detail page and have the option to continue shopping, or add this item, with a chosen quantity to their bag. If the user is logged in as a superuser, Update / Delete option is also shown on each card.
 
 Product Card for products
 <div align="center"><img src = "" width=500></div>
@@ -584,6 +587,16 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"
 - https://www.healthline.com/health/magnesium-oil-benefits
 - medlife.com/blog/5-natural-ways-relieve-menstrual-cramps/#:~:text=2.-,Fennel,honey%20and%20mix%20it%20well.
 - template tags : https://engineertodeveloper.com/a-better-way-to-route-back-to-a-section-ids-in-django/
+- <span>Photo by <a href="https://unsplash.com/@sharonmccutcheon?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sharon McCutcheon</a> on <a href="https://unsplash.com/s/photos/periods?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+- https://unsplash.com/photos/eCJiD00AJqs
+- https://unsplash.com/photos/2oegF67ikOM
+- <span>Photo by <a href="https://unsplash.com/@prophsee?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Prophsee Journals</a> on <a href="https://unsplash.com/s/photos/food-diary?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+- <span>Photo by <a href="https://unsplash.com/@socialcut?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">S O C I A L . C U T</a> on <a href="https://unsplash.com/s/photos/food-diary?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+- <span>Photo by <a href="https://unsplash.com/@edgardo1987?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Edgar Soto</a> on <a href="https://unsplash.com/s/photos/thermometer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+- <span>Photo by <a href="https://unsplash.com/@anshu18?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Anshu A</a> on <a href="https://unsplash.com/s/photos/oil?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+- <span>Photo by <a href="https://unsplash.com/@rhsupplies?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Reproductive Health Supplies Coalition</a> on <a href="https://unsplash.com/s/photos/fertility?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+- dame website 
+- 
 
 ### Acknowledgements
 - Thanks to: my Code Institute Mentor  advice throughout the development process.
