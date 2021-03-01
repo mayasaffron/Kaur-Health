@@ -33,6 +33,23 @@ body{
     bottom: 10px;
     right: 10px;
 }
+
+/* footer */
+
+.page-footer {
+    color: black;
+    background-color: #C9CBA3;
+    position: relative;
+    width:100%;
+    bottom: 0;
+    padding:2rem 0rem 1rem 0rem;
+}
+
+.socials{
+    height: 24px;
+    width: 24px;
+}
+
 /* home app */
 .page-section {
     padding: 4rem 0;
