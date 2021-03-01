@@ -50,6 +50,12 @@ body{
     width: 24px;
 }
 
+/* contact app */
+
+#contact{
+    margin-top: 50%;
+}
+
 /* home app */
 .page-section {
     padding: 4rem 0;

@@ -3,7 +3,7 @@ from django import forms
 
 class ContactForm(forms.Form):
     """
-    Contact Form on Landing Page
+    Contact Form for contact link
     """
     SUBJECT_CHOICES = (
         ('NFP Inquiry',
