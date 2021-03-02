@@ -5,7 +5,6 @@ from products_and_services.models import Product, Service
 
 
 def bag_contents(request):
-
     bag_items = []
     total = 0
     product_count = 0
@@ -13,18 +12,24 @@ def bag_contents(request):
     bag = request.session.get('bag', {})
 
     for item_id, quantity in bag.items():
-        product = get_object_or_404(Product, pk=item_id)
-        service = get_object_or_404(Service, pk=item_id)
-        total += quantity * product.price
-        total += quantity * service.price
-        product_count += quantity
-        service_count += quantity
-        bag_items.append({
-            'item_id': item_id,
-            'quantity': quantity,
-            'product': product,
-            'service': service,
-        })
+        product = Product.objects.filter(pk=item_id).first()
+        if product:
+            total += quantity * product.price
+            product_count += quantity
+            bag_items.append({
+                'item_id': item_id,
+                'quantity': quantity,
+                'product': product,
+            })
+        else:
+            service = get_object_or_404(Service, pk=item_id)
+            total += quantity * service.price
+            service_count += quantity
+            bag_items.append({
+                'item_id': item_id,
+                'quantity': quantity,
+                'service': service,
+            })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
@@ -45,5 +50,5 @@ def bag_contents(request):
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
     }
-
+    print("hi there again")
     return context

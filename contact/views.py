@@ -9,9 +9,9 @@ def contactform(request):
     Send an email to the admin
     when site visitors send message via contact form
     """
-
-    if request.POST:
+    if request.method == "POST":
         contact_form = request.POST(ContactForm)
+
         if contact_form.is_valid():
             name = contact_form.cleaned_data['name']
             email = contact_form.cleaned_data['email']
@@ -28,9 +28,8 @@ def contactform(request):
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
         return redirect('contact_response')
-    return render(request, 'contact/contact_form.html')
-    # else:
-    # return
+    else:
+        return render(request, 'contact/contact_form.html')
 
 
 def contact_response(request):

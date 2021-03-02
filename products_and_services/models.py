@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
 class Category(models.Model):
     class Meta:
         verbose_name_plural = 'Categories'
@@ -39,7 +39,6 @@ class Service(models.Model):
     rating = models.DecimalField(max_digits=6, decimal_places=2,
                                  null=True, blank=True)
     product_image = models.ImageField(null=False, blank=True)
-    # purchased_with = maybe the id of the service/ product that goes with it?
 
     def __str__(self):
         return self.name

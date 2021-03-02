@@ -5,34 +5,30 @@ from products_and_services.models import Product, Service
 
 
 def view_bag(request):
+    print("hello")
     return render(request, 'bag/bag.html')
 
 
-def add_product_to_bag(request, item_id, self, product_id):
+def add_product_to_bag(request, item_id):
     '''Add a quantity of the specified product to the shopping bag'''
     product = Product.objects.get(pk=item_id)
-    quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
+    quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
-    item_type = get_object_or_404(Product, pk=product_id)
 
-    if item_type:
-        if item_id in list(bag.keys()):
-            bag[item_id] += quantity
-            messages.success(request,
-                             f' Updated {product.name}'
-                             f'quantity to {bag[item_id]}')
-        else:
-            bag[item_id] = quantity
-            messages.success(request,
-                             f' {product.name}'
-                             ' added to your bag! ')
-
-        request.session['bag'] = bag
-        return redirect(redirect_url)
+    if item_id in list(bag.keys()):
+        bag[item_id] += quantity
+        messages.success(request,
+                         f' Updated {product.name}'
+                         f'quantity to {bag[item_id]}')
     else:
-        messages.error(request, 'could not add this to your bag')
-        return redirect(redirect_url)
+        bag[item_id] = quantity
+        messages.success(request,
+                         f' {product.name}'
+                         ' added to your bag! ')
+
+    request.session['bag'] = bag
+    return redirect(redirect_url)
 
 
 def add_service_to_bag(request, item_id):
