@@ -374,6 +374,162 @@ Solution: Correct the URLs for the app
 ``` path('service_detail/<int:service_id>/', ```
 ```        views.service_detail, name='service_detail'), ```
 - this solved the issue
+
+
+Multiple items added to the bag each time a product/ service was added.  
+Solution: add if statement in the contexts.py file
+
+![Multiple items added to bag](readme_materials/bug_screenshots/bug_2(a)
+![Multiple items added to bag](readme_materials/bug_screenshots/bug_2(b)
+
+- I have 2 models that I needed to pull data from
+this means I need to specify with actions, if I am pulling data from the service_id or the product_id.
+- My Products and Services had identical pk's, i didnt think this was an issue because they were still two different models, however, with this issue arising, i decided to change the services' pks.
+
+- First, I changed the pks of my services. To do this I, mistakenly used the `loaddata` command. This indeed added the services with new pks, however didnt UPDATE, I was left with two sets of services.. To resolve this I had to manually delete ALL of my services, via the admin on my site and then `loaddata` again. 
+I researched and found out that in order to update models, you need to update the migrations used. I will do this if the issue arise again in the future, as it saves time. 
+- Changing the pk's led to me continually getting this error 
+![no service matches your query](readme_materials/bug_screenshots/bug_2(c))
+<br>
+when i tried to add a product or service. If i added a product, the error would say 'no service matches your query' and if i added a service, the error would say 'no product matches your query'.
+
+- I believed my issue was in my views and urls and started to seperate the logic. 
+```
+ def add_product_to_bag(request, item_id):
+    '''Add a quantity of the specified product to the shopping bag'''
+    product = Product.objects.get(pk=item_id)
+    quantity = int(request.POST.get('quantity'))
+    bag = request.session.get('bag', {})
+
+    if item_id in list(bag.keys()):
+        bag[item_id] += quantity
+        messages.success(request,
+                         f' Updated {product.name}'
+                         f'quantity to {bag[item_id]}')
+    else:
+        bag[item_id] = quantity
+        messages.success(request,
+                         f' {product.name}'
+                         ' added to your bag! ')
+
+    request.session['bag'] = bag
+   print("here")  
+ return redirect("view_bag") 
+ ```
+ ```
+ urlpatterns = [
+    path('', views.view_bag, name='view_bag'),
+    path('add_product/<item_id>/',
+         views.add_product_to_bag,
+         name='add_product_to_bag'),
+```
+- I was still getting the error, so came to the conclusion that I needed to define the item specifically to check if its a service or product. To do this I added a parameter of `product.id` in the add product to bag view, however i would get this error;
+![type error](readme_materials/bug_screenshots/bug_2(d))
+
+- Eventually after I had made all of the changes I could think of, to my views and urls, i took a look at the `contexts.py` file. <strong> In hindsight, I should have loooked st this file earlier on in the process, as it was the only other file in the bag app, which handled functions specfic to the bag. </strong>  
+- In the `contexts.py` file;
+I changed the `bag contents` method from 
+```
+def bag_contents(request):
+    bag_items = []
+    total = 0
+    product_count = 0
+    service_count = 0
+    bag = request.session.get('bag', {})
+
+    for item_id, quantity in bag.items():
+        product = get_object_or_404(Product, pk=item_id)(pk=item_id)
+        service = get_object_or_404(Service, pk=item_id)
+        total += quantity * product.price
+        total += quantity * service.price
+        service_count += quantity
+        product_count += quantity
+        bag_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'product': product,
+            'service': service,
+        })
+
+    if total < settings.FREE_DELIVERY_THRESHOLD:
+        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
+    else:
+        delivery = 0
+        free_delivery_delta = 0
+
+    grand_total = delivery + total
+
+    context = {
+        'bag_items': bag_items,
+        'total': total,
+        'product_count': product_count,
+        'service_count': service_count,
+        'delivery': delivery,
+        'free_delivery_delta': free_delivery_delta,
+        'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
+        'grand_total': grand_total,
+    }
+    return context
+
+```
+to: 
+```
+def bag_contents(request):
+    bag_items = []
+    total = 0
+    product_count = 0
+    service_count = 0
+    bag = request.session.get('bag', {})
+
+    for item_id, quantity in bag.items():
+        product = Product.objects.filter(pk=item_id).first()
+        if product:
+            total += quantity * product.price
+            product_count += quantity
+            bag_items.append({
+                'item_id': item_id,
+                'quantity': quantity,
+                'product': product,
+            })
+        else:
+            service = get_object_or_404(Service, pk=item_id)
+            total += quantity * service.price
+            service_count += quantity
+            bag_items.append({
+                'item_id': item_id,
+                'quantity': quantity,
+                'service': service,
+            })
+
+    if total < settings.FREE_DELIVERY_THRESHOLD:
+        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
+    else:
+        delivery = 0
+        free_delivery_delta = 0
+
+    grand_total = delivery + total
+
+    context = {
+        'bag_items': bag_items,
+        'total': total,
+        'product_count': product_count,
+        'service_count': service_count,
+        'delivery': delivery,
+        'free_delivery_delta': free_delivery_delta,
+        'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
+        'grand_total': grand_total,
+    }
+    return context
+
+```
+- In the original method, essentially, I had stated that in order to add an item to the bag contents, there needed to be both products and services. This is why originally, two items would simultaneously be added to the bag and thereafter i got the query error. 
+- the change to the contexts.py solved the issue. 
+
+
+
+
 ### Product App
 
 
