@@ -14,4 +14,6 @@ urlpatterns = [
          views.adjust_bag_product, name='adjust_bag_product'),
     path('adjust_service/<item_id>/',
          views.adjust_bag_service, name='adjust_bag_service'),
+    path('remove/<item_id>/',
+         views.remove_item, name='remove_item'),
 ]

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -34,8 +35,8 @@
                             <th scope="col">Subtotal</th>
                         </tr>
                     </thead>
-
                     {% for item in bag_items %}
+
                     <!--products in the bag -->
                         <tr>
                             <td class="p-3 w-25">
@@ -84,13 +85,13 @@
 
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.product.price }}</p>
+                            <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
+                   
 
-        
                         <!--services in the bag -->
-                        <tr>
+                                            <tr>
                             <td class="p-3 w-25">
                                 {% if item.product.image %}
                                 <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.service.name }}">
@@ -137,19 +138,20 @@
 
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.service.price }}</p>
+                            <p class="my-0">£{{ item.service.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
-                        
-                    {% endfor %}
+
+                    {% endfor %} 
+                    
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
-                            <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                            <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                            <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                            <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
+                            <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                            <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                             {% if free_delivery_delta > 0 %}
                             <p class="mb-1 text-danger">
-                                You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong>
+                                You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong>
                                 more!
                             </p>
                             {% endif %}
@@ -188,7 +190,8 @@
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}
-    
+    {% include 'products_and_services/includes/product_quantity_input_script.html' %}
+    {% include 'products_and_services/includes/service_quantity_input_script.html' %}
     <script type="text/javascript">
 // update quantity on click 
 
