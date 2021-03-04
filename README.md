@@ -752,7 +752,7 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"
 - <span>Photo by <a href="https://unsplash.com/@anshu18?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Anshu A</a> on <a href="https://unsplash.com/s/photos/oil?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 - <span>Photo by <a href="https://unsplash.com/@rhsupplies?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Reproductive Health Supplies Coalition</a> on <a href="https://unsplash.com/s/photos/fertility?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 - dame website 
-- 
+- https://pythoncircle.com/post/703/using-if-else-condition-in-django-template/
 
 ### Acknowledgements
 - Thanks to: my Code Institute Mentor  advice throughout the development process.

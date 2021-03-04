@@ -87,9 +87,9 @@
                         <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                         <p class="my-0">
                             {% if grand_total %}
-                                ${{ grand_total|floatformat:2 }}
+                                £{{ grand_total|floatformat:2 }}
                             {% else %}
-                                $0.00
+                                £0.00
                             {% endif %}
                         </p>
                     </div>
@@ -111,12 +111,26 @@
 
 </header>
 
+{% if messages %}
+    <div class="message-container">
+    {% for message in messages %} 
+      {% with message.level as level %}
+            {% if level == 40 %}
+                {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %}
+                {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %}
+                {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+                {% include 'includes/toasts/toast_info.html' %}
+            {% endif %}
+        {% endwith %}
+    {% endfor %}
+    </div>
+{% endif %}
 
-<div class="message-container">
 
 
-
-</div>
 
 {% block page_header %}
 
@@ -127,7 +141,9 @@
 {% endblock %}
 
 {% block postloadjs %}
-
+<script type="text/javascript">
+    $('.toast').toast('show');
+</script>
 {% endblock %}
 <!--footer -->
     <footer class="page-footer">
