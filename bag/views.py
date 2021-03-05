@@ -4,14 +4,12 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 
 
 def view_bag(request):
-    product = Product.objects.all()
-    service = Service.objects.all()
-    context = {
-        'product': product,
-        'service': service,
-    }
+    bag_items = {
+        'products': [],
+        'services': [],
+        }
 
-    return render(request, 'bag/bag.html', context)
+    return render(request, 'bag/bag.html', bag_items)
     print(request.session.get('bag', {}))
 
 
