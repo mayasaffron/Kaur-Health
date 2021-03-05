@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -16,4 +18,4 @@ urlpatterns = [
          views.adjust_bag_service, name='adjust_bag_service'),
     path('remove/<item_id>/',
          views.remove_item, name='remove_item'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
