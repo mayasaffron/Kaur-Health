@@ -527,8 +527,189 @@ def bag_contents(request):
 - In the original method, essentially, I had stated that in order to add an item to the bag contents, there needed to be both products and services. This is why originally, two items would simultaneously be added to the bag and thereafter i got the query error. 
 - the change to the contexts.py solved the issue. 
 
+Unable to correctly format the bag_contents
+Solution: created empty arrays for both products and services, within bag_items and appended products to the bag_items, to help decipher which item was coming from where. Then iterrate through the new array in the template. 
+
+- After solving the above issues, i realised that with every item added, an extra empty row was added, because the server was being told to look for a product AND service everytime, by the contexts.py file. 
+![Rendering empty respective products and services](readme-materials/bug_screenshots/bug_3(a).png)
+- I didnt understand the lack of the seperation of the models and their end points as much as i do now, i thought that because i had seperated the products and services actions eg 
+``` add_product_to_bag and add_service_to_bag ```
+that this was sufficient.
+- So i thought i could sperate the products and views from the template. 
+![template logic, trying to seperate the bag contents](readme-materials/bug_screenshots/bug_3(b).png)
+- However, this still gave the same errors that i had previously seen
+![item confusion](readme-materials/bug_screenshots/bug_3(c).png)
+and led to only the products or services displaying at any one time, not together and seamlesly. 
+Here you can see from the total that there are other items in the bag (services) however only the products show, until you remove the products, then the services are displayed. 
+- I realised i needed to go bag into the view_bag view and contexts.py file, both of which currently had little to no differentiation between items being products or services. 
+![initial view_bag view](readme-materials/bug_screenshots/bug_3(f).png)
+I changed the view_bag view to 
+``` 
+def view_bag(request):
+    bag_items = {
+        'products': [],
+        'services': [],
+        }
+
+    return render(request, 'bag/bag.html', bag_items)
+    print(request.session.get('bag', {})) 
+```
+similarly the bag_contents in the contexts.py file was 
+```
+def bag_contents(request):
+    bag_items = []
+    total = 0
+    product_count = 0
+    service_count = 0
+    bag = request.session.get('bag', {})
+    print("hello im working2")
+    for item_id, quantity in bag.items():
+        product = Product.objects.filter(pk=item_id).first()
+        if product:
+            total += quantity * product.price
+            product_count += quantity
+            print("hello im working3")
+            bag_items({
+                'item_id': item_id,
+                'quantity': quantity,
+                'product': product,
+            })
+            print("hello im working1")
+        else:
+            service = get_object_or_404(Service, pk=item_id)
+            total += quantity * service.price
+            service_count += quantity
+            bag_items({
+                'item_id': item_id,
+                'quantity': quantity,
+                'service': service,
+            })
+        print("hello im working")
+    if total < settings.FREE_DELIVERY_THRESHOLD:
+        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
+    else:
+        delivery = 0
+        free_delivery_delta = 0
+
+    grand_total = delivery + total
+
+    context = {
+        'bag_items': bag_items,
+        'total': total,
+        'product_count': product_count,
+        'service_count': service_count,
+        'delivery': delivery,
+        'free_delivery_delta': free_delivery_delta,
+        'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
+        'grand_total': grand_total,
+    }
+    print(request.session.get('bag', {}))
+    return context
+
+```
+Which i changed to 
+```
+from django.conf import settings
+from decimal import Decimal
+from django.shortcuts import get_object_or_404
+from products_and_services.models import Product, Service
 
 
+def bag_contents(request):
+    bag_items = {
+        'products': [],
+        'services': [],
+        }
+    total = 0
+    product_count = 0
+    service_count = 0
+    bag = request.session.get('bag', {})
+    print("hello im working2")
+    for item_id, quantity in bag.items():
+        product = Product.objects.filter(pk=item_id).first()
+        if product:
+            total += quantity * product.price
+            product_count += quantity
+            print("hello im working3")
+            bag_items['products'].append({
+                'item_id': item_id,
+                'quantity': quantity,
+                'product': product,
+            })
+            print("hello im working1")
+        else:
+            service = get_object_or_404(Service, pk=item_id)
+            total += quantity * service.price
+            service_count += quantity
+            bag_items['services'].append({
+                'item_id': item_id,
+                'quantity': quantity,
+                'service': service,
+            })
+        print("hello im working")
+    if total < settings.FREE_DELIVERY_THRESHOLD:
+        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
+    else:
+        delivery = 0
+        free_delivery_delta = 0
+
+    grand_total = delivery + total
+
+    context = {
+        'bag_items': bag_items,
+        'total': total,
+        'product_count': product_count,
+        'service_count': service_count,
+        'delivery': delivery,
+        'free_delivery_delta': free_delivery_delta,
+        'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
+        'grand_total': grand_total,
+    }
+    print(request.session.get('bag', {}))
+    return context
+
+```
+By adding products and services as empty arrays, i could append them to the bag_items, depending on their condition and iterrate through them in the template.
+
+- I changed the template logic to 
+```
+                    {% for item in bag_items['products'] %}
+                    <!--products in the bag -->
+
+                    {% endfor %}
+                    {% for item in bag_items['services'] %}
+
+                    <!--services in the bag -->
+
+                    {% endfor %}
+```
+
+and got this error
+![template error](readme-materials/bug_screenshots/bug_3(g).png)
+
+Django and python dont like [''], within for loops 
+
+so i changed it to 
+```
+                    {% for item in bag_items.products %}
+                    <!--products in the bag -->
+
+                    {% endfor %}
+                    {% for item in bag_items.services %}
+
+                    <!--services in the bag -->
+
+                    {% endfor %}
+```
+
+which worked and my server is no longer looking for a product AND service everytime an item is added 
+![issue solved!](readme-materials/bug_screenshots/bug_3(h).png)
+
+
+Cannot render images in bag
+Solution
 
 ### Product App
 
