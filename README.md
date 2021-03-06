@@ -379,8 +379,8 @@ Solution: Correct the URLs for the app
 Multiple items added to the bag each time a product/ service was added.  
 Solution: add if statement in the contexts.py file
 
-![Multiple items added to bag](readme_materials/bug_screenshots/bug_2(a)
-![Multiple items added to bag](readme_materials/bug_screenshots/bug_2(b)
+![Multiple items added to bag](readme-materials/bug_screenshots/bug_2(a)
+![Multiple items added to bag](readme-materials/bug_screenshots/bug_2(b)
 
 - I have 2 models that I needed to pull data from
 this means I need to specify with actions, if I am pulling data from the service_id or the product_id.
@@ -389,7 +389,7 @@ this means I need to specify with actions, if I am pulling data from the service
 - First, I changed the pks of my services. To do this I, mistakenly used the `loaddata` command. This indeed added the services with new pks, however didnt UPDATE, I was left with two sets of services.. To resolve this I had to manually delete ALL of my services, via the admin on my site and then `loaddata` again. 
 I researched and found out that in order to update models, you need to update the migrations used. I will do this if the issue arise again in the future, as it saves time. 
 - Changing the pk's led to me continually getting this error 
-![no service matches your query](readme_materials/bug_screenshots/bug_2(c))
+![no service matches your query](readme-materials/bug_screenshots/bug_2(c).png)
 <br>
 when i tried to add a product or service. If i added a product, the error would say 'no service matches your query' and if i added a service, the error would say 'no product matches your query'.
 
@@ -424,7 +424,7 @@ when i tried to add a product or service. If i added a product, the error would 
          name='add_product_to_bag'),
 ```
 - I was still getting the error, so came to the conclusion that I needed to define the item specifically to check if its a service or product. To do this I added a parameter of `product.id` in the add product to bag view, however i would get this error;
-![type error](readme_materials/bug_screenshots/bug_2(d))
+![type error](readme-materials/bug_screenshots/bug_2(d).png)
 
 - Eventually after I had made all of the changes I could think of, to my views and urls, i took a look at the `contexts.py` file. <strong> In hindsight, I should have loooked st this file earlier on in the process, as it was the only other file in the bag app, which handled functions specfic to the bag. </strong>  
 - In the `contexts.py` file;
@@ -709,7 +709,31 @@ which worked and my server is no longer looking for a product AND service everyt
 
 
 Cannot render images in bag
-Solution
+Solution: change pathway from 
+```
+<td class="p-3 w-25">
+                            {% if item.service.image %}
+                            <img class="w-100" src="{{ item.service.image.url }}" alt="{{ item.service.name }}">
+                            {% else %}
+                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.service.name }}">
+                            {% endif %}
+                        </td>
+```
+![Images not being rendered in bag](readme-materials/bug_screenshots/bug_4(a).png)
+
+To
+```
+<td class="p-3 w-25">
+                            {% if item.service.product_image %}
+                            <img class="w-100" src="{{ item.service.product_image.url }}" alt="{{ item.service.name }}">
+                            {% else %}
+                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.service.name }}">
+                            {% endif %}
+                        </td>
+```
+![Images being rendered in bag](readme-materials/bug_scr-enshots/bug_4(b).png)
+
+I used dev tools to compare the pathway written in the image source, on all_items.html and bag.html and quickly realised that i needed to use the exact field name from my models. 
 
 ### Product App
 

@@ -23,8 +23,8 @@
             <!--products in the bag -->
             <div class="row">
                 <div class="col-3 my-1">
-                    {% if item.product.image %}
-                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                    {% if item.product.product_image %}
+                    <img class="w-100" src="{{ item.product.product_image.url }}" alt="{{ item.product.name }}">
                     {% else %}
                     <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                     {% endif %}
@@ -37,12 +37,11 @@
 
             {% endfor %}
             {% for item in bag_items.services %}
-
             <!--services in the bag -->
             <div class="row">
                 <div class="col-3 my-1">
-                    {% if item.service.image %}
-                    <img class="w-100" src="{{ item.service.image.url }}" alt="{{ item.service.name }}">
+                    {% if item.service.product_image %}
+                    <img class="w-100" src="{{ item.service.product_image.url }}" alt="{{ item.service.name }}">
                     {% else %}
                     <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.service.name }}">
                     {% endif %}
