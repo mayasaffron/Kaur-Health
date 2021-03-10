@@ -704,7 +704,7 @@ so i changed it to
                     {% endfor %}
 ```
 
-which worked and my server is no longer looking for a product AND service everytime an item is added 
+which worked and my server is no longer looking for a product AND service everytime an item is added.
 ![issue solved!](readme-materials/bug_screenshots/bug_3(h).png)
 
 
@@ -734,6 +734,33 @@ To
 ![Images being rendered in bag](readme-materials/bug_scr-enshots/bug_4(b).png)
 
 I used dev tools to compare the pathway written in the image source, on all_items.html and bag.html and quickly realised that i needed to use the exact field name from my models. 
+
+
+card number input field not working
+solution: Typed '66' which triggered the num lock and was then able to type valid and invalid card numbers. 
+
+I discovered this issue after adding the intial stripe functionality. 
+
+I used dev tools to try and debug the issue, i assumed it was a styling overlap error at first. 
+
+I could see the input was very cluttered with styles and believed this had somehting to do with the bug. 
+![Card number field not inputtable](readme-materials/bug_screenshots/bug_5(a).png)
+
+I made my port public, removed the environment variables from a previous project (in case there was confusion in the application of public and secret keys ) and looked into the ad block settings in my browser (chrome).
+
+I then tried to input a card number into the mini project deployed site and another completed MS4 site. Both of which were not working! 
+![Card number field not inputtable on other sites](readme-materials/bug_screenshots/bug_5(b).png)
+![Card number field not inputtable on other sites](readme-materials/bug_screenshots/bug_5(c).png)
+
+I was then convinced that it must be an ad setting in chrome somewhere, however to disable all security against the pop ups, would not be wise..
+
+Finally, it was suggested that I type '66' into the card number field. 
+![66 inputted into the card number field ](readme-materials/bug_screenshots/bug_5(d).png)
+
+Initially, I thought I may have some numbers on my keyboard not working, however after typing '66' I was able to type every number. 
+I then came to the conclusion that I had been trying to enter the numbers in using the number keypad without Num Lock turned on. '66' triggered the num lock and 77, 88, would have been just as effective! 
+
+
 
 ### Product App
 
