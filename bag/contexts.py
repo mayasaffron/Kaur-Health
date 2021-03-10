@@ -13,19 +13,19 @@ def bag_contents(request):
     product_count = 0
     service_count = 0
     bag = request.session.get('bag', {})
-    
+
     for item_id, quantity in bag.items():
         product = Product.objects.filter(pk=item_id).first()
         if product:
             total += quantity * product.price
             product_count += quantity
-           
+
             bag_items['products'].append({
                 'item_id': item_id,
                 'quantity': quantity,
                 'product': product,
             })
-            
+
         else:
             service = get_object_or_404(Service, pk=item_id)
             total += quantity * service.price

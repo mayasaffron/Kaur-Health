@@ -29,25 +29,24 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
-
             for item_id, quantity in bag.items():
+                quantity = int(request.POST.get('quantity'))
                 product = Product.objects.get(id=item_id)
                 if product:
                     order_line_item = OrderLineItem(
-                        order=order,
-                        product=product,
-                        quantity=quantity,
+                                order=order,
+                                product=product,
+                                quantity=quantity,
                     )
                     order_line_item.save()
-
                 else:
+                    service = Service.objects.get(id=item_id)
                     order_line_item = OrderLineItem(
-                        order=order,
-                        service=service,
-                        quantity=quantity,
+                                order=order,
+                                service=service,
+                                quantity=quantity,
                     )
                     order_line_item.save()
-
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
 
