@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from bag.contexts import bag_contents
 from django.conf import settings
-from products_and_services.models import Product, Service
+from products_and_services.models import Product
 from .models import Order, OrderLineItem
 from .forms import OrderForm
 import stripe
@@ -29,30 +29,28 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
-            for item_id, quantity in bag.items():
-                quantity = int(request.POST.get('quantity'))
+            for  item_id, quantity in bag.items():
                 product = Product.objects.get(id=item_id)
+                quantity_product = int(request.POST.get('quantity_product'))
                 if product:
                     order_line_item = OrderLineItem(
-                                order=order,
-                                product=product,
-                                quantity=quantity,
+                        order=order,
+                        product=product,
+                        quantity_product=quantity_product,
                     )
                     order_line_item.save()
                 else:
                     service = Service.objects.get(id=item_id)
+                    quantity = quantity_service
                     order_line_item = OrderLineItem(
-                                order=order,
-                                service=service,
-                                quantity=quantity,
+                        order=order,
+                        service=service,
+                        quantity_service=quantity_service,
                     )
                     order_line_item.save()
-            request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
 
-        else:
-            messages.error(request, 'There was an error with your form. \
-                           Please double check your information.')
+
+
     else:
         bag = request.session.get('bag', {})
         if not bag:

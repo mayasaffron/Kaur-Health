@@ -37,7 +37,7 @@
                         <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                     </div>
                 </div>
-                                    {% for item in bag_items.products %}
+                                    {% for item in bag_items %}
                     <!--products in the bag -->
                     <div class="row">
                         <div class="col-2 mb-1">
@@ -59,28 +59,7 @@
                     </div>
 
                     {% endfor %}
-                    {% for item in bag_items.services %}
-                    <!--services in the bag -->
-<div class="row">
-                        <div class="col-2 mb-1">
-                            <a href="{% url 'service_detail' item.service.id %}">
-                            {% if item.service.product_image %}
-                            <img class="w-100" src="{{ item.service.product_image.url }}" alt="{{ item.service.name }}">
-                            {% else %}
-                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.service.name }}">
-                            {% endif %}
-                            </a>
-                        </div>
-                        <div class="col-7">
-                            <p class="my-0"><strong>{{ item.service.name }}</strong></p>
-                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                        </div>
-                        <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">${{ item.service.price | calc_subtotal:item.quantity }}</p>
-                        </div>
-                    </div>
 
-                    {% endfor %}
 
 
                 <hr class="my-0">

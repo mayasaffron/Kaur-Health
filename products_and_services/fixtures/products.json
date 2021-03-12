@@ -94,6 +94,107 @@
     "category": 3, 
     "rating": 5, 
     "product_image": "face_wipes.JPG"
+    }},
+
+    {"pk": 100, "model": "products_and_services.product", "fields": {
+    "name": "The basics of Natural family planning", 
+    "description": "2-hour workshop\" It can so terrifying when you come off hormonal contraception and are trying to avoid pregnancy. It can be equally as overwhelming, when you are trying to conceive, but have no idea how to find your fertile window. In this workshop, I go through the do's and do not's of natural family planning to help get you started on your journey", 
+    "price": 100, 
+    "category": 1, 
+    "rating": 5, 
+    "product_image": "canva_nfp_basics.png",
+    "service_category": 1
+    }},
+     
+    {"pk":101, "model": "products_and_services.product", "fields": {
+    "name": "His and her fertility windows", 
+    "description": "2-hour workshop\" Have you ever noticed that we spend a lot of time talking about how women should control/ slow/ speed and preserve their fertility, but almost nothing on the guys? In this workshop, I break it down for him and her!", 
+    "price": 150, 
+    "category": 1, 
+    "rating": 5, 
+    "product_image": "canva_nfp_his_her.png",
+    "service_category": 1
+    }},
+    
+    {"pk":102, "model": "products_and_services.product", "fields": {
+    "name": "Let's talk about cervical mucus", 
+    "description": "2-hour workshop\" What we grew up learning as 'discharge' is actually; cervical mucus. A fluid that helps preserve sperm and transport it to eggs! But what does it look like? How should it look? How do you look out for it? Join me in this workshop to find out!", 
+    "price": 50, 
+    "category": 1, 
+    "rating": 5, 
+    "product_image": "canva_nfp_cm.png",
+    "service_category": 1
+    }},
+
+    {"pk":103, "model": "products_and_services.product", "fields": {
+    "name": "BBT and the rules of recording it", 
+    "description": "1-hour workshop\" Basal Body Temperature is a crucial piece of data that you need to collect from yourself every day, to successfully manage your fertility. However, there are rules! A slight change can throw your recordings off and lead to an unwanted situation. Join me in this quick workshop where you can get to grips with the rules!", 
+    "price": 50, 
+    "category": 1, 
+    "rating": 5, 
+    "product_image": "canva_nfp_bbt.png",
+    "service_category": 1
+    }},
+
+    {"pk":104, "model": "products_and_services.product", "fields": {
+    "name": "Period tracking and its value", 
+    "description": "30-minute workshop\" The majority of women are told to track their periods, very flippantly, and rarely told why it is important to do so. Especially in terms of NFP, period tracking can be so valuable. I explain all in this super quick 30-minute workshop", 
+    "price": 40, 
+    "category": 2, 
+    "rating": 5, 
+    "product_image": "canva_period_tracking.png",
+    "service_category": 1
+    }},
+
+    {"pk":105, "model": "products_and_services.product", "fields": {
+    "name": "hormone triggered food cravings and how to manage them", 
+    "description": "1-hour workshop\" Every month, many of our diets are governed by what feels like a powerful superhuman addiction or craving for sugary/high-fat foods, which rarely leave us feeling satisfied or in any better state to tackle our period pains! In this workshop, I explain the how's, why's and why not's, which will hopefully be helpful for your next period!", 
+    "price": 40, 
+    "category": 2, 
+    "rating": 5, 
+    "product_image": "canva_hormonal_eating.png",
+    "service_category": 1
+    }},
+
+    {"pk":106, "model": "products_and_services.product", "fields": {
+    "name": "Herbs to heal PMS", 
+    "description": "2-hour virtual DIY workshop\" Equipment and products needed, will be sent to you before the workshop\" I will walk you through how to prepare some amazing herbs, that can be used to naturally keep PMS at bay!", 
+    "price": 100, 
+    "category": 2, 
+    "rating": 5, 
+    "product_image": "canva_herbs_pms.png",
+    "service_category": 1
+    }},
+
+
+    {"pk":107, "model": "products_and_services.product", "fields": {
+    "name": "Decolonising diet", 
+    "description": "2-hour workshop\" Research shows that eating a diet, similar to those of your ancestors is highly beneficial for bodily functions and well being. In this workshop, I point out how to best implement some simple changes to your diet, to achieve the desired outcome.", 
+    "price": 80, 
+    "category": 2, 
+    "rating": 5, 
+    "product_image": "canva_decolonising_diet.png",
+    "service_category": 1
+    }},
+
+    {"pk":108, "model": "products_and_services.product", "fields": {
+    "name": "Skin - the underrated organ ", 
+    "description": "2-hour workshop\" Did you know that your skin absorbs 90% of whatever you put on it?\" In this workshop, I dive into the effects of chemicals on your skin and simple lifestyle and product changes you can make to reduce harmful effects of chemical absorption.", 
+    "price": 90, 
+    "category": 3, 
+    "rating": 5, 
+    "product_image": "canva_skin_absorption.png",
+    "service_category": 1
+    }},
+
+    {"pk": 109, "model": "products_and_services.product", "fields": {
+    "name": "Period shame and how to overcome it", 
+    "description": "2-hour workshop\" I feel that I speak for all women when I say; we all have at least 5 traumatic period stories.\" In this workshop, I examine how the messaging we have been given, about period-related issues, has negatively impacted us and propose some changes we can make, to help undo some of the damage!", 
+    "price": 150, 
+    "category": 1, 
+    "rating": 5, 
+    "product_image": "canva_period_shame.png",
+    "service_category": 1
     }}
 
 ]

@@ -4,7 +4,7 @@ from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 from django_countries.fields import CountryField
-from products_and_services.models import Product, Service
+from products_and_services.models import Product
 
 
 class Order(models.Model):
@@ -67,10 +67,8 @@ class OrderLineItem(models.Model):
                               related_name='lineitems')
     product = models.ForeignKey(Product, null=False,
                                 blank=False, on_delete=models.CASCADE)
-    quantity_product = models.IntegerField(null=False, blank=False, default=0)
-    service = models.ForeignKey(Service, null=False,
-                                blank=False, on_delete=models.CASCADE)
-    quantity_service = models.IntegerField(null=False, blank=False, default=0)
+    quantity = models.IntegerField(null=False, blank=False, default=0)
+
     lineitem_total = models.DecimalField(max_digits=6,
                                          decimal_places=2, null=False,
                                          blank=False, editable=False)
@@ -80,12 +78,9 @@ class OrderLineItem(models.Model):
         to set the order number, if it
         hasnt been set already '''
 
-        if product:
-            self.lineitem_total = self.product.price * self.quantity
-            super().save(*args, **kwargs)
-        else:
-            self.lineitem_total = self.service.price * self.quantity
-            super().save(*args, **kwargs)
+        self.lineitem_total = self.product.price * self.quantity
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return f'Order: {self.order.order_number}'
+

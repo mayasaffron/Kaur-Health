@@ -36,7 +36,7 @@
                         </tr>
                     </thead>
 
-                    {% for item in bag_items.products %}
+                    {% for item in bag_items %}
                     <!--products in the bag -->
                     <tr>
                         <td class="p-3 w-25">
@@ -91,64 +91,6 @@
                         </td>
                     </tr>
                     {% endfor %}
-                    {% for item in bag_items.services %}
-                    <!--services in the bag -->
-                    <tr>
-                        <td class="p-3 w-25">
-                            {% if item.service.product_image %}
-                            <img class="w-100" src="{{ item.service.product_image.url }}" alt="{{ item.service.name }}">
-                            {% else %}
-                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.service.name }}">
-                            {% endif %}
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0"><strong>{{ item.service.name }}</strong></p>
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0">£{{ item.service.price }}</p>
-                        </td>
-                        <td class="py-3 w-25">
-                            <form class="form update-form" method="POST"
-                                action="{% url 'adjust_bag_service' item.item_id %}">
-                                {% csrf_token %}
-                                <div class="form-group ">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-black btn-sm rounded-0"
-                                                data-item_id="{{ item.item_id }}"
-                                                id="decrement-qty-service_{{ item.item_id }}">
-                                                <span>
-                                                    <i class="fas fa-minus fa-sm"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                        <input class="form-control form-control-sm qty_input" type="number"
-                                            name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                            data-item_id="{{ item.item_id }}" id="id_qty-service_{{ item.item_id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-black btn-sm rounded-0"
-                                                data-item_id="{{ item.item_id }}"
-                                                id="increment-qty-service_{{ item.item_id }}">
-                                                <span>
-                                                    <i class="fas fa-plus fa-sm"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                            <a class="update-link text-info"><small> Update </small></a>
-                            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small> Remove
-                                </small></a>
-
-
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0">£{{ item.service.price | calc_subtotal:item.quantity }}</p>
-                        </td>
-                    </tr>
-
-                    {% endfor %}
 
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
@@ -197,7 +139,7 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products_and_services/includes/product_quantity_input_script.html' %}
-{% include 'products_and_services/includes/service_quantity_input_script.html' %}
+
 <script type="text/javascript">
     // update quantity on click 
 
