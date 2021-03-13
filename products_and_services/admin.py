@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product, ServiceCategory
+from .models import Category, Product
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -10,6 +10,7 @@ class ProductAdmin(admin.ModelAdmin):
         'price',
         'product_image',
         'rating',
+        'service_category',
         )
     ordering = ('name', 'price')
 
@@ -21,13 +22,5 @@ class CategoryAdmin(admin.ModelAdmin):
         )
 
 
-class ServiceCategoryAdmin(admin.ModelAdmin):
-    list_display = (
-        'friendly_name',
-        'name',
-        )
-
-
-admin.site.register(ServiceCategory, ServiceCategoryAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)

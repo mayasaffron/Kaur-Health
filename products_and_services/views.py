@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.db.models.functions import Lower
 from django.db.models import Q
-from .models import Product, Category, ServiceCategory
+from .models import Product, Category
 
 
 def all_items(request):

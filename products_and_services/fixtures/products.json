@@ -102,8 +102,7 @@
     "price": 100, 
     "category": 1, 
     "rating": 5, 
-    "product_image": "canva_nfp_basics.png",
-    "service_category": 1
+    "product_image": "canva_nfp_basics.png"
     }},
      
     {"pk":101, "model": "products_and_services.product", "fields": {
@@ -112,8 +111,7 @@
     "price": 150, 
     "category": 1, 
     "rating": 5, 
-    "product_image": "canva_nfp_his_her.png",
-    "service_category": 1
+    "product_image": "canva_nfp_his_her.png"
     }},
     
     {"pk":102, "model": "products_and_services.product", "fields": {
@@ -122,8 +120,7 @@
     "price": 50, 
     "category": 1, 
     "rating": 5, 
-    "product_image": "canva_nfp_cm.png",
-    "service_category": 1
+    "product_image": "canva_nfp_cm.png"
     }},
 
     {"pk":103, "model": "products_and_services.product", "fields": {
@@ -132,8 +129,7 @@
     "price": 50, 
     "category": 1, 
     "rating": 5, 
-    "product_image": "canva_nfp_bbt.png",
-    "service_category": 1
+    "product_image": "canva_nfp_bbt.png"
     }},
 
     {"pk":104, "model": "products_and_services.product", "fields": {
@@ -142,8 +138,7 @@
     "price": 40, 
     "category": 2, 
     "rating": 5, 
-    "product_image": "canva_period_tracking.png",
-    "service_category": 1
+    "product_image": "canva_period_tracking.png"
     }},
 
     {"pk":105, "model": "products_and_services.product", "fields": {
@@ -152,8 +147,7 @@
     "price": 40, 
     "category": 2, 
     "rating": 5, 
-    "product_image": "canva_hormonal_eating.png",
-    "service_category": 1
+    "product_image": "canva_hormonal_eating.png"
     }},
 
     {"pk":106, "model": "products_and_services.product", "fields": {
@@ -162,8 +156,7 @@
     "price": 100, 
     "category": 2, 
     "rating": 5, 
-    "product_image": "canva_herbs_pms.png",
-    "service_category": 1
+    "product_image": "canva_herbs_pms.png"
     }},
 
 
@@ -173,8 +166,7 @@
     "price": 80, 
     "category": 2, 
     "rating": 5, 
-    "product_image": "canva_decolonising_diet.png",
-    "service_category": 1
+    "product_image": "canva_decolonising_diet.png"
     }},
 
     {"pk":108, "model": "products_and_services.product", "fields": {
@@ -183,8 +175,7 @@
     "price": 90, 
     "category": 3, 
     "rating": 5, 
-    "product_image": "canva_skin_absorption.png",
-    "service_category": 1
+    "product_image": "canva_skin_absorption.png"
     }},
 
     {"pk": 109, "model": "products_and_services.product", "fields": {
@@ -193,8 +184,7 @@
     "price": 150, 
     "category": 1, 
     "rating": 5, 
-    "product_image": "canva_period_shame.png",
-    "service_category": 1
+    "product_image": "canva_period_shame.png"
     }}
 
 ]

@@ -19,7 +19,7 @@
             {{ service_count }})</p>
         <div class="bag-notification-wrapper">
 
-            {% for item in bag_items.products %}
+            {% for item in bag_items %}
             <!--products in the bag -->
             <div class="row">
                 <div class="col-3 my-1">
@@ -36,24 +36,6 @@
             </div>
 
             {% endfor %}
-            {% for item in bag_items.services %}
-            <!--services in the bag -->
-            <div class="row">
-                <div class="col-3 my-1">
-                    {% if item.service.product_image %}
-                    <img class="w-100" src="{{ item.service.product_image.url }}" alt="{{ item.service.name }}">
-                    {% else %}
-                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.service.name }}">
-                    {% endif %}
-                </div>
-                <div class="col-9">
-                    <p class="my-0"><strong>{{ item.service.name }}</strong></p>
-                    <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                </div>
-            </div>
-
-            {% endfor %}
-
 
         </div>
         <div class="row">

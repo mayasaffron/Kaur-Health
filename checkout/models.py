@@ -68,7 +68,7 @@ class OrderLineItem(models.Model):
     product = models.ForeignKey(Product, null=False,
                                 blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
-
+    product_is_service = models.TextField() # what fiel attributes are fitting??
     lineitem_total = models.DecimalField(max_digits=6,
                                          decimal_places=2, null=False,
                                          blank=False, editable=False)

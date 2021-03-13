@@ -376,7 +376,7 @@ Solution: Correct the URLs for the app
 - this solved the issue
 
 
-Multiple items added to the bag each time a product/ service was added.  
+## Multiple items added to the bag each time a product/ service was added.  
 Solution: add if statement in the contexts.py file
 
 ![Multiple items added to bag](readme-materials/bug_screenshots/bug_2(a)
@@ -527,7 +527,7 @@ def bag_contents(request):
 - In the original method, essentially, I had stated that in order to add an item to the bag contents, there needed to be both products and services. This is why originally, two items would simultaneously be added to the bag and thereafter i got the query error. 
 - the change to the contexts.py solved the issue. 
 
-Unable to correctly format the bag_contents
+## Unable to correctly format the bag_contents
 Solution: created empty arrays for both products and services, within bag_items and appended products to the bag_items, to help decipher which item was coming from where. Then iterrate through the new array in the template. 
 
 - After solving the above issues, i realised that with every item added, an extra empty row was added, because the server was being told to look for a product AND service everytime, by the contexts.py file. 
@@ -736,7 +736,7 @@ To
 I used dev tools to compare the pathway written in the image source, on all_items.html and bag.html and quickly realised that i needed to use the exact field name from my models. 
 
 
-card number input field not working
+## card number input field not working
 solution: Typed '66' which triggered the num lock and was then able to type valid and invalid card numbers. 
 
 I discovered this issue after adding the intial stripe functionality. 
@@ -760,7 +760,80 @@ Finally, it was suggested that I type '66' into the card number field.
 Initially, I thought I may have some numbers on my keyboard not working, however after typing '66' I was able to type every number. 
 I then came to the conclusion that I had been trying to enter the numbers in using the number keypad without Num Lock turned on. '66' triggered the num lock and 77, 88, would have been just as effective! 
 
+## Unable to correctly render the checkout success page
+solution: chnage entire structure, by having one model!
+- I was building the checkout logic, trying to replicate the logic from my contexts.py file, however, my contexts.py file was very specific to my two models. I was stumbling with the order_line_items.
 
+![ views for checkout app ](readme-materials/bug_screenshots/bug_6(a).png)
+![ contexts.py for bag app ](readme-materials/bug_screenshots/bug_6(b).png)
+
+- I thought i needed to create similar variable as bag_items for order_line_items. I started looking into this and realised just how complicated the logic was becoming..
+![ error ](readme-materials/bug_screenshots/bug_6(c).png)
+
+- I continued to try and define the quantity, continuing to try and keep the products and services seperated. 
+![ error ](readme-materials/bug_screenshots/bug_6(d).png)
+![ error ](readme-materials/bug_screenshots/bug_6(e).png)
+
+- eventually, i was advised to chnage my model structure or discuss with my mentor at least. I was very disheartened by this at first, but it was a great learning curve for me. We are taught KISS from the first lessons on the course and, personally, I find myself straying and not abiding by DRY. 
+![ tutor advice ](readme-materials/bug_screenshots/bug_6(f).png)
+
+- in order to honour the importance of seperating the products and services, i added a boolean field to the product model
+```
+service_category = models.BooleanField(default=False, null=True,
+                                           blank=True)
+```
+However i wasnt sure how to list this field in the order model, in the order_line_item class, in the checkout app. 
+![ error ](readme-materials/bug_screenshots/bug_6(g).png)
+
+- i tried and it worked! 
+
+## updateing add to bag view, so that service count is functional and messages relay service specific information
+solution: correct logic in the view
+
+- I adapted and used the logic from the mini project and tried to clrrectly define each evenutality of services being added to bag, with if statements. 
+```
+def add_product_to_bag(request, item_id):
+    '''Add a quantity of the specified product to the shopping bag'''
+    product = Product.objects.get(pk=item_id)
+    redirect_url = request.POST.get('redirect_url')
+    quantity = int(request.POST.get('quantity'))
+    service = bool(request.POST.get('product_is_service'))
+    bag = request.session.get('bag', {})
+
+    if service:
+        if item_id in list(bag.keys()):
+            if item_id in bag["services"]:
+                bag["services"][item_id] += quantity
+                messages.success(request, f' Updated service {product.name}'
+                                 f'quantity to {bag[item_id]}'
+                                 '[item_is_service"][service]!')
+            else:
+                bag[item_id]['product_is_service'][service] = quantity
+                messages.success(request, f'added {product.name}'
+                                 'to your bag! Please read the'
+                                 'rules regarding services!')
+        else:
+            bag["services"] = {item_id: quantity}
+            messages.success(request, f'added {product.name}'
+                             'to your bag! Please read the'
+                             'rules regarding services!')
+    else:
+        if item_id in list(bag.keys()):
+            bag[item_id] += quantity
+            messages.success(request, f' Updated {product.name}'
+                             f'quantity to {bag[item_id]}')
+        else:
+            bag[item_id] = quantity
+            messages.success(request, f' {product.name} added to your bag!')
+
+    request.session['bag'] = bag
+    print(bag)
+    return redirect(redirect_url)
+```
+![ add to bag view ](readme-materials/bug_screenshots/bug_7(a).png)
+![ add to bag view ](readme-materials/bug_screenshots/bug_7(b).png)
+![ add to bag view ](readme-materials/bug_screenshots/bug_7(c).png)
+![ add to bag view ](readme-materials/bug_screenshots/bug_7(d).png)
 
 ### Product App
 

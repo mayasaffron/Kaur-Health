@@ -62,11 +62,8 @@
                         </p>
                     </div>
                 </div>
-                <section id="products_section">
+
                 <div class="row">
-                    <div class="col-12 text-center mt-3">
-                            <h2 class="logo-font">Products</h2>
-                            </div>
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
@@ -81,6 +78,9 @@
                                 {% endif %}
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ product.name }}</p>
+                                    {% if product.service_category %} 
+                                    <h1 class="mb-0">This is a service <span class="bg-secondary">Juspreet reserves the rights to withdraw input at any stage</span></h1>
+                                    {% endif %}
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
@@ -93,6 +93,7 @@
                                                 </a>
                                             </p>
                                             {% endif %}
+
                                             {% if product.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                             {% else %}
@@ -109,6 +110,7 @@
                                 </div>
                             </div>
                         </div>
+
                         {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-sm-none mb-5">
                                 <hr>
@@ -131,7 +133,6 @@
                         {% endif %}
                     {% endfor %} 
                     </div>
-                    </section>
 
                 </div>
             </div>
