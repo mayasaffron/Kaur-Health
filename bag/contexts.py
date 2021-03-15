@@ -30,7 +30,6 @@ def bag_contents(request):
                     'item_id': item_id,
                     'quantity': quantity,
                     'product': product,
-                    'service': service,
                 })
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)

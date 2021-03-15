@@ -60,8 +60,9 @@
                         <div class="form-row">
                             {% with product.service_category as s %}
                                 {% if s %}
-                                    <div class="col-12" name="product_is_service" id="id_product_is_service">
-                                        <h1 class="mb-0">This is a service <span class="bg-secondary">Juspreet reserves the rights to withdraw input at any stage</span></h1>
+                                    <div class="col-12">
+                                        <input type="hidden" value="{{ product.name }}" name="product_is_service" id="id_product_is_service">
+                                        <h1 class="mb-0">This is a service <span class="bg-secondary rounded-0 w-50">Juspreet reserves the rights to withdraw input at any stage</span></h1>
                                     </div>
                                 {% endif %}
                             <div class="col-12">

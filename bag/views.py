@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 
 
 def view_bag(request):
-
+    print(request.session.get('bag', {}))
     return render(request, 'bag/bag.html')
     print(request.session.get('bag', {}))
 
@@ -14,34 +14,37 @@ def add_product_to_bag(request, item_id):
     product = Product.objects.get(pk=item_id)
     redirect_url = request.POST.get('redirect_url')
     quantity = int(request.POST.get('quantity'))
-    service = bool(request.POST.get('product_is_service'))
+    service = None
+    if 'product_is_service' in request.POST:
+        service = request.POST['product_is_service']
+        print("check for service")
     bag = request.session.get('bag', {})
-
+    print(service)
     if service:
+        print("if im a service")
         if item_id in list(bag.keys()):
-            if item_id in bag["services"]:
-                bag["services"][item_id] += quantity
-                messages.success(request, f' Updated service {product.name}'
-                                 f'quantity to {bag[item_id]}'
-                                 '[item_is_service"][service]!')
-            else:
-                bag[item_id]['product_is_service'][service] = quantity
-                messages.success(request, f'added {product.name}'
-                                 'to your bag! Please read the'
-                                 'rules regarding services!')
+            print("if im a service in the bag already")
+            bag[item_id][product.name] += quantity
+            messages.success(request, f' Updated {product.name}'
+                             f'Quantity to {bag[item_id]["item_is_service"] [product.name]}')
+            print("updating service")
         else:
-            bag["services"] = {item_id: quantity}
+            print("adding service to bag attempt")
+            bag[item_id] = {'item_is_service': {product.name: quantity}}
             messages.success(request, f'added {product.name}'
                              'to your bag! Please read the'
                              'rules regarding services!')
+            print("adding service in bag")
     else:
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
             messages.success(request, f' Updated {product.name}'
-                             f'quantity to {bag[item_id]}')
+                             f' quantity to {bag[item_id]}')
+            print("everything is a product")
         else:
             bag[item_id] = quantity
             messages.success(request, f' {product.name} added to your bag!')
+            print("everything is a product 2")
 
     request.session['bag'] = bag
     print(bag)
