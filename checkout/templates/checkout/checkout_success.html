@@ -58,7 +58,11 @@
                         </div>
                     </div>
 
-                    {% for item in order.lineitems.all.product %}
+                    {% for item in order.lineitems.all %}
+                        {% if item.product.service_category %}
+                        {{ item.product.name }}
+                        <p>PLease rememebr the t's and c's</p>
+                        {% endif %}
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="small mb-0 text-black font-weight-bold">
