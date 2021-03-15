@@ -28,9 +28,16 @@ def all_items(request):
             products = products.order_by(sortkey)
 
         if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            products = products.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
+            categories = request.GET['category']
+            if categories == 'services':
+                print("into services")
+                products = products.filter(service_category=True)
+                categories = Category.objects.filter(name__in=categories)
+                print(products)
+            else:
+                categories = request.GET['category'].split(',')
+                products = products.filter(category__name__in=categories)
+                categories = Category.objects.filter(name__in=categories)
 
         if 'q' in request.GET:
             query = request.GET['q']
