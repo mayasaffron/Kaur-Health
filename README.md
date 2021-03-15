@@ -58,6 +58,8 @@ This image is created with [ami.responsivedesign]().
 
 8. [Disclaimer](#disclaimer)
 
+9.[Reflection](#reflection)
+
 
 # UX
 ## Project Goals
@@ -273,16 +275,23 @@ Product Card for services
 
 ### Product Detail Page
 
-<div align="center"><img src = "" width=700></div>
+The product detail, simply outlines more detail about the product. If the product is a service, it has a small banner in the decsription explaining that this is a service and therefore there are different terms and conditions. In the future i would potentially add a modal pop up box here so that users wuld have to scroll to the bottom of the terms and condiotons before adding to the service to their bag. Howver, for the sake of time, i decided against this, as i ran into enough compications with basic functionality! 
 
 
 ## Cart Page
+This page is simple, it outlines the products'; picture, name, price, quantity and the subtotal. I liked the idea of the items being clear and readable. This also satisfied 
+| Site User | Easily select the quantity (if applicable) of a product after adding a product to a cart | Ensure I don't accidentally select the wrong product and the quantity | 
+this user story, by being clear and readable, there was less risk of the above occuring. 
 
 <div align="center"><img src = "" width=700></div>
 
 ## Checkout Page
 ### Checkout Page
+this page satisfys 
+| Site User | Have my delivery information is prefilled if logged in | Smoothly proceed with my purchase | 
+| Site User | Be reminded to log in if I did not log in | Smoothly proceed with my purchase and prefilled form |
 
+It also shows the order in the right hand side of the screen. This was more feedback to the user and an opportunity for them to make any adjustments to their shopping bag. 
 
 ### Checkout Success Page
 
@@ -344,6 +353,7 @@ Base template for allauth has `Back to Home` button at the end of the page, for 
 - User model is provided as a default by [Django's authentication system](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/).
 
 ## Data Modeling
+
 Following is Entity Relationship Diagram of this project. I created this diagram with [dbdiagram.io](https://dbdiagram.io/home).
 When I designed this ERD, I referred to [this article](https://launchschool.com/books/sql/read/table_relationships). 
 <p align="center"><img src = "https://github.com/AsunaMasuda/FloweryDays/blob/master/readme_materials/Entity_Relationship_Diagrams.png?raw=true" width=900></p>
@@ -787,10 +797,10 @@ However i wasnt sure how to list this field in the order model, in the order_lin
 
 - i tried and it worked! 
 
-## updateing add to bag view, so that service count is functional and messages relay service specific information
+## updating add to bag view, so that service count is functional and messages relay service specific information
 solution: correct logic in the view
 
-- I adapted and used the logic from the mini project and tried to clrrectly define each evenutality of services being added to bag, with if statements. 
+- I adapted and used the logic from the mini project and tried to correctly define each evenutality of services being added to bag, with if statements. 
 ```
 def add_product_to_bag(request, item_id):
     '''Add a quantity of the specified product to the shopping bag'''
@@ -834,6 +844,54 @@ def add_product_to_bag(request, item_id):
 ![ add to bag view ](readme-materials/bug_screenshots/bug_7(b).png)
 ![ add to bag view ](readme-materials/bug_screenshots/bug_7(c).png)
 ![ add to bag view ](readme-materials/bug_screenshots/bug_7(d).png)
+
+- I struggled to understand how to add to the dictionary, with a sub disctionary. To better understand the logic i loaded pythin in my cli and practised 
+![ adding to subdictionary ](readme-materials/bug_screenshots/bug_7(e).png)
+I finally understtod that i needed to do 
+dict[key] = value
+
+- However, my code was still wrong and if block which handled eventualities of a service being added to the bag, was getting completely skipped and the only logic was coming from the else block. 
+![ adding to subdictionary ](readme-materials/bug_screenshots/bug_7(f).png)
+![ adding to subdictionary ](readme-materials/bug_screenshots/bug_7(g).png)
+
+- I then went to my Product_detail.html template, where i passed in `product_is_service` 
+After more debugging and adjusting, i learnt that the issue was not that `product_is_service` was not being recognised/ passed in, but was definitely within my code, in views. 
+
+- FINALLY after trial and error, debugging and support from peers.. I was able to understand that I needed a sub dictionary WITH a sub array inside. My current subdictionary 
+``` 
+bag["services"] = {item_id: quantity}
+``` 
+was throwing errors becuase a) plural of service was not a wise choice for the name. b) it was not nested correctly.
+The correct sub dictionary, also had an array within it
+
+```
+bag[item_id] = {'item_is_service': {product.name: quantity}}
+```
+- After making these adjustments, the correct messages were displaying. In order to solve the service count issue, I simply added the varibale service_count into the else block for my service logic in the contexts.py file. 
+
+
+### 'This is a service' message displaying on order summary 
+solution: assessed the logic necessary for desired outcome, adjusted the html template. 
+- I followed the logic from the mini project to help achieve functionality for my boolean field on the product model. 
+```
+    service_category = models.BooleanField(default=False, null=True,
+                                           blank=True)
+```
+I thought it was necessary for me to also add the new subdictionary 
+```
+'item_is_service'
+```
+to the order line item model, so that it would come up on the order summary. 
+- I was trying to work out which field would be best, because I thought it was no longer a boolean field, because the boolean had already served its purpose, it was different to the example, because my boolean, did not serve as an input elsewhere. 
+- After taking heed of the errors i have already made by not adhering to KISS, i reviewed the situation and realised that i didnt need to do ANYTHING to the order line item class and instead, just needed to put an if statement in the checkout successs template. 
+
+```
+{% if item.product.service_category %}
+                        {{ item.product.name }}
+                        <p>PLease rememebr the t's and c's</p>
+                        {% endif %}
+```
+
 
 ### Product App
 
@@ -1065,3 +1123,7 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"
 
 ### Disclaimer
 This website is created for educational purpose only. content entirely fictional. 
+
+
+### Reflection
+At the start of this project I had two models with items. Products and Services. Having two models like this, both of equal importance to the main functionality of your site is a tremendous amount of work. I was having to cater for both models and their functionality all the way until building the checkout. It was at this point that I had to make the executive decision to change the entire structure of my project, by consolidating all of the items into one model (products). this was a great lesson, it taught me the true value of KISS and moving forward, simplicity will be at the forefront of my mind when approaching all projects. For me personally, I have found it tough to distinguish between what it necessary and what is extra. Throughout all of my projects at code Institute I have struggled to confine and adequately execute my ideas. I feel that this project, really taught me how to scale my ideas and the consequences of allowing your imagaination and ego, rule your decsions. In hindsight, I should have just had products as my model and i could have then got further along in my project faster and avoided the wasted time and energy, PLUS i would have had more time to focus on the functionality required to still distinguish between items in the shopping bag, both coming from the same model! However, if i had not had this bump in the road, it is very likely that i would have repeated this unhelpfil patterns of believeing that unecessaery ideas,should all be taken into developement. 
