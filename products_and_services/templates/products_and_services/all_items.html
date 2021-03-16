@@ -56,13 +56,16 @@
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
                                 <span class="small"><a href="{% url 'all_items' %}">Products and Services Home</a> | </span>
+                            {% elif search_term or current_categories or current_sorting == 'None_None' %}
+                                <span class="small"><a href="{% url 'all_items' %}">Products and Services Home</a> | </span>
                             {% endif %}
-                            {{ products|length }} <a href= "{% anchor 'all_items' 'products_section' %}">Products </a>{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-                            {{ services|length }} <a href= "{% anchor2 'all_items' 'services_section' %}">Services </a> {% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                            {{ product_count }} Products {% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                            {{ service_count }} Services {% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                            
                         </p>
                     </div>
                 </div>
-
+                
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
