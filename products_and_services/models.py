@@ -18,7 +18,7 @@ class Category(models.Model):
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True,
                                  blank=True, on_delete=models.SET_NULL)
-    service_category = models.BooleanField(default=False, null=True,
+    service_category = models.BooleanField(default=False, null=False,
                                            blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()

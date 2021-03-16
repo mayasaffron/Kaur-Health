@@ -11,7 +11,9 @@ def all_items(request):
     categories = None
     sort = None
     direction = None
-
+    product_count = len(products.filter(service_category=False))
+    service_count = len(products.filter(service_category=True))
+    print(product_count, service_count)
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -30,14 +32,16 @@ def all_items(request):
         if 'category' in request.GET:
             categories = request.GET['category']
             if categories == 'services':
-                print("into services")
                 products = products.filter(service_category=True)
                 categories = Category.objects.filter(name__in=categories)
-                print(products)
+                product_count = len(products.filter(service_category=False))
+                service_count = len(products.filter(service_category=True))
             else:
                 categories = request.GET['category'].split(',')
                 products = products.filter(category__name__in=categories)
                 categories = Category.objects.filter(name__in=categories)
+                product_count = len(products.filter(service_category=False))
+                service_count = len(products.filter(service_category=True))
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -47,12 +51,18 @@ def all_items(request):
                 return redirect(reverse('all_items'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
+
             products = products.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'
+            product_count = len(products.filter(service_category=False))
 
+            service_count = len(products.filter(service_category=True))
+
+    current_sorting = f'{sort}_{direction}'
     context = {
         'products': products,
+        'product_count': product_count,
+        'service_count': service_count,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
@@ -68,4 +78,3 @@ def product_detail(request, product_id):
     }
     return render(request, 'products_and_services/product_detail.html',
                   context)
-
