@@ -2,9 +2,10 @@
 
 {% load static %}
 
-{% block checkout_css %}
+{% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
+
 
 {% block page_header %}
     <div class="container header-container">
@@ -201,7 +202,7 @@
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
                 {% if from_profile %}
-                    <a href="#" class="btn btn-black rounded-0 my-2">
+                    <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
 					<span class="icon mr-2">
 						<i class="fas fa-angle-left"></i>
 					</span>

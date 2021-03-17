@@ -43,6 +43,10 @@ select, select option{
 
 }
 
+.black-text{
+    color: red;
+}
+
 select:invalid,
 select option[value=""]{
     color: gray;
