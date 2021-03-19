@@ -92,7 +92,7 @@ def checkout(request):
             messages.error(request,
                            "There's nothing in your"
                            " bag at the moment")
-            return redirect(reverse('products'))
+            return redirect(reverse('all_items'))
 
         current_bag = bag_contents(request)
         total = current_bag['grand_total']
@@ -107,7 +107,7 @@ def checkout(request):
             try:
                 profile = UserProfile.objects.get(user=request.user)
                 order_form = OrderForm(initial={
-                    'full name': profile.user.get_full_name(),
+                    'full name': profile.full_name,
                     'email': profile.user.email,
                     'phone_number': profile.default_phone_number,
                     'street_address1': profile.default_street_address1,
@@ -119,11 +119,9 @@ def checkout(request):
                 })
                 print("prefilled")
             except UserProfile.DoesNotExist:
-                order_form = OrderForm
+                order_form = OrderForm()
         else:
-            order_form = OrderForm
-
-        order_form = OrderForm()
+            order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
@@ -155,6 +153,7 @@ def checkout_success(request, order_number):
         # Save the user's info
         if save_info:
             profile_data = {
+                'full_name': order.full_name,
                 'default_phone_number': order.phone_number,
                 'default_country': order.country,
                 'default_postcode': order.postcode,
