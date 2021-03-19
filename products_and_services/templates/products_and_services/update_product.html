@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <hr>
+                <h2 class="logo-font mb-4">Product management</h2>
+                <h5 class="text-muted">Update a Product</h5>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <form class="form mb-2" method="POST" action="{% url 'update_product' product.id %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
+                    <div class="text-right">
+                    <a class="btn btn-outline-black rounded-0" href="{% url 'all_items' %}">Cancel</a>
+                    <button id="submit-button" class="btn btn-black rounded-0">Update Product</button>
+                    </div>
+                </form>
+    
+            </div>
+
+
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+        <script type="text/javascript">
+        $('#new-image').change(function(){
+            var file = $('#new-image')[0].files[0];
+            $('#filename').text(`Image will be set to ${file.name}`);
+        });
+        </script>
+{% endblock %}
+
+products_and_services/urls.py
+products_and_services/views.py
+profiles/static/css/profiles.css
+templates/base.html
+        products_and_services/templates/products_and_services/all_items.html
+                media/image_1.png
+        products_and_services/forms.py
+        products_and_services/templates/products_and_services/add_product.html
+        products_and_services/templates/products_and_services/custom_widgets_templates/
+        products_and_services/templates/products_and_services/update_product.html
+        products_and_services/widgets.py
+    
+
+
+                        modified:   checkout/static/checkout/js/stripe_elements.js
+        modified:   checkout/webhook_handler.py
+        modified:   kaur_health/settings.py
+
+        confirmation emails 
