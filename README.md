@@ -360,7 +360,7 @@ When I designed this ERD, I referred to [this article](https://launchschool.com/
 
 # Bugs discovered
 
-Service details not showing up 
+## Bug 1 - Service details not showing up 
 Solution: Correct the URLs for the app
 - I have three models categories, services and products. Products and services, rely on the categories model. 
 - When i built the template for the product and service details, the product detail worked fine, but the service details would not. 
@@ -386,7 +386,7 @@ Solution: Correct the URLs for the app
 - this solved the issue
 
 
-## Multiple items added to the bag each time a product/ service was added.  
+## Bug 2 - Multiple items added to the bag each time a product/ service was added.  
 Solution: add if statement in the contexts.py file
 
 ![Multiple items added to bag](readme-materials/bug_screenshots/bug_2(a)
@@ -797,7 +797,7 @@ However i wasnt sure how to list this field in the order model, in the order_lin
 
 - i tried and it worked! 
 
-## updating add to bag view, so that service count is functional and messages relay service specific information
+## Bug 3 - updating add to bag view, so that service count is functional and messages relay service specific information
 solution: correct logic in the view
 
 - I adapted and used the logic from the mini project and tried to correctly define each evenutality of services being added to bag, with if statements. 
@@ -870,7 +870,7 @@ bag[item_id] = {'item_is_service': {product.name: quantity}}
 - After making these adjustments, the correct messages were displaying. In order to solve the service count issue, I simply added the varibale service_count into the else block for my service logic in the contexts.py file. 
 
 
-### 'This is a service' message displaying on order summary 
+## Bug 4 - 'This is a service' message displaying on order summary 
 solution: assessed the logic necessary for desired outcome, adjusted the html template. 
 - I followed the logic from the mini project to help achieve functionality for my boolean field on the product model. 
 ```
@@ -892,10 +892,20 @@ to the order line item model, so that it would come up on the order summary.
                         {% endif %}
 ```
 
+## Bug 5 - name not prefilled at checkout
+![ updating info on profile ](readme-materials/bug_screenshots/bug_8(a).png)
+![ info carried through except name.. ](readme-materials/bug_screenshots/bug_8(b).png)
+![ no value for name ](readme-materials/bug_screenshots/bug_8(c).png)
+![ full name field added to profiles model ](readme-materials/bug_screenshots/bug_8(d).png)
+
+after playing around with this issue some more, i came to the conclusion that, in order to automatically update the order form and subsequently, profile details, with the users full name, from their first transation; I would have had to collect that information when they signed up. 
+
+The sign up form does not collect their full name, only username and email address. The email address was an easy fix, however full name was uncooperative. 
+
+Therefore to resolve this, I would need to extend the user model (using a class called 'abstract based user' ) this will let you customise user model and add first name and last name as required field for sign up. 
+Then, I could use that data for the profile and the form would be prefilled from the first transaction. 
 
 ### Product App
-
-
 
 ### Order App
 
@@ -1127,3 +1137,5 @@ This website is created for educational purpose only. content entirely fictional
 
 ### Reflection
 At the start of this project I had two models with items. Products and Services. Having two models like this, both of equal importance to the main functionality of your site is a tremendous amount of work. I was having to cater for both models and their functionality all the way until building the checkout. It was at this point that I had to make the executive decision to change the entire structure of my project, by consolidating all of the items into one model (products). this was a great lesson, it taught me the true value of KISS and moving forward, simplicity will be at the forefront of my mind when approaching all projects. For me personally, I have found it tough to distinguish between what it necessary and what is extra. Throughout all of my projects at code Institute I have struggled to confine and adequately execute my ideas. I feel that this project, really taught me how to scale my ideas and the consequences of allowing your imagaination and ego, rule your decsions. In hindsight, I should have just had products as my model and i could have then got further along in my project faster and avoided the wasted time and energy, PLUS i would have had more time to focus on the functionality required to still distinguish between items in the shopping bag, both coming from the same model! However, if i had not had this bump in the road, it is very likely that i would have repeated this unhelpfil patterns of believeing that unecessaery ideas,should all be taken into developement. 
+
+
