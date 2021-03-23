@@ -24,9 +24,10 @@ def add_product_to_bag(request, item_id):
         print("if im a service")
         if item_id in list(bag.keys()):
             print("if im a service in the bag already")
-            bag[item_id][product.name] += quantity
+            bag[item_id]['item_is_service'][product.name] += quantity
             messages.success(request, f' Updated {product.name}'
-                             f'Quantity to {bag[item_id]["item_is_service"] [product.name]}')
+                             'quantity to'
+                             f' {bag[item_id]["item_is_service"][product.name]}')
             print("updating service")
         else:
             print("adding service to bag attempt")
