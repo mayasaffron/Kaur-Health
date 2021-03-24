@@ -53,18 +53,3 @@ else:
         order_line_item.save()
 ```
 this solved the issue! 
-
-README.md
-bag/views.py
-checkout/urls.py
-checkout/webhook_handler.py
-kaur_health/settings.py
-products_and_services/templates/products_and_services/update_product.html
-
-
-readme-materials/bug_screenshots/bug_8(a).png
-readme-materials/bug_screenshots/bug_8(b).png
-readme-materials/bug_screenshots/bug_8(d).png
-readme-materials/bug_screenshots/bug_b(c).png
-readme-materials/testing_screenshots/
-testing.md
