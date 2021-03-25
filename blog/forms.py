@@ -7,9 +7,9 @@ from .widgets import CustomClearableFileInput
 class BlogPostForm(forms.ModelForm):
     class Meta:
         model = BlogPost
-        fields = '__all__'
+        fields = 'title', 'category', 'body', 'blog_image'
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    blog_image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
