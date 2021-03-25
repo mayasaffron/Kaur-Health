@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views.generic import ListView, DetailView
 from .models import BlogPost
+from django.contrib.auth.models import User
 from django.contrib import messages
 from .forms import BlogPostForm
 
@@ -8,6 +9,22 @@ from .forms import BlogPostForm
 class HomeView(ListView):
     model = BlogPost
     template_name = 'blog/all_blogs.html'
+
+    def get_queryset(self):
+        author_val = self.request.GET.get('author', '')
+        if author_val:
+            author_object = User.objects.get(username=author_val)
+            new_context = BlogPost.objects.filter(
+                author=author_object,
+            )
+        else:
+            new_context = BlogPost.objects.all()
+        return new_context
+
+    def get_context_data(self, **kwargs):
+        context = super(HomeView, self).get_context_data(**kwargs)
+        context['author'] = self.request.GET.get('author')
+        return context
 
 
 class BlogDetailView(DetailView):
@@ -24,7 +41,9 @@ def add_blog_post(request):
     if request.method == 'POST':
         form = BlogPostForm(request.POST, request.FILES)
         if form.is_valid():
-            new_blog = form.save()
+            new_blog = form.save(commit=False)
+            new_blog.author = request.user
+            new_blog.save()
             messages.success(request, 'Thank you! your blog has been added')
             return redirect(reverse('blog_detail', args=[new_blog.pk]))
         else:
