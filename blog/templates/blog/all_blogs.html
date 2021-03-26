@@ -29,14 +29,14 @@
         <div class="col-12">
             <div class="blog-posts-container">
 
-                <p class="mb-0"><a href="{% url 'blog_detail' blog.pk %}">{{ blog.title }}</a></p>
+                <p class="mb-0"><a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a></p>
                 <p class="lead mb-0 font-weight-bold">{{ blog.author}}</p>
                 {% if blog.blog_image %}
-                <a href="{% url 'blog_detail' blog.pk %}" target="_blank">
+                <a href="{{ BlogPost.get_absolute_url }}" target="_blank">
                     <img class="card-img-top img-fluid" src="{{ blog.blog_image.url }}" alt="{{ post.title }}">
                 </a>
                 {% else %}
-                <a href="{% url 'blog_detail' blog.pk %}">
+                <a href="{{ BlogPost.get_absolute_url }}">
                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
                 </a>
                 {% endif %}
@@ -83,14 +83,14 @@
         <div class="col-12">
             <div class="blog-posts-container">
 
-                <p class="mb-0"><a href="{% url 'blog_detail' blog.pk %}">{{ blog.title }}</a></p>
+                <p class="mb-0"><a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a></p>
                 <p class="lead mb-0 font-weight-bold">{{ blog.author}}</p>
                 {% if blog.blog_image %}
-                <a href="{% url 'blog_detail' blog.pk %}" target="_blank">
+                <a href="{% url 'blog_detail' blog.slug %}" target="_blank">
                     <img class="card-img-top img-fluid" src="{{ blog.blog_image.url }}" alt="{{ post.title }}">
                 </a>
                 {% else %}
-                <a href="{% url 'blog_detail' blog.pk %}">
+                <a href="{% url 'blog_detail' blog.slug %}">
                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
                 </a>
                 {% endif %}
@@ -107,7 +107,7 @@
                     <a href="#">comment</a>
                     <a class="text-danger" href="{% url 'add_blog_post' %}">i want to write a post!</a>
                     {% if request.user == blog.author %}
-                    <a class="btn-edit" href="{% url 'update_blog' blog.pk %}">Edit</a>
+                    <a class="btn-edit" href="{% url 'update_blog' blog.slug %}">Edit</a>
                     <!--delete confirmation modal  -->
                     <a class="text-danger " href="{% url 'delete_blog' blog.pk %}">Delete</a>
 

@@ -4,6 +4,7 @@ from .models import BlogPost
 from django.contrib.auth.models import User
 from django.contrib import messages
 from .forms import BlogPostForm
+from django.template.defaultfilters import slugify
 
 
 class HomeView(ListView):
@@ -43,9 +44,16 @@ def add_blog_post(request):
         if form.is_valid():
             new_blog = form.save(commit=False)
             new_blog.author = request.user
+            new_slug = slugify(form.cleaned_data['title'])
+            qs_exists = BlogPost.objects.filter(
+                    slug=new_slug).exists()
+            if qs_exists:
+                messages.error(request, 'blog with this title, already exists! Change it slightly pls')
+                return redirect(reverse('add_blog_post'))
+            new_blog.slug = new_slug
             new_blog.save()
             messages.success(request, 'Thank you! your blog has been added')
-            return redirect(reverse('blog_detail', args=[new_blog.pk]))
+            return redirect(reverse('blog_detail', kwargs={'slug': new_blog.slug}))
         else:
             messages.error(request, 'Blog cannot be added, please recheck the form')
             return redirect(reverse('add_blog_post'))
@@ -60,17 +68,17 @@ def add_blog_post(request):
     return render(request, template, context)
 
 
-def update_blog(request, pk):
+def update_blog(request, slug):
     '''A view to allow users to edit blogs'''
 
-    blog = get_object_or_404(BlogPost, pk=pk)
+    blog = get_object_or_404(BlogPost, slug=slug)
     print(blog)
     if request.method == 'POST':
         form = BlogPostForm(request.POST, request.FILES, instance=blog)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated blog!')
-            return redirect(reverse('blog_detail', args=[blog.pk]))
+            return redirect(reverse('blog_detail', args=[blog.slug]))
         else:
             messages.error(request, 'Failed to update, please recheck the form')
     else:

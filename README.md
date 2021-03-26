@@ -327,7 +327,8 @@ Base template for allauth has `Back to Home` button at the end of the page, for 
 <div><a href="#table-of-contents">Back to top</a></div>
 
 ## Features Left to Implement
-
+When a user tries to add blog post, currently due to the slug, I have put some defensive programming so that if a user tries to add a post, with an exisiting blog posts name, they will get an errro message. 
+However ideally, if developing this site further, i would like to add 'title comparison/ checks' to the form validatioon, or use AJAX to esssntially check the title as the user types it and pause them there, if the title is preexitisng. 
 
 
 ## Defensive Design
@@ -537,7 +538,7 @@ def bag_contents(request):
 - In the original method, essentially, I had stated that in order to add an item to the bag contents, there needed to be both products and services. This is why originally, two items would simultaneously be added to the bag and thereafter i got the query error. 
 - the change to the contexts.py solved the issue. 
 
-## Unable to correctly format the bag_contents
+## Bug 3 Unable to correctly format the bag_contents
 Solution: created empty arrays for both products and services, within bag_items and appended products to the bag_items, to help decipher which item was coming from where. Then iterrate through the new array in the template. 
 
 - After solving the above issues, i realised that with every item added, an extra empty row was added, because the server was being told to look for a product AND service everytime, by the contexts.py file. 
@@ -718,7 +719,7 @@ which worked and my server is no longer looking for a product AND service everyt
 ![issue solved!](readme-materials/bug_screenshots/bug_3(h).png)
 
 
-Cannot render images in bag
+## Bug 4 Cannot render images in bag
 Solution: change pathway from 
 ```
 <td class="p-3 w-25">
@@ -746,7 +747,7 @@ To
 I used dev tools to compare the pathway written in the image source, on all_items.html and bag.html and quickly realised that i needed to use the exact field name from my models. 
 
 
-## card number input field not working
+## Bug 5 card number input field not working
 solution: Typed '66' which triggered the num lock and was then able to type valid and invalid card numbers. 
 
 I discovered this issue after adding the intial stripe functionality. 
@@ -770,7 +771,7 @@ Finally, it was suggested that I type '66' into the card number field.
 Initially, I thought I may have some numbers on my keyboard not working, however after typing '66' I was able to type every number. 
 I then came to the conclusion that I had been trying to enter the numbers in using the number keypad without Num Lock turned on. '66' triggered the num lock and 77, 88, would have been just as effective! 
 
-## Unable to correctly render the checkout success page
+## Bug 6 Unable to correctly render the checkout success page
 solution: chnage entire structure, by having one model!
 - I was building the checkout logic, trying to replicate the logic from my contexts.py file, however, my contexts.py file was very specific to my two models. I was stumbling with the order_line_items.
 
@@ -797,7 +798,7 @@ However i wasnt sure how to list this field in the order model, in the order_lin
 
 - i tried and it worked! 
 
-## Bug 3 - updating add to bag view, so that service count is functional and messages relay service specific information
+## Bug 7 - updating add to bag view, so that service count is functional and messages relay service specific information
 solution: correct logic in the view
 
 - I adapted and used the logic from the mini project and tried to correctly define each evenutality of services being added to bag, with if statements. 
@@ -870,7 +871,7 @@ bag[item_id] = {'item_is_service': {product.name: quantity}}
 - After making these adjustments, the correct messages were displaying. In order to solve the service count issue, I simply added the varibale service_count into the else block for my service logic in the contexts.py file. 
 
 
-## Bug 4 - 'This is a service' message displaying on order summary 
+## Bug 7 - 'This is a service' message displaying on order summary 
 solution: assessed the logic necessary for desired outcome, adjusted the html template. 
 - I followed the logic from the mini project to help achieve functionality for my boolean field on the product model. 
 ```
@@ -892,7 +893,7 @@ to the order line item model, so that it would come up on the order summary.
                         {% endif %}
 ```
 
-## Bug 5 - name not prefilled at checkout
+## Bug 8 - name not prefilled at checkout
 ![ updating info on profile ](readme-materials/bug_screenshots/bug_8(a).png)
 ![ info carried through except name.. ](readme-materials/bug_screenshots/bug_8(b).png)
 ![ no value for name ](readme-materials/bug_screenshots/bug_8(c).png)
@@ -905,6 +906,76 @@ The sign up form does not collect their full name, only username and email addre
 Therefore to resolve this, I would need to extend the user model (using a class called 'abstract based user' ) this will let you customise user model and add first name and last name as required field for sign up. 
 Then, I could use that data for the profile and the form would be prefilled from the first transaction. 
 
+## Bug 9 - filtering the users blog posts
+- I wanted to add a dropdown for users who are logged in, to view their blog posts. 
+- The first step to doing this was specifying in the main nav that the 'my blogs' link would pertain to author equaling the user. 
+```
+            <div class="dropdown-menu border-0" aria-labelledby="#">
+                <a href="{% url 'blog' %}" class="dropdown-item">All blog posts</a>
+                {% if request.user.is_authenticated %}
+                    <a href="{% url 'blog' %}?author={{ request.user }}"  class="dropdown-item">My blog posts</a>
+                {% endif %}
+            </div>
+```
+- then i needed to do the back end work, which wasnt as simple because the blogs were displayed via a class as opposed to a method. 
+- I had to use a method within the class
+```
+class HomeView(ListView):
+    model = BlogPost
+    template_name = 'blog/all_blogs.html'
+
+# This method was used to place the filter on the main nav link. 
+    def get_queryset(self):
+        author_val = self.request.GET.get('author', '')
+        if author_val:
+            author_object = User.objects.get(username=author_val)
+# Here i am adding 'author' to a new context (returned if 'my blogs' in nav is selected) 
+            new_context = BlogPost.objects.filter(
+                author=author_object,
+            )
+        else:
+            new_context = BlogPost.objects.all()
+        return new_context
+ ```
+ - This worked, however, it was easy to change name of the user to potentially view all the blogs, written by other users. 
+ ![ all blog posts displaying ](readme-materials/bug_screenshots/bug_9(a).png)
+ ![ users blog posts displaying ](readme-materials/bug_screenshots/bug_9(b).png)
+ ![ users blog posts displaying ](readme-materials/bug_screenshots/bug_9(c).png)
+ ![ lack of defensive programming, allowing user to filter to another authors blogs ](readme-materials/bug_screenshots/bug_9(d).png)
+ ![ lack of defensive programming, allowing user to filter to another authors blogs ](readme-materials/bug_screenshots/bug_9(e).png)
+
+- I needed to add another method, beneath the query set, so that i could add the new object('author') onto the context 
+```
+# This method was used to get the above context. 
+    def get_context_data(self, **kwargs):
+        context = super(HomeView, self).get_context_data(**kwargs)
+        context['author'] = self.request.GET.get('author')
+        return context
+```
+- I also needed to accompany this new logic, with some logic in the all blogs template. 
+![ template logic ](readme-materials/bug_screenshots/bug_9(f).png)
+
+- Now the user is unable to manually change the url, to attain another users' blogs. 
+![ defensive programming- working ](readme-materials/bug_screenshots/bug_9(g).png)
+
+
+## Bug 10 add blog url not working, since slug implementation 
+- ![ url path error ](readme-materials/bug_screenshots/bug_9(g).png)
+I needed to change my blog detail page url from 
+```
+urlpatterns = [
+    path('', HomeView.as_view(), name='blog'),
+    path('/<slug:slug>/', BlogDetailView.as_view(), name='blog_detail'),
+    path('new/', views.add_blog_post, name='add_blog_post'),
+```
+to 
+```
+urlpatterns = [
+    path('', HomeView.as_view(), name='blog'),
+    path('detail/<slug:slug>/', BlogDetailView.as_view(), name='blog_detail'),
+    path('new/', views.add_blog_post, name='add_blog_post'),
+```
+The blog detail path, with just slug:slug, was throwing django off, because the value of slug is just words and no actual path. without detail / before the slug:slug, when a user would try to add a blog post, the url, was referrring to the above view/ url. i needed to distinguish them, so. i added the 'detail/'
 ### Product App
 
 ### Order App
@@ -1126,6 +1197,8 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"
 - <span>Photo by <a href="https://unsplash.com/@rhsupplies?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Reproductive Health Supplies Coalition</a> on <a href="https://unsplash.com/s/photos/fertility?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 - dame website 
 - https://pythoncircle.com/post/703/using-if-else-condition-in-django-template/
+- https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi (blog)
+- https://learndjango.com/tutorials/django-slug-tutorial (slug)
 
 ### Acknowledgements
 - Thanks to: my Code Institute Mentor  advice throughout the development process.
