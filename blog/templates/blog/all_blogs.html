@@ -85,6 +85,7 @@
 
                 <p class="mb-0"><a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a></p>
                 <p class="lead mb-0 font-weight-bold">{{ blog.author}}</p>
+                <p class="mt-3">{{ blog.date }}</p>
                 {% if blog.blog_image %}
                 <a href="{% url 'blog_detail' blog.slug %}" target="_blank">
                     <img class="card-img-top img-fluid" src="{{ blog.blog_image.url }}" alt="{{ post.title }}">

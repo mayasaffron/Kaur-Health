@@ -6,7 +6,7 @@ from django.urls import reverse
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=254)
-    # date = models.DateTimeField(auto_now_add=True)
+    date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     slug = models.SlugField(max_length=254, null=False, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, null=True,
@@ -20,12 +20,11 @@ class BlogPost(models.Model):
     def get_absolute_url(self):
         return reverse('blog_detail', kwargs={'slug': self.slug})
 
+class Comment(models.Model):
+ 
+    body = models.TextField()
+    name = models.CharField(max_length=254)
+    date = models.DateTimeField(auto_now_add=True)
 
-# class Comment(models.Model):
-#     post_comment = models.ForeignKey(BlogPost, related_name= "comments", on_delete=models.CASCADE)
-#     body = models.TextField()
-#     name = models.CharField(max_length=254)
-#     date = models.DateTimeField(auto_now_add=True)
-
-#     def __str__(self):
-#         return  '%s - %s' % (self.blogpost.title, self.name)
+    def __str__(self):
+        return  '%s - %s' % (self.blogpost.title, self.name)
