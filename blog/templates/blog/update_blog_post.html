@@ -24,7 +24,7 @@
 
         <div class="row">
             <div class="col-12 col-md-6">
-                <form class="form mb-2" method="POST" action="{% url 'update_blog' blog.pk %}" enctype="multipart/form-data">
+                <form class="form mb-2" method="POST" action="{% url 'update_blog' blog.slug %}" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}
@@ -34,7 +34,7 @@
                         {% endif %}
                     {% endfor %}
                     <div class="text-right">
-                    <a class="btn btn-outline-black rounded-0" href="{% url 'blog_detail' blog.pk %}">Cancel</a>
+                    <a class="btn btn-outline-black rounded-0" href="{% url 'blog_detail' blog.slug %}">Cancel</a>
                     <button id="submit-button" class="btn btn-black rounded-0">Update blog</button>
                     </div>
                 </form>
