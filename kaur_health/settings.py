@@ -45,10 +45,10 @@ INSTALLED_APPS = [
     'home',
     'products_and_services',
     'bag',
-    'contact',
     'checkout',
     'profiles',
     'blog',
+    'honeypot',
 
 
     # Other
