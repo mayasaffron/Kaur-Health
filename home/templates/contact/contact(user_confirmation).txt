@@ -1,0 +1,11 @@
+{% autoescape off %}
+Hello {{ name }},
+Thank you for contacting us.
+Your message:
+{{ message }}
+was successfully sent! 
+Juspreet will respond to {{ email }} in 2-3 working days. 
+Enjoy the rest of your day!
+Sincerely,
+The Kaur Health Team
+{% endautoescape %}

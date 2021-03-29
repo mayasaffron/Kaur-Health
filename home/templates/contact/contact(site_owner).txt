@@ -1,0 +1,9 @@
+{% autoescape off %}
+Hello,
+{{ name }} has submitted the contact form.
+Email: {{ email }}
+Subject: {{ subject }}
+{{ message }}
+Sincerely,
+The Website Team
+{% endautoescape %}
