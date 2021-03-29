@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views.generic import ListView, DetailView
-from .models import BlogPost
+from .models import BlogPost, Comment
 from django.contrib.auth.models import User
 from django.contrib import messages
-from .forms import BlogPostForm
+from .forms import BlogPostForm, CommentForm
 from django.template.defaultfilters import slugify
 
 
@@ -28,9 +28,27 @@ class HomeView(ListView):
         return context
 
 
-class BlogDetailView(DetailView):
-    model = BlogPost
-    template_name = 'blog/blog_detail.html'
+def blog_detail(request, slug):
+    blog = get_object_or_404(BlogPost, slug=slug)
+    form = CommentForm()
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            new_comment = form.save(commit=False)
+            new_comment.post_comment = blog
+            new_comment.save()
+            messages.success(request, 'Thank you! your comment has been added')
+            return redirect(reverse('blog_detail', kwargs={'slug': blog.slug}))
+
+        else:
+            messages.error(request, 'comment cannot be added, please recheck the form')
+            return redirect(reverse('blog_detail', kwargs={'slug': blog.slug}))
+    context = {
+        'object': blog,
+        'form': form,
+    }
+    return render(request, 'blog/blog_detail.html',
+                  context)
 
 
 def add_blog_post(request):
@@ -100,3 +118,4 @@ def delete_blog(request, pk):
     blog.delete()
     messages.success(request, f' "{blog.title}" has been deleted')
     return redirect(reverse('blog'))
+

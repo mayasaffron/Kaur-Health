@@ -30,7 +30,7 @@
                     <p class="lead mb-0 font-weight-bold">by: {{ object.author }}</p>
                     {% if request.user == object.author %}
                         <a class="btn-edit" href="{% url 'update_blog' object.pk %}">Edit</a>
-                        <!--delete confirmation modal  -->
+                        delete confirmation modal 
                                 <a class="text-danger " href="{% url 'delete_blog' object.pk %}">Delete</a>
                     {% endif %}
         
@@ -52,7 +52,13 @@
             {% if not object.comments.all %}
                 <div class="row">
                 <div class="col-12">
-                <h2>No Comments yet..<a href="#">want to make one?</a></h2>
+                <h2>No Comments yet..
+                    {% if request.user.is_authenticated %}
+                        <a href="#">want to make one?</a>
+                    {% else %}
+                        <a href="#">want to make one?</a>
+                    {% endif %}
+                </h2>
                 </div>
                 </div>
             {% else %}
@@ -62,7 +68,7 @@
                 <div class="col-12">
                 <h2>Comments!!</h2>
                 </div>
-                <a href="#">add comment</a>
+                <h6 data-toggle="modal" data-target="#commentModal">add comment</h6>
                 </div>
                     {% for comment in object.comments.all %}
                 <div class="row">
@@ -98,5 +104,29 @@
 </div>
 </div>
     </div>
-        
+    
+
+ <!-- Modal -->
+<div class="modal fade" id="commentModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="commentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-black">
+            <div class="modal-header">
+                <h5 class="modal-title" id="commentModalLabel">Delivery Options</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="{% url 'blog_detail' object.slug %}" method="POST">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <input type="submit" value="Submit"></form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 {% endblock %}
+

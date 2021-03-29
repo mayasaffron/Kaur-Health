@@ -27,7 +27,7 @@
                     <a href="#">comment</a>
                     <a class="text-danger" href="{% url 'add_blog_post' %}">i want to write a post!</a>
                     {% if request.user == blog.author %}
-                    <a class="btn-edit" href="{% url 'update_blog' blog.pk %}">Edit</a>
+                    <a class="btn-edit" href="{% url 'update_blog' blog.slug %}">Edit</a>
                     <!--delete confirmation modal  -->
                     <a class="text-danger " href="{% url 'delete_blog' blog.pk %}">Delete</a>
 
