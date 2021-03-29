@@ -31,6 +31,7 @@ This image is created with [ami.responsivedesign]().
         - [Product Page](#product-page)
         - [Cart Page](#cart-page)
         - [Checkout Page](#checkout-page)
+        - [Contact Page](#contact-page)
         - [Blog Page](#blog-page)
         - [Profiles Page](#profiles-page)
         - [Admin Product Managment](#admin-product-managment)
@@ -298,6 +299,13 @@ It also shows the order in the right hand side of the screen. This was more feed
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
+## Contact Page
+- Initially i had an entire contat app, however after seeing the limited functionality and processes involved, i thought it may be more logical to add the contact functionality into the home app.
+- i used the honeypot package to ward against bots, honeypot cleverly provides an extra, fake field for site owners to use somehwere within their form. When their site is stumbled upon, by a bot, the bot will make no distinction and fill the field in, regardless of the hints that they shouldnt! 
+- I decided to send two emails from the contavct view, one for the site owner, to recieve the contact form and the other for the user, to receive a confirmation email with a copy of their message. 
+- As i will only ever be sending a total of two emails from this view, it is not necessary, howevre if i was to develop this aspect more and send more than two emails from this view, i would opt to use the send mass mail wrapper from the django.core.mail module.
+- for the backend wiring up, i dcided to use aws email, as opposoised to gmail. I thought it made more sense as we are using aws to collect the static files etc. 
+
 ## Blog Page
 ### Blog Feed Page
 
@@ -309,7 +317,11 @@ It also shows the order in the right hand side of the screen. This was more feed
 
 ### Add/Edit Blog
 - 
+### comment on  Blog
+- comments of a post can be viewed if the user clicks on the blog post and is taken to the blog detail page. Here the user can also add a comment, however, if they are not authenticated, they cannot add a comment. 
 
+- Initially i made a seperate view for the commenting functionality, however i deceided it would be better UX if the comment function could occur on the page of the blog post and not take users to a se[erate page. For this reason, i chose to use a modal, which would pop up when a user wrote a comment and when submitted, would simply reload the page, now displaying the users comment. 
+- In the future, if developing this site further, i would look into using AJAX requests, to give the user the ability to edit and delete their comments. 
 ## Profiles Page
 
 ### My Profile Page
