@@ -155,21 +155,23 @@ This image is created with [ami.responsivedesign]().
 
 ### UX Research 
 <!-- fill this in w/ updated stuff-->
-Initially, I had the idea to make an app which I would use in my career as a Personal Trainer, however, with the help of my wonderful [mentor](https://github.com/SinCron) I recognised that my emotional investment in the fruition of this project idea, was blocking my ability to see the importance of the functionality. It was also an idea, which required the user to already be aware of other such apps/ technology and was therefore not as accessible as the current idea I have run with. 
+In order for me to be bale to successfully meet both the user and business goals of this project, it was vital that i usnderstoof the wokr and mission of Juspreet Mahoon. 
+I was lucky to be presented with her work and findings and used her many social media posts and videos on youtube, to get a feel of the kind of oerson she was and the message she wanted to share with the world. 
 
-I went for a COVID test and in the booking stages, I was being asked about what symptoms I have had to make me think that I may have contracted the virus. 
+After learning about her, I then underwent some learning on the topics she is passionate about and would like to share across the site. 
+I am passionate about many of the same subjects; female health is of utmost concern to me, being a woman and female only pre and post natal specialising, personal trainer. I have a unique insght into the anatomical journey women experience. 
+I was able to bring this knowledge to the site. 
 
-This triggered my idea, I thought that the average person, may not be able to accurately track when they started experiencing symptoms and unless faced with a format that asked you the right questions, the person may not recognise the severity of their symptoms. 
+I used feedback from my clients on colour choices and read blogs about which colours and fonts would be most appealing to women. 
 
-I used the easy to understand the format of the [official gov- NHS site](https://www.gov.uk/get-coronavirus-test) and understood that user accessibility was of the utmost importance. 
 
 I knew that I wanted to create an app that would:
-- Relieve the average person of the task of remembering what exactly their symptoms were and when they developed. 
-- Provide a mechanism so that these symptoms could be updated/ deleted and created EASILY.
-- Ensure that my design would tell users that this site is for functional use, but also that this is a tool to hopefully serve for a good outcome. 
-- I was also adamant that I didn't want the site to be inundated with 'news' or 'information' forced upon the user. As we all know, the pandemic is a very emotional topic and causes unease for much of the population. 
+- Engage all women, not just women with a predetermined interest in the subjects discussed. 
+- Provide a community feel, whereby users could gain information and feel acknowledged. 
+- Encourage users to create a profile, so that they could gain the benefit of start discussions on the blog and also have their order information prefilled. 
+- Ensure that my design would tell users that this site is a safe space for women, but also that this is an educational tool to hopefully enlighten women with similar interests, or those who have no idea. 
 
-I based my simplistic functional aspect of the app on the module-[mini-project-task-application]() expertly delivered by [code Institute](). Everything in this project is entirely fictionally and all content was created by me. 
+I based the checkout profiles and store functionality of the app on the module-[mini-project-boutique-ado]() expertly delivered by [code Institute](). Everything in this project is entirely fictionally and all content was created by me. 
 
 
 
@@ -365,11 +367,49 @@ However ideally, if developing this site further, i would like to add 'title com
 
 - User model is provided as a default by [Django's authentication system](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/).
 
-## Data Modeling
+## Data Models
 
-Following is Entity Relationship Diagram of this project. I created this diagram with [dbdiagram.io](https://dbdiagram.io/home).
-When I designed this ERD, I referred to [this article](https://launchschool.com/books/sql/read/table_relationships). 
-<p align="center"><img src = "https://github.com/AsunaMasuda/FloweryDays/blob/master/readme_materials/Entity_Relationship_Diagrams.png?raw=true" width=900></p>
+#### User
+The user model utilised for this project is the standard model, provided by from django.contrib.auth.models 
+
+#### Products app model
+Within the products app, the <strong>Product</strong> model holds all the data necessary for the functionality of the store. The <strong>Category</strong> model, provides the categories for which the products depend on. 
+
+##### Category Model
+| Title | Key in db | Form validation type | Data type |
+-----  | ---  | --- | ---
+Category | name| max_length=254, null=True, blank=True| CharField
+Category | friendly_name  | max_length=254, null=True, blank=True| CharField
+
+
+##### Product Model
+
+
+| Title | Key in db | Form validation type | Data type |
+-----  | ---  | --- | ---
+
+
+[Example JSON from the users collection](/data/schemas/users.json)
+
+
+#### Symptoms Collection
+
+| Title | Key in db | Form validation type | Data type |
+--- | --- | --- | --- 
+Symptoms | _id | None | ObjectId 
+Isolation Status | isolation_status |select-dropdown, `required` | string
+Symptom | symptom_name | text, `required` | string
+Description | description | text, `required`| string
+Start date | start_date| datepicker | DateTime
+Mood | mood | text, `required` | string
+
+[Example JSON from the symptoms collection](/data/schemas/symptoms.json)
+
+#### Status Collection
+| Title | Key in db | Form validation type | Data type |
+--- | --- | --- | --- 
+Status | _id | None | ObjectId 
+Isolation Status | isolation_status | None | string
 
 # Bugs discovered
 
@@ -972,7 +1012,6 @@ class HomeView(ListView):
 
 
 ## Bug 10 add blog url not working, since slug implementation 
-- ![ url path error ](readme-materials/bug_screenshots/bug_9(g).png)
 I needed to change my blog detail page url from 
 ```
 urlpatterns = [
@@ -988,6 +1027,20 @@ urlpatterns = [
     path('new/', views.add_blog_post, name='add_blog_post'),
 ```
 The blog detail path, with just slug:slug, was throwing django off, because the value of slug is just words and no actual path. without detail / before the slug:slug, when a user would try to add a blog post, the url, was referrring to the above view/ url. i needed to distinguish them, so. i added the 'detail/'
+
+## Bug 11 sending email attempt rejected due to the region. 
+- After setting up amazon aws SES backend email functionality, I tested an email in the python shell. It did not work. 
+- ![ message rejected ](readme-materials/bug_screenshots/bug_10(a).png)
+- I had already verfied my email, so knew it wasnt that. 
+- ![ email verified ](readme-materials/bug_screenshots/bug_10(b).png)
+- After doing some research I found two other variables that were necessary in order for amazon to know the region I was in when sending the email. 
+- ![ added variables ](readme-materials/bug_screenshots/bug_10(c).png)
+- After changing these variables and restarting the testing process, i successfully recieved the message.
+- ![ email sent ](readme-materials/bug_screenshots/bug_10(d).png)
+- However, after reading the documentation around aws ses regions, i was aware that i needed to request to not be in a 'sandbox' that way i would be able to send emails to any email address (as opposed to solely the email address i had verified.)
+- To resove this issue, all i needed to do, was follow the given steps. 
+- ![ removal from sandbox](readme-materials/bug_screenshots/bug_10(e).png)
+
 ### Product App
 
 ### Order App
@@ -1211,6 +1264,7 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"
 - https://pythoncircle.com/post/703/using-if-else-condition-in-django-template/
 - https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi (blog)
 - https://learndjango.com/tutorials/django-slug-tutorial (slug)
+- https://github.com/jamesturk/django-honeypot (honeypot documentation)
 
 ### Acknowledgements
 - Thanks to: my Code Institute Mentor  advice throughout the development process.
