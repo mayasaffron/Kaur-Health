@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views.generic import ListView, DetailView
-from .models import BlogPost, Comment
+from .models import BlogPost
 from django.contrib.auth.models import User
 from django.contrib import messages
 from .forms import BlogPostForm, CommentForm
@@ -118,4 +118,3 @@ def delete_blog(request, pk):
     blog.delete()
     messages.success(request, f' "{blog.title}" has been deleted')
     return redirect(reverse('blog'))
-
