@@ -54,9 +54,9 @@
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'all_items' %}">Products and Services Home</a> | </span>
+                                <span class="small"><a href="{% url 'all_items' %}?category=natural_family_planning,female_health,skincare">Products and Services Home</a> | </span>
                             {% elif search_term or current_categories or current_sorting == 'None_None' %}
-                                <span class="small"><a href="{% url 'all_items' %}">Products and Services Home</a> | </span>
+                                <span class="small"><a href="{% url 'all_items' %}?category=natural_family_planning,female_health,skincare">Products and Services Home</a> | </span>
                             {% endif %}
                             {{ product_count }} Products {% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                             {{ service_count }} Services {% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}

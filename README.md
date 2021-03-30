@@ -209,10 +209,7 @@ Logo design is the cornerstone in your brand identity and presents a company's n
 # Features
 
 ## Existing Features
-This website is composed of 6 applications: `home`, `blog`, `cart`, `checkout`, `products`, `services`, `profiles`.
-
-## Landing Page
-Landing Page is designed as a single page website to provide site visitors with all the information they need, in one place! This pages content consists of; an explanation of who juspreet is and the brand kaur health, Juspreets areas of expertise, testimonies about each of these areas and a call to action to drop her a line on the contact form. This is to let the site visitors take next actions. The page has a `Navbar` and consists of the following sections; `About`, `info on specialisms` and `testimonies`. 
+This website is composed of 6 applications: `home`, `blog`, `checkout`, `products_and_services`, `bag`, `profiles`. There is a static navbar and footer throughout the site. 
 
 ### Navbar
 Navbar is fixed at the top of pages across the site, so that the site visitors easily navigate the whole site.  Navbar contains  `Brand Logo`, `Search Box`, `Site Menu`, `My Account dropdown` and `Cart icon`.
@@ -222,7 +219,7 @@ Navbar is fixed at the top of pages across the site, so that the site visitors e
 <br>
 !['blood' in description](readme_materials/logic_screenshots/search-logic(2).png)
 <br>
-I chose this logic because, the nature of the tooics on this site, mean that there is likley to be some overlap in name and description of products and services and category that a particular item falls into. 
+I chose this logic because, the nature of the topics on this site, mean that there is likley to be some overlap in name and description of products and services and category that a particular item falls into. 
 
 
 - Site Menu & My Account dropdown: The site menu collapses to toggle icon less than 992px width. My Account dropdown is included to toggle menu for smaller screen.
@@ -238,38 +235,66 @@ Navbar for smaller screensizes (width < 992px)
 Navbar for authenticated users
 <div align="center"><img src = "" width=900></div>
 
-
-
-
-### About me
-`About me` section explains who Juspreet is to the site visitor.
-
-### info on specialisms
-`info on specialisms` section showcases Juspreets areas of expertise, i provide 3 cards each with a picture and body, comprising of a title and expalanation. 
-This is to give the site visitor an insight into the nature and scope of Juspreets work. i was tempted to make the text show up on hover, however, i was aware that on smaller dervices this can be difficult to function and also, lilkely to cause bugs and dely which is bad ux. i deceided to simply have cards with and images and body. i have learnt through this experience that its important to remember, KISS!!
-
-### Testimonial
-`Testimonies ` section has a carousel of 3 testimonies, one from each area of exepertise. Testimonials can contribute to building the trust of potential customers and also explain the benefits of your products or services.
-
 ### Footer
 The footer section is just links to Social Media with their icons. In this milestone project, Social Media icons are linked to Juspreets personal social media accounts, as her brand is consistent on her social media.
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
-## Product and services Page
-### Online Shop Page
-By clicking 'products and services' on the site menu, you are given a dropdown to the different categories of profucts and services and an option for all products and services. I thought that the dropdown would provide better user experience than a direct link, which takes you to a page where you then have to sift through the categores that you are interested in. The nature of this site, is such that, as a user you are prpbably well aware of what you are looking and therefore which category to find it. Or, if you are new to the sites content, i felt it would be less overwhelming if you have some filtering control and could navigate to the category you were most interested in. 
-By doing this I satisfy the ease of navihation in my user stories and adhere to my wireframes. Initially I had planned to have a sorting tab and functionlaity on the left side of the page, where the user could filter to the category they were interested in, however this way is more effeicient. 
 
-- when a user chooses a catrgory from the dropdown, when clicked, they arrive on a page with product at the top and services beneath. there is also and products and service count, which shows jsers how many of each there are in this category. 
+## Landing Page
+Landing Page is designed as a single page website to provide site visitors with all the information they need, in one place! The page has a `Navbar` and consists of the following sections; `About`, `info on specialisms` and `testimonies`. 
 
-- Product Card: The products are displayed in cards that have `Product/ Service Name`, `Price`, `rating`. When the product image is pressed, the user will be taken to the respective detail page and have the option to continue shopping, or add this item, with a chosen quantity to their bag. If the user is logged in as a superuser, Update / Delete option is also shown on each card.
+### About me
+`About me` section explains who Juspreet is and the brand kaur health to the site visitor.
 
+### info on specialisms
+`info on specialisms` section showcases Juspreets areas of expertise.
+I provide 3 cards each with a picture and body, comprising of a title and expalanation. 
+This is to give the site visitor an insight into the nature and scope of Juspreets work. I was tempted to make the text show up on hover, however, I was aware that on smaller dervices this can be difficult to function and also, likely to cause bugs and delay which is bad ux. I deceided to simply have cards with and images and body. I have learnt through this experience that its important to remember, KISS!!
+
+### Testimonial
+`Testimonies ` section has a carousel of 3 testimonies, one from each area of exepertise. Testimonials can contribute to building the trust of potential customers and also explain the benefits of your products or services. Users can click forward and backward on the testimonies. 
+
+
+## Product and services App
+
+### Products and services 
+
+When a user clicks on ` Product and services ` dropdown nav bar option, you are given a dropdown to the different categories of the products and services. I thought that the dropdown would provide better user experience than a direct link, which takes you to a page where you then have to sift through the categores that you are interested in. The nature of this site, is such that, as a user you are prpbably well aware of what you are looking and therefore which category to find it. Or, if you are new to the sites content, i felt it would be less overwhelming if you have some filtering control and could navigate to the category you were most interested in. 
+By doing this I satisfy the ease of navihation in my user stories and adhere to my wireframes. 
+![ The dropdown distinguishes the products and services by category ](readme_materials/logic_screenshots/navbar_dropdown(products).png)
+
+After clicking on your chosen category, all of the products and services under this category, will be displayed. The category name will appear just beneath the consistent title of 'products and services' and there is a banner just above the title, with the free delivery minimum spend. 
+# picture? 
+In the top left corner the user will see a link to `Products and services home` which when clicked will take them to the `all products and services page `, here all of the categories will be clickable links beneath the title, so that a user can navigate to the other categories from here as well/ instead of the navbar dropdown.
+Beside the `Products and services home` there is a product and service count, outlining how many products and how many services belong to this category. 
+Originally I toyed with the idea of having the product and service count clickable links and sectioning the page so that the user would be taken to a products section if they clicked the product count link to 'products' and the same for services. However, this proved to be bad UI, as when and if the user chose to sort the products, the sections would make things very messy and hard to contain. 
+
+I opted to distinguish services from products in a few ways;
+1) Adding a consistent banner in each of the services' descriptions # picture
+2) When a service is added to the users bag, the success message will clearly state that the user has just added a service and should read the terms and conditions carefully. 
+3) On the order receipt, I have again stated, which of the items are services and that the user should therefore read the terms and conditions. 
+
+# picture? 
+After clicking any of the products and services dropdown options, the user can use the sorting function on the top right of the page to sort through the products on the page, however they desire. Initially I had planned to include category sorting in this tab, however, since the dropdown options are filtered by category, this was already satisfied.
+# picture?
+
+The products are displayed in cards that have `Product/ Service Name`, `Image`, `Category` `Price`, `rating`. As mentioned above, the product card format, ever so slightly differs if the product is a service. 
 Product Card for products
 <div align="center"><img src = "" width=500></div>
 
-Product Card for services
-<div align="center"><img src = "" width=250></div>
+### Product detail
+When the product image is pressed, the user will be taken to the respective detail page and have the option to continue shopping, or add this item, with a chosen quantity to their bag. If the user is logged in as a superuser, Update / Delete option is also shown on each card.
+# picture?
+
+### Adding product to bag (this functionality takes the user from the products and services app to the checkout app)
+When a user adds an item to the bag a success message appears in the top right corner. 
+success_message(add_product_to_bag).png
+the message gives a product and service count of the items in the bag, a small picture of the items and their quantity, it also has a slightly different message if a service is added. 
+success_message(add_service_to_bag).png
+By using these messages i am satisfying x in mhy user story. 
+
+## Checkout App
 
 - Pagination Bar: unnecessary here..
 
@@ -372,7 +397,7 @@ However ideally, if developing this site further, i would like to add 'title com
 #### User
 The user model utilised for this project is the standard model, provided by from django.contrib.auth.models 
 
-#### Products app model
+#### Products app models
 Within the products app, the <strong>Product</strong> model holds all the data necessary for the functionality of the store. The <strong>Category</strong> model, provides the categories for which the products depend on. 
 
 ##### Category Model
@@ -387,29 +412,83 @@ Category | friendly_name  | max_length=254, null=True, blank=True| CharField
 
 | Title | Key in db | Form validation type | Data type |
 -----  | ---  | --- | ---
+Category | friendly_name | null=True,blank=True, on_delete=models.SET_NULL | ForeignKey 
+Service | service_category | default=False, null=False, blank=True | BooleanField     
+Product | name | max_length=254 | CharField
+Description | description | none | TextField
+Price | price | max_digits=6, decimal_places=2 | DecimalField 
+Rating | rating | max_digits=6, decimal_places=2, null=True, blank=True | DecimalField
+Product image | product_image | null=False, blank=True | ImageField
 
+#### Checkout app models
+Within the checkout app, the <strong>Order</strong> model holds all the data of the users' order. The <strong>OrderLineItem</strong> model, mainly extracts data from the order model, to get the order number, but also returns the user on the front end the information about each individual product. 
 
-[Example JSON from the users collection](/data/schemas/users.json)
-
-
-#### Symptoms Collection
-
+##### Order Model
 | Title | Key in db | Form validation type | Data type |
---- | --- | --- | --- 
-Symptoms | _id | None | ObjectId 
-Isolation Status | isolation_status |select-dropdown, `required` | string
-Symptom | symptom_name | text, `required` | string
-Description | description | text, `required`| string
-Start date | start_date| datepicker | DateTime
-Mood | mood | text, `required` | string
+-----  | ---  | --- | ---
+Order number | order_number| max_length=32, null=False, editable=False| CharField
+User | user_profile  | on_delete=models.SET_NULL,null=True, blank=True, related_name='orders'| ForeignKey
+Full name | full_name | max_length=50, null=False, blank=False | CharField
+Email | email | max_length=254, null=False, blank=False | EmailField
+Phone number | phone_number | max_length=20, null=False, blank=False | CharField
+Country | country | blank_label='Country *', null=False, blank=False | CountryField
+Postcode | postcode | max_length=20, null=True, blank=True| CharField
+Town or city | town_or_city | max_length=40, null=True, blank=True | CharField
+Street address1 | street_address1 | max_length=80, null=True, blank=True | CharField
+Street address2 | street_address2 | max_length=80, null=True, blank=True | CharField
+County | county | max_length=80, null=True, blank=True | CharField
+Date | date | auto_now_add=True | DateTimeField
+Delivery cost | delivery_cost | max_digits=6,decimal_places=2, null=False, default=0 | DecimalField
+Order total | order_total | max_digits=10,decimal_places=2, null=False, default=0 | DecimalField
+Grand total | grand_total | max_digits=10,decimal_places=2, null=False, default=0 | DecimalField
+Original bag | original_bag | null=False, blank=False, default='' | TextField
+Stripe pid | stripe_pid | max_length=254, blank=False, default='' | CharField
 
-[Example JSON from the symptoms collection](/data/schemas/symptoms.json)
-
-#### Status Collection
+##### OrderLineItem Model
 | Title | Key in db | Form validation type | Data type |
---- | --- | --- | --- 
-Status | _id | None | ObjectId 
-Isolation Status | isolation_status | None | string
+-----  | ---  | --- | ---
+Order | order | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' | ForeignKey
+Product | product | null=False, blank=False, on_delete=models.CASCADE | ForeignKey
+Quantity | quantity | null=False, blank=False, default=0 | IntegerField
+Total | lineitem_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=False | DecimalField
+
+#### Blog app models
+Within the Blog app, the <strong>BlogPost</strong> model provides the structure for the blog posts. The <strong>Comment</strong> model, provides the structure necessary for users to comment on blog posts. 
+
+##### BlogPost Model
+| Title | Key in db | Form validation type | Data type |
+-----  | ---  | --- | ---
+Title | title | max_length=254 | CharField
+Date | date | auto_now_add=True, null=True, blank=True | DateTimeField
+Slug | slug | max_length=254, null=False, unique=True | SlugField
+Author | author | on_delete=models.CASCADE | ForeignKey
+Category | category | null=True,blank=True, on_delete=models.SET_NULL | ForeignKey 
+Body | body | none | TextField
+Image | blog_image | null=False, blank=True| ImageField
+
+##### Comment Model
+| Title | Key in db | Form validation type | Data type |
+-----  | ---  | --- | ---
+Comment | post_comment related_name="comments", on_delete=models.CASCADE | ForeignKey
+Body | body | none | TextField
+Name | name | max_length=254 | CharField
+Date | date | auto_now_add=True, null=True, blank=True | DateTimeField
+
+
+#### Profile app model
+Within the profile app, the <strong>UserProfile</strong> model holds all the data necessary for the user to have a prefilled order form, if they create a profile. This saves them time and energy, when checking out. 
+##### UserProfile Model
+| Title | Key in db | Form validation type | Data type |
+-----  | ---  | --- | ---
+User | user | on_delete=models.CASCADE | OneToOneField
+Full name | full_name | max_length=50, null=False, blank=False | CharField
+Phone number | default_phone_number | max_length=20, null=False, blank=False | CharField
+Country | default_country | blank_label='Country *', null=False, blank=False | CountryField
+Postcode | default_postcode | max_length=20, null=True, blank=True| CharField
+Town or city | default_town_or_city | max_length=40, null=True, blank=True | CharField
+Street address1 | default_street_address1 | max_length=80, null=True, blank=True | CharField
+Street address2 | default_street_address2 | max_length=80, null=True, blank=True | CharField
+County | default_county | max_length=80, null=True, blank=True | CharField
 
 # Bugs discovered
 
