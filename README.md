@@ -283,78 +283,92 @@ The products are displayed in cards that have `Product/ Service Name`, `Image`, 
 Product Card for products
 <div align="center"><img src = "" width=500></div>
 
-### Product detail
-When the product image is pressed, the user will be taken to the respective detail page and have the option to continue shopping, or add this item, with a chosen quantity to their bag. If the user is logged in as a superuser, Update / Delete option is also shown on each card.
-# picture?
+- Pagination Bar: Unnecessary for this site currently, however I would add this as kaur health grew as a brand and had more products on offer. 
 
-### Adding product to bag (this functionality takes the user from the products and services app to the checkout app)
+### Product detail
+When the product image is pressed, the user will be taken to the respective detail page and have the option to continue shopping, or add this item, with a chosen quantity to their bag. 
+# picture?
+As mentioned above, if the product is a service, it has a small banner in the decsription explaining that this is a service and therefore there are different terms and conditions. In the future i would potentially add a modal pop up box here so that users wuld have to scroll to the bottom of the terms and condiotons before adding to the service to their bag. Howver, for the sake of time, i decided against this, as i ran into enough compications with basic functionality! 
+
+## Admin Product Managment
+If the user is logged in as a superuser, Update / Delete option is also shown on each card.
+#picture
+
+### Adding product to bag (this functionality takes the user from the products and services app to the bag app)
 When a user adds an item to the bag a success message appears in the top right corner. 
 success_message(add_product_to_bag).png
 the message gives a product and service count of the items in the bag, a small picture of the items and their quantity, it also has a slightly different message if a service is added. 
 success_message(add_service_to_bag).png
-By using these messages i am satisfying x in mhy user story. 
+By using these messages i am satisfying x in my user story. 
 
-## Checkout App
+## Bag App
 
-- Pagination Bar: unnecessary here..
-
-
-
-
-### Product Detail Page
-
-The product detail, simply outlines more detail about the product. If the product is a service, it has a small banner in the decsription explaining that this is a service and therefore there are different terms and conditions. In the future i would potentially add a modal pop up box here so that users wuld have to scroll to the bottom of the terms and condiotons before adding to the service to their bag. Howver, for the sake of time, i decided against this, as i ran into enough compications with basic functionality! 
-
-
-## Cart Page
 This page is simple, it outlines the products'; picture, name, price, quantity and the subtotal. I liked the idea of the items being clear and readable. This also satisfied 
 | Site User | Easily select the quantity (if applicable) of a product after adding a product to a cart | Ensure I don't accidentally select the wrong product and the quantity | 
 this user story, by being clear and readable, there was less risk of the above occuring. 
 
-<div align="center"><img src = "" width=700></div>
+When in the bag, the user can <strong>update the quantity of their products</strong>, <strong>remove a product entirely</strong> and choose to either <strong>continue shopping</strong> or <strong>checkout</strong>. 
+#picture 
+There are success/ alert messages to update user of each eventuality. Again this is satisfying x in my user stories. 
+If the user chooses to checkout, they will be using the backend logic and functionality, created in the checkout app. However, if they choose to continue shopping, they will be taken back to all the products and services and can navigate via category to the category of items, in which they are interested in. 
 
-## Checkout Page
-### Checkout Page
+## Checkout App
+
+When clicking the 'checkout option' the user is taken to a page displaying an empty order form on the left, needing to be completed and a summary of their order on the right. This is more feedback to the user and an opportunity for them to make any adjustments to their shopping bag. 
+If the user is logged in, beneath the form, there will be a checked option to save the info to their profile. 
 this page satisfys 
 | Site User | Have my delivery information is prefilled if logged in | Smoothly proceed with my purchase | 
 | Site User | Be reminded to log in if I did not log in | Smoothly proceed with my purchase and prefilled form |
+#picture 
+If they keep the box ticked, the delivery information will appear prefilled on their profile page. 
+#picture 
+When a order has gone through successfully, the user will be redirected to the checkout success page. Here they will have a summary of their order (which calls on the order line item models logic) a message to confirm that their order has gone through and an option to keep shopping. Their bag will now appear empty too. 
 
-It also shows the order in the right hand side of the screen. This was more feedback to the user and an opportunity for them to make any adjustments to their shopping bag. 
+## profile app 
 
-### Checkout Success Page
+The profile app is just the users delivery information on the left and a history of their orders on the right. 
+Users can update their details on their profile, this means the details will be updated for when the user carries out their next order. 
+#picture 
+The profile app can be accessed through the account option on the navbar. 
+#picture 
 
+## Blog app 
 
-<div><a href="#table-of-contents">Back to top</a></div>
+The blogs are available for any site visitor to browse, however only logged in users can write a blog.
+#picture 
+If you are logged in, you will have the option to view just your blog posts. If you are logged in, you will see a links to edit and delete your blog posts if you are looking at them on the all blogs page/ your blogs page and on the blog detail page.
+#picture
+You will be able to perform these functions if you are logged in.
+#picture
+If you are not logged in, you can view all the blog posts and then click on them and be taken to the blog detail page. 
 
-## Contact Page
-- Initially i had an entire contat app, however after seeing the limited functionality and processes involved, i thought it may be more logical to add the contact functionality into the home app.
-- i used the honeypot package to ward against bots, honeypot cleverly provides an extra, fake field for site owners to use somehwere within their form. When their site is stumbled upon, by a bot, the bot will make no distinction and fill the field in, regardless of the hints that they shouldnt! 
-- I decided to send two emails from the contavct view, one for the site owner, to recieve the contact form and the other for the user, to receive a confirmation email with a copy of their message. 
-- As i will only ever be sending a total of two emails from this view, it is not necessary, howevre if i was to develop this aspect more and send more than two emails from this view, i would opt to use the send mass mail wrapper from the django.core.mail module.
-- for the backend wiring up, i dcided to use aws email, as opposoised to gmail. I thought it made more sense as we are using aws to collect the static files etc. 
-
-## Blog Page
-### Blog Feed Page
-
-
-### Blog Post Detail Page
-
-
-<div align="center"><img src = ""></div>
-
-### Add/Edit Blog
-- 
 ### comment on  Blog
+
 - comments of a post can be viewed if the user clicks on the blog post and is taken to the blog detail page. Here the user can also add a comment, however, if they are not authenticated, they cannot add a comment. 
 
 - Initially i made a seperate view for the commenting functionality, however i deceided it would be better UX if the comment function could occur on the page of the blog post and not take users to a se[erate page. For this reason, i chose to use a modal, which would pop up when a user wrote a comment and when submitted, would simply reload the page, now displaying the users comment. 
 - In the future, if developing this site further, i would look into using AJAX requests, to give the user the ability to edit and delete their comments. 
-## Profiles Page
+You will see the comments that other users have left on the blog you are looking at, you will also find a link to leave a comment, however, if you are not logged in, you will not be able to make a comment and will be notified with a message. 
+#picture
+I thought it was better UX for the edit and delete buttons to only be visible to a user if they are logged in, as it would otherwsise be misleading. However, I decided to have the 'make a comment' links visible to all site visitors, because when the none authenticated user attempts to make a comment, they may be more inclined to create a profile, for the prupose of being able to complete this action. This would in turn, build on the community and discussion aspect of the site - satisfying x in the user stories.
+If you are logged in and want to comment on a blog post, you can do so after clicking on the link and completing the comment form, in the modal.
+#picture
+I thought the use of a modal, for comment functionality was good UX, the nature of a comment is that it is fast and on topic, i worried that if the commenting functionality, meant that users needede to leave the page they were currently visiting, so that they could leave their on topic comment, it would ruin the flow of a users experience. 
+#picture
 
-### My Profile Page
+## contact
+
+I thought it was necessary for a site like this to have a contact form, Kaur health is multi faceted and relies on the openess of site visitors. I felt that if i didnt include a contavt form, I would lose the opportunity to create a rapport between Kaur health and the user. I feel it helps to satisfy x in the user stories. 
+The contact form is very simple and lives in the home app. 
+When a user sends a message via the form, they will be taken to a reponse page, see a success message and recieve a copy of the message they sent! I felt this was a personal and 'extra-mile' feature, again leading to users feeeling acknowledged, which in turn helps build community and rapportt, satisfying x
+#picture. 
+To protect the site owner, I used a honeypot field, designed to catch and prohibit spam mail from bots. A honeypot field is a field that is hidden on your contavt form, that a bot will not be anble to distinguish. When they try to fill it out, they will reach the error page and their spam mail will not be sent! I could also use the honeypot admin functionality, which offers increased security and definsive programming. Anyone with minor developer exeprience will know that you just need to change a sites url and add admin to the end of the url to accesss the admin page. From there it would be easy to hack your way into the sites admin and cause some damage! To protect against this, honeypot admin, allows site owners to create a new admin area, whilst also providing a 'fake' admin area for bots/ hackers to attempt to login to! You will also be notified, how many login attempts there have been, so that you can guage whether this feature is fitting for your site or if you need to take extra measures to protect yourself.
+#picture
+I will definitely be using honeypot fields and honeypot admin functionality in the future, however for this project i felt that the honeypot field alone, would suffice. 
+- As i will only ever be sending a total of two emails from this view, it is not necessary, howevre if i was to develop this aspect more and send more than two emails from this view, i would opt to use the send mass mail wrapper from the django.core.mail module.
+- for the backend wiring up, i dcided to use aws email, as opposoised to gmail. I thought it made more sense as we are using aws to collect the static files etc. 
 
 
-## Admin Product Managment
 
 ## Django-allauth features
 Base template for allauth has `Back to Home` button at the end of the page, for easy navigation for users.
@@ -366,9 +380,10 @@ Base template for allauth has `Back to Home` button at the end of the page, for 
 <div><a href="#table-of-contents">Back to top</a></div>
 
 ## Features Left to Implement
-When a user tries to add blog post, currently due to the slug, I have put some defensive programming so that if a user tries to add a post, with an exisiting blog posts name, they will get an errro message. 
+- When a user tries to add blog post, currently due to the slug, I have put some defensive programming so that if a user tries to add a post, with an exisiting blog posts name, they will get an errro message. 
 However ideally, if developing this site further, i would like to add 'title comparison/ checks' to the form validatioon, or use AJAX to esssntially check the title as the user types it and pause them there, if the title is preexitisng. 
-
+- Honeypot admin
+- AJAX requests for the user to update and make blog posts in the page as opposed to in seperate pages. 
 
 ## Defensive Design
 ### Error views (404 and 500 error)
@@ -377,10 +392,6 @@ However ideally, if developing this site further, i would like to add 'title com
 ### Form Validation
 - Django Form Validation
 
-### Product Quantity Counter Validation
-
-
-<div><a href="#table-of-contents">Back to top</a></div>
 
 # Information Architecture
 ## Database choice
@@ -1344,6 +1355,7 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"
 - https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi (blog)
 - https://learndjango.com/tutorials/django-slug-tutorial (slug)
 - https://github.com/jamesturk/django-honeypot (honeypot documentation)
+- https://medium.com/hackernoon/the-easiest-way-to-send-emails-with-django-using-ses-from-aws-62f3d3d33efd (amazon ses)
 
 ### Acknowledgements
 - Thanks to: my Code Institute Mentor  advice throughout the development process.
