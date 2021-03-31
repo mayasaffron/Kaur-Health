@@ -1,1 +1,1 @@
-web: gunicorn kaur_health.wsgi.application'
+web: gunicorn kaur_health.wsgi.application
