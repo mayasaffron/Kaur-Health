@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -110,8 +111,6 @@ SITE_ID = 1
 
 # sending and recieving emails
 EMAIL_BACKEND = 'django_ses.SESBackend'
-AWS_ACCESS_KEY_ID = 'AKIAX7XFQK4HQGKKB4XL'
-AWS_SECRET_ACCESS_KEY = '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'
 DEFAULT_FROM_EMAIL = 'mayasaffronhan@gmail.com'
 AWS_SES_REGION_NAME = 'eu-west-2'
 AWS_SES_REGION_ENDPOINT = 'email.eu-west-2.amazonaws.com'
@@ -145,7 +144,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
