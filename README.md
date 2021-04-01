@@ -1131,6 +1131,23 @@ The blog detail path, with just slug:slug, was throwing django off, because the 
 - To resove this issue, all i needed to do, was follow the given steps. 
 - ![ removal from sandbox](readme-materials/bug_screenshots/bug_10(e).png)
 
+## Bug 12 Deployment errors 
+solution: update aws keys, add static root.
+- As I already set up a user so that I could access the amazon aws SES email functoionality, I had some confusion over which aws settings to add. 
+- When I began deployment, I got the user I had made for the email purpose ( which was not in a group ), looked at the permissions of the user, and simply added that permission to the user in the group in my bucket. 
+- ![ added permission to group user ](readme-materials/bug_screenshots/bug_12(a).png)
+- When i tried to deploy i got a few errors, one being an unrecognised AWS_ACCESS_KEY_ID. This made sense because, the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY in my heroku and env settings, were that of the user I had now deleted. 
+- ![ AWS_ACCESS_KEY_ID error ](readme-materials/bug_screenshots/bug_12(a).png)
+- I ran the deployment again and got another error, this time about the static root.
+- ![ STATIC ROOT error ](readme-materials/bug_screenshots/bug_12(c).png)
+- I did some research and read [ this ](https://docs.djangoproject.com/en/dev/ref/settings/#static-root) and added 
+```
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+```
+to my settings.py file. when setting your static root, a common mistake is setting the name to 'static' however, this will throw an error as 'static' will refer to your 'STATICFILES_DIRS' variable. 
+After changing these varibales, i successfully deployed. 
+On reflection, I will insure that with future projects I deploy a lot earlier into the journey than I have with this project. Although I am still not quite finished and it is a weight off my shoulders, it would have been even better to iron out these issues and learn about things like the static roote varibale , even eaelier in the project. 
+
 ### Product App
 
 ### Order App
