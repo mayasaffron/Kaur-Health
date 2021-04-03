@@ -154,15 +154,16 @@ This image is created with [ami.responsivedesign]().
 ## UX Design process
 
 ### UX Research 
-<!-- fill this in w/ updated stuff-->
-In order for me to be bale to successfully meet both the user and business goals of this project, it was vital that i usnderstoof the wokr and mission of Juspreet Mahoon. 
+
+In order for me to be able to successfully meet both the user and business goals of this project, it was vital that i usnderstoof the wokr and mission of Juspreet Mahoon. 
 I was lucky to be presented with her work and findings and used her many social media posts and videos on youtube, to get a feel of the kind of oerson she was and the message she wanted to share with the world. 
 
 After learning about her, I then underwent some learning on the topics she is passionate about and would like to share across the site. 
 I am passionate about many of the same subjects; female health is of utmost concern to me, being a woman and female only pre and post natal specialising, personal trainer. I have a unique insght into the anatomical journey women experience. 
 I was able to bring this knowledge to the site. 
 
-I used feedback from my clients on colour choices and read blogs about which colours and fonts would be most appealing to women. 
+I scoured the internet for other sites with similar target audiences, brand messages and tone of voice, to get an idea of a good colour scheme, [this](https://www.healthline.com/health/best-womens-health-blogs) blog proved very helpful. 
+ feedback from my clients on colour choices and read blogs about which colours and fonts would be most appealing to women. 
 
 
 I knew that I wanted to create an app that would:
@@ -179,32 +180,40 @@ I based the checkout profiles and store functionality of the app on the module-[
 ### Wireframes
 Wireframes were created with [balsamiq](https://balsamiq.com/) 
 
-You can find the wireframes [here]()
+You can find the wireframes [here](https://github.com/mayasaffron/Kaur-Health/blob/master/wireframes.md)
 
 ### Brand Identity
 - Vision: Aesthetically pleasing, none pretentious site, empowering people who are in search of Kaur Health's services or curious about them.  
 - Mission: Provide clients with support on intuitive eating, menstruation, skincare and natural family planning, not jus in the UK, but worldwide. Use the site as a mechanism to bring conversations on these topics to the forefront of society and eventually use the site to host virtual consultations, webinars etc. Doing everything possoible, to minimise the distance between the user/ client and saccess to this valuable information. 
-- Values: 1. Female Health - Improving a womans understanding of her bodyily functions and how they relate to her fertility, menstrual cycle, physical appearance and ultimately mental health. 2. 
+- Values: 
+1. Female Health - Improving a womans understanding of her bodyily functions and how they relate to her fertility, menstrual cycle, physical appearance and ultimately mental health. 
+2. Natural is best - Whilst we are so very lucky to live in a time of technological and pharmaceutical progression, it is important that we remain as natural as possible with what we consume for bodily health. This stretches from natural fertility management to chemical free skincare.
+3. Imperfection is reality - kaur health does not exist to shame or judge people for their choices, rather inform people so that they have all the information when they go to make thier choices. 
+4. The future is female - It is time for us to be counted and regarded in all spheres, especially reproductively. 
 
 ### Color Scheme
-Color scheme is important as this is one of the first things site visitors notice when visiting the site. I chose persian indigo and avacado for the site's primary colors because these colors are bold and strong, not typically 'female' but statistically, very inticing for women . In addition to that, for the secondary colors of the site, I wanted to create a balance of bold to calm, whilst providing continuity in the colours too . For the secondary colour i chose medium slate blue. I used [Coolors.co](https://coolors.co/) to create a color pallet, which you can find below.
+
+Color scheme is important as this is one of the first things site visitors notice when visiting the site. In the research phase of the designing process, i noticed that most of the blogs listed in [this](https://www.healthline.com/health/best-womens-health-blogs) list, used purples, pinks and white. 
+However, I couldnt find a site which was also an ecommerce store, so for better UI, I decided to use pink, purples and white and black. 
+When you have a site which offers a community aspect and ecommerce functionality, it is important to have a balance with the aesthetic. 
+The pink and purples would be inviting and representative of the nature of the site, whilst the black and white are neutral and profesional, indicating the presence of the store.
+
+I chose persian indigo and avacado for the site's primary colors because these colors are bold and strong, not typically 'female' but statistically, very inticing for women . In addition to that, for the secondary colors of the site, I wanted to create a balance of bold to calm, whilst providing continuity in the colours too . For the secondary colour i chose medium slate blue. I used [Coolors.co](https://coolors.co/) to create a color pallet, which you can find below.
 
 [This article](https://neilpatel.com/blog/psychology-of-color-and-conversions/) explained the importance of recognising the effect of colurs on your audiences mood. the article explains that "35% of women said blue was their favorite color, followed by purple (23%) and green (14%). 33% of women confessed that orange was their least favorite color, followed by brown (33%) and gray (17%)." as the content of this site will appeal mainly to women, i decided i needed colours that would be most inviting to them. 
 
-[This pallet] ()
-totally enages and appeals to women, whilst not being sterotypically 'girly and therefore offputtting to men! 
+![This pallet] (readme_materials/wireframes/kaur-health-palette.png)
+totally enages and appeals to women, however the 'english violet' stops the entire palette being sterotypically 'girly' and therefore offputtting to men! 
 
 ### Typography
-To reflect the kaur Helath's brand identity, the typeface chosen for main headings was Mulish, (formerly known as Muli) and I coupled this with Nunito for the body text, both of these fonts fall under the sans serif family. I chose this duo, after doing some research and realising that I needed the font to reflect; strength; empowerment; practicality and most importantly readability. Due to the nature of the sites content, being quite woman centric, i was tempted to select a playful font, such as Oleo script, however i decided this woud take away from the profesional feel i was aiming to achieve. [This article]("https://piktochart.com/blog/fonts-and-colors/#:~:text=For%20subheadings%20and%20body%20text,partially%20for%20titles%20or%20headlines") by Natasya Sunarto was very insightful, as it compared a range of industries and i was able to work out where Kaur Health fits within the examples and make an informed decision about which typeface would be most fitting. 
+To reflect the kaur Health's brand identity, the typeface chosen for main headings was Mulish, (formerly known as Muli) and I coupled this with Nunito for the body text, both of these fonts fall under the sans serif family. I chose this duo, after doing some research and realising that I needed the font to reflect; strength; empowerment; practicality and most importantly readability. Due to the nature of the sites content, being quite woman centric, i was tempted to select a playful font, such as Oleo script, however i decided this woud take away from the profesional feel i was aiming to achieve. [This article]("https://piktochart.com/blog/fonts-and-colors/#:~:text=For%20subheadings%20and%20body%20text,partially%20for%20titles%20or%20headlines") by Natasya Sunarto was very insightful, as it compared a range of industries and i was able to work out where Kaur Health fits within the examples and make an informed decision about which typeface would be most fitting. 
 
-- Icon: [kaur Health]() is used for the main icon library accross the site.
+- Icon: [kaur Health](readme_materials/wireframes/logo.jpg) is used for the main icon library accross the site.
 - Favicon: I got the favicon by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/).
 
 ### Brand Logo
-Logo design is the cornerstone in your brand identity and presents a company's name, product and brand. I consulted with Juspreet to capture a balance of vision mission and culture, used []( to create the brand logo file. The font represents the brand value `x` and the image of x was added to represent `x` brand value.
+Logo design is the cornerstone in your brand identity and presents a company's name, product and brand. Juspreet presented me with this logo, she felt it successfully captured a balance of vision mission and culture. The colour speak to the first brand value; female health, various shades of pink are globally used to indicate 'female' anatomy and topics. Whilst Kaur health does not want women to fell bound by 'the global norm', it was important that we recognised how we could immediately grab the attention of female identifying people. The logo font represents the final brand value, women are a force, strong and unwaivering! Finally, the subtle image of the leaf, speaks to the second barand value, nature!
 
-
-<div "text-align: right;"><a href="#table-of-contents">Back to top</a></div>
 
 # Features
 
@@ -245,129 +254,104 @@ The footer section is just links to Social Media with their icons. In this miles
 Landing Page is designed as a single page website to provide site visitors with all the information they need, in one place! The page has a `Navbar` and consists of the following sections; `About`, `info on specialisms` and `testimonies`. 
 
 ### About me
-`About me` section explains who Juspreet is and the brand kaur health to the site visitor.
+- `About me` section explains who Juspreet is and the brand kaur health to the site visitor.
 
-### info on specialisms
-`info on specialisms` section showcases Juspreets areas of expertise.
-I provide 3 cards each with a picture and body, comprising of a title and expalanation. 
-This is to give the site visitor an insight into the nature and scope of Juspreets work. I was tempted to make the text show up on hover, however, I was aware that on smaller dervices this can be difficult to function and also, likely to cause bugs and delay which is bad ux. I deceided to simply have cards with and images and body. I have learnt through this experience that its important to remember, KISS!!
+### Info on specialisms
+- `info on specialisms` section showcases Juspreets areas of expertise.
+- I provide 3 cards each with a picture and body, comprising of a title and expalanation. This is to give the site visitor an insight into the nature and scope of Juspreets work. I was tempted to make the text show up on hover, however, I was aware that on smaller dervices this can be difficult to function and also, likely to cause bugs and delay which is bad ux. I deceided to simply have cards with and images and body. I have learnt through this experience that its important to remember, KISS!!
 
-### Testimonial
-`Testimonies ` section has a carousel of 3 testimonies, one from each area of exepertise. Testimonials can contribute to building the trust of potential customers and also explain the benefits of your products or services. Users can click forward and backward on the testimonies. 
+### Testimonials
+- `Testimonies ` section has a carousel of 3 testimonies, one from each area of exepertise. Testimonials can contribute to building the trust of potential customers and also explain the benefits of your products or services. Users can click forward and backward on the testimonies. 
 
 
 ## Product and services App
 
 ### Products and services 
 
-When a user clicks on ` Product and services ` dropdown nav bar option, you are given a dropdown to the different categories of the products and services. I thought that the dropdown would provide better user experience than a direct link, which takes you to a page where you then have to sift through the categores that you are interested in. The nature of this site, is such that, as a user you are prpbably well aware of what you are looking and therefore which category to find it. Or, if you are new to the sites content, i felt it would be less overwhelming if you have some filtering control and could navigate to the category you were most interested in. 
-By doing this I satisfy the ease of navihation in my user stories and adhere to my wireframes. 
-![ The dropdown distinguishes the products and services by category ](readme_materials/logic_screenshots/navbar_dropdown(products).png)
-
-After clicking on your chosen category, all of the products and services under this category, will be displayed. The category name will appear just beneath the consistent title of 'products and services' and there is a banner just above the title, with the free delivery minimum spend. 
-# picture? 
-In the top left corner the user will see a link to `Products and services home` which when clicked will take them to the `all products and services page `, here all of the categories will be clickable links beneath the title, so that a user can navigate to the other categories from here as well/ instead of the navbar dropdown.
-Beside the `Products and services home` there is a product and service count, outlining how many products and how many services belong to this category. 
-Originally I toyed with the idea of having the product and service count clickable links and sectioning the page so that the user would be taken to a products section if they clicked the product count link to 'products' and the same for services. However, this proved to be bad UI, as when and if the user chose to sort the products, the sections would make things very messy and hard to contain. 
-
-I opted to distinguish services from products in a few ways;
+- ` Product and services ` dropdown nav bar option, provides 5 options; 'Natural family planning', 'Female health', 'chemical free skincare', 'services' and 'all products and services'. These are the categories that the products and services fall into.
+- I thought that the dropdown would provide better user experience than a direct link, which takes you to a page where you then have to sift through the categores that you are interested in. The nature of this site, is such that, as a user you are prpbably well aware of what you are looking and therefore which category to find it. Or, if you are new to the sites content, i felt it would be less overwhelming if you have some filtering control and could navigate to the category you were most interested in. 
+- Initially I had two seperate models for products and services, however this proved to be extremely complicated and halfway through the project, I changed the data structure, so that i had one model 'products' for all the products and services. In order to keep services somewhat distinguishable from the products, I added a boolean field on my products model `service_category`, the services have this field set to true.
+- I opted to distinguish services from products in a few ways;
 1) Adding a consistent banner in each of the services' descriptions # picture
-2) When a service is added to the users bag, the success message will clearly state that the user has just added a service and should read the terms and conditions carefully. 
-3) On the order receipt, I have again stated, which of the items are services and that the user should therefore read the terms and conditions. 
+2) When a service is added to the users bag, the success message will clearly state that the user has just added a service and should read the terms and conditions carefully. # picture
+3) On the order receipt, I have again stated, which of the items are services and that the user should therefore read the terms and conditions. # picture
 
-# picture? 
-After clicking any of the products and services dropdown options, the user can use the sorting function on the top right of the page to sort through the products on the page, however they desire. Initially I had planned to include category sorting in this tab, however, since the dropdown options are filtered by category, this was already satisfied.
-# picture?
-
-The products are displayed in cards that have `Product/ Service Name`, `Image`, `Category` `Price`, `rating`. As mentioned above, the product card format, ever so slightly differs if the product is a service. 
+- The products are displayed in cards that have `Product/ Service Name`, `Image`, `Category` `Price`, `rating`. As mentioned above, the product card format, ever so slightly differs if the product is a service. 
 Product Card for products
 <div align="center"><img src = "" width=500></div>
 
 - Pagination Bar: Unnecessary for this site currently, however I would add this as kaur health grew as a brand and had more products on offer. 
 
 ### Product detail
-When the product image is pressed, the user will be taken to the respective detail page and have the option to continue shopping, or add this item, with a chosen quantity to their bag. 
+- product detail page displays the product card of the respective product, the option to continue shopping, or add this item, with a chosen quantity to users bag. 
 # picture?
-As mentioned above, if the product is a service, it has a small banner in the decsription explaining that this is a service and therefore there are different terms and conditions. In the future i would potentially add a modal pop up box here so that users wuld have to scroll to the bottom of the terms and condiotons before adding to the service to their bag. Howver, for the sake of time, i decided against this, as i ran into enough compications with basic functionality! 
+- As mentioned above, if the product is a service, it has a small banner in the decsription explaining that this is a service and therefore there are different terms and conditions. In the future i would potentially add a modal pop up box here so that users wuld have to scroll to the bottom of the terms and condiotons before adding to the service to their bag. Howver, for the sake of time, i decided against this, as i ran into enough compications with basic functionality! 
 
 ## Admin Product Managment
-If the user is logged in as a superuser, Update / Delete option is also shown on each card.
-#picture
+- Product management functionality can only be carried out by admin users and is only possible if the admin user is logged in. 
+- When admin is logged on;
+- There is a product management option in the account link, from here admin user can add a product, via a simple product form. 
+- Update / Delete options are shown beneath each product card.
+- Update option takes the admin user to the current product form, a message also displays to feedback to the user that they are editing a product.
+[updating a product](readme_materials/logic_screenshots/update(product_management.png))
+- If deleting a product a modal appears to double check the validity of the request, then user is given a success message. #picture
+- It was apparent to me that if a none admin user attempted to update or delete any of the products and services, if they guessed the corresponding urls, they would be anble to. To resolve this i added some defensive code to my views. Details of this can be found in the (testing file)[testing.md]
+
 
 ### Adding product to bag (this functionality takes the user from the products and services app to the bag app)
-When a user adds an item to the bag a success message appears in the top right corner. 
-success_message(add_product_to_bag).png
-the message gives a product and service count of the items in the bag, a small picture of the items and their quantity, it also has a slightly different message if a service is added. 
-success_message(add_service_to_bag).png
-By using these messages i am satisfying x in my user story. 
+- User can add to bag from the product detail page.
+- Before or after adding to the bag, user can adjust the quantity of product they are adding. 
+- When a user adds an item to the bag a success message appears in the top right corner. The message gives a product and service count of the items in the bag, a small picture of the items and their quantity, it also has a slightly different message if a service is added. At the bottom of the success message is the current bag total and a link to the bag.
+
 
 ## Bag App
 
-This page is simple, it outlines the products'; picture, name, price, quantity and the subtotal. I liked the idea of the items being clear and readable. This also satisfied 
-| Site User | Easily select the quantity (if applicable) of a product after adding a product to a cart | Ensure I don't accidentally select the wrong product and the quantity | 
-this user story, by being clear and readable, there was less risk of the above occuring. 
-
-When in the bag, the user can <strong>update the quantity of their products</strong>, <strong>remove a product entirely</strong> and choose to either <strong>continue shopping</strong> or <strong>checkout</strong>. 
-#picture 
-There are success/ alert messages to update user of each eventuality. Again this is satisfying x in my user stories. 
-If the user chooses to checkout, they will be using the backend logic and functionality, created in the checkout app. However, if they choose to continue shopping, they will be taken back to all the products and services and can navigate via category to the category of items, in which they are interested in. 
+- This page is simple, it outlines the products'; picture, name, price, quantity and the subtotal. As per my goals, it was important that the items were clear and readable.  
+- From here the user can adjust the quantity of the products/ services in the bag or remove them altogether, each action has corresponding feedback messages, which appear in the top right of the screen. 
+- User can also go to secure checkout or continue shopping.
 
 ## Checkout App
 
-When clicking the 'checkout option' the user is taken to a page displaying an empty order form on the left, needing to be completed and a summary of their order on the right. This is more feedback to the user and an opportunity for them to make any adjustments to their shopping bag. 
-If the user is logged in, beneath the form, there will be a checked option to save the info to their profile. 
-this page satisfys 
-| Site User | Have my delivery information is prefilled if logged in | Smoothly proceed with my purchase | 
-| Site User | Be reminded to log in if I did not log in | Smoothly proceed with my purchase and prefilled form |
-#picture 
-If they keep the box ticked, the delivery information will appear prefilled on their profile page. 
-#picture 
-When a order has gone through successfully, the user will be redirected to the checkout success page. Here they will have a summary of their order (which calls on the order line item models logic) a message to confirm that their order has gone through and an option to keep shopping. Their bag will now appear empty too. 
+- Checkout page displays an empty order form on the left, needing to be completed and a summary of their order on the right. This is more feedback to the user and an opportunity for them to make any adjustments to their shopping bag. 
+- If the user is logged in, beneath the form, there will be a checked option to save the info to their profile. 
+- When a order has gone through successfully, the user will be redirected to the checkout success page. Here they will have a summary of their order (which calls on the order line item models logic) a message to confirm that their order has gone through and an option to keep shopping. Their bag will now appear empty too. 
 
-## profile app 
+## Profile app 
 
-The profile app is just the users delivery information on the left and a history of their orders on the right. 
-Users can update their details on their profile, this means the details will be updated for when the user carries out their next order. 
-#picture 
-The profile app can be accessed through the account option on the navbar. 
-#picture 
+- The profile app can be accessed through the account option on the navbar. 
+- The profile app is just the users delivery information on the left and a history of their orders on the right. 
+- The delivery information will be populated with the delivery information from their last order, however, users can update these details, which will then be updated for when the user carries out their next order. 
 
 ## Blog app 
 
-The blogs are available for any site visitor to browse, however only logged in users can write a blog.
-#picture 
-If you are logged in, you will have the option to view just your blog posts. If you are logged in, you will see a links to edit and delete your blog posts if you are looking at them on the all blogs page/ your blogs page and on the blog detail page.
-#picture
-You will be able to perform these functions if you are logged in.
-#picture
-If you are not logged in, you can view all the blog posts and then click on them and be taken to the blog detail page. 
+- As mentioned in the goals and user stories, it was important that this site struck a balance of business and community. A crucial aspect of creating the community element, was to have a blog on the site. As mentioned in the research seection, when i was looking at sites with similar messaging and brand identites, I was inundated with blogs. This was even more inspiration to add blog functionality. 
+- The blogs are available for any site visitor to browse, if you are not logged in, you can view all the blog posts and then click on them and be taken to the blog detail page, where you will also be able to view the comments on the post.
+- If you are logged in;
+- you can write a blog post.
+- you will have the option to view your blog posts, alone. 
+- you will see links to edit and delete your blog posts, regardless of if you are viewing them on your blog page/ the blog detail/ all blog posts page.
+- comment on a post. 
+- Similar to the product management functionality, if a user put another users name in the url, they were able to edit their blog post. However by adding some code to my templates I was able to defend against this. 
+
 
 ### comment on  Blog
 
 - comments of a post can be viewed if the user clicks on the blog post and is taken to the blog detail page. Here the user can also add a comment, however, if they are not authenticated, they cannot add a comment. 
 
-- Initially i made a seperate view for the commenting functionality, however i deceided it would be better UX if the comment function could occur on the page of the blog post and not take users to a se[erate page. For this reason, i chose to use a modal, which would pop up when a user wrote a comment and when submitted, would simply reload the page, now displaying the users comment. 
-- In the future, if developing this site further, i would look into using AJAX requests, to give the user the ability to edit and delete their comments. 
-You will see the comments that other users have left on the blog you are looking at, you will also find a link to leave a comment, however, if you are not logged in, you will not be able to make a comment and will be notified with a message. 
-#picture
-I thought it was better UX for the edit and delete buttons to only be visible to a user if they are logged in, as it would otherwsise be misleading. However, I decided to have the 'make a comment' links visible to all site visitors, because when the none authenticated user attempts to make a comment, they may be more inclined to create a profile, for the prupose of being able to complete this action. This would in turn, build on the community and discussion aspect of the site - satisfying x in the user stories.
-If you are logged in and want to comment on a blog post, you can do so after clicking on the link and completing the comment form, in the modal.
-#picture
-I thought the use of a modal, for comment functionality was good UX, the nature of a comment is that it is fast and on topic, i worried that if the commenting functionality, meant that users needede to leave the page they were currently visiting, so that they could leave their on topic comment, it would ruin the flow of a users experience. 
-#picture
+- Initially i made a seperate view for the commenting functionality, however i deceided it would be better UX if the comment function could occur on the page of the blog post and not take users to a se[erate page. The nature of a comment is that it is fast and on topic, i worried that if the commenting functionality, meant that users needede to leave the page they were currently visiting, so that they could leave their on topic comment, it would ruin the flow of a users experience.
+- I havent offered the user the option to edit or delete their comments, however in the future, if developing this site further, i would look into using AJAX requests, to give the user the ability to edit and delete their comments. 
+
 
 ## contact
 
-I thought it was necessary for a site like this to have a contact form, Kaur health is multi faceted and relies on the openess of site visitors. I felt that if i didnt include a contavt form, I would lose the opportunity to create a rapport between Kaur health and the user. I feel it helps to satisfy x in the user stories. 
-The contact form is very simple and lives in the home app. 
-When a user sends a message via the form, they will be taken to a reponse page, see a success message and recieve a copy of the message they sent! I felt this was a personal and 'extra-mile' feature, again leading to users feeeling acknowledged, which in turn helps build community and rapportt, satisfying x
-#picture. 
-To protect the site owner, I used a honeypot field, designed to catch and prohibit spam mail from bots. A honeypot field is a field that is hidden on your contavt form, that a bot will not be anble to distinguish. When they try to fill it out, they will reach the error page and their spam mail will not be sent! I could also use the honeypot admin functionality, which offers increased security and definsive programming. Anyone with minor developer exeprience will know that you just need to change a sites url and add admin to the end of the url to accesss the admin page. From there it would be easy to hack your way into the sites admin and cause some damage! To protect against this, honeypot admin, allows site owners to create a new admin area, whilst also providing a 'fake' admin area for bots/ hackers to attempt to login to! You will also be notified, how many login attempts there have been, so that you can guage whether this feature is fitting for your site or if you need to take extra measures to protect yourself.
-#picture
-I will definitely be using honeypot fields and honeypot admin functionality in the future, however for this project i felt that the honeypot field alone, would suffice. 
+- Given that this site is not solely an ecommerce site, I thought it was necessary to have a contact form, Kaur health is multi faceted and relies on the openess of site visitors. I felt that if i didnt include a contavt form, I would lose the opportunity to create a rapport between Kaur health and the user.
+- The contact form is very simple and lives in the home app. 
+- When a user submits the form, they will be taken to a reponse page, see a success message and recieve a copy of the message they sent on the email address they provided! I felt this was a personal and 'extra-mile' feature, again leading to users feeeling acknowledged, which in turn helps build community and rapport.
+- To protect the site owner, I used a honeypot field, designed to catch and prohibit spam mail from bots. A honeypot field is a field that is hidden on your contavt form, that a bot will not be anble to distinguish. When they try to fill it out, they will reach the error page and their spam mail will not be sent! 
+- I could also use the honeypot admin functionality, which offers increased security and definsive programming. Anyone with minor developer exeprience will know that you just need to change a sites url and add admin to the end of the url to accesss the admin page. From there it would be easy to hack your way into the sites admin and cause some damage! To protect against this, honeypot admin, allows site owners to create a new admin area, whilst also providing a 'fake' admin area for bots/ hackers to attempt to login to! You will also be notified, how many login attempts there have been, so that you can guage whether this feature is fitting for your site or if you need to take extra measures to protect yourself.
+- I will definitely be using honeypot fields and honeypot admin functionality in the future, however for this project i felt that the honeypot field alone, would suffice. 
 - As i will only ever be sending a total of two emails from this view, it is not necessary, howevre if i was to develop this aspect more and send more than two emails from this view, i would opt to use the send mass mail wrapper from the django.core.mail module.
-- for the backend wiring up, i dcided to use aws email, as opposoised to gmail. I thought it made more sense as we are using aws to collect the static files etc. 
-
+- for the backend wiring up, i dcided to use aws email, as opposoised to gmail. I thought it made more sense as I was using aws to store the static and media files. It will be easier to track email and storage related issues, if they are all being hosted via amazon aws. 
 
 
 ## Django-allauth features
@@ -380,10 +364,25 @@ Base template for allauth has `Back to Home` button at the end of the page, for 
 <div><a href="#table-of-contents">Back to top</a></div>
 
 ## Features Left to Implement
-- When a user tries to add blog post, currently due to the slug, I have put some defensive programming so that if a user tries to add a post, with an exisiting blog posts name, they will get an errro message. 
-However ideally, if developing this site further, i would like to add 'title comparison/ checks' to the form validatioon, or use AJAX to esssntially check the title as the user types it and pause them there, if the title is preexitisng. 
-- Honeypot admin
-- AJAX requests for the user to update and make blog posts in the page as opposed to in seperate pages. 
+- Given the scope of this project I definitely feel the updates and modifications to the idealogy and code, could be endless! Below are the list of features I would like to impleemtn moving forward, in order of priority (1 being most important).
+
+### Products and services
+1 - Instead of a boolean field to distinguish whether a product is tangible or a service, I would have a field such as "product_type" with choices such as:
+a. tangible
+b. service
+This would give me more freedom to develop further as the site and products grow, to add more product types for example; discount, requires ID, requires health check. 
+6 - Review section for products, as i have testimonies i didnt think it was totally necessary, however as the site grew, i would like to add review and rating models to the products and services app's models. These models would follow similar functionality to the blog post and comment models.  
+
+### Bag
+2 - A model just for the bag, if a user is authenticated and adds items to their bag. In between visits, this model would serve to save the items in the bag, saving the user time and energy if they were disrupted in their initial purchase attempt.
+
+### Admin
+3 - I would install Honeypot admin and apply to my code. As mentioned, with the project at the scope it currently is, I felt that the honeypot field, alone, on the contact form met the needs for my users and the site owner, however, i am aware of the sensitivity of the topics dicussed on this site and for this reason alone, as the site grew, i would be very motivated to add the honey pot admin function. 
+
+### Blog
+4 - Currently due to the slug, when a user tries to add a blog post, if the title of the blog post is that of an existing blog post, the user will get an errro message. However ideally, if developing this site further, i would like to add 'title comparison/ checks' to the form validatioon, or use AJAX to esssntially check the title as the user types it and pause them there, if the title is preexitisng. 
+5 - Install AJAX requests functionality, so that users can update and make blog posts in the page, similar to the comment functionality occuring on the page, via a modal. 
+
 
 ## Defensive Design
 ### Error views (404 and 500 error)
@@ -501,652 +500,6 @@ Street address1 | default_street_address1 | max_length=80, null=True, blank=True
 Street address2 | default_street_address2 | max_length=80, null=True, blank=True | CharField
 County | default_county | max_length=80, null=True, blank=True | CharField
 
-# Bugs discovered
-
-## Bug 1 - Service details not showing up 
-Solution: Correct the URLs for the app
-- I have three models categories, services and products. Products and services, rely on the categories model. 
-- When i built the template for the product and service details, the product detail worked fine, but the service details would not. 
-- if i clicked on a service, i would be taken to the details of a product with the same pk as the service i had clicked on. 
-- I thought it was an issue with the primary keys, but i couldnt work out what the issue was, because the primary keys were from different models. 
-- In an attempt to rule this out, I displayed the ids (primary keys) of each service using 
-``` {{ service.id }} ```
-- Then i changed the pk of one of my services to a number that was entirely different to any of the pk values of the products or services. 
-- when i clicked on this service, i got an error.
-![bug1](readme-materials/bug_screenshots/bug_1.png)
-- This told me, the service details were reliant on the product id's. The new pk of the service i had tried to access, was out of range of the current product ids.
-- this led me to check the link path of the items when they were clicked. this revealed all items were following the ``` all_items/<pk_value> ``` path. 
-- this in turn led me to change my products and services app urls from 
-``` path('<int:product_id>/', ```
-```        views.product_detail, name='product_detail'), ```
-``` path('<int:service_id>/', ```
-```        views.service_detail, name='service_detail'), ```
- to 
-``` path('product_detail/<int:product_id>/', ```
-```        views.product_detail, name='product_detail'), ```
-``` path('service_detail/<int:service_id>/', ```
-```        views.service_detail, name='service_detail'), ```
-- this solved the issue
-
-
-## Bug 2 - Multiple items added to the bag each time a product/ service was added.  
-Solution: add if statement in the contexts.py file
-
-![Multiple items added to bag](readme-materials/bug_screenshots/bug_2(a)
-![Multiple items added to bag](readme-materials/bug_screenshots/bug_2(b)
-
-- I have 2 models that I needed to pull data from
-this means I need to specify with actions, if I am pulling data from the service_id or the product_id.
-- My Products and Services had identical pk's, i didnt think this was an issue because they were still two different models, however, with this issue arising, i decided to change the services' pks.
-
-- First, I changed the pks of my services. To do this I, mistakenly used the `loaddata` command. This indeed added the services with new pks, however didnt UPDATE, I was left with two sets of services.. To resolve this I had to manually delete ALL of my services, via the admin on my site and then `loaddata` again. 
-I researched and found out that in order to update models, you need to update the migrations used. I will do this if the issue arise again in the future, as it saves time. 
-- Changing the pk's led to me continually getting this error 
-![no service matches your query](readme-materials/bug_screenshots/bug_2(c).png)
-<br>
-when i tried to add a product or service. If i added a product, the error would say 'no service matches your query' and if i added a service, the error would say 'no product matches your query'.
-
-- I believed my issue was in my views and urls and started to seperate the logic. 
-```
- def add_product_to_bag(request, item_id):
-    '''Add a quantity of the specified product to the shopping bag'''
-    product = Product.objects.get(pk=item_id)
-    quantity = int(request.POST.get('quantity'))
-    bag = request.session.get('bag', {})
-
-    if item_id in list(bag.keys()):
-        bag[item_id] += quantity
-        messages.success(request,
-                         f' Updated {product.name}'
-                         f'quantity to {bag[item_id]}')
-    else:
-        bag[item_id] = quantity
-        messages.success(request,
-                         f' {product.name}'
-                         ' added to your bag! ')
-
-    request.session['bag'] = bag
-   print("here")  
- return redirect("view_bag") 
- ```
- ```
- urlpatterns = [
-    path('', views.view_bag, name='view_bag'),
-    path('add_product/<item_id>/',
-         views.add_product_to_bag,
-         name='add_product_to_bag'),
-```
-- I was still getting the error, so came to the conclusion that I needed to define the item specifically to check if its a service or product. To do this I added a parameter of `product.id` in the add product to bag view, however i would get this error;
-![type error](readme-materials/bug_screenshots/bug_2(d).png)
-
-- Eventually after I had made all of the changes I could think of, to my views and urls, i took a look at the `contexts.py` file. <strong> In hindsight, I should have loooked st this file earlier on in the process, as it was the only other file in the bag app, which handled functions specfic to the bag. </strong>  
-- In the `contexts.py` file;
-I changed the `bag contents` method from 
-```
-def bag_contents(request):
-    bag_items = []
-    total = 0
-    product_count = 0
-    service_count = 0
-    bag = request.session.get('bag', {})
-
-    for item_id, quantity in bag.items():
-        product = get_object_or_404(Product, pk=item_id)(pk=item_id)
-        service = get_object_or_404(Service, pk=item_id)
-        total += quantity * product.price
-        total += quantity * service.price
-        service_count += quantity
-        product_count += quantity
-        bag_items.append({
-            'item_id': item_id,
-            'quantity': quantity,
-            'product': product,
-            'service': service,
-        })
-
-    if total < settings.FREE_DELIVERY_THRESHOLD:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
-        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
-    else:
-        delivery = 0
-        free_delivery_delta = 0
-
-    grand_total = delivery + total
-
-    context = {
-        'bag_items': bag_items,
-        'total': total,
-        'product_count': product_count,
-        'service_count': service_count,
-        'delivery': delivery,
-        'free_delivery_delta': free_delivery_delta,
-        'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
-        'grand_total': grand_total,
-    }
-    return context
-
-```
-to: 
-```
-def bag_contents(request):
-    bag_items = []
-    total = 0
-    product_count = 0
-    service_count = 0
-    bag = request.session.get('bag', {})
-
-    for item_id, quantity in bag.items():
-        product = Product.objects.filter(pk=item_id).first()
-        if product:
-            total += quantity * product.price
-            product_count += quantity
-            bag_items.append({
-                'item_id': item_id,
-                'quantity': quantity,
-                'product': product,
-            })
-        else:
-            service = get_object_or_404(Service, pk=item_id)
-            total += quantity * service.price
-            service_count += quantity
-            bag_items.append({
-                'item_id': item_id,
-                'quantity': quantity,
-                'service': service,
-            })
-
-    if total < settings.FREE_DELIVERY_THRESHOLD:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
-        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
-    else:
-        delivery = 0
-        free_delivery_delta = 0
-
-    grand_total = delivery + total
-
-    context = {
-        'bag_items': bag_items,
-        'total': total,
-        'product_count': product_count,
-        'service_count': service_count,
-        'delivery': delivery,
-        'free_delivery_delta': free_delivery_delta,
-        'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
-        'grand_total': grand_total,
-    }
-    return context
-
-```
-- In the original method, essentially, I had stated that in order to add an item to the bag contents, there needed to be both products and services. This is why originally, two items would simultaneously be added to the bag and thereafter i got the query error. 
-- the change to the contexts.py solved the issue. 
-
-## Bug 3 Unable to correctly format the bag_contents
-Solution: created empty arrays for both products and services, within bag_items and appended products to the bag_items, to help decipher which item was coming from where. Then iterrate through the new array in the template. 
-
-- After solving the above issues, i realised that with every item added, an extra empty row was added, because the server was being told to look for a product AND service everytime, by the contexts.py file. 
-![Rendering empty respective products and services](readme-materials/bug_screenshots/bug_3(a).png)
-- I didnt understand the lack of the seperation of the models and their end points as much as i do now, i thought that because i had seperated the products and services actions eg 
-``` add_product_to_bag and add_service_to_bag ```
-that this was sufficient.
-- So i thought i could sperate the products and views from the template. 
-![template logic, trying to seperate the bag contents](readme-materials/bug_screenshots/bug_3(b).png)
-- However, this still gave the same errors that i had previously seen
-![item confusion](readme-materials/bug_screenshots/bug_3(c).png)
-and led to only the products or services displaying at any one time, not together and seamlesly. 
-Here you can see from the total that there are other items in the bag (services) however only the products show, until you remove the products, then the services are displayed. 
-- I realised i needed to go bag into the view_bag view and contexts.py file, both of which currently had little to no differentiation between items being products or services. 
-![initial view_bag view](readme-materials/bug_screenshots/bug_3(f).png)
-I changed the view_bag view to 
-``` 
-def view_bag(request):
-    bag_items = {
-        'products': [],
-        'services': [],
-        }
-
-    return render(request, 'bag/bag.html', bag_items)
-    print(request.session.get('bag', {})) 
-```
-similarly the bag_contents in the contexts.py file was 
-```
-def bag_contents(request):
-    bag_items = []
-    total = 0
-    product_count = 0
-    service_count = 0
-    bag = request.session.get('bag', {})
-    print("hello im working2")
-    for item_id, quantity in bag.items():
-        product = Product.objects.filter(pk=item_id).first()
-        if product:
-            total += quantity * product.price
-            product_count += quantity
-            print("hello im working3")
-            bag_items({
-                'item_id': item_id,
-                'quantity': quantity,
-                'product': product,
-            })
-            print("hello im working1")
-        else:
-            service = get_object_or_404(Service, pk=item_id)
-            total += quantity * service.price
-            service_count += quantity
-            bag_items({
-                'item_id': item_id,
-                'quantity': quantity,
-                'service': service,
-            })
-        print("hello im working")
-    if total < settings.FREE_DELIVERY_THRESHOLD:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
-        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
-    else:
-        delivery = 0
-        free_delivery_delta = 0
-
-    grand_total = delivery + total
-
-    context = {
-        'bag_items': bag_items,
-        'total': total,
-        'product_count': product_count,
-        'service_count': service_count,
-        'delivery': delivery,
-        'free_delivery_delta': free_delivery_delta,
-        'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
-        'grand_total': grand_total,
-    }
-    print(request.session.get('bag', {}))
-    return context
-
-```
-Which i changed to 
-```
-from django.conf import settings
-from decimal import Decimal
-from django.shortcuts import get_object_or_404
-from products_and_services.models import Product, Service
-
-
-def bag_contents(request):
-    bag_items = {
-        'products': [],
-        'services': [],
-        }
-    total = 0
-    product_count = 0
-    service_count = 0
-    bag = request.session.get('bag', {})
-    print("hello im working2")
-    for item_id, quantity in bag.items():
-        product = Product.objects.filter(pk=item_id).first()
-        if product:
-            total += quantity * product.price
-            product_count += quantity
-            print("hello im working3")
-            bag_items['products'].append({
-                'item_id': item_id,
-                'quantity': quantity,
-                'product': product,
-            })
-            print("hello im working1")
-        else:
-            service = get_object_or_404(Service, pk=item_id)
-            total += quantity * service.price
-            service_count += quantity
-            bag_items['services'].append({
-                'item_id': item_id,
-                'quantity': quantity,
-                'service': service,
-            })
-        print("hello im working")
-    if total < settings.FREE_DELIVERY_THRESHOLD:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
-        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
-    else:
-        delivery = 0
-        free_delivery_delta = 0
-
-    grand_total = delivery + total
-
-    context = {
-        'bag_items': bag_items,
-        'total': total,
-        'product_count': product_count,
-        'service_count': service_count,
-        'delivery': delivery,
-        'free_delivery_delta': free_delivery_delta,
-        'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
-        'grand_total': grand_total,
-    }
-    print(request.session.get('bag', {}))
-    return context
-
-```
-By adding products and services as empty arrays, i could append them to the bag_items, depending on their condition and iterrate through them in the template.
-
-- I changed the template logic to 
-```
-                    {% for item in bag_items['products'] %}
-                    <!--products in the bag -->
-
-                    {% endfor %}
-                    {% for item in bag_items['services'] %}
-
-                    <!--services in the bag -->
-
-                    {% endfor %}
-```
-
-and got this error
-![template error](readme-materials/bug_screenshots/bug_3(g).png)
-
-Django and python dont like [''], within for loops 
-
-so i changed it to 
-```
-                    {% for item in bag_items.products %}
-                    <!--products in the bag -->
-
-                    {% endfor %}
-                    {% for item in bag_items.services %}
-
-                    <!--services in the bag -->
-
-                    {% endfor %}
-```
-
-which worked and my server is no longer looking for a product AND service everytime an item is added.
-![issue solved!](readme-materials/bug_screenshots/bug_3(h).png)
-
-
-## Bug 4 Cannot render images in bag
-Solution: change pathway from 
-```
-<td class="p-3 w-25">
-                            {% if item.service.image %}
-                            <img class="w-100" src="{{ item.service.image.url }}" alt="{{ item.service.name }}">
-                            {% else %}
-                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.service.name }}">
-                            {% endif %}
-                        </td>
-```
-![Images not being rendered in bag](readme-materials/bug_screenshots/bug_4(a).png)
-
-To
-```
-<td class="p-3 w-25">
-                            {% if item.service.product_image %}
-                            <img class="w-100" src="{{ item.service.product_image.url }}" alt="{{ item.service.name }}">
-                            {% else %}
-                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.service.name }}">
-                            {% endif %}
-                        </td>
-```
-![Images being rendered in bag](readme-materials/bug_scr-enshots/bug_4(b).png)
-
-I used dev tools to compare the pathway written in the image source, on all_items.html and bag.html and quickly realised that i needed to use the exact field name from my models. 
-
-
-## Bug 5 card number input field not working
-solution: Typed '66' which triggered the num lock and was then able to type valid and invalid card numbers. 
-
-I discovered this issue after adding the intial stripe functionality. 
-
-I used dev tools to try and debug the issue, i assumed it was a styling overlap error at first. 
-
-I could see the input was very cluttered with styles and believed this had somehting to do with the bug. 
-![Card number field not inputtable](readme-materials/bug_screenshots/bug_5(a).png)
-
-I made my port public, removed the environment variables from a previous project (in case there was confusion in the application of public and secret keys ) and looked into the ad block settings in my browser (chrome).
-
-I then tried to input a card number into the mini project deployed site and another completed MS4 site. Both of which were not working! 
-![Card number field not inputtable on other sites](readme-materials/bug_screenshots/bug_5(b).png)
-![Card number field not inputtable on other sites](readme-materials/bug_screenshots/bug_5(c).png)
-
-I was then convinced that it must be an ad setting in chrome somewhere, however to disable all security against the pop ups, would not be wise..
-
-Finally, it was suggested that I type '66' into the card number field. 
-![66 inputted into the card number field ](readme-materials/bug_screenshots/bug_5(d).png)
-
-Initially, I thought I may have some numbers on my keyboard not working, however after typing '66' I was able to type every number. 
-I then came to the conclusion that I had been trying to enter the numbers in using the number keypad without Num Lock turned on. '66' triggered the num lock and 77, 88, would have been just as effective! 
-
-## Bug 6 Unable to correctly render the checkout success page
-solution: chnage entire structure, by having one model!
-- I was building the checkout logic, trying to replicate the logic from my contexts.py file, however, my contexts.py file was very specific to my two models. I was stumbling with the order_line_items.
-
-![ views for checkout app ](readme-materials/bug_screenshots/bug_6(a).png)
-![ contexts.py for bag app ](readme-materials/bug_screenshots/bug_6(b).png)
-
-- I thought i needed to create similar variable as bag_items for order_line_items. I started looking into this and realised just how complicated the logic was becoming..
-![ error ](readme-materials/bug_screenshots/bug_6(c).png)
-
-- I continued to try and define the quantity, continuing to try and keep the products and services seperated. 
-![ error ](readme-materials/bug_screenshots/bug_6(d).png)
-![ error ](readme-materials/bug_screenshots/bug_6(e).png)
-
-- eventually, i was advised to chnage my model structure or discuss with my mentor at least. I was very disheartened by this at first, but it was a great learning curve for me. We are taught KISS from the first lessons on the course and, personally, I find myself straying and not abiding by DRY. 
-![ tutor advice ](readme-materials/bug_screenshots/bug_6(f).png)
-
-- in order to honour the importance of seperating the products and services, i added a boolean field to the product model
-```
-service_category = models.BooleanField(default=False, null=True,
-                                           blank=True)
-```
-However i wasnt sure how to list this field in the order model, in the order_line_item class, in the checkout app. 
-![ error ](readme-materials/bug_screenshots/bug_6(g).png)
-
-- i tried and it worked! 
-
-## Bug 7 - updating add to bag view, so that service count is functional and messages relay service specific information
-solution: correct logic in the view
-
-- I adapted and used the logic from the mini project and tried to correctly define each evenutality of services being added to bag, with if statements. 
-```
-def add_product_to_bag(request, item_id):
-    '''Add a quantity of the specified product to the shopping bag'''
-    product = Product.objects.get(pk=item_id)
-    redirect_url = request.POST.get('redirect_url')
-    quantity = int(request.POST.get('quantity'))
-    service = bool(request.POST.get('product_is_service'))
-    bag = request.session.get('bag', {})
-
-    if service:
-        if item_id in list(bag.keys()):
-            if item_id in bag["services"]:
-                bag["services"][item_id] += quantity
-                messages.success(request, f' Updated service {product.name}'
-                                 f'quantity to {bag[item_id]}'
-                                 '[item_is_service"][service]!')
-            else:
-                bag[item_id]['product_is_service'][service] = quantity
-                messages.success(request, f'added {product.name}'
-                                 'to your bag! Please read the'
-                                 'rules regarding services!')
-        else:
-            bag["services"] = {item_id: quantity}
-            messages.success(request, f'added {product.name}'
-                             'to your bag! Please read the'
-                             'rules regarding services!')
-    else:
-        if item_id in list(bag.keys()):
-            bag[item_id] += quantity
-            messages.success(request, f' Updated {product.name}'
-                             f'quantity to {bag[item_id]}')
-        else:
-            bag[item_id] = quantity
-            messages.success(request, f' {product.name} added to your bag!')
-
-    request.session['bag'] = bag
-    print(bag)
-    return redirect(redirect_url)
-```
-![ add to bag view ](readme-materials/bug_screenshots/bug_7(a).png)
-![ add to bag view ](readme-materials/bug_screenshots/bug_7(b).png)
-![ add to bag view ](readme-materials/bug_screenshots/bug_7(c).png)
-![ add to bag view ](readme-materials/bug_screenshots/bug_7(d).png)
-
-- I struggled to understand how to add to the dictionary, with a sub disctionary. To better understand the logic i loaded pythin in my cli and practised 
-![ adding to subdictionary ](readme-materials/bug_screenshots/bug_7(e).png)
-I finally understtod that i needed to do 
-dict[key] = value
-
-- However, my code was still wrong and if block which handled eventualities of a service being added to the bag, was getting completely skipped and the only logic was coming from the else block. 
-![ adding to subdictionary ](readme-materials/bug_screenshots/bug_7(f).png)
-![ adding to subdictionary ](readme-materials/bug_screenshots/bug_7(g).png)
-
-- I then went to my Product_detail.html template, where i passed in `product_is_service` 
-After more debugging and adjusting, i learnt that the issue was not that `product_is_service` was not being recognised/ passed in, but was definitely within my code, in views. 
-
-- FINALLY after trial and error, debugging and support from peers.. I was able to understand that I needed a sub dictionary WITH a sub array inside. My current subdictionary 
-``` 
-bag["services"] = {item_id: quantity}
-``` 
-was throwing errors becuase a) plural of service was not a wise choice for the name. b) it was not nested correctly.
-The correct sub dictionary, also had an array within it
-
-```
-bag[item_id] = {'item_is_service': {product.name: quantity}}
-```
-- After making these adjustments, the correct messages were displaying. In order to solve the service count issue, I simply added the varibale service_count into the else block for my service logic in the contexts.py file. 
-
-
-## Bug 7 - 'This is a service' message displaying on order summary 
-solution: assessed the logic necessary for desired outcome, adjusted the html template. 
-- I followed the logic from the mini project to help achieve functionality for my boolean field on the product model. 
-```
-    service_category = models.BooleanField(default=False, null=True,
-                                           blank=True)
-```
-I thought it was necessary for me to also add the new subdictionary 
-```
-'item_is_service'
-```
-to the order line item model, so that it would come up on the order summary. 
-- I was trying to work out which field would be best, because I thought it was no longer a boolean field, because the boolean had already served its purpose, it was different to the example, because my boolean, did not serve as an input elsewhere. 
-- After taking heed of the errors i have already made by not adhering to KISS, i reviewed the situation and realised that i didnt need to do ANYTHING to the order line item class and instead, just needed to put an if statement in the checkout successs template. 
-
-```
-{% if item.product.service_category %}
-                        {{ item.product.name }}
-                        <p>PLease rememebr the t's and c's</p>
-                        {% endif %}
-```
-
-## Bug 8 - name not prefilled at checkout
-![ updating info on profile ](readme-materials/bug_screenshots/bug_8(a).png)
-![ info carried through except name.. ](readme-materials/bug_screenshots/bug_8(b).png)
-![ no value for name ](readme-materials/bug_screenshots/bug_8(c).png)
-![ full name field added to profiles model ](readme-materials/bug_screenshots/bug_8(d).png)
-
-after playing around with this issue some more, i came to the conclusion that, in order to automatically update the order form and subsequently, profile details, with the users full name, from their first transation; I would have had to collect that information when they signed up. 
-
-The sign up form does not collect their full name, only username and email address. The email address was an easy fix, however full name was uncooperative. 
-
-Therefore to resolve this, I would need to extend the user model (using a class called 'abstract based user' ) this will let you customise user model and add first name and last name as required field for sign up. 
-Then, I could use that data for the profile and the form would be prefilled from the first transaction. 
-
-## Bug 9 - filtering the users blog posts
-- I wanted to add a dropdown for users who are logged in, to view their blog posts. 
-- The first step to doing this was specifying in the main nav that the 'my blogs' link would pertain to author equaling the user. 
-```
-            <div class="dropdown-menu border-0" aria-labelledby="#">
-                <a href="{% url 'blog' %}" class="dropdown-item">All blog posts</a>
-                {% if request.user.is_authenticated %}
-                    <a href="{% url 'blog' %}?author={{ request.user }}"  class="dropdown-item">My blog posts</a>
-                {% endif %}
-            </div>
-```
-- then i needed to do the back end work, which wasnt as simple because the blogs were displayed via a class as opposed to a method. 
-- I had to use a method within the class
-```
-class HomeView(ListView):
-    model = BlogPost
-    template_name = 'blog/all_blogs.html'
-
-# This method was used to place the filter on the main nav link. 
-    def get_queryset(self):
-        author_val = self.request.GET.get('author', '')
-        if author_val:
-            author_object = User.objects.get(username=author_val)
-# Here i am adding 'author' to a new context (returned if 'my blogs' in nav is selected) 
-            new_context = BlogPost.objects.filter(
-                author=author_object,
-            )
-        else:
-            new_context = BlogPost.objects.all()
-        return new_context
- ```
- - This worked, however, it was easy to change name of the user to potentially view all the blogs, written by other users. 
- ![ all blog posts displaying ](readme-materials/bug_screenshots/bug_9(a).png)
- ![ users blog posts displaying ](readme-materials/bug_screenshots/bug_9(b).png)
- ![ users blog posts displaying ](readme-materials/bug_screenshots/bug_9(c).png)
- ![ lack of defensive programming, allowing user to filter to another authors blogs ](readme-materials/bug_screenshots/bug_9(d).png)
- ![ lack of defensive programming, allowing user to filter to another authors blogs ](readme-materials/bug_screenshots/bug_9(e).png)
-
-- I needed to add another method, beneath the query set, so that i could add the new object('author') onto the context 
-```
-# This method was used to get the above context. 
-    def get_context_data(self, **kwargs):
-        context = super(HomeView, self).get_context_data(**kwargs)
-        context['author'] = self.request.GET.get('author')
-        return context
-```
-- I also needed to accompany this new logic, with some logic in the all blogs template. 
-![ template logic ](readme-materials/bug_screenshots/bug_9(f).png)
-
-- Now the user is unable to manually change the url, to attain another users' blogs. 
-![ defensive programming- working ](readme-materials/bug_screenshots/bug_9(g).png)
-
-
-## Bug 10 add blog url not working, since slug implementation 
-I needed to change my blog detail page url from 
-```
-urlpatterns = [
-    path('', HomeView.as_view(), name='blog'),
-    path('/<slug:slug>/', BlogDetailView.as_view(), name='blog_detail'),
-    path('new/', views.add_blog_post, name='add_blog_post'),
-```
-to 
-```
-urlpatterns = [
-    path('', HomeView.as_view(), name='blog'),
-    path('detail/<slug:slug>/', BlogDetailView.as_view(), name='blog_detail'),
-    path('new/', views.add_blog_post, name='add_blog_post'),
-```
-The blog detail path, with just slug:slug, was throwing django off, because the value of slug is just words and no actual path. without detail / before the slug:slug, when a user would try to add a blog post, the url, was referrring to the above view/ url. i needed to distinguish them, so. i added the 'detail/'
-
-## Bug 11 sending email attempt rejected due to the region. 
-- After setting up amazon aws SES backend email functionality, I tested an email in the python shell. It did not work. 
-- ![ message rejected ](readme-materials/bug_screenshots/bug_10(a).png)
-- I had already verfied my email, so knew it wasnt that. 
-- ![ email verified ](readme-materials/bug_screenshots/bug_10(b).png)
-- After doing some research I found two other variables that were necessary in order for amazon to know the region I was in when sending the email. 
-- ![ added variables ](readme-materials/bug_screenshots/bug_10(c).png)
-- After changing these variables and restarting the testing process, i successfully recieved the message.
-- ![ email sent ](readme-materials/bug_screenshots/bug_10(d).png)
-- However, after reading the documentation around aws ses regions, i was aware that i needed to request to not be in a 'sandbox' that way i would be able to send emails to any email address (as opposed to solely the email address i had verified.)
-- To resove this issue, all i needed to do, was follow the given steps. 
-- ![ removal from sandbox](readme-materials/bug_screenshots/bug_10(e).png)
-
-## Bug 12 Deployment errors 
-solution: update aws keys, add static root.
-- As I already set up a user so that I could access the amazon aws SES email functoionality, I had some confusion over which aws settings to add. 
-- When I began deployment, I got the user I had made for the email purpose ( which was not in a group ), looked at the permissions of the user, and simply added that permission to the user in the group in my bucket. 
-- ![ added permission to group user ](readme-materials/bug_screenshots/bug_12(a).png)
-- When i tried to deploy i got a few errors, one being an unrecognised AWS_ACCESS_KEY_ID. This made sense because, the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY in my heroku and env settings, were that of the user I had now deleted. 
-- ![ AWS_ACCESS_KEY_ID error ](readme-materials/bug_screenshots/bug_12(a).png)
-- I ran the deployment again and got another error, this time about the static root.
-- ![ STATIC ROOT error ](readme-materials/bug_screenshots/bug_12(c).png)
-- I did some research and read [ this ](https://docs.djangoproject.com/en/dev/ref/settings/#static-root) and added 
-```
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-```
-to my settings.py file. when setting your static root, a common mistake is setting the name to 'static' however, this will throw an error as 'static' will refer to your 'STATICFILES_DIRS' variable. 
-After changing these varibales, i successfully deployed. 
-On reflection, I will insure that with future projects I deploy a lot earlier into the journey than I have with this project. Although I am still not quite finished and it is a weight off my shoulders, it would have been even better to iron out these issues and learn about things like the static roote varibale , even eaelier in the project. 
 
 ### Product App
 
@@ -1191,7 +544,7 @@ The main frontend development was created using HTML, CSS, JavaScript and their 
 - [PostgreSQL](https://www.postgresql.org/) - database used for production.
 
 # Testing
-Testing was conducted and recorded in a different file: [Testing.md]().
+Testing was conducted and recorded in a different file: [Testing.md](https://github.com/mayasaffron/Kaur-Health/blob/master/testing.md).
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
@@ -1215,15 +568,13 @@ This website is deployed on [Heroku](https://www.heroku.com/), following these s
 | AWS_ACCESS_KEY_ID | `Your AWS Access Key` |
 | AWS_SECRET_ACCESS_KEY | `Your AWS Secret Access Key` |
 | DATABASE_URL | `Your Postgres Database URL` |
-| EMAIL_HOST_PASS | `Your Email Password (generated by Gmail)` |
-| EMAIL_HOST_USER | `Your Email Address` |
 | SECRET_KEY | `Your Secret Key` |
 | STRIPE_PUBLIC_KEY | `Your Stripe Public Key` |
 | STRIPE_SECRET_KEY | `Your Stripe Secret Key` | 
 | STRIPE_WH_SECRET | `Your Stripe WH Key` |
 | USE_AWS | `True` |
 
-* I used []()to generate Django Secret Key.
+* I used [Djecrety](https://djecrety.ir/)to generate Django Secret Key.
 
 8. Comment out the current database setting in settings.py, and add the code below instead. This is done temporarily to migrate the datbase on Heroku.
 ```
@@ -1252,9 +603,9 @@ else:
     }
 ```
 13. Disable collect static, so that Heroku won't try to collect static file with: `heroku config:set DISABLE_COLLECTSTATIC=1`
-14. Add `'flowerydays.herokuapp.com', 'localhost', '127.0.0.1'` to `ALLOWED_HOSTS` in settings.py.
+14. Add `'kaur-health.herokuapp.com', 'localhost', '127.0.0.1'` to `ALLOWED_HOSTS` in settings.py.
 ```
-ALLOWED_HOSTS = ['flowerydays.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['kaur-health.herokuapp.com', 'localhost', '127.0.0.1']
 ```
 15. In Stripe, add Heroku app URL a new webhook endpoint.
 16. Update the settings.py with the new Stripe environment variables and email settings.
@@ -1308,8 +659,13 @@ if 'USE_AWS' in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+    # Roots
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 ```
-5. Add [custom_storages.py](https://github.com/AsunaMasuda/FloweryDays/blob/master/custom_storages.py).
+5. Add [custom_storages.py](https://github.com/mayasaffron/Kaur-Health/blob/master/custom_storages.py).
 6. Delete DISABLE_COLLECTSTATIC from Heroku Config Var.
 7. Push all the changes to Github/Heroku and all the static files will be uploaded to S3 bucket.
 By setting up above, Heroku will run python3 manage.py collectstatic during the build process and look for static and media files.
@@ -1351,9 +707,10 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"
 # Credits
 
 ### Content & Code
--
-- I was inspired by the flow and structure of flowery days project by []() and used her read me as a template. 
-- This project was developed refering to the Boutique Ado Django mini-project from Code Institute course materials. The codes are customized and modified to fit the purpose of this milestone project.
+- This project was based on the work of Juspreet Mahoon, however, the content is fictional and created by me. 
+- I was inspired by the flow and structure of flowery days by [Asuna Masuda](https://github.com/AsunaMasuda/FloweryDays) and used her read me as a template. 
+- I liked the structure and detail of the testing file for the project The House of Mouse by [Anna Greaves](https://github.com/AJGreaves/thehouseofmouse/blob/master/TESTING.md) and used the testing. md as a template for my testing template. 
+- This project was developed refering to the Boutique Ado Django mini-project from Code Institute course materials. The code is customized and modified to fit the purpose of this milestone project.
 
 ### Images & Media
 - https://www.healthline.com/health/magnesium-oil-benefits
@@ -1362,27 +719,48 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"
 - <span>Photo by <a href="https://unsplash.com/@sharonmccutcheon?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sharon McCutcheon</a> on <a href="https://unsplash.com/s/photos/periods?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 - https://unsplash.com/photos/eCJiD00AJqs
 - https://unsplash.com/photos/2oegF67ikOM
-- <span>Photo by <a href="https://unsplash.com/@prophsee?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Prophsee Journals</a> on <a href="https://unsplash.com/s/photos/food-diary?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+Photo by <a href="https://unsplash.com/@gabriellefaithhenderson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Gabrielle Henderson</a> on <a href="https://unsplash.com/s/photos/journal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">journal</a>
+  
 - <span>Photo by <a href="https://unsplash.com/@socialcut?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">S O C I A L . C U T</a> on <a href="https://unsplash.com/s/photos/food-diary?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 - <span>Photo by <a href="https://unsplash.com/@edgardo1987?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Edgar Soto</a> on <a href="https://unsplash.com/s/photos/thermometer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 - <span>Photo by <a href="https://unsplash.com/@anshu18?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Anshu A</a> on <a href="https://unsplash.com/s/photos/oil?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 - <span>Photo by <a href="https://unsplash.com/@rhsupplies?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Reproductive Health Supplies Coalition</a> on <a href="https://unsplash.com/s/photos/fertility?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 - dame website 
+- Photo by <a href="https://unsplash.com/@ramaissance?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ramez E. Nassif</a> on <a href="https://unsplash.com/s/photos/body-temperature?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">bbt services</a>
+- Photo by <a href="https://unsplash.com/@lukemichael?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luke Michael</a> on <a href="https://unsplash.com/s/photos/natural-food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> decolonising diet 
+- Photo by <a href="https://unsplash.com/@dainisgraveris?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dainis Graveris</a> on <a href="https://unsplash.com/s/photos/fertility?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">his her ferytility </a>
+- Photo by <a href="https://unsplash.com/@deonblack?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Deon Black</a> on <a href="https://unsplash.com/s/photos/period-shame?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">period shameh</a>
+  
+- Photo by <a href="https://unsplash.com/@jernejgraj?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jernej Graj</a> on <a href="https://unsplash.com/s/photos/skin-in-water?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">skin organ</a>
+- Photo by <a href="https://unsplash.com/@saiid_bel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">saiid bel</a> on <a href="https://unsplash.com/s/photos/babies?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">natural family planning</a>
+- Photo by <a href="https://unsplash.com/@esteejanssens?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Estée Janssens</a> on <a href="https://unsplash.com/s/photos/calendar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"> period tracking</a>
+- https://helloclue.com/articles/cycle-a-z/wet-sticky-what-your-discharge-is-telling-you (cervical mucus)   
+- Photo by <a href="https://unsplash.com/@morgane_lb?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Morgane Le Breton</a> on <a href="https://unsplash.com/s/photos/herbs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">herbs</a>
+- Photo by <a href="https://unsplash.com/@bookblock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bookblock</a> on <a href="https://unsplash.com/s/photos/food-diary?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">food diary</a>
+- Photo by <a href="https://unsplash.com/@deonblack?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Deon Black</a> on <a href="https://unsplash.com/s/photos/fertility-facts?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">fertility facts</a>
+  
+-
+
+  
 - https://pythoncircle.com/post/703/using-if-else-condition-in-django-template/
 - https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi (blog)
 - https://learndjango.com/tutorials/django-slug-tutorial (slug)
 - https://github.com/jamesturk/django-honeypot (honeypot documentation)
 - https://medium.com/hackernoon/the-easiest-way-to-send-emails-with-django-using-ses-from-aws-62f3d3d33efd (amazon ses)
+- https://shareyourstorypdx.com/2018/04/05/canva-resize-images/#:~:text=First%2C%20you%20need%20to%20log,example%20600%20x%20400%20px. (resizing images on canva)
 
 ### Acknowledgements
-- Thanks to: my Code Institute Mentor  advice throughout the development process.
+- Thanks to: my Code Institute Mentor [Anna](https://github.com/annavillanueva) for the advice throughout the development process.
 - Code Institute Slack Community that gave me a light when I was stuck in my coding.
+- A fellow student [Thomas](https://github.com/Tmuat) for the unlimited support and guidance where possible. The process of learning how to code and create a full stack wenbsite can be ever so tough and daunting. Having a peer who is willing to brainstorm and troubleshoot problems with youm is a priceless asset. 
 
 ### Disclaimer
 This website is created for educational purpose only. content entirely fictional. 
 
 
 ### Reflection
-At the start of this project I had two models with items. Products and Services. Having two models like this, both of equal importance to the main functionality of your site is a tremendous amount of work. I was having to cater for both models and their functionality all the way until building the checkout. It was at this point that I had to make the executive decision to change the entire structure of my project, by consolidating all of the items into one model (products). this was a great lesson, it taught me the true value of KISS and moving forward, simplicity will be at the forefront of my mind when approaching all projects. For me personally, I have found it tough to distinguish between what it necessary and what is extra. Throughout all of my projects at code Institute I have struggled to confine and adequately execute my ideas. I feel that this project, really taught me how to scale my ideas and the consequences of allowing your imagaination and ego, rule your decsions. In hindsight, I should have just had products as my model and i could have then got further along in my project faster and avoided the wasted time and energy, PLUS i would have had more time to focus on the functionality required to still distinguish between items in the shopping bag, both coming from the same model! However, if i had not had this bump in the road, it is very likely that i would have repeated this unhelpfil patterns of believeing that unecessaery ideas,should all be taken into developement. 
+At the start of this project I had two models with items. Products and Services. 
+Having two models like this, both of equal importance to the main functionality of your site is a tremendous amount of work. I was having to cater for both models and their functionality all the way until building the checkout. It was at this point that I had to make the executive decision to change the entire structure of my project, by consolidating all of the items into one model (products). This was a great lesson, it taught me the true value of KISS and moving forward, simplicity will be at the forefront of my mind when approaching all projects. For me personally, I have found it tough to distinguish between what it necessary and what is extra. Throughout all of my projects at code Institute I have struggled to confine and adequately execute my ideas. I feel that this project, really taught me how to scale my ideas and the consequences of allowing your imagaination and ego, rule your decsions. In hindsight, I should have had one model- 'products', from the beginning. If I had made this call earlier, I would have been able to implement features 1 and 2, from my future features list. PLUS I would have avoided the time and energy spent trying to solve dual model related bugs and errors. However, if i had not had this bump in the road, it is very likely that i would have repeated this unhelpfil patterns of believeing that unecessaery ideas, should all be taken into developement. Up until this point, the idea of actually working in a tech role, alone, without the support of tutor guidance or the slack community, terrified me, however i definitely feel ready to go out into the 'real' world with my new found skills. I am grateful to code institute the mountains of helpful resources and support and cannot wait to start putting my new skills to use! 
+
 
 
