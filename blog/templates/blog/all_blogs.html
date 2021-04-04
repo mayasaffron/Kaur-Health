@@ -57,7 +57,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{% url 'blog_detail' object.slug %}" method="POST">
+                <form action="{% url 'blog_detail' blog.slug %}" method="POST">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <input type="submit" value="Submit"></form>

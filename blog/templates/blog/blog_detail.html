@@ -89,10 +89,13 @@
 <hr>
                     {% endfor %}
             {% endif %}
-            <small class="ml-3">
-                <div class="col"><a class="text-info" href="{% url 'add_blog_post' %}">Write a post</a></div>
-                <div class="col"><a class="text-info" href="{% url 'blog' %}">Back to the other blogs</a></div>
+            <div class="row">
+                <small class="ml-3">
+                <div class="col-6"><a class="text-info" href="{% url 'add_blog_post' %}">Write a post</a></div>
+                <div class="col-6"><a class="text-info" href="{% url 'blog' %}">Back to the other blogs</a></div>
             </small>
+            </div>
+
 
 
         </div>
@@ -136,7 +139,7 @@
                 <div class="modal-footer">
                     <a href="{% url 'delete_blog' object.pk %}"
                         class="modal-close waves-effect waves-green btn-flat text-danger">Yes</a>
-                    <a class="modal-close waves-effect waves-green btn-flat">No</a>
+                    <a href="#" data-bs-dismiss="modal" class="modal-close waves-effect waves-green btn-flat">No</a>
                 </div>
         </div>
     </div>
