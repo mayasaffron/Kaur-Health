@@ -46,19 +46,15 @@
                         <img class="card-img-top img-fluid" src="{{ object.blog_image.url }}" alt="{{ post.title }}">
                     </a>
                 {% else %}
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.png" alt="{{ post.title }}">
                 {% endif %}    
 
             {% if not object.comments.all %}
                 <div class="row">
                 <div class="col-12">
                 <h2>No Comments yet..
-                    {% if request.user.is_authenticated %}
-                        <h6 data-toggle="modal" data-target="#commentModal">Add first comment!</h6>
-                    {% else %}
-                        <h6 data-toggle="modal" data-target="#commentModal">Add first comment!</h6>
-                    {% endif %}
                 </h2>
+                <div class="col"><p class="text-info" data-toggle="modal" data-target="#commentModal">Comment</p></div>
                 </div>
                 </div>
             {% else %}
@@ -94,7 +90,6 @@
                     {% endfor %}
             {% endif %}
             <small class="ml-3">
-                <div class="col"><p class="text-info" data-toggle="modal" data-target="#commentModal">Comment</p></div>
                 <div class="col"><a class="text-info" href="{% url 'add_blog_post' %}">Write a post</a></div>
                 <div class="col"><a class="text-info" href="{% url 'blog' %}">Back to the other blogs</a></div>
             </small>
@@ -141,7 +136,7 @@
                 <div class="modal-footer">
                     <a href="{% url 'delete_blog' object.pk %}"
                         class="modal-close waves-effect waves-green btn-flat text-danger">Yes</a>
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+                    <a class="modal-close waves-effect waves-green btn-flat">No</a>
                 </div>
         </div>
     </div>
