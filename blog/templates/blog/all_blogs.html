@@ -45,12 +45,9 @@
 
         <!-- initialisation for modals for double checking deleting -->
     <script type="text/javascript"> 
-        var myModal = document.getElementById('myModal')
-        var myInput = document.getElementById('myInput')
-
-        myModal.addEventListener('shown.bs.modal', function () {
-        myInput.focus()
-        })
+        $(document).ready(function () {
+        $('.modal').modal();
+        });
     </script>
 
 {% endblock %}
