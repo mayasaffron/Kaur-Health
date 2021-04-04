@@ -29,9 +29,17 @@
                     <div class="blog-detail-container">
                     <p class="lead mb-0 font-weight-bold">by: {{ object.author }}</p>
                     {% if request.user == object.author %}
-                        <a class="btn-edit" href="{% url 'update_blog' object.pk %}">Edit</a>
-                        delete confirmation modal 
-                                <a class="text-danger " href="{% url 'delete_blog' object.pk %}">Delete</a>
+<!-- confirm delete modal -->
+                <a class="btn modal-trigger delete" href="#delete-confirmation">Delete</a>
+                <div id="delete-confirmation" class="modal">
+                    <div class="modal-content col s12">
+                        <h4 class="subtitles">Are you sure you want to delete?</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <a class="text-danger " href="{% url 'delete_blog' blog.pk %}">Yes</a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+                    </div>
+                </div>
                     {% endif %}
         
         {% if post.category %}
@@ -54,7 +62,7 @@
                 <div class="col-12">
                 <h2>No Comments yet..
                     {% if request.user.is_authenticated %}
-                        <a href="#">want to make one?</a>
+                        <h6 data-toggle="modal" data-target="#commentModal">want to make one?</h6>
                     {% else %}
                         <a href="#">want to make one?</a>
                     {% endif %}
@@ -129,4 +137,3 @@
 
 
 {% endblock %}
-

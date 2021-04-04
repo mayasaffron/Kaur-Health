@@ -51,8 +51,19 @@
         {% if request.user.is_superuser %}
             <small class="ml-3">
                 <a href="{% url 'update_product' product.id %}">Update</a>
-                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-            </small>
+                                                                                <!-- confirm delete modal -->
+                <a class="btn modal-trigger delete" href="#delete-confirmation">Delete</a>
+                <div id="delete-confirmation" class="modal">
+                    <div class="modal-content col s12">
+                        <h4 class="subtitles">Are you sure you want to delete?</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Yes</a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+                    </div>
+                </div>
+                                                
+                                            </small>
         {% endif %}
         <p class="mt-3">{{ product.description }}</p>
     <form class="form" action="{% url 'add_product_to_bag' product.id %}" method="POST">
@@ -114,5 +125,11 @@
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}
+        <!-- initialisation for modals for double checking deleting -->
+    <script type="text/javascript"> 
+    $(document).ready(function () {
+    $('.modal').modal();
+    });
+    </script>
     {% include 'products_and_services/includes/product_quantity_input_script.html' %}
 {% endblock %}

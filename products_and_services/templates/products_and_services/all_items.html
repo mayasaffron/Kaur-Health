@@ -104,7 +104,9 @@
                                             {% if request.user.is_superuser %}
                                             <small class="ml-3">
                                                 <a href="{% url 'update_product' product.id %}">Update</a>
-                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                                <!-- confirm delete modal -->
+                                                                
+                                                
                                             </small>
                                             {% endif %}
                                         </div>
@@ -148,12 +150,14 @@
 {% block postloadjs %}
     {{ block.super }}
 
+    <!-- scroll up link -->
     <script type="text/javascript">
     $('.scroll-up-link').click(function(e){
         window.scrollTo(0,0)
     })
     </script>
 
+    <!-- sort selector -->
     <script type="text/javascript">
     $('#sort-selector').change(function(){
         var selector = $(this);
