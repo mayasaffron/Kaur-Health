@@ -62,9 +62,9 @@
                 <div class="col-12">
                 <h2>No Comments yet..
                     {% if request.user.is_authenticated %}
-                        <h6 data-toggle="modal" data-target="#commentModal">want to make one?</h6>
+                        <h6 data-toggle="modal" data-target="#commentModal">Add first comment!</h6>
                     {% else %}
-                        <a href="#">want to make one?</a>
+                        <h6 data-toggle="modal" data-target="#commentModal">Add first comment!</h6>
                     {% endif %}
                 </h2>
                 </div>
@@ -76,7 +76,7 @@
                 <div class="col-12">
                 <h2>Comments!!</h2>
                 </div>
-                <h6 data-toggle="modal" data-target="#commentModal">add comment</h6>
+                <h6 data-toggle="modal" data-target="#commentModal">Add comment</h6>
                 </div>
                     {% for comment in object.comments.all %}
                 <div class="row">

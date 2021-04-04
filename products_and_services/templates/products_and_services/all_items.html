@@ -106,6 +106,16 @@
                                                 <a href="{% url 'update_product' product.id %}">Update</a>
                                                                 <!-- confirm delete modal -->
                                                                 
+                <a class="btn modal-trigger delete" href="#delete-confirmation">Delete</a>
+                <div id="delete-confirmation" class="modal">
+                    <div class="modal-content col s12">
+                        <h4 class="subtitles">Are you sure you want to delete?</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <a class="text-danger" data-bs-dismiss="modal" href="{% url 'delete_product' product.id %}">Yes</a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+                    </div>
+                </div>
                                                 
                                             </small>
                                             {% endif %}
@@ -149,6 +159,16 @@
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}
+
+        <!-- initialisation for modals for double checking deleting -->
+    <script type="text/javascript"> 
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()
+        })
+    </script>
 
     <!-- scroll up link -->
     <script type="text/javascript">
