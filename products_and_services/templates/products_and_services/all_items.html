@@ -104,19 +104,8 @@
                                             {% if request.user.is_superuser %}
                                             <small class="ml-3">
                                                 <a href="{% url 'update_product' product.id %}">Update</a>
-                                                                <!-- confirm delete modal -->
-                                                                
-                <a class="btn modal-trigger delete" href="#delete-confirmation">Delete</a>
-                <div id="delete-confirmation" class="modal">
-                    <div class="modal-content col s12">
-                        <h4 class="subtitles">Are you sure you want to delete?</h4>
-                    </div>
-                    <div class="modal-footer">
-                        <a class="text-danger" data-bs-dismiss="modal" href="{% url 'delete_product' product.id %}">Yes</a>
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
-                    </div>
-                </div>
-                                                
+                                        <!-- confirm delete modal -->
+                                                <h6 class="btn modal-trigger delete" data-toggle="modal" data-target="#deleteModal">Delete</h6>
                                             </small>
                                             {% endif %}
                                         </div>
@@ -156,6 +145,29 @@
             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
         </a>	
     </div>
+
+ <!-- Delete Modal -->
+ 
+<div class="modal fade" id="deleteModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="commentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-black">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Are you sure you want to delete?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+                <div class="modal-footer">
+                    <a href="{% url 'delete_product' product.id %}"
+                        class="modal-close waves-effect waves-green btn-flat text-danger">Yes</a>
+                    <a class="modal-close waves-effect waves-green btn-flat">No</a>
+                </div>
+        </div>
+    </div>
+</div>
+
+
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}
