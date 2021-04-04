@@ -29,17 +29,10 @@
                     <div class="blog-detail-container">
                     <p class="lead mb-0 font-weight-bold">by: {{ object.author }}</p>
                     {% if request.user == object.author %}
-<!-- confirm delete modal -->
-                <a class="btn modal-trigger delete" href="#delete-confirmation">Delete</a>
-                <div id="delete-confirmation" class="modal">
-                    <div class="modal-content col s12">
-                        <h4 class="subtitles">Are you sure you want to delete?</h4>
-                    </div>
-                    <div class="modal-footer">
-                        <a class="text-danger " href="{% url 'delete_blog' blog.pk %}">Yes</a>
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
-                    </div>
-                </div>
+
+                    <a class="btn-edit" href="{% url 'update_blog' blog.slug %}">Edit post</a>
+                    <!-- confirm delete modal -->
+                <h6 class="btn modal-trigger delete" data-toggle="modal" data-target="#deleteModal">Are you sure you want to delete?</h6>
                     {% endif %}
         
         {% if post.category %}
@@ -114,13 +107,13 @@
     </div>
     
 
- <!-- Modal -->
+ <!-- Comment Modal -->
 <div class="modal fade" id="commentModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
     aria-labelledby="commentModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content text-black">
             <div class="modal-header">
-                <h5 class="modal-title" id="commentModalLabel">Delivery Options</h5>
+                <h5 class="modal-title" id="commentModalLabel">Your comment</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -135,5 +128,24 @@
     </div>
 </div>
 
+ <!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="commentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-black">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Are you sure you want to delete?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+                <div class="modal-footer">
+                    <a href="{% url 'delete_blog' blog.pk %}"
+                        class="modal-close waves-effect waves-green btn-flat text-danger">Yes</a>
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+                </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

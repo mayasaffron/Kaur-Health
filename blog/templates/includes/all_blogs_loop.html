@@ -37,20 +37,7 @@
                     <a class="btn-edit" href="{% url 'update_blog' blog.slug %}">Edit post</a>
 
                 <!-- confirm delete modal -->
-                    <div class="col s6">
-                        <a class="waves-effect btn modal-trigger delete " href="#delete-confirmation">Delete</a>
-                    </div>
-                    <div id="delete-confirmation" class="modal">
-                        <div class="modal-content col s12">
-                            <h4 class="subtitles">Are you sure you want to delete?</h4>
 
-                        </div>
-                        <div class="modal-footer">
-                            <a href="{% url 'delete_blog' blog.pk %}"
-                                class="modal-close waves-effect waves-green btn-flat text-danger">Yes</a>
-                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
-                        </div>
-                    </div>
 
                     {% endif %}
                 </small>
