@@ -35,9 +35,8 @@
                     <a class="text-danger" href="{% url 'add_blog_post' %}">Write a post</a>
                     {% if request.user == blog.author %}
                     <a class="btn-edit" href="{% url 'update_blog' blog.slug %}">Edit post</a>
-
-                <!-- confirm delete modal -->
-
+                    <!-- confirm delete modal -->
+                <h6 class="btn modal-trigger delete" data-toggle="modal" data-target="#deleteModal">Are you sure you want to delete?</h6>
 
                     {% endif %}
                 </small>

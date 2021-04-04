@@ -3,8 +3,8 @@ html{
 }
 
 body{
-    background-color: #547A06;
-    color: white;
+    background-color: #f4e1e1;
+    color: black;
     font-family: "Nunito", sans-serif;
 }
 
@@ -14,7 +14,7 @@ body{
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: lavender;
+	background: #48304d;
 	z-index: -1;
 }
 

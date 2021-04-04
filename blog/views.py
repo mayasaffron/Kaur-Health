@@ -47,8 +47,7 @@ def blog_detail(request, slug):
         'object': blog,
         'form': form,
     }
-    return render(request, 'blog/blog_detail.html',
-                  context)
+    return render(request, 'blog/blog_detail.html', context)
 
 
 def add_blog_post(request):
