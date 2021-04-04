@@ -29,10 +29,9 @@
                     <div class="blog-detail-container">
                     <p class="lead mb-0 font-weight-bold">by: {{ object.author }}</p>
                     {% if request.user == object.author %}
-
                     <a class="btn-edit" href="{% url 'update_blog' object.slug %}">Edit post</a>
                     <!-- confirm delete modal -->
-                <h6 class="btn modal-trigger delete" data-toggle="modal" data-target="#deleteModal">Are you sure you want to delete?</h6>
+                <h6 class="btn modal-trigger delete" data-toggle="modal" data-target="#deleteModal">Delete post</h6>
                     {% endif %}
         
         {% if post.category %}
@@ -95,10 +94,10 @@
                     {% endfor %}
             {% endif %}
             <small class="ml-3">
-                <a href="#">comment</a>
-                <a class="text-danger" href="#">i want to write a post!</a>
-                <a class="text-danger" href="{% url 'blog' %}">back to the other blogs</a>
-                    </small>
+                <div class="col"><p class="text-info" data-toggle="modal" data-target="#commentModal">Comment</p></div>
+                <div class="col"><a class="text-info" href="{% url 'add_blog_post' %}">Write a post</a></div>
+                <div class="col"><a class="text-info" href="{% url 'blog' %}">Back to the other blogs</a></div>
+            </small>
 
 
         </div>
