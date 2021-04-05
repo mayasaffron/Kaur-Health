@@ -3,8 +3,6 @@
         
         
         {% for blog in object_list %}
- 
-            <div class="blog-posts-container">
                 <div class="card mb-4">
                 {% if blog.blog_image %}
                 <a href="{{ BlogPost.get_absolute_url }}" target="_blank">
@@ -19,7 +17,7 @@
                     <div class="card-body">
                         <h2 class="card-title"><a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a></h2>
                         <p class="card-text">{{ blog.title }}</p>
-                        <a href="{{ blog.get_absolute_url }}" target="_blank" class="btn btn-primary">Click here to see if there are any comments! &rarr;</a>
+                        <a href="{{ blog.get_absolute_url }}" target="_blank" class="btn btn-primary">Read more &rarr;</a>
                     </div>
                     <div class="card-footer text-muted">
                         <h3>Posted on {{ blog.date }} by {{ blog.author }}</h3> 
@@ -43,8 +41,6 @@
                     </div>
                     
                 </div>
-
-            </div>
 
         {% endfor %}
 

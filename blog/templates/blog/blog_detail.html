@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
+    <div class="header-container">
         <div class="row">
             <div class="col"></div>
         </div>
@@ -18,91 +18,134 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="logo-font mb-4">{{ object.title }}</h2>
-                <p class="mt-3">{{ object.date }}</p>
-                <hr>
-            </div>
 
-                <div class="col-12">
-                    <div class="blog-detail-container">
-                    <p class="lead mb-0 font-weight-bold">by: {{ object.author }}</p>
-                    {% if request.user == object.author %}
-                    <a class="btn-edit" href="{% url 'update_blog' object.slug %}">Edit post</a>
-                    <!-- confirm delete modal -->
-                <h6 class="btn modal-trigger delete" data-toggle="modal" data-target="#deleteModal">Delete post</h6>
-                    {% endif %}
-        
-        {% if post.category %}
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h1 class="mt-4">{{ object.title }}</h1>
+
+        <!-- Author -->
+        <p class="lead">
+          by: {{ object.author }}
+        </p>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p>{{ object.date }}</p>
+
+        <hr>
+
+        {% if object.category %}
             <p class="small mt-1 mb-0">
                 {{ object.category.friendly_name }}
             </p>
         {% endif %}
 
-            <p class="mt-3">{{ object.body }}</p>
-                {% if object.blog_image %}
-                            <a href="{{ object.blog_image.url }}" target="_blank">
-                        <img class="card-img-top img-fluid" src="{{ object.blog_image.url }}" alt="{{ post.title }}">
-                    </a>
-                {% else %}
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.png" alt="{{ post.title }}">
-                {% endif %}    
+        <hr>
+        <!-- Preview Image -->
+        {% if object.blog_image  %}
+                <a href="{{ object.blog_image.url }}" target="_blank">
+                <img class="img-fluid rounded" src="{{ object.blog_image.url  }}" alt="{{ post.title }}">
+                </a>
+        {% else %}
+                <img class="img-fluid rounded" src="{{ MEDIA_URL }}no-image.png" alt="{{ post.title }}">
+        {% endif %}
 
-            {% if not object.comments.all %}
-                <div class="row">
-                <div class="col-12">
-                <h2>No Comments yet..
-                </h2>
-                <div class="col"><p class="text-info" data-toggle="modal" data-target="#commentModal">Comment</p></div>
-                </div>
-                </div>
-            {% else %}
-             <hr>
-             
-             <div class="row">
-                <div class="col-12">
-                <h2>Comments!!</h2>
-                </div>
-                <h6 data-toggle="modal" data-target="#commentModal">Add comment</h6>
-                </div>
-                    {% for comment in object.comments.all %}
-                <div class="row">
-            <div class="col-4">
-                 <p class="small mt-1 mb-0">
-                {{ comment.name }}
-            </p>
+        <hr>
 
+        <!-- Post Content -->
+        <p class="lead"> {{ object.body }} </p>
 
-                 <p class="small mt-1 mb-0">
-                {{ comment.date }}
-            </p>
-            </div>
-                </div>
-                <div class="row">
-            <div class="col">
-                 <p class="small mt-1 mb-0">
-                {{ comment.body }}
-            </p>
-            </div>
-            </div>
-<hr>
-                    {% endfor %}
-            {% endif %}
-            <div class="row">
-                <small class="ml-3">
-                <div class="col-6"><a class="text-info" href="{% url 'add_blog_post' %}">Write a post</a></div>
-                <div class="col-6"><a class="text-info" href="{% url 'blog' %}">Back to the other blogs</a></div>
-            </small>
-            </div>
-
-
-
+        <hr>
+        {% if request.user == object.author %}
+            <a class="btn-edit" href="{% url 'update_blog' object.slug %}">Edit post</a>
+            <!-- confirm delete modal -->
+            <h6 class="btn modal-trigger delete" data-toggle="modal" data-target="#deleteModal">Delete post</h6>
+        {% endif %}
+        
         </div>
-</div>
-</div>
-    </div>
-    
+        </div>
+        <!-- Single Comment -->
+        <div class="row">
+        <div class="col-lg-8">
+        <div class="media mb-4">
+            {% if not object.comments.all %}
+                <div class="media-body">
+                    <h5 class="mt-0">No Comments yet..</h5>
+                    <div class="col"><p class="text-info" data-toggle="modal" data-target="#commentModal">Comment</p></div>
+                </div>
+        </div>
+                    <small class="ml-3">
+            {% if request.user.is_authenticated %}
+                <div class="col-4"><a class="text-info" href="{% url 'add_blog_post' %}">Write a post</a></div>
+                <div class="col-4"><p class="text-info" data-toggle="modal" data-target="#commentModal">Comment</p></div>
+                
+            {% else %}
+                <div class="col-4"><a class="text-info" href="{% url 'account_login' %}" target="blank">Login and write a post</a></div>
+                <div class="col-4"><a class="text-info" href="{% url 'account_login' %}" target="blank">Login and comment</a></div>
+            {% endif %} 
+            <div class="col-4"><a class="text-info" href="{% url 'blog' %}">Back to the other blogs</a></div>
+            </small> 
+             <hr>
+            {% else %}
+        <div class="media mb-4">
+                <div class="media-body">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="">Comments</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                        {% for comment in object.comments.all %}
+                        <h4 class="mt-0">{{ comment.name }} said</h4>
+                        <p class="lead"> {{ comment.body }} </p>
+                        <p class="small mt-1 mb-0">on {{ comment.date }}</p>
+                    </div>
+                </div>
+                <hr>
+                {% if forloop.counter|divisibleby:1 %}
+                            <div class="col-12 d-sm-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}                        
+                        {% if forloop.counter|divisibleby:2 %}
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:3 %}
+                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:4 %}
+                            <div class="col-12 d-none d-xl-block mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        {% endfor %}       
+            {% endif %}
+            </div>
+            </div>
+        </div> 
+                    <small class="ml-3">
+            {% if request.user.is_authenticated %}
+                <div class="col-4"><a class="text-info" href="{% url 'add_blog_post' %}">Write a post</a></div>
+                <div class="col-4"><p class="text-info" data-toggle="modal" data-target="#commentModal">Comment</p></div>
+                <div class="col-4"><a class="text-info" href="{% url 'blog' %}">Back to the other blogs</a></div>
+            {% else %}
+                <div class="col-4"><a class="text-info" href="{% url 'account_login' %}" target="blank">Login and write a post</a></div>
+                <div class="col-4"><a class="text-info" href="{% url 'account_login' %}" target="blank">Login and comment</a></div>
+                <div class="col-4"><a class="text-info" href="{% url 'blog' %}">Back to the other blogs</a></div>
+            {% endif %} 
+            </small> 
+        </div>
+
+
+
 
  <!-- Comment Modal -->
 <div class="modal fade" id="commentModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
@@ -132,14 +175,11 @@
         <div class="modal-content text-black">
             <div class="modal-header">
                 <h5 class="modal-title" id="deleteModalLabel">Are you sure you want to delete?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
             </div>
                 <div class="modal-footer">
                     <a href="{% url 'delete_blog' object.pk %}"
                         class="modal-close waves-effect waves-green btn-flat text-danger">Yes</a>
-                    <a href="#" data-bs-dismiss="modal" class="modal-close waves-effect waves-green btn-flat">No</a>
+                    <button type="button" class="btn-success btn" data-dismiss="modal" aria-label="Close"> No </button>
                 </div>
         </div>
     </div>
