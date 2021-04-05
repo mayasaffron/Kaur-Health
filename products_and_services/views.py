@@ -147,5 +147,17 @@ def delete_product(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
-    messages.success(request, f' {product.name} has been deleted')
     return redirect(reverse('all_items'))
+
+
+def confirm_delete(request):
+    """
+   confirm delete
+    """
+    if request.method == 'POST':
+        selected = request.POST.get('id-selected')
+        product = get_object_or_404(Product, pk=selected)
+        product.delete()
+        messages.success(request, f' {product.name} has been deleted')
+    redirect_url = request.POST.get('redirect_url')
+    return redirect(redirect_url)

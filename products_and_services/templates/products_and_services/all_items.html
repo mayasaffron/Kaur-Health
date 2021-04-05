@@ -104,9 +104,9 @@
                                             {% if request.user.is_superuser %}
                                             <small class="ml-3">
                                                 <a href="{% url 'update_product' product.id %}">Update</a>
-                                        <!-- confirm delete modal -->
-                                                <h6 class="btn modal-trigger delete" data-toggle="modal" data-target="#deleteModal">Delete</h6>
-                                            </small>
+                                             <!-- confirm delete modal -->
+                                                <button class="btn modal-trigger delete js-delete" data-id="{{ product.id }}" data-value="{{ product.id }}" data-toggle="modal" data-target="#deleteModal">Delete</button>
+                                                </small>
                                             {% endif %}
                                         </div>
                                     </div>
@@ -146,7 +146,7 @@
         </a>	
     </div>
 
- <!-- Delete Modal -->
+     <!-- Delete Modal -->
  
 <div class="modal fade" id="deleteModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
     aria-labelledby="deleteModalLabel" aria-hidden="true">
@@ -154,39 +154,37 @@
         <div class="modal-content text-black">
             <div class="modal-header">
                 <h5 class="modal-title" id="deleteModalLabel">Are you sure you want to delete?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
             </div>
                 <div class="modal-footer">
-                    <a href="{% url 'delete_product' product.id %}"
-                        class="modal-close waves-effect waves-green btn-flat text-danger">Yes</a>
-                    <a class="modal-close waves-effect waves-green btn-flat">No</a>
+                    <form id="delete-form" method="POST" action="{% url 'confirm_delete' %}">
+        {% csrf_token %}
+        <input type="hidden" name="id-selected" id="id-selected">
+        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+        <input type="submit" value="Confirm Delete" class="btn btn-danger">
+       <button type="button" class="btn-success btn" data-dismiss="modal" aria-label="Close"> No
+                </button>
+    </form>
                 </div>
         </div>
     </div>
 </div>
 
-
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}
-
-        <!-- initialisation for modals for double checking deleting -->
-    <script type="text/javascript"> 
-        var myModal = document.getElementById('myModal')
-        var myInput = document.getElementById('myInput')
-
-        myModal.addEventListener('shown.bs.modal', function () {
-        myInput.focus()
-        })
-    </script>
-
-    <!-- scroll up link -->
+        <!-- scroll up link -->
     <script type="text/javascript">
     $('.scroll-up-link').click(function(e){
         window.scrollTo(0,0)
     })
+    </script>
+
+    <!-- delete modal -->
+    <script type="text/javascript">
+    $(".js-delete").click(function () {
+        var productId = $(this).attr("data-value");
+        $("#id-selected").val(productId)
+    });
     </script>
 
     <!-- sort selector -->
