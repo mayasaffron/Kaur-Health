@@ -750,6 +750,7 @@ Photo by <a href="https://unsplash.com/@gabriellefaithhenderson?utm_source=unspl
 - https://github.com/jamesturk/django-honeypot (honeypot documentation)
 - https://medium.com/hackernoon/the-easiest-way-to-send-emails-with-django-using-ses-from-aws-62f3d3d33efd (amazon ses)
 - https://shareyourstorypdx.com/2018/04/05/canva-resize-images/#:~:text=First%2C%20you%20need%20to%20log,example%20600%20x%20400%20px. (resizing images on canva)
+- https://startbootstrap.com/previews/blog-home (blog template)
 
 ### Acknowledgements
 - Thanks to: my Code Institute Mentor [Anna](https://github.com/annavillanueva) for the advice throughout the development process.

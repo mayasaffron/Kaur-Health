@@ -1263,7 +1263,63 @@ to my settings.py file. when setting your static root, a common mistake is setti
 After changing these varibales, i successfully deployed. 
 On reflection, I will insure that with future projects I deploy a lot earlier into the journey than I have with this project. Although I am still not quite finished and it is a weight off my shoulders, it would have been even better to iron out these issues and learn about things like the static roote varibale , even eaelier in the project. 
 
-
+## Bug 13 modal confusion errors
+- Initially I had thought it was good UX to have the action aoptions; edit, delete and comment, accessible on all blog pages (all blogs, my blogs, blog detail).
+- This was fine for the update and comment options, but if the user hit delete, I wanted to add a modal in so that the user could double check whether they really wanted to delete. 
+- The modal relies on links that exist inside the for loop, therefore, if i placed the delete confirmation button (linked to the modal) in the loop and the modal outside the loop. The confirmation button and relative data-target, toggle etc, were not recognised and would throw a loop. 
+- An obvious solution would be to place the modal functionality inside the loop, however this would result in generating a modal for all of the products on the page, which would undoubtedly lead to many bugs. 
+- I decided that it was arguably better to have all the action buttons in one destination and UX would not be damaged if, edit delete and comment functionality was only accessible via blog detail. 
+- However, when it came to the same logic for confirming delete modal for the store items (accessible to admin user) I felt it was none negotiable that the admin should be able to delete an item from both the all items and product detail page. 
+- again, this was straight forward on the product detail page, becuase the functionality is only referring to ONE item, however i ran into errors on the all items page. 
+- ![ URL error ](readme-materials/bug_screenshots/bug_13(a).png)
+- To solve this I added a hidden form into the modal.
+```
+<div class="modal fade" id="deleteModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-black">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Are you sure you want to delete?</h5>
+            </div>
+                <div class="modal-footer">
+                    <form id="delete-form" method="POST" action="{% url 'confirm_delete' %}">
+        {% csrf_token %}
+        <input type="hidden" name="id-selected" id="id-selected">
+        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+        <input type="submit" value="Confirm Delete" class="btn btn-danger">
+       <button type="button" class="btn-success btn" data-dismiss="modal" aria-label="Close"> No
+                </button>
+    </form>
+                </div>
+        </div>
+    </div>
+</div>
+```
+- Made a new view with a corresponding URL 
+```
+def confirm_delete(request):
+    """
+   confirm delete
+    """
+    if request.method == 'POST':
+        selected = request.POST.get('id-selected')
+        product = get_object_or_404(Product, pk=selected)
+        product.delete()
+        messages.success(request, f' {product.name} has been deleted')
+    redirect_url = request.POST.get('redirect_url')
+    return redirect(redirect_url)
+```
+- Finally, used Jquery to complete the action and direct the functionality 
+```
+    <!-- delete modal -->
+    <script type="text/javascript">
+    $(".js-delete").click(function () {
+        var productId = $(this).attr("data-value");
+        $("#id-selected").val(productId)
+    });
+    </script>
+```
+- It has become clear throughout this project, that whilst Django is a very helpful framework, its limitations lie within the difficulty to apply specific actions to more than one item, hence why its easier to have detail pages for each item/ blog. I could have decided to simply have the delete functionality on the product detail only, however I truly beleiev it is better UX for the delete to be accessible in all items. Moving forward, I would spend more time learning AJAX, which i know would have come in handy here. 
 ## Validators and Linters
 
 ### WW3 HTML validation 
