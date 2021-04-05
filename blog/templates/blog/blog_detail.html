@@ -131,17 +131,6 @@
             </div>
             </div>
         </div> 
-                    <small class="ml-3">
-            {% if request.user.is_authenticated %}
-                <div class="col-4"><a class="text-info" href="{% url 'add_blog_post' %}">Write a post</a></div>
-                <div class="col-4"><p class="text-info" data-toggle="modal" data-target="#commentModal">Comment</p></div>
-                <div class="col-4"><a class="text-info" href="{% url 'blog' %}">Back to the other blogs</a></div>
-            {% else %}
-                <div class="col-4"><a class="text-info" href="{% url 'account_login' %}" target="blank">Login and write a post</a></div>
-                <div class="col-4"><a class="text-info" href="{% url 'account_login' %}" target="blank">Login and comment</a></div>
-                <div class="col-4"><a class="text-info" href="{% url 'blog' %}">Back to the other blogs</a></div>
-            {% endif %} 
-            </small> 
         </div>
 
 
@@ -186,3 +175,6 @@
 </div>
 
 {% endblock %}
+
+
+ 
