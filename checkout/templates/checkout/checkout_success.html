@@ -78,12 +78,12 @@ Order Number
     {% else %}
         <td class="left"><strong> This is a tangible product</strong></td>
     {% endif %}
-{% endfor %}
-<td class="right">£{{ item.product.price }}</td>
-  <td class="center">{{ item.quantity }}</td>
-<td class="right">{{ lineitem_total }}</td>
-</tr>
 
+    <td class="right">£{{ item.product.price }}</td>
+    <td class="center">{{ item.quantity }}</td>
+    <td class="right">{{ lineitem_total }}</td>
+    </tr>
+{% endfor %}
 </tbody>
 </table>
 </div>
