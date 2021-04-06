@@ -122,7 +122,7 @@ This image is created with [ami.responsivedesign]().
 | Site User| Filter by a specific category | Easily find products in a specific category |
 | Site User | Leave/View product reviews with scores | Understand which products are popular with other customers |
 | Site User | Easily add a new product | Make sure the online site has the latest catalogue |
-| Site User | Easily remove a product | Make sure the online site has the latest catalogue |
+| Site User | Easily update and remove a product | Make sure the online site has the latest catalogue |
 
 <br/>
 
@@ -381,7 +381,8 @@ This would give me more freedom to develop further as the site and products grow
 
 ### Blog
 4 - Currently due to the slug, when a user tries to add a blog post, if the title of the blog post is that of an existing blog post, the user will get an errro message. However ideally, if developing this site further, i would like to add 'title comparison/ checks' to the form validatioon, or use AJAX to esssntially check the title as the user types it and pause them there, if the title is preexitisng. 
-5 - Install AJAX requests functionality, so that users can update and make blog posts in the page, similar to the comment functionality occuring on the page, via a modal. 
+5 - add functionality for super user to be able to delete unsavoury comments.
+6 - Install AJAX requests functionality, so that users can update and make blog posts in the page, similar to the comment functionality occuring on the page, via a modal. 
 
 
 ## Defensive Design
@@ -751,6 +752,8 @@ Photo by <a href="https://unsplash.com/@gabriellefaithhenderson?utm_source=unspl
 - https://medium.com/hackernoon/the-easiest-way-to-send-emails-with-django-using-ses-from-aws-62f3d3d33efd (amazon ses)
 - https://shareyourstorypdx.com/2018/04/05/canva-resize-images/#:~:text=First%2C%20you%20need%20to%20log,example%20600%20x%20400%20px. (resizing images on canva)
 - https://startbootstrap.com/previews/blog-home (blog template)
+- https://codepen.io/daplo/pen/xYVQPz (invoice template - checkout success)
+
 
 ### Acknowledgements
 - Thanks to: my Code Institute Mentor [Anna](https://github.com/annavillanueva) for the advice throughout the development process.

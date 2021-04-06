@@ -44,7 +44,11 @@ select, select option{
 }
 
 .black-text{
-    color: red;
+    color: black;
+}
+
+.text-muted {
+    color:black!important;
 }
 
 select:invalid,
@@ -69,3 +73,13 @@ select option[value=""]{
     margin: 0;
     height: 100%;
 }
+/* checkout success */
+.card{
+    border: 1px solid #dda0a1;
+
+}
+
+.card-header{
+    background-color: #dda0a1;
+}
+

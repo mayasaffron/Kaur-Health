@@ -21,21 +21,20 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4 black-text">Thank You</h2>
+                <h2 class="uppercase mb-4 black-text">Thank You</h2>
                 <hr>
                 <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
             </div>
         </div>
   <div class="card">
 <div class="card-header">
-Order Number
-<strong>{{ order.order_number }}</strong> 
-  <span class="float-right"> <strong>Date:</strong>{{ order.date }}</span>
+Order Number:<strong> {{ order.order_number }}</strong> 
+  <span class="float-right"> <strong>Date:</strong> {{ order.date }}</span>
 </div>
 
 <div class="card-body">
     <div class="row mb-4">
-<div class="col-sm-6">
+<div class="col-sm-12">
 <h6 class="mb-3">Delivering To:</h6>
 <div>
 <strong>{{ order.full_name }}</strong>
@@ -65,8 +64,7 @@ Order Number
 <th>Description</th>
 
 <th class="right">Unit Cost</th>
-  <th class="center">Qty</th>
-<th class="right">Total</th>
+  <th class="center">Quantity</th>
 </tr>
 </thead>
 <tbody>
@@ -81,7 +79,6 @@ Order Number
 
     <td class="right">£{{ item.product.price }}</td>
     <td class="center">{{ item.quantity }}</td>
-    <td class="right">{{ lineitem_total }}</td>
     </tr>
 {% endfor %}
 </tbody>

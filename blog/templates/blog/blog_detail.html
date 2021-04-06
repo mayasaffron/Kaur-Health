@@ -74,7 +74,9 @@
             {% if not object.comments.all %}
                 <div class="media-body">
                     <h5 class="mt-0">No Comments yet..</h5>
+                    {% if request.user.is_authenticated %}
                     <div class="col"><p class="text-info" data-toggle="modal" data-target="#commentModal">Comment</p></div>
+                    {% endif %} 
                 </div>
         </div>
                     <small class="ml-3">

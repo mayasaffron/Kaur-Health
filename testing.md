@@ -25,69 +25,82 @@
     -[Accessibility](#Accessibility)
     -[Usability](#Usability)
 
-## Accessibility
-* I used [wave](https://wave.webaim.org/) to achieve better accessibility on my site. 
-
-### Symptoms
-
-![First attempt with wave](/testing/accesibility/wave-test-1-(homepage).png)  
-* I had a serious contrast issue, so I immediately resolved this on every page. 
-
-![After resolving contrast issue](/testing/screenshots/wave-test-2-(homepage).png). 
-* I started to understand the importance of the contrast issues and labelling objects that I wouldn't assume necessary to label. For example, lists and navbars. 
-![After adding more aria-labels where necessary](/testing/screenshots/wave-test-3-(homepage).png)
-![Final wave test on homepage](/testing/screenshots/wave-test-final.png)
-
-* Due to my sites restrictions on what content can be seen by other users, I was not able to run the 'my symptoms' page through the wave test. To ensure I was able to maintain the same diligence to the accessibility of the site, across all pages, I added wave's google chrome extension to my browser. 
-[google chrome extension](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh/related) 
 
 
- ### Login
+## Validators and Linters
 
-![Login page](/testing/screenshots/wave-login.png)
-* The empty link being sighted on the page is the scroll to top function which appears as dormant on the login and register pages because, the pages have so little contnet that the function is not activated. To add clarity to the scroll to top button/ link, i added a aria- label, explaiinng that it was a scroll to top link. 
+### WW3 HTML validation 
+As expected, each of my pages flagged errors due to my use of jinja code, I also had some warnings about the misuse of the `aria-label` attribute, however since I had added these after taking the accessibility of my site into account, I thought that the wave tool was likely to be a better judge of the use of this particular attribute and felt comfortable with my choice. 
 
- ### Register
-![register page](/testing/screenshots/wave-register.png)
-* On the register page, I also had a link button to 'log in' (if users already had an account). The wave test pointed out that this was in fact bad usability and could actually be confusing for a user, therefore contributing to bad user experience. 
+Other than the jinja code-related errors, I had no other HTML validation errors. 
 
-* I removed the login link. 
+### WW3 CSS validation 
+- My CSS had no errors.
+![CSS Validator](/testing/usability/CSS-Validator.png)
 
-* In aiming to be an 'easy to use site', I had added surplus buttons for user ease. However, I had overpopulated the site with excessive buttons, which had the opposite effect! 
+### PEP8 validation 
+- My python code had no errors.
+![PEP8](/testing/usability/PEP8.png)
 
- ### My symptoms
 
-![My symptoms](/testing/screenshots/wave-my_symptoms.png)
-* The missing 'form label' is for the first question on the add symptom form 
-``` <div class="input-field status-options">
-                    <select id="isolation_status" name="isolation_status" class="validate" aria-label="isolation-status dropdown" required> 
-                    <label for="isolation_status"> </label>
-                        <option value="" disabled selected>What is your Self-isolation status?</option>
-                        {% for stat in status %}
-                        <option value="{{ stat.isolation_status }}">
-                            {{ stat.isolation_status }}
-                        </option>
-                        {% endfor %}
-                       
-                    </select>                    
-                    </div> 
-```
+### Javascript validation 
 
-* Due to the nature of this input field, it was less aesthetically pleasing, responsive to have a label AND a disabled selected option. I opted for the disabled selected option instead of a label because the disabled selected option could function as a label. I also added an aria-label for users who rely on labels. 
 
-## Responsiveness
-## Product and services App
 
-### Products and services 
 
-When a user clicks on ` Product and services ` dropdown nav bar option, you are given a dropdown to the different categories of the products and services. I thought that the dropdown would provide better user experience than a direct link, which takes you to a page where you then have to sift through the categores that you are interested in. The nature of this site, is such that, as a user you are prpbably well aware of what you are looking and therefore which category to find it. Or, if you are new to the sites content, i felt it would be less overwhelming if you have some filtering control and could navigate to the category you were most interested in. 
+## User stories testing
+
+## Viewing and Navigation
+
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Site User | Read all content clearly | Enjoy using the site. |
+
+
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Site User | Access the website on both larger and smaller screened devices | Access the website on my phone and PC |
+
+
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Site User | Be able to easily access information about Juspreet and the services she offers | Trust the validity of her and her services. |
+
+- The about page is breif and informative, not only do users have access to inforamtion regarding Juspreet and her work, they can also find testimonies from clients too. 
+- I feel the about page, fully satisfies this user story. 
+
+
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Site User | Easily navigate to the Products and services available | Find the product or service I want to purchase |
+
+- There is a searchbar on the main nav bar which says `Search Products & Services`
+![ All products and services ](readme_materials/testing_screenshots/user_stories_products(2)).png)
+- Products and services tab is clear and obvoius on the nav bar.
+
+
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Site User | See a shopping cart icon on nav bar | Always check the current order and checkout when I want |
+
+- The shopping cart icon is black when bag is empty, when bag has items; the bag becomes illuminated and reads the current total in bag. 
+
+<br/>
+
+## Online shopping 
+
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Site User| Filter by a specific category | Easily find products in a specific category |
+
+- When a user clicks on ` Product and services` dropdown nav bar option, you are given a dropdown to the different categories of the products and services. I thought that the dropdown would provide better user experience than a direct link, which takes you to a page where you then have to sift through the categores that you are interested in. The nature of this site, is such that, as a user you are prpbably well aware of what you are looking and therefore which category to find it. Or, if you are new to the sites content, i felt it would be less overwhelming if you have some filtering control and could navigate to the category you were most interested in. 
 By doing this I satisfy the ease of navihation in my user stories and adhere to my wireframes. 
 ![ The dropdown distinguishes the products and services by category ](readme_materials/logic_screenshots/navbar_dropdown(products).png)
-
-After clicking on your chosen category, all of the products and services under this category, will be displayed. The category name will appear just beneath the consistent title of 'products and services' and there is a banner just above the title, with the free delivery minimum spend. 
-# picture? 
-In the top left corner the user will see a link to `Products and services home` which when clicked will take them to the `all products and services page `, here all of the categories will be clickable links beneath the title, so that a user can navigate to the other categories from here as well/ instead of the navbar dropdown.
+- After clicking on your chosen category, all of the products and services under this category, will be displayed. The category name will appear just beneath the consistent title of 'products and services' and there is a banner just above the title, with the free delivery minimum spend. 
+In the top left corner the user will see a link to `Products and services home` which when clicked will take them to the `all products and services`, here all of the categories will be clickable links beneath the title, so that a user can navigate to the other categories from here as well/ instead of the navbar dropdown.
 Beside the `Products and services home` there is a product and service count, outlining how many products and how many services belong to this category. 
+![ All products and services ](readme_materials/testing_screenshots/user_stories_products(1)).png)
+
 Originally I toyed with the idea of having the product and service count clickable links and sectioning the page so that the user would be taken to a products section if they clicked the product count link to 'products' and the same for services. However, this proved to be bad UI, as when and if the user chose to sort the products, the sections would make things very messy and hard to contain. 
 - It was through this boolean field, that i was als able to filter down to just the services. I simply added some code to my views and template so that just the services would be displayed when a user clicks on the services. 
 I opted to distinguish services from products in a few ways;
@@ -95,260 +108,101 @@ I opted to distinguish services from products in a few ways;
 2) When a service is added to the users bag, the success message will clearly state that the user has just added a service and should read the terms and conditions carefully. 
 3) On the order receipt, I have again stated, which of the items are services and that the user should therefore read the terms and conditions. 
 
-# picture? 
-After clicking any of the products and services dropdown options, the user can use the sorting function on the top right of the page to sort through the products on the page, however they desire. Initially I had planned to include category sorting in this tab, however, since the dropdown options are filtered by category, this was already satisfied.
-# picture?
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Site User | View individual product pages that have prices and descriptions | Get detailed information about the product before purchasing |
 
-The products are displayed in cards that have `Product/ Service Name`, `Image`, `Category` `Price`, `rating`. As mentioned above, the product card format, ever so slightly differs if the product is a service. 
-Product Card for products
-<div align="center"><img src = "" width=500></div>
-
-- Pagination Bar: Unnecessary for this site currently, however I would add this as kaur health grew as a brand and had more products on offer. 
-
-### Product detail
-When the product image is pressed, the user will be taken to the respective detail page and have the option to continue shopping, or add this item, with a chosen quantity to their bag. 
-# picture?
-As mentioned above, if the product is a service, it has a small banner in the decsription explaining that this is a service and therefore there are different terms and conditions. In the future i would potentially add a modal pop up box here so that users wuld have to scroll to the bottom of the terms and condiotons before adding to the service to their bag. Howver, for the sake of time, i decided against this, as i ran into enough compications with basic functionality! 
-
-## Admin Product Managment
-If the user is logged in as a superuser, Update / Delete option is also shown on each card.
-#picture
-
-### Adding product to bag (this functionality takes the user from the products and services app to the bag app)
-When a user adds an item to the bag a success message appears in the top right corner. 
-success_message(add_product_to_bag).png
-the message gives a product and service count of the items in the bag, a small picture of the items and their quantity, it also has a slightly different message if a service is added. 
-success_message(add_service_to_bag).png
-By using these messages i am satisfying x in my user story. 
-
-## Bag App
-
-This page is simple, it outlines the products'; picture, name, price, quantity and the subtotal. I liked the idea of the items being clear and readable. This also satisfied 
-| Site User | Easily select the quantity (if applicable) of a product after adding a product to a cart | Ensure I don't accidentally select the wrong product and the quantity | 
-this user story, by being clear and readable, there was less risk of the above occuring. 
-
-When in the bag, the user can <strong>update the quantity of their products</strong>, <strong>remove a product entirely</strong> and choose to either <strong>continue shopping</strong> or <strong>checkout</strong>. 
-#picture 
-There are success/ alert messages to update user of each eventuality. Again this is satisfying x in my user stories. 
-If the user chooses to checkout, they will be using the backend logic and functionality, created in the checkout app. However, if they choose to continue shopping, they will be taken back to all the products and services and can navigate via category to the category of items, in which they are interested in. 
-
-## Checkout App
-
-When clicking the 'checkout option' the user is taken to a page displaying an empty order form on the left, needing to be completed and a summary of their order on the right. This is more feedback to the user and an opportunity for them to make any adjustments to their shopping bag. 
-If the user is logged in, beneath the form, there will be a checked option to save the info to their profile. 
-this page satisfys 
-| Site User | Have my delivery information is prefilled if logged in | Smoothly proceed with my purchase | 
-| Site User | Be reminded to log in if I did not log in | Smoothly proceed with my purchase and prefilled form |
-#picture 
-If they keep the box ticked, the delivery information will appear prefilled on their profile page. 
-#picture 
-When a order has gone through successfully, the user will be redirected to the checkout success page. Here they will have a summary of their order (which calls on the order line item models logic) a message to confirm that their order has gone through and an option to keep shopping. Their bag will now appear empty too. 
-
-## profile app 
-
-The profile app is just the users delivery information on the left and a history of their orders on the right. 
-Users can update their details on their profile, this means the details will be updated for when the user carries out their next order. 
-#picture 
-The profile app can be accessed through the account option on the navbar. 
-#picture 
-
-## Blog app 
-
-The blogs are available for any site visitor to browse, however only logged in users can write a blog.
-#picture 
-If you are logged in, you will have the option to view just your blog posts. If you are logged in, you will see a links to edit and delete your blog posts if you are looking at them on the all blogs page/ your blogs page and on the blog detail page.
-#picture
-You will be able to perform these functions if you are logged in.
-#picture
-If you are not logged in, you can view all the blog posts and then click on them and be taken to the blog detail page. 
-
-### comment on  Blog
-
-- comments of a post can be viewed if the user clicks on the blog post and is taken to the blog detail page. Here the user can also add a comment, however, if they are not authenticated, they cannot add a comment. 
-
-- Initially i made a seperate view for the commenting functionality, however i deceided it would be better UX if the comment function could occur on the page of the blog post and not take users to a se[erate page. For this reason, i chose to use a modal, which would pop up when a user wrote a comment and when submitted, would simply reload the page, now displaying the users comment. 
-- In the future, if developing this site further, i would look into using AJAX requests, to give the user the ability to edit and delete their comments. 
-You will see the comments that other users have left on the blog you are looking at, you will also find a link to leave a comment, however, if you are not logged in, you will not be able to make a comment and will be notified with a message. 
-#picture
-I thought it was better UX for the edit and delete buttons to only be visible to a user if they are logged in, as it would otherwsise be misleading. However, I decided to have the 'make a comment' links visible to all site visitors, because when the none authenticated user attempts to make a comment, they may be more inclined to create a profile, for the prupose of being able to complete this action. This would in turn, build on the community and discussion aspect of the site - satisfying x in the user stories.
-If you are logged in and want to comment on a blog post, you can do so after clicking on the link and completing the comment form, in the modal.
-#picture
-I thought the use of a modal, for comment functionality was good UX, the nature of a comment is that it is fast and on topic, i worried that if the commenting functionality, meant that users needede to leave the page they were currently visiting, so that they could leave their on topic comment, it would ruin the flow of a users experience. 
-#picture
-
-## contact
-
-I thought it was necessary for a site like this to have a contact form, Kaur health is multi faceted and relies on the openess of site visitors. I felt that if i didnt include a contavt form, I would lose the opportunity to create a rapport between Kaur health and the user. I feel it helps to satisfy x in the user stories. 
-The contact form is very simple and lives in the home app. 
-When a user sends a message via the form, they will be taken to a reponse page, see a success message and recieve a copy of the message they sent! I felt this was a personal and 'extra-mile' feature, again leading to users feeeling acknowledged, which in turn helps build community and rapportt, satisfying x
-#picture. 
-To protect the site owner, I used a honeypot field, designed to catch and prohibit spam mail from bots. A honeypot field is a field that is hidden on your contavt form, that a bot will not be anble to distinguish. When they try to fill it out, they will reach the error page and their spam mail will not be sent! I could also use the honeypot admin functionality, which offers increased security and definsive programming. Anyone with minor developer exeprience will know that you just need to change a sites url and add admin to the end of the url to accesss the admin page. From there it would be easy to hack your way into the sites admin and cause some damage! To protect against this, honeypot admin, allows site owners to create a new admin area, whilst also providing a 'fake' admin area for bots/ hackers to attempt to login to! You will also be notified, how many login attempts there have been, so that you can guage whether this feature is fitting for your site or if you need to take extra measures to protect yourself.
-#picture
-I will definitely be using honeypot fields and honeypot admin functionality in the future, however for this project i felt that the honeypot field alone, would suffice. 
-- As i will only ever be sending a total of two emails from this view, it is not necessary, howevre if i was to develop this aspect more and send more than two emails from this view, i would opt to use the send mass mail wrapper from the django.core.mail module.
-- for the backend wiring up, i dcided to use aws email, as opposoised to gmail. I thought it made more sense as we are using aws to collect the static files etc. 
-
-
-## Responsiveness
-### User Stories Tested:
-| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... | 
-| ----------- | ----------- | ----------- | 
-| Site User/ Shopper | access the website with any devices | Use the website anytime and anywhere |
-| Shopper | All the important services are accessible from nav bar| Don't need to scroll to find important information | 
-| Shopper | Have a shopping cart icon on nav bar | Always check the current order and checkout when I want | 
-### Test conducted:
-- Access each page in the site with different screen sizes with Google Dev Tool's Emulator and check the layout and format of site elements
-### Result:
-1. Navbar: I have the search bar collapsed for smaller than medium screen size (width < 992px) because the search bar with input field conflicted with other navbar components. 
-'My Account' pulldown list is included to toggle menu for smaller than medium screen size.
-2. Home page: The image size responsiveness on Carousel at landing(home) page was adjusted by media queries.
-### Verdict:
-Passed all tests.
-
-
-* Bootstrap is made for responsive and upwards, therefore I kept the use of col sizes minimal and made sure everything would fit a small screen first and mainly used the col size of s12. 
-
-### Footer
-* Just at desktop/ iPad pro screen size, my main issue was the footer on all pages sitting at the bottom of the page, this happens when an object is too big for its container and overspills outside of the main HTML. 
-![footer on homepage](/testing/responsiveness/ipad-pro-homepage(2).png)
-![login on homepage](/testing/responsiveness/login.png)
-![registeration on homepage](/testing/responsiveness/ipad-pro-register.png)
-
-* My first action was to change the position of the footer to 'relative' and 'absolute' in turn. neither of these options made all three pages' footers responsive.
-
-* I then added an id to the footer and trialled different positions through the id. This was again no help. 
-
-#### Solution 
-
-- I referred back to materialize, which was where I had used the footer template and added some positioning to the body and main. This made the footer responsive on all pages. 
-```
-body{
-    background-color: #FFE1A8;
-    font-family: 'Roboto', 'sans-serif';
-    color: #472D30;
-    text-align: center;
-    font-size: 20px;
-    padding: 1rem 0rem 0rem 0rem;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-
-}
-
-  main {
-    flex: 1 0 auto;
-  }
-```
-
-- Something I learnt with this error, is that if you are going to use a library and templates from the library in your developing process, you must be aware that the entire framework, relies on (sometimes hidden) positioning/ sizing, these will affect aspects of your entire project. although it may seem like the easiest option in early development, to use libraries, it may not always be the easiest option in the long run. 
-
-### footer layout on mobile 
-
-- Similarly, on the iPhone 5 screen size, I was troubled by the layout of the footer. 
-
-![footer layout](/testing/responsiveness/iphone-5-footer-layout.png)
-
-I made some changes and simplified the content, but I was still unhappy that at the small device size it was still 3 columns. I thought I had understood the materialize grid system to mean that s12 m4 l4 meant that, the columns would take up all 12 spaces (the entire screen width) when being viewed at this size. 4/12 for each column when viewed on medium and large screens. 
-
-- To try to solve this I adjusted the column sizes and kept checking them again. 
-
-#### Solution 
-- unresolved. 
-
-### add symptom form 
-
-- On the add symptom form, when a user clicks on the input fields, the labels became slightly obstructed. 
-![add symptom form](/testing/responsiveness/ipad-pro-add-symptom-form(1).png)
-
-* Using inspect in dev tools, I adjusted the position of the label in the input field.
-
-#### Solution 
-
-- I added a bit of extra room to the top and left of the input field label so that when the field is clicked on and being added to, the labels are still not obstructed 
--*I did the same for the text area's of the input fields and eventually managed to make the form more aesthetically pleasing and readable 
-```
-.input-field>label {
-color: black;
-left:2rem;
-top:.50rem;
-}
-```
-![add symptom form](/testing/responsiveness/ipad-pro-add-symptom-form(2).png)
-![add symptom form](/testing/responsiveness/ipad-pro-add-symptom-form(3).png)
-![add symptom form- iPhone 5](/testing/responsiveness/iphone-5-add-symptom-form.png)
-
-### Overspill from content causing responsiveness issue
-- At desktop screen size there was a vertical overspill of content, causing the page to jiggle from side to side. I also saw a horizontal overspill too.
-
-![Overspill](/testing/responsiveness/footer-overspill(1).png)
-![horizontal overspill](/testing/responsiveness/horizontal-overspill(1).png)
-#### solution 
-- Using the [unicorn revealer tool](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB) 
-I scrolled to see the issue and where the overspills lie. 
-![Overspill](/testing/responsiveness/footer-overspill(2).png)
-![horizontal overspill](/testing/responsiveness/horizontal-overspill(2).png)
-
-- Eventually, I saw the overspill was in the footer.
-![Overspill](/testing/responsiveness/footer-overspill(3).png)
-- Also in the `body` element.
-
-- To solve this I added a `div` with the class of `container`
-![Solved](/testing/responsiveness/overspill-solved(1).png)
-![Solved](/testing/responsiveness/overspill-solved(2).png)
-
-- To solve the overspill in the body, I removed some extra padding I had added. 
-![Solved](/testing/responsiveness/horizontal-overspill-solved.png)
-
-## User stories testing
-
-- Viewing and Navigation
+- The product detail page satisfies this user story. 
+- For servicess in particular, it was important that the user could access all necessary information. 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
-| Site User | Access the website on both larger and smaller screened devices | Access the website on my phone and PC |
+| Site User | Leave/View product reviews with scores | Understand which products are popular with other customers |
 
-
-
-| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
-| ----------- | ----------- | ----------- |
-| Site User | Easily navigate to the Products and services available | Find the product or service I want to purchase |
-
-
-
+- Site users can view ratings of each product, however as noted in the `features left to implement` section of the readme; in production i quickly understood that he nature of this site is such that there needed to be a balance between business and community. The use of testimonies on the about page served as a review and in the future as the site grows I would consider adding a product review section and functionality.  
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
-| Site User | Read all content clearly | Enjoy using the site. |
+| Site User | Easily update and remove a product | Make sure the online site has the latest catalogue |
 
-
-
+- If the user is logged in as a superuser, Update / Delete option is also shown on each card.
+![ product management ](readme_materials/testing_screenshots/user_stories_product_management(1)).png)
+![ updating product ](readme_materials/testing_screenshots/user_stories_product_management(5)).png)
+![ updating product ](readme_materials/testing_screenshots/user_stories_product_management(6)).png)
+![ updating product ](readme_materials/testing_screenshots/user_stories_product_management(7)).png)
+![ updating product ](readme_materials/testing_screenshots/user_stories_product_management(8)).png)
+![ deleting product ](readme_materials/testing_screenshots/user_stories_product_management(11)).png)
+![ deleting product ](readme_materials/testing_screenshots/user_stories_product_management(9)).png)
+- It was also necessary to add some defensive programming, to inform none admin users that they are not permitted to make any changes to the products, should a none admin user attempt it.
+![ alert message for none admin user ](readme_materials/testing_screenshots/user_stories_product_management(10)).png)
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
-| Site User | See a shopping cart icon on nav bar | Always check the current order and checkout when I want |
+| Site User | Easily add a new product | Make sure the online site has the latest catalogue |
 
-
-
-
-| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
-| ----------- | ----------- | ----------- |
-| Site User | Be able to easily access information about Juspreet and the services she offers | Trust the validity of her and her services. |
-
+- As explained in readme, when superuser is logged on, product management is accessible as dropdown link from `account` in nav bar. 
+- this link will take admin straight to a new product form. 
+![ adding product ](readme_materials/testing_screenshots/user_stories_product_management(2)).png)
+![ adding product ](readme_materials/testing_screenshots/user_stories_product_management(4)).png)
+![ product management ](readme_materials/testing_screenshots/user_stories_product_management(3)).png)
 
 <br/>
 
-- Registration, User Accounts and User Community
+## Cart, Purchasing and Checkout
+
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Site User | Easily select the quantity (if applicable) of a product after adding a product to a cart | Ensure I don't accidentally select the wrong product and the quantity |
+
+- The quantity is set to a defualt of 1 and can be easily adjustable both in and out side of the bag. 
+![ updating bag items outside ](readme_materials/testing_screenshots/user_stories_cart(1)).png)
+![ updating bag items ](readme_materials/testing_screenshots/user_stories_cart(2)).png)
+- Users are also given feedback messages when adjusting any of the items in their bags. 
+- Items can be easily removed from the bag. 
+![ updating bag items ](readme_materials/testing_screenshots/user_stories_cart(3)).png)
+
+
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Site User | Have my delivery information is prefilled if logged in | Smoothly proceed with my purchase |
+
+- If users are authenticated, after their first order, their delivery information can be saved to their profiles. Users can update their details on their profile, this means the details will be updated for when the user carries out their next order.
+![ delivery info on profile ](readme_materials/testing_screenshots/user_stories_checkout(2)).png)
+![ delivery info prefilled ](readme_materials/testing_screenshots/user_stories_checkout(3)).png) 
+
+
+
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Site User | Be reminded to log in if I did not log in | Smoothly proceed with my purchase and prefilled form | 
+
+- Beneath the order form there are links to either register for an account or log in. 
+- I considered adding more reminders to log in for this functionality, throughout the site, howver decided against it, as I thought this could attribute to bad UX. If a user feels that it is impossible to carry out the desired action, without being authenticated, this may disuade them from visiting or more importantly, purchasing thorough the site again. 
+
+<br/>
+
+## Registration, User Accounts and User Community
+
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
 | Site User | Easily register for an account | Have a personal account where I can edit my information and access blog articles |
 
+- users with a profile can edit their delivery information. 
+- Initially, I had intended to make blog articles accessible for users only. However, during production I decided against this as i felt this would negatively impact Juspreets exposure to brands and other potential clients (brand goals). 
+- Blogs are accessible to all, however, only authenticated users can make a post or comment on a post. 
+- To acknowledge this user story, if a user has written blog posts, when they log on and click on the blog tab in the nav bar they will see a dropdown link ` my blog posts `. Here they will find all of the posts that they have written. 
+- Whilst my original idea hasnt been executed, I feel that what exists now is a better alternative and will reuslt in a better UX. The users perosonal blogs being accessed via the nav bar is another way of satisfying the idea behind this user story. 
+![ my blog posts ](readme_materials/testing_screenshots/user_stories_blog(1)).png) 
+![ my blog posts ](readme_materials/testing_screenshots/user_stories_blog(2)).png)
 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
 | Site User | View my order history | Purchase the same product again in the next order |
 
+- This is achieved on the users profile page. 
+![ my blog posts ](readme_materials/testing_screenshots/user_stories_profile(1)).png)
 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
@@ -367,83 +221,35 @@ I scrolled to see the issue and where the overspills lie.
 | ----------- | ----------- | ----------- |
 | Site User | Post a blog about any of my areas of expertise | Provide site visitors interesting information and hopefully make a sale as a result |
 
+- As aforementioned, I thought it would be a good way to encourage more users and build an online community if users were only permitted to write blogs, if they were authenticated. 
+- I convey this clearly throughout the site.
+![ authenticated users can add blogs ](readme_materials/testing_screenshots/user_stories_blog(3)).png)
+- Adding a post is easy to do. 
+![ adding blog ](readme_materials/testing_screenshots/user_stories_blog(4)).png)
+![ posted blog ](readme_materials/testing_screenshots/user_stories_blog(5)).png)
 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
 | Site User | Add comments to the blog posts | Write down my thoughts on the post |
 
-
+- Comments of a post can be viewed by all users, however, only authenticated users can add a comment. 
+- If a user is authenticated they will see links to comment, if the user is not they will see links to `login and comment` which will direct them to the login. 
+- Initially, instead of links i had an alert message which was triggered if a none authenticated user attempted to comment. However I chnaged this, as the natire of 'topical comments' are such that, the user will want to quickly express whatever feeling/ response, the post have evoked in them. I felt an alert message was a little vague and would contribute to bad UX. the user could likely be confused as to what to do next? Whereas a link will direct them to the login page, where they are on a mission to comment. 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
 | Site User | Have the ability to remove unsavoury comments | Protect my brand and the site visitors' experince |
+
+- I did not have time to add this in, however in the future i will. 
 <br/>
 
-- Online shopping
-
-| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
-| ----------- | ----------- | ----------- |
-| Site User | View individual product pages that have prices and descriptions | Get detailed information about the product before purchasing |
 
 
 
+# Manual testing
 
 
-| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
-| ----------- | ----------- | ----------- |
-| Site User| Filter by a specific category | Easily find products in a specific category |
-
-
-
-
-
-| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
-| ----------- | ----------- | ----------- |
-| Site User | Leave/View product reviews with scores | Understand which products are popular with other customers |
-
-
-
-
-
-| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
-| ----------- | ----------- | ----------- |
-| Site User | Easily add a new product | Make sure the online site has the latest catalogue |
-
-
-
-
-
-| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
-| ----------- | ----------- | ----------- |
-| Site User | Easily remove a product | Make sure the online site has the latest catalogue |
-
-<br/>
-
-- Cart, Purchasing and Checkout
-
-| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
-| ----------- | ----------- | ----------- |
-| Site User | Easily select the quantity (if applicable) of a product after adding a product to a cart | Ensure I don't accidentally select the wrong product and the quantity |
-
-
-
-
-
-| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
-| ----------- | ----------- | ----------- |
-| Site User | Have my delivery information is prefilled if logged in | Smoothly proceed with my purchase |
-
-
-
-
-
-| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
-| ----------- | ----------- | ----------- |
-| Site User | Be reminded to log in if I did not log in | Smoothly proceed with my purchase and prefilled form | 
-
-
-<br/>
 
 updating_quantity of item from product detail:
 
@@ -499,122 +305,7 @@ else:
 ```
 this solved the issue! 
 
-## Usability testing
 
-### Symptoms page usability 
-
-![user lands on homepage](/testing/usability/home(1).png)
-* Name of the page is highlighted in navbar, user knows they are on the symptoms page. 
-
-* User reads the text and clicks 'get started now'.
-![user clicks on 'get started now'](/testing/usability/home(2).png)
-
-* Button highlights- aesthetically pleasing, the user is given feedback that they have hovered/ clicked on the button.
-![User is taken to register page](/testing/usability/home(3).png)
-
-* User is taken to register page after clicking, again register is highlighted and page is simple and functional. 
-
-* *If user is already logged in and clicks this same button, they are redirected to the add add symptom form* 
-
-![search bar on homepage](/testing/usability/home(4).png)
-* If the user comes back to the homepage, they are met with the search bar. If they perform a none format fitting search, they are told what is wrong and how to solve the issue. 
-![none formatting search item](/testing/usability/home(5).png)
-
-* If, search item does not match any of the listed symptoms, the user sees a message explaining that with a link. 
-
-- This message could be stronger and more obviously a feedback message. 
-
-!['search item doesnt exist' message](/testing/usability/home(13).png)
-Here I have added a div with class 'alert' around the if statement which actions the feedback text, letting the user know that their search item was unmatched and what they should do next. I checked its accessibility too and found no issues with style. 
-
-- *If user clicks on the link to add the symptom, they are redirected to the login page.*
-
-- *If user is already logged in and clicks this same button, they are redirected to the add add symptom form* 
-
-* User resets and scrolls down to find the list of added symptoms.
-![user resets search item](/testing/usability/home(6).png) 
-
-* User is informed with text that the list is clickable after clicking, they see the description. 
-![user clicks symptom on list- description appears](/testing/usability/home(7).png) 
-![user clicks symptom on list- description disappears](/testing/usability/home(8).png)
-
-* Scrolling down to bottom of page, copy url functionality is hovered, clicked and gives feedback. 
-![copy url functionality is hovered](/testing/usability/home(9).png)
-![copy url functionality is clicked](/testing/usability/home(10).png)
-![copy url functionality gives feedback](/testing/usability/home(11).png)
-
-
-* Link in footer works, however when testing I noticed I had forgotten to add `"_blank"` attribute. I have since added and the link now opens to a new tab. 
-![user lands on homepage](/testing/usability/home(12).png)
-
-
-### Register page usability
-- After clicking one of the homepage links or after clicking register in the nav bar, user arrives at the registration page 
-![register](/testing/usability/register(1).png)
-![register](/testing/usability/register(2).png)
-
-* The registration page nav bar link is highlighted, the registration form provides feedback of the allowances of choosing a username and or password. 
-
-* Originally, I had added a pattern that the user must adhere when choosing a username and password. I did this because I wanted to improve my defensive programing, however, after testing, I realised that these features actually inhibited a good UX. I since removed them and now the only requirements for a username/ password are the minimum lengths. 
-
-* After successfully registering, the user is taken directly to the 'my symptoms' page where they are informed that they have no symptoms currently and are encouraged to add one.
-![register](/testing/usability/register(3).png)
-
-* Initially I had a link to the add symptom form, however again when testing, I realised that it was actually confusing to have an additional link for a process which is a mere scroll away! 
-![register](/testing/usability/register(4).png)
-
-* If the user tries to login with a username that is already in use they are taken to the login page 
-![register](/testing/usability/register(5).png)
-
-### Login page usability 
-- When logging in with an error, the user is taken to an error page, which does not say the specific reason they have not successfully logged in, but gives all possible reasons. I felt this was better defensive programming than a mere flash message. 
-![login](/testing/usability/login(1).png)
-![login](/testing/usability/login(2).png)
-
-- The link in error page, brings user back to login. 
-![login](/testing/usability/login(3).png)
-![login](/testing/usability/login(4).png)
-
-- If login is successful; 
-![login](/testing/usability/login(5).png)
-
-### Add symptom usability
-- When the user has logged in / registered and now wants to add a symptom,
-![add symptom](/testing/usability/add_symptom(1).png)
-
-- The user fills in the form and receives feedback once complete. 
-![add symptom](/testing/usability/add_symptom(2).png)
-
-### Edit symptom usability
-- When the user wants to edit;
-
-![edit symptom](/testing/usability/edit_symptom(1).png)
-
-- The text at the top of the page explains to the user why it is important to continually update their symptoms.
-
-![edit symptom](/testing/usability/edit_symptom(2).png)
-
-- The users' original form is loaded.
-
-![edit symptom](/testing/usability/edit_symptom(3).png)
-
-- When changes are made to the form, the user clicks the save button. 
-
-![edit symptom](/testing/usability/edit_symptom(4).png)
-
-- At this point, the user is given feedback that the symptom is updated and where it can be found. 
-
-### Delete symptom usability
-- When deleting a symptom; 
-![deleting symptom](/testing/usability/delete-symptom(1).png)
-![deleting symptom](/testing/usability/delete-symptom(2).png)
-
-- A modal will appear asking the user if they are sure they want to delete. 
-- If yes, they will be given a feedback message, prompting them to add another. I didn't think a link to 'add symptom' was necessary, again,  it may have contributed to bad UX.
-![deleting symptom](/testing/usability/delete-symptom(3).png)
-
-- If no, the box simply closes. 
-![deleting symptom](/testing/usability/delete-symptom(4).png)
 
 # Bugs discovered
 
@@ -1320,38 +1011,15 @@ def confirm_delete(request):
     </script>
 ```
 - It has become clear throughout this project, that whilst Django is a very helpful framework, its limitations lie within the difficulty to apply specific actions to more than one item, hence why its easier to have detail pages for each item/ blog. I could have decided to simply have the delete functionality on the product detail only, however I truly beleiev it is better UX for the delete to be accessible in all items. Moving forward, I would spend more time learning AJAX, which i know would have come in handy here. 
-## Validators and Linters
-
-### WW3 HTML validation 
-As expected, each of my pages flagged errors due to my use of jinja code, I also had some warnings about the misuse of the `aria-label` attribute, however since I had added these after taking the accessibility of my site into account, I thought that the wave tool was likely to be a better judge of the use of this particular attribute and felt comfortable with my choice. 
-
-Other than the jinja code-related errors, I had no other HTML validation errors. 
-
-### WW3 CSS validation 
-- My CSS had no errors.
-![CSS Validator](/testing/usability/CSS-Validator.png)
-
-### PEP8 validation 
-- My python code had no errors.
-![PEP8](/testing/usability/PEP8.png)
-
-
-### Javascript validation 
-- My javascript code had no errors but did have 3 warnings. The warnings were about the use of keywords such as `let` and `const`, to avoid any issues with this, in the future I would ensure that all of my JS functions had an `error` response, if anything I was using, was not supported in the users' browser. Similar to the error function I used for the creation of my copy to clipboard function. 
-```
-clipboard.on('error', function(e) {
-alert("Oops, it looks like this function isn't supported on your browser! Don't worry, Just copy this: https://self-isolation-watch.herokuapp.com/"); 
-```
-
-![JS-Hint](/testing/usability/JS-Hint.png)
 
 
 > [To return to the previous document please click here](https://github.com/mayasaffron/self-isolation-watch/blob/master/README.md) 
 
 
+# Further testing 
+Used peer code review in channel in slack
 
+Kaur Health viewed on all devices and orientations available in Chrome DevTools.
 
-
-
-
-
+## Accessibility
+* I used [wave](https://wave.webaim.org/) to achieve better accessibility on my site. 
