@@ -70,10 +70,10 @@
         <!-- Single Comment -->
         <div class="row">
         <div class="col-lg-8">
-        <div class="media mb-4">
+        <div class="media">
             {% if not object.comments.all %}
                 <div class="media-body">
-                    <h5 class="mt-0">No Comments yet..</h5>
+                    <h5 class="mt-0"><u>No Comments yet..<u></h5>
                     {% if request.user.is_authenticated %}
                     <div class="col"><p class="text-info" data-toggle="modal" data-target="#commentModal">Comment</p></div>
                     {% endif %} 

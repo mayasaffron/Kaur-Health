@@ -1012,9 +1012,21 @@ def confirm_delete(request):
 ```
 - It has become clear throughout this project, that whilst Django is a very helpful framework, its limitations lie within the difficulty to apply specific actions to more than one item, hence why its easier to have detail pages for each item/ blog. I could have decided to simply have the delete functionality on the product detail only, however I truly beleiev it is better UX for the delete to be accessible in all items. Moving forward, I would spend more time learning AJAX, which i know would have come in handy here. 
 
+## Bug 14 deployed heroku site error
+- I was repeatedly getting this error after pushing to heroku master, to see the changes made to my site. 
+![ pre-receive hook declined heroku ](readme-materials/bug_screenshots/bug_15.png)
+- I came across [this](https://stackoverflow.com/questions/63639673/heroku-deploy-error-remote-rejected-master-master-pre-receive-hook-dec) rticle on slack overflow and tried it 
 
-> [To return to the previous document please click here](https://github.com/mayasaffron/self-isolation-watch/blob/master/README.md) 
 
+## Unsolved Bugs
+
+### Bug 1 aws email 
+- Despite wanting to use aws for my email functionality, I was denied my request to leave the sandbox.
+- I continued to dipute this, howevere gave up in the interest of time. 
+![ AWS correspondance ](readme-materials/bug_screenshots/bug_14(a).png)
+![ AWS correspondance ](readme-materials/bug_screenshots/bug_14(b).png)
+![ AWS correspondance ](readme-materials/bug_screenshots/bug_14(c).png)
+![ AWS correspondance ](readme-materials/bug_screenshots/bug_14(d).png)
 
 # Further testing 
 Used peer code review in channel in slack
@@ -1023,3 +1035,5 @@ Kaur Health viewed on all devices and orientations available in Chrome DevTools.
 
 ## Accessibility
 * I used [wave](https://wave.webaim.org/) to achieve better accessibility on my site. 
+
+> [To return to the previous document please click here](https://github.com/mayasaffron/self-isolation-watch/blob/master/README.md) 

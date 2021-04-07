@@ -35,6 +35,11 @@ a {
     background-color: transparent;
 }
 
+a:hover{
+   color: #EBEBEB;
+    text-decoration: none;
+    background-color: #6A4771; 
+}
 /* headers, paragraphs */
 
 .uppercase{
@@ -199,6 +204,7 @@ a {
     cursor: pointer;
     border: 1px solid transparent #48304d;
     padding: .375rem .75rem;
+    margin-bottom: .8rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
@@ -227,6 +233,9 @@ a.category-badge > span.badge:hover {
     color: #fff !important;
 }
 
+
+.media {
+    padding-top:1rem;
 /* Product Form */
 
 .btn-file {
@@ -266,11 +275,19 @@ a.category-badge > span.badge:hover {
 
 
 /* buttons */
-.cta-button {
-    background: #48304d;
-    color: white;
+.text-info{
+    color: #48304d;
+    text-decoration: none;
+    background-color: transparent;
 }
 
+.text-info:hover{
+   color: #EBEBEB;
+    text-decoration: none;
+    background-color: #6A4771; 
+}
+
+}
 .btn-violet {
     background: #48304d;
     color: white;
@@ -356,12 +373,12 @@ a.category-badge > span.badge:hover {
 /* modal for confirm delete */
 #delete-confirmation .modal-footer{
     color:white;
-    background-color:#E26D5C;
+    background-color:#dda0a1;
 }
 
 #delete-confirmation .modal, .modal-content{
     color:white;
-    background-color:#E26D5C;
+    background-color:#dda0a1;
 }
 
 /* -------------------------------- Media Queries */
