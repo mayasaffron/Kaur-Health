@@ -43,7 +43,8 @@ a:hover{
     font-size: 1rem;
 }
 
-.nav-item, .social-link a:hover{
+.nav-item a:hover 
+.social-link a:hover{
     color: #EBEBEB;
     text-decoration: none;
     background-color: #6A4771; 
@@ -204,7 +205,8 @@ footer {
     margin-top: 50%;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon{
+.carousel-control-prev-icon
+.carousel-control-next-icon{
     color: #48304d;
 }
 /* blog app */
