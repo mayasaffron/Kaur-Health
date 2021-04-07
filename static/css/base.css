@@ -29,6 +29,12 @@ body{
     right: 10px;
 }
 
+a {
+    color: #48304d;
+    text-decoration: none;
+    background-color: transparent;
+}
+
 /* headers, paragraphs */
 
 .uppercase{
@@ -41,7 +47,7 @@ body{
 
 
 .text-muted {
-    color:white!important;
+    color:#000!important;
 }
 
 /* ------------------------------- bootstrap toasts */
@@ -261,13 +267,12 @@ a.category-badge > span.badge:hover {
 
 /* buttons */
 .cta-button {
-    background: black;
+    background: #48304d;
     color: white;
-    min-width: 260px;
 }
 
-.btn-black {
-    background: black;
+.btn-violet {
+    background: #48304d;
     color: white;
 }
 

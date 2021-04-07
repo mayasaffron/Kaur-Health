@@ -12,14 +12,14 @@
 {% block content %}
 <div id="delivery-banner" class="row text-center">
     <div class="col bg-black text-white">
-        <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>                
+        <h4 class="uppercase my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>                
     </div>            
 </div>
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="logo-font">Products and Services</h2>
+                <h2 class="uppercase">Products and Services</h2>
                 
                     {% for c in current_categories %}
                         <a class="category-badge text-decoration-none" href="{% url 'all_items' %}?category={{ c.name }}">

@@ -308,6 +308,7 @@ this solved the issue!
 
 # Bugs discovered
 
+## Solved Bugs
 ## Bug 1 - Service details not showing up 
 Solution: Correct the URLs for the app
 - I have three models categories, services and products. Products and services, rely on the categories model. 
