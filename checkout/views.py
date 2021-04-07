@@ -24,7 +24,7 @@ def cache_checkout_data(request):
         })
         return HttpResponse(status=200)
     except Exception as e:
-        messages.error(request, 'sorry your payment has not been processed, please try again later')
+        messages.error(request, 'Sorry, your payment has not been processed, please try again later.')
         return HttpResponse(content=e, status=400)
 
 
@@ -75,7 +75,7 @@ def checkout(request):
                     messages.error(request, (
                                    "One of the products in"
                                    " your bag wasn't found in our database."
-                                   "Please call us for assistance!")
+                                   " Please call us for assistance!")
                                    )
                     order.delete()
                     return redirect(reverse('view_bag'))

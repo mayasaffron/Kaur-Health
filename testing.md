@@ -23,7 +23,6 @@
     - [Unsolved bugs](#unsolved-bugs)
 5. [Further Testing](#further-testing)
     -[Accessibility](#Accessibility)
-    -[Usability](#Usability)
 
 
 

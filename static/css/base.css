@@ -205,6 +205,10 @@ body{
     border: solid 1px;
     border-color:#48304d ;
 }
+
+.blog-image{
+    height:451px;
+}
 /* product app */
 .all-items-container{
 

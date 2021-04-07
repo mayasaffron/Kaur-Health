@@ -158,6 +158,6 @@ def confirm_delete(request):
         selected = request.POST.get('id-selected')
         product = get_object_or_404(Product, pk=selected)
         product.delete()
-        messages.success(request, f' {product.name} has been deleted')
+        messages.success(request, f'{product.name} has been deleted!')
     redirect_url = request.POST.get('redirect_url')
     return redirect(redirect_url)

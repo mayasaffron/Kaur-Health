@@ -4,21 +4,24 @@
         
         {% for blog in object_list %}
                 <div class="card blog-style mb-4">
-                {% if blog.blog_image %}
-                <a class="blog-link" href="{{ BlogPost.get_absolute_url }}" target="_blank">
-                <img class="card-img-top" src="{{ blog.blog_image.url }}" alt="{{ post.title }}">
-                </a>
-                {% else %}
-                <a class="blog-link" href="{{ BlogPost.get_absolute_url }}">
-                    <img class="card-img-top" src="{{ MEDIA_URL }}no-image.png" alt="{{ post.title }}">
-                </a>
-                {% endif %}
-                    
                     <div class="card-body">
                         <h2 class="card-title"><a class="blog-link" href="{{ blog.get_absolute_url }}">{{ blog.title }}</a></h2>
                         <p class="card-text">{{ blog.title }}</p>
                         <a href="{{ blog.get_absolute_url }}" target="_blank" class="blog-btn">Read more &rarr;</a>
+
+                {% if blog.blog_image %}
+                    <a class="blog-link" href="{{ BlogPost.get_absolute_url }}" target="_blank">
+                    <img class="card-img-top blog-image" src="{{ blog.blog_image.url }}" alt="{{ post.title }}">
+                    </a>
+                {% else %}
+                    <a class="blog-link" href="{{ BlogPost.get_absolute_url }}">
+                        <img class="card-img-top" src="{{ MEDIA_URL }}no-image.png" alt="{{ post.title }}">
+                    </a>
+                {% endif %}
+
                     </div>
+
+
                     <div class="card-footer text-muted">
                         <h3>Posted on {{ blog.date }} by {{ blog.author }}</h3> 
                             {% if blog.category %}

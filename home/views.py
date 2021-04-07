@@ -53,7 +53,7 @@ def contact_form(request):
                 )
                 email_confirm.send(fail_silently=False)
                 messages.success(request, 'Thank you for submitting '
-                                 'the contact form')
+                                 'the contact form!')
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
         return redirect('contact_response')
