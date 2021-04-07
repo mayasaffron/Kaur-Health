@@ -123,20 +123,29 @@ a:hover{
     overflow-x: hidden;
     overflow-y: auto;
 }
-/* footer */
 
-.page-footer {
-    color: black;
-    background-color: #48304d;
-    position: relative;
-    width:100%;
-    bottom: 0;
-    padding:2rem 0rem 1rem 0rem;
+/* Footer */
+
+footer {
+	text-align: center;
 }
 
-.socials{
-    height: 24px;
-    width: 24px;
+.social-link {
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.social-link:nth-child(odd) {
+	margin: 0 0.5rem;
+}
+
+.social-ul {
+	padding: 0;
+}
+
+.footerHeader{
+    margin-top: 1rem;
 }
 
 /* contact app */
@@ -185,6 +194,10 @@ a:hover{
 .thankyou{
     margin-top: 50%;
 }
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    color: #48304d;
+}
 /* blog app */
 
 .blog-style{
@@ -218,7 +231,7 @@ a:hover{
     border-color:#48304d ;
 }
 
-.blog-image{
+.blog-image-container{
     height:451px;
 }
 /* product app */
