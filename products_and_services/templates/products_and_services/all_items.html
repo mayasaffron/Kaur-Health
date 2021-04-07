@@ -105,7 +105,7 @@
                                             <small class="ml-3">
                                                 <a href="{% url 'update_product' product.id %}">Update</a>
                                              <!-- confirm delete modal -->
-                                                <button class="btn modal-trigger delete js-delete" data-id="{{ product.id }}" data-value="{{ product.id }}" data-toggle="modal" data-target="#deleteModal">Delete</button>
+                                                <button class="btn btn-violet modal-trigger delete js-delete" data-id="{{ product.id }}" data-value="{{ product.id }}" data-toggle="modal" data-target="#deleteModal">Delete</button>
                                                 </small>
                                             {% endif %}
                                         </div>
@@ -168,7 +168,7 @@
         </div>
     </div>
 </div>
-
+{% include 'includes/footer.html' %} 
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}

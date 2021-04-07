@@ -62,7 +62,7 @@
         {% if request.user == object.author %}
             <a class="btn-edit" href="{% url 'update_blog' object.slug %}">Edit post</a>
             <!-- confirm delete modal -->
-            <h6 class="btn modal-trigger delete" data-toggle="modal" data-target="#deleteModal">Delete post</h6>
+            <h6 class="btn btn-violet modal-trigger delete" data-toggle="modal" data-target="#deleteModal">Delete post</h6>
         {% endif %}
         
         </div>
