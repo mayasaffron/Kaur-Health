@@ -1,10 +1,15 @@
 /* ------------------------------- general */
+html{
 
+min-height: 100vh;
+
+}
 body{
     background-color: #f4e1e1;
     color: black;
     font-family: "Nunito", sans-serif;
-    min-height: 100%;
+    /* min-height: 100%; */
+    
 }
 
 .overlay {
@@ -43,13 +48,14 @@ a:hover{
     font-size: 1rem;
 }
 
-.nav-item a:hover 
-.social-link a:hover{
+.nav-item > a.nav-link:hover {
     color: #EBEBEB;
     text-decoration: none;
     background-color: #6A4771; 
     font-size: 1rem;
 }
+
+
 /* headers, paragraphs */
 
 .uppercase{
@@ -145,7 +151,14 @@ footer {
 	display: inline-block;
 	cursor: pointer;
 }
-
+a.social-ul{
+   background: red;
+    color: white; 
+}
+a.social-ul:hover{
+    background: red;
+    color: white;
+}
 .social-link:nth-child(odd) {
 	margin: 0 0.5rem;
 }
@@ -253,13 +266,14 @@ footer {
     height: 480px;
 }
 a.category-badge > span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
+    background: #48304d !important; 
+    color: white !important;
 }
 
 
 .media {
     padding-top:1rem;
+    }
 /* Product Form */
 
 .btn-file {
@@ -310,7 +324,10 @@ a.category-badge > span.badge:hover {
     text-decoration: none;
     background-color: #6A4771; 
 }
-
+.text-danger{
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
 }
 .btn-violet {
     background: #48304d;

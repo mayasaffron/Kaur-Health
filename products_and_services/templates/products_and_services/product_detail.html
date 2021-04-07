@@ -50,7 +50,7 @@
         {% endif %}
         {% if request.user.is_superuser %}
             <small class="ml-3">
-                <a href="{% url 'update_product' product.id %}">Update</a>
+                <a class="btn btn-violet" href="{% url 'update_product' product.id %}">Update</a>
  <!-- confirm delete modal -->
                 <h6 class="btn btn-violet modal-trigger delete" data-toggle="modal" data-target="#deleteModal">Delete</h6>
             </small>

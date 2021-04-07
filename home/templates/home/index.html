@@ -11,21 +11,20 @@
 
 {% block content %}
     <!-- about section -->
-<section class="page-section" id="about">
+<section id="about">
     <div class="container">
         <div class="row h-100 my-5">
-            <div class="col h-100">
-                <p class="intro mt-5">
+            <div class="col-lg-6 col-md-12">
+                <img class="img-fluid" src="{{ MEDIA_URL }}welcome.png" alt="Juspreet Kaur">
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <p class="intro">
                     Hi! I'm Juspreet Kaur, a Health Coach and Natural Family Planning (NFP) teacher. I am passionate about female health, nutrition and fertility.
 
                     Through Health Coaching, I help women achieve their goals by making small, manageable dietary changes. And through NFP, I help couples track their fertility and achieve/avoid pregnancy using non-invasive holistic methods.
                 </p>
         <a href="{% url 'product_detail' 7 %}" class="btn-violet uppercase">Purchase my latest ebook</a>
             </div>
-
-        <div class="col h-100 mt-5">
-        <img class="img-fluid" src="{{ MEDIA_URL }}welcome.png" alt="Juspreet Kaur">
-        </div>
         </div>
     </div>
 </section>
