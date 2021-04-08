@@ -80,8 +80,8 @@
                                     </div>
                                 </div>
                             </form>
-                            <a class="update-link text-info"><small> Update </small></a>
-                            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small> Remove
+                            <a class="update-link"><small> Update </small></a>
+                            <a class="remove-item float-right" id="remove_{{ item.item_id }}"><small> Remove
                                 </small></a>
 
 
@@ -107,13 +107,13 @@
                     </tr>
                     <tr>
                         <td colspan="5" class="text-right">
-                            <a href="{% url 'all_items' %}?category=natural_family_planning,female_health,skincare" class="btn btn-outline-black rounded-0 btn-lg">
+                            <a href="{% url 'all_items' %}?category=natural_family_planning,female_health,skincare" class="btn btn-outline-black rounded-0">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                            <a href="{% url 'checkout' %}" class="btn-violet rounded-0">
                                 <span class="text-uppercase">Secure Checkout</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>

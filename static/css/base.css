@@ -21,10 +21,23 @@ body{
 	z-index: -1;
 }
 
-.scroll-up-link,
-.update-link,
-.remove-item {
+.scroll-up-link:hover,
+.update-link:hover {
     cursor: pointer;
+    background: none;
+    color: #EBEBEB;
+}
+a.remove-item {
+    cursor: pointer;
+    color: red;
+    font-weight: 500;
+}
+
+a.remove-item:hover{
+    cursor: pointer;
+    color: red;
+    font-weight: 500;
+    background: none;
 }
 .scroll-up-button{
     height: 42px;
@@ -224,8 +237,13 @@ i.social-icon:hover{
     margin-top: 50%;
 }
 
-.carousel-inner > .item > img { width:640px; height:360px; }
 
+.carousel img{ 
+    height: 50%; 
+}
+.carousel-inner {
+  margin: auto;
+}
 a.carousel-control-next > span.carousel-control-next-icon
 {
     color: yellow !important;
@@ -323,27 +341,89 @@ a.category-badge > span.badge:hover {
 
 
 /* buttons */
+
 .text-info{
-    color: #48304d;
+    color: #48304d !important;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.text-info:hover{
+   color: #6A4771 !important;
+    text-decoration: none;
+    background-color: none !important;
+    cursor: pointer;
+}
+
+
+a.text-info{
+    color: #48304d !important;
     text-decoration: none;
     background-color: transparent;
 }
 
-.text-info:hover{
-   color: #EBEBEB;
+a.text-info:hover{
+   color: #EBEBEB !important;
     text-decoration: none;
-    background-color: #6A4771; 
+    background-color: #6A4771 !important; 
 }
 .text-danger{
     background-color: #dc3545;
     border-color: #dc3545;
 }
+
+.btn-tag{
+    padding-top: 1rem;
+    background: #48304d;
+    color: white;
+    font-size: 1rem;
+    border: 1px solid #48304d;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+        display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: .25rem;
 }
+
+.btn-tag:hover{
+    color: #EBEBEB;
+    text-decoration: none;
+    background-color: #6A4771; 
+    font-size: 1rem;
+}
+
 .btn-violet {
     background: #48304d;
     color: white;
     font-size: 1rem;
+    border: 1px solid #48304d;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+        display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: .25rem;
+
 }
+
+
+
 
 .btn-outline-black {
     background: white;

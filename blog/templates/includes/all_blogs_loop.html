@@ -7,8 +7,23 @@
                     <div class="card-body">
                         <h2 class="card-title"><a class="blog-link" href="{{ blog.get_absolute_url }}">{{ blog.title }}</a></h2>
                         <p class="card-text">{{ blog.title }}</p>
-                        <a href="{{ blog.get_absolute_url }}" target="_blank" class="blog-btn">Read more &rarr;</a>
-                    <div class="blog-image-container">   
+                        <div class="col-4"><a href="{{ blog.get_absolute_url }}" target="_blank" class="blog-btn">Read more &rarr;</a></div>
+                        <div class="col-4"><a class="blog-btn" href="{% url 'add_blog_post' %}">Write a post</a></div>
+                        <div class="col-4">
+                             {% if request.user == blog.author %}
+                    <a class="blog-btn" href="{% url 'update_blog' blog.slug %}">Edit post</a>
+                    {% endif %}
+                        </div>
+                        
+                
+             
+                         
+   
+      
+                        
+      
+                
+  
                 {% if blog.blog_image %}
                     <a class="blog-link" href="{{ BlogPost.get_absolute_url }}" target="_blank">
                     <img class="card-img-top" src="{{ blog.blog_image.url }}" alt="{{ post.title }}">
@@ -24,26 +39,11 @@
 
                     <div class="card-footer text-muted">
                         <h3>Posted on {{ blog.date }} by {{ blog.author }}</h3> 
-                            {% if blog.category %}
                                 <p class="small mt-1 mb-0">
                                     {{ blog.category.friendly_name }}
-                                </p>
-                            {% endif %}
-
-                    {% if request.user.is_authenticated %}
-                <small class="ml-3">
-                    <a class="text-info" href="{% url 'add_blog_post' %}">Write a post</a>
-                    {% if request.user == blog.author %}
-                    <a class="btn-edit" href="{% url 'update_blog' blog.slug %}">Edit post</a>
-                    <!-- make this a link to the delete in detail/ remove the edit too? -->
-                    
-                <h6 class="btn modal-trigger delete" data-toggle="modal" data-target="#deleteModal">Delete post</h6>
-                    {% endif %}
-                </small>
-                {% endif %}        
+                                </p>      
                     </div>
                     
-                </div>
 
         {% endfor %}
 

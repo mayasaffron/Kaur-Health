@@ -27,7 +27,7 @@ def add_product_to_bag(request, item_id):
             bag[item_id]['item_is_service'][product.name] += quantity
             messages.success(request, f' Updated {product.name}'
                              ' quantity to'
-                             f' {bag[item_id]["item_is_service"][product.name]}')
+                             f' {bag[item_id]["item_is_service"][product.name]} !')
             
         else:
             print("adding service to bag attempt")
@@ -40,7 +40,7 @@ def add_product_to_bag(request, item_id):
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
             messages.success(request, f' Updated {product.name}'
-                             f' quantity to {bag[item_id]}')
+                             f' quantity to {bag[item_id]} !')
 
         else:
             bag[item_id] = quantity
@@ -59,11 +59,11 @@ def adjust_bag_product(request, item_id):
 
     if quantity in range(0, 1000):
         bag[item_id] = quantity
-        messages.success(request, f'Updated {product.name}'
-                      f' quantity to {bag[item_id]}')
+        messages.info(request, f'Updated {product.name}'
+                      f' quantity to {bag[item_id]} !')
     else:
         bag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your bag! ')
+        messages.info(request, f'Removed {product.name} from your bag! ')
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
@@ -82,12 +82,12 @@ def remove_item(request, item_id):
             del bag[item_id]['item_is_service'][service]
             if not bag[item_id]['item_is_service']:
                 bag.pop(item_id)
-            messages.success(request, f'Removed service {product.name}'
-                             ' from your bag!')
+            messages.info(request, f'Removed service {product.name}'
+                          ' from your bag!')
         else:
             bag.pop(item_id)
-            messages.success(request, f'{product.name}'
-                             ' deleted from your bag! ')
+            messages.info(request, f'{product.name}'
+                          ' deleted from your bag! ')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
