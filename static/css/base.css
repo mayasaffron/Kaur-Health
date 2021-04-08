@@ -456,6 +456,10 @@ a.text-info:hover{
 }
 
 /* Allauth form formatting */
+
+.confirm-email{
+    margin: 10rem 2rem;
+}
 .reset-page{
     margin: 6rem 2rem;
 }
