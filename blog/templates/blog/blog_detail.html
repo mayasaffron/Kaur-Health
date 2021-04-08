@@ -82,9 +82,10 @@
             {% else %}
 
                     <div class="row">
-                        <div class="col-sm-12 mt-5">
+                        <div class="col-sm-12 mt-3">
+                         <h3 class="text-info" data-toggle="modal" data-target="#commentModal">Add a Comment</h3>
                         {% for comment in object.comments.all %}
-                        <h4 class="mt-0">{{ comment.name }} said:</h4>
+                        <h4 class="mt-3">{{ comment.name }} said:</h4>
                         <p class="lead"> {{ comment.body }} </p>
                         <p class="small mt-1 mb-0">on {{ comment.date }}</p>
                     </div>
@@ -110,7 +111,7 @@
                                 <hr>
                             </div>
                         {% endif %}
-                        {% endfor %}       
+                        {% endfor %}  
             {% endif %}
             </div>
             </div>
@@ -134,7 +135,7 @@
                 <form action="{% url 'blog_detail' object.slug %}" method="POST">
                     {% csrf_token %}
                     {{ form | crispy }}
-                    <input type="submit" value="Submit"></form>
+                    <input class="btn-tag" type="submit" value="Post comment!"></form>
             </div>
         </div>
     </div>

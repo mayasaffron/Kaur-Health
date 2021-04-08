@@ -287,7 +287,8 @@ a.carousel-control-next > span.carousel-control-next-icon
     height:451px;
 }
 /* product app */
-.all-items-container{
+#delivery-banner h4{
+color: #48304d;
 
 }
 .item{
@@ -373,6 +374,7 @@ a.text-info:hover{
     border-color: #dc3545;
 }
 
+
 .btn-tag{
     padding-top: 1rem;
     background: #48304d;
@@ -423,7 +425,12 @@ a.text-info:hover{
 }
 
 
-
+.btn-violet:hover{
+    color: #EBEBEB;
+    text-decoration: none;
+    background-color: #6A4771; 
+    font-size: 1rem;
+}
 
 .btn-outline-black {
     background: white;
@@ -449,7 +456,9 @@ a.text-info:hover{
 }
 
 /* Allauth form formatting */
-
+.reset-page{
+    margin: 6rem 2rem;
+}
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
@@ -498,9 +507,7 @@ a.text-info:hover{
     border-color: #222;
 }
 
-.allauth-form-inner-content a {
-	color: #48304d; /* text-info */
-}
+
 
 /* modal for confirm delete */
 #delete-confirmation .modal-footer{
