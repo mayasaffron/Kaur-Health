@@ -47,11 +47,20 @@ a:hover{
     background-color: #6A4771; 
     font-size: 1rem;
 }
+a.uppercase.font-weight-bold.nav-link.text-black.mr-5:hover,
+a.uppercase.font-weight-bold.nav-link.text-black:hover,
+a.nav-link.text-black:hover,
+a#user-options:hover{
+    color: #EBEBEB !important;
+    text-decoration: none;
+    background-color: #6A4771 !important; 
+    font-size: 1rem;
+}
 
-.nav-item > a.nav-link:hover {
+a.nav-link.main-logo-link:hover{
     color: #EBEBEB;
     text-decoration: none;
-    background-color: #6A4771; 
+    background-color: #EBEBEB; 
     font-size: 1rem;
 }
 
@@ -146,19 +155,17 @@ footer {
 	text-align: center;
 }
 
+i.social-icon:hover{
+    color: #EBEBEB !important;
+    text-decoration: none;
+    background-color: #6A4771 !important; 
+}
 .social-link {
 	text-decoration: none;
 	display: inline-block;
 	cursor: pointer;
 }
-a.social-ul{
-   background: red;
-    color: white; 
-}
-a.social-ul:hover{
-    background: red;
-    color: white;
-}
+
 .social-link:nth-child(odd) {
 	margin: 0 0.5rem;
 }
@@ -218,10 +225,14 @@ a.social-ul:hover{
     margin-top: 50%;
 }
 
-.carousel-control-prev-icon
-.carousel-control-next-icon{
-    color: #48304d;
+.carousel-inner > .item > img { width:640px; height:360px; }
+
+a.carousel-control-next > span.carousel-control-next-icon
+{
+    color: yellow !important;
 }
+
+
 /* blog app */
 
 .blog-style{

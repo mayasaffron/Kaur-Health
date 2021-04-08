@@ -57,7 +57,7 @@ def adjust_bag_product(request, item_id):
     bag = request.session.get('bag', {})
     product = get_object_or_404(Product, pk=item_id)
 
-    if quantity > 0:
+    if quantity in range(0, 1000):
         bag[item_id] = quantity
         messages.success(request, f'Updated {product.name}'
                       f' quantity to {bag[item_id]}')
