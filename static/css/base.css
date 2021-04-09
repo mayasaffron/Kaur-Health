@@ -370,10 +370,7 @@ a.text-info:hover{
     text-decoration: none;
     background-color: #6A4771 !important; 
 }
-.text-danger{
-    background-color: #dc3545;
-    border-color: #dc3545;
-}
+
 
 
 .btn-tag{
