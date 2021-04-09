@@ -167,10 +167,11 @@ footer {
 	text-align: center;
 }
 
-i.social-icon:hover{
-    color: #EBEBEB !important;
+a.no-hover:hover{
+    color: #6A4771;
     text-decoration: none;
-    background-color: #6A4771 !important; 
+    background-color: transparent;
+    font-size: 1rem;
 }
 .social-link {
 	text-decoration: none;
