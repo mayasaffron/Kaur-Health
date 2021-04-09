@@ -420,13 +420,11 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 - confirm that shipping form is empty if user is not logged in and thatthere is a link beneath form reminding user to log in to this form prefilled. Or register. 
 - confirm adjust bag button takes user bag to bag. 
 - confirm secure complete order button, completes order. 
-
-2. Payment Page
-<!-- - Cancel the payment, confirm that the user is taken back to the all products page of the website. -->
-- Return to the payment page , use the stripe checkout test card numbers to check the various responses to different errors.
+- Use the stripe checkout test card numbers to check the various responses to different errors.
 - Make a successful payment. Confirm that the user is returned to checkout success page.
+- confirm overlay and loading spinner successfully display whilst payment is going through.
 
-3. Checkout success page
+2. Checkout success page
 - Check that the success page loads as expected.
 - Confirm that the user sees a sucess message in top right with order number and email address.
 - Check that the invoice form is displayed correctly and clearly with all relevant values.
@@ -454,8 +452,8 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 - Confirm correct buttons appear and that they work correctly 
 - Check that the comments display where applicable and that authenticated users can add them. 
 
-<!-- #### Django Allauth pages 
-6. Register Page
+#### Django Allauth pages 
+1. Register Page
 - Try to go to the register url when already logged in, confirm that the user is redirected to the home page.
 - Log out then go to the register page again. Confirm that the register form is displayed as expected.
 - Fill in the form with a username already in the database, confirm that the user is informed that they must use a unique username.
@@ -464,14 +462,14 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 - Fill in the form with two different passwords, confirm the error is caught again and the user is informed of their mistake.
 - Fill in the registration for correctly, confirm that the user is automatically directed to the login page, and the message "Your account has been created <username>. You can now log in." is displayed above the login page.
 
-7. Login Page
+2. Login Page
 - Reload the login page, confirm that the message for a new account is not visible.
 - Attempt to log in with a username not in the database, confirm the relevant error message is shown.
 - Attempt to log in with a correct username but wrong password, confirm the relevant error message is shown.
 - Log in with a correct username and password, confirm that the user is logged in and that they are redirected to their cart page.
 - Try to return to the login page url when already logged in, confirm that the user is redirected to the cart page.
 
-8. Account Page
+3. Account Page
 - Go to the account page of a newly created user. Confirm that the profile info form is populated with the users username and email address.
 - Confirm that the first name and last name fields are also available.
 - Fill in the form with a non-email address, confirm that the applicable error is shown to the user
@@ -481,40 +479,42 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 - Confirm that all orders after it in the list are closed accordions, but that can be opened with a click.
 - Confirm that all data in the orders on the account page is accurate.
 
-9. Log Out Page
+4. Log Out Page
 - Add a new product to the users cart. Click the "log out" link in the navigation bar. Confirm that the user is logged out and their cart has been cleared.
 - Click the "Log in again" link on this page, confirm that the user is taken back to the login page.
-- Confirm that the footer stays stuck to the bottom of the screen even when there is not enough content on the page to push it down. -->
+- Confirm that the footer stays stuck to the bottom of the screen even when there is not enough content on the page to push it down.
 
 
 
 ### Testing undertaken on tablet and phone devices
 All steps below were tested in the Chrome Developer Tools device simulators on all options and orientations.
 
-Elements on every page
-Navbar
+#### Elements on every page
+1. Navbar
+- Open the website on mobile, confirm that the navbar is collapsed into a burger icon
+- click the burger icon, confirm that the navbar list appears are expected.
+- Click the "Products and services" dropdown menu, confirm that the products are displayed.
+- Add something to the cart, confirm that the user shopping cart icon counter appears and displays correctly.
 
-Open the website on mobile, confirm that the navbar is collapsed into a burger icon
-click the burger icon, confirm that the navbar list appears are expected.
-Click the "Shop" dropdown menu, confirm that the shop sections are displayed.
-Add something to the cart, confirm that the user shopping cart icon counter appears and displays correctly.
-Footer
+2. Footer
+- Scroll to the bottom of the page, confirm that the footer contents is displayed as expected with the bootstrap grid.
+- No content squashed or squeezed or disproportionate in size.
+- Confirm that all links and buttons in footer are easy to click with a finger on the smallest screen sizes.
 
-Scroll to the bottom of the page, confirm that the footer contents is displayed as expected with the bootstrap grid.
-No content squashed or squeezed or disproportionate in size.
-Confirm that all links and buttons in footer are easy to click with a finger on the smallest screen sizes.
-Shop pages
+#### Products and services pages
 
-Confirm that the product list is displayed one on top of each other on mobile, and 3 to a row on tablet.
-Confirm that all clicks and swipes operate as expected on touch screen.
-Checkout pages
+- Confirm that the products are displayed one on top of each other on mobile, and 2 to a row on tablet.
+- Confirm that all clicks operate as expected on touch screen.
 
-Confirm that the order summary is displayed as a closed accordion, and can be opened with a click.
-Check that the display of elements matches the expected layout for mobile and tablet devices.
-All pages
+#### Checkout pages
 
-Navigate to all pages on the site, check that the layout is as expected for the screen size.
-Check that all buttons, menus, forms and other elements are the correct proportions and easily clickable with a finger.
+- Confirm that the order summary is displayed as a closed accordion, and can be opened with a click.
+- Check that the display of elements matches the expected layout for mobile and tablet devices.
+
+#### All pages
+
+- Navigate to all pages on the site, check that the layout is as expected for the screen size.
+- Check that all buttons, menus, forms and other elements are the correct proportions and easily clickable with a finger.
 
 
 

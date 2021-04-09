@@ -202,7 +202,7 @@ I chose persian indigo and avacado for the site's primary colors because these c
 
 [This article](https://neilpatel.com/blog/psychology-of-color-and-conversions/) explained the importance of recognising the effect of colurs on your audiences mood. the article explains that "35% of women said blue was their favorite color, followed by purple (23%) and green (14%). 33% of women confessed that orange was their least favorite color, followed by brown (33%) and gray (17%)." as the content of this site will appeal mainly to women, i decided i needed colours that would be most inviting to them. 
 
-![This pallet] (readme_materials/wireframes/kaur-health-palette.png)
+![This pallet](readme_materials/wireframes/kaur-health-palette.png)
 totally enages and appeals to women, however the 'english violet' stops the entire palette being sterotypically 'girly' and therefore offputtting to men! 
 
 ### Typography
