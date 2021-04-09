@@ -8,6 +8,8 @@
     <meta http-equiv="X-UA-compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'favicon/favicon-16x16.png' %}" type="image/x-icon" />
+    <link rel="icon" href="{% static 'favicon/favicon-16x16.png' %}" type="image/x-icon" />
 {% endblock %}
 
 {% block extrameta %}
@@ -44,7 +46,7 @@
 <body>
 <header class="container-fluid fixed-top">
 <div class="row bg-white pt-lg-2 d-none d-lg-flex" id="topnav">
-    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left"> <a href="{% url 'home' %}" class="navbar-brand nav-link main-logo-link"><img class="img-fluid" width="123px" height="123px" src="{{ MEDIA_URL }}logo.jpg" alt="Kaur Health logo"> </a></div>
+    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left"> <a href="{% url 'home' %}" class="navbar-brand nav-link main-logo-link"><img class="img-fluid" width="50px" height="50px" src="{{ MEDIA_URL }}logo.jpg" alt="Kaur Health logo"> </a></div>
     <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <form method="GET" action="{% url 'all_items' %}">
             <div class="input-group w-100">
