@@ -204,7 +204,7 @@ engages and appeals to women, however, the 'English violet' stops the entire pal
 ### Typography
 To reflect kaur Health's brand identity, the typeface chosen for main headings was Mulish, (formerly known as Muli) and I coupled this with Nunito for the body text, both of these fonts fall under the sans serif family. I chose this duo, after doing some research and realising that I needed the font to reflect; strength; empowerment; practicality and most importantly readability. Due to the nature of the site's content, being quite woman-centric, I was tempted to select a playful font, such as Oleo script, however, I decided this would take away from the professional feel I was aiming to achieve. [This article]("https://piktochart.com/blog/fonts-and-colors/#:~:text=For%20subheadings%20and%20body%20text,partially%20for%20titles%20or%20headlines") by Natasya Sunarto was very insightful, as it compared a range of industries and I was able to work out where Kaur Health fits within the examples and make an informed decision about which typeface would be most fitting. 
 
-- Icon: [kaur Health](readme-materials/wireframes/logo.jpg) is used for the main icon library across the site.
+- Icon: ![This logo](readme-materials/wireframes/logo.jpg) is used for the main icon library across the site.
 - Favicon: I got the favicon by uploading the logo to  [Favicon](https://favicon.io).
 
 ### Brand Logo
@@ -220,11 +220,11 @@ This website is composed of 6 applications: `home`, `blog`, `checkout`, `product
 ### Navbar
 Navbar is fixed at the top of pages across the site so that the site visitors easily navigate the whole site.  Navbar contains  `Brand Logo`, `Search Box`, `Site Menu`, `My Account dropdown` and `Cart icon`.
 - Search box: This search box function allows the visitors to search the products on the online shop with keywords. The keywords are searched over `name` and `description` field of Product Model, `name` and `description` field of Service Model. (Details of these models will be described at the [Information Architecture](#information-architecture)) This function uses the "or" condition not when searching the keywords, meaning, if the search query was "blood", the function will search the names and descriptions of the products and services and return results where the search term was found in either the name or description. 
-<br>
+
 ![search term 'blood'](readme-materials/logic_screenshots/search-logic(1).png)
-<br>
+
 !['blood' in description](readme-materials/logic_screenshots/search-logic(2).png)
-<br>
+
 I chose this logic because, due to the nature of the topics on this site, there is likely to be some overlap in name and description of products and services and category that a particular item falls into. 
 
 ### Footer
