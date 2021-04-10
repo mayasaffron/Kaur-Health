@@ -6,7 +6,6 @@
                 <div class="card blog-style mb-4">
                     <div class="card-body">
                         <h2 class="card-title"><a class="blog-link" href="{{ blog.get_absolute_url }}">{{ blog.title }}</a></h2>
-                        <p class="card-text">{{ blog.title }}</p>
                         <div class="col-4"><a href="{{ blog.get_absolute_url }}" target="_blank" class="blog-btn">Read more &rarr;</a></div>
                         <div class="col-4"><a class="blog-btn" href="{% url 'add_blog_post' %}">Write a post</a></div>
                         <div class="col-4">
@@ -14,19 +13,10 @@
                     <a class="blog-btn" href="{% url 'update_blog' blog.slug %}">Edit post</a>
                     {% endif %}
                         </div>
-                        
-                
-             
-                         
-   
-      
-                        
-      
-                
   
                 {% if blog.blog_image %}
                     <a class="blog-link" href="{{ BlogPost.get_absolute_url }}" target="_blank">
-                    <img class="card-img-top" src="{{ blog.blog_image.url }}" alt="{{ post.title }}">
+                    <img class="card-img-top" height="320px" width="320px" src="{{ blog.blog_image.url }}" alt="{{ post.title }}">
                     </a>
                 {% else %}
                     <a class="blog-link" href="{{ BlogPost.get_absolute_url }}">

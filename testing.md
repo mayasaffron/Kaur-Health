@@ -1310,4 +1310,10 @@ Kaur Health viewed on all devices and orientations available in Chrome DevTools.
 ## Accessibility
 * I used [wave](https://wave.webaim.org/) to achieve better accessibility on my site. 
 
+- wave test on each page revealed:
+- 2 contrast errors, when using red text on the bag and checkout pages. 
+- Inputs with class 'form-control', not having corresponding labels. I decided thatthese were not big issues as in each case, the placeholder text was there to inform a visually impaired user. 
+- Empty buttons, where the button content is an icon. Again, I felt this was not a big issue, as the icon was there to indicate the action to the user, however as an extra measure, I added aria-labels to each of these icons. 
+
+
 > [To return to the previous document please click here](https://github.com/mayasaffron/self-isolation-watch/blob/master/README.md) 

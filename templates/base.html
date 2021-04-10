@@ -48,13 +48,13 @@
 <div class="row bg-white pt-lg-2 d-none d-lg-flex" id="topnav">
     <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left"> <a href="{% url 'home' %}" class="navbar-brand nav-link main-logo-link"><img class="img-fluid" width="50px" height="50px" src="{{ MEDIA_URL }}logo.jpg" alt="Kaur Health logo"> </a></div>
     <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-        <form method="GET" action="{% url 'all_items' %}">
+        <form label="search form" method="GET" action="{% url 'all_items' %}">
             <div class="input-group w-100">
                 <input type="text" class="form-control rounded-0 border border-black" name="q" placeholder="Search Products & Services">
                 <div class="input-group-append">    
-                        <button class="btn btn-black border border-black rounded-0" type="submit">
+                <button class="btn btn-black border border-black rounded-0" type="submit">
                     <span class="icon">
-                        <i class="fas fa-search"></i>
+                        <i class="fas fa-search" aria-label="search button"></i>
                     </span>
                 </button>
                 </div>

@@ -66,7 +66,7 @@
         <div class="col-sm-12">
 
             {% if not object.comments.all %}
-                <h3 class="mt-0 text-center"><u><strong> Comments yet..</strong></u></h3> 
+                <h3 class="mt-0 text-center"><u><strong> No comments yet..</strong></u></h3> 
                     <small class="ml-3">
                 {% if request.user.is_authenticated %}
                     <div class="col-4"><p class="text-info" data-toggle="modal" data-target="#commentModal">Comment</p></div>
