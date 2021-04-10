@@ -1,8 +1,8 @@
 # Kaur Health
-![am i responsive design](readme_materials/wireframes/amiresponsive1.png)
-![am i responsive design](readme_materials/wireframes/amiresponsive2.png)
-![am i responsive design](readme_materials/wireframes/amiresponsive3.png)
-![am i responsive design](readme_materials/wireframes/amiresponsive4.png)
+![am i responsive design](readme-materials/wireframes/amiresponsive1.png)
+![am i responsive design](readme-materials/wireframes/amiresponsive2.png)
+![am i responsive design](readme-materials/wireframes/amiresponsive3.png)
+![am i responsive design](readme-materials/wireframes/amiresponsive4.png)
 This image is created with [ami.responsivedesign](http://ami.responsivedesign.is/?url=https%3A%2F%2Fkaur-health.herokuapp.com%2F).
 
 Link to [Deployed Site](https://kaur-health.herokuapp.com/)
@@ -198,13 +198,13 @@ However, I couldn't find a site that was also an e-commerce store, so for better
 When you have a site that offers a community aspect and e-commerce functionality, it is important to have a balance with the aesthetic. 
 The pink and purples would be inviting and representative of the nature of the site, whilst the black and white are neutral and professional, indicating the presence of the store.
 
-![This pallet](readme_materials/wireframes/colour-palette.png)
+![This pallet](readme-materials/wireframes/colour-palette.png)
 engages and appeals to women, however, the 'English violet' stops the entire palette from being stereotypically 'girly' and therefore offputting to men! 
 
 ### Typography
 To reflect kaur Health's brand identity, the typeface chosen for main headings was Mulish, (formerly known as Muli) and I coupled this with Nunito for the body text, both of these fonts fall under the sans serif family. I chose this duo, after doing some research and realising that I needed the font to reflect; strength; empowerment; practicality and most importantly readability. Due to the nature of the site's content, being quite woman-centric, I was tempted to select a playful font, such as Oleo script, however, I decided this would take away from the professional feel I was aiming to achieve. [This article]("https://piktochart.com/blog/fonts-and-colors/#:~:text=For%20subheadings%20and%20body%20text,partially%20for%20titles%20or%20headlines") by Natasya Sunarto was very insightful, as it compared a range of industries and I was able to work out where Kaur Health fits within the examples and make an informed decision about which typeface would be most fitting. 
 
-- Icon: [kaur Health](readme_materials/wireframes/logo.jpg) is used for the main icon library across the site.
+- Icon: [kaur Health](readme-materials/wireframes/logo.jpg) is used for the main icon library across the site.
 - Favicon: I got the favicon by uploading the logo to  [Favicon](https://favicon.io).
 
 ### Brand Logo
@@ -221,9 +221,9 @@ This website is composed of 6 applications: `home`, `blog`, `checkout`, `product
 Navbar is fixed at the top of pages across the site so that the site visitors easily navigate the whole site.  Navbar contains  `Brand Logo`, `Search Box`, `Site Menu`, `My Account dropdown` and `Cart icon`.
 - Search box: This search box function allows the visitors to search the products on the online shop with keywords. The keywords are searched over `name` and `description` field of Product Model, `name` and `description` field of Service Model. (Details of these models will be described at the [Information Architecture](#information-architecture)) This function uses the "or" condition not when searching the keywords, meaning, if the search query was "blood", the function will search the names and descriptions of the products and services and return results where the search term was found in either the name or description. 
 <br>
-![search term 'blood'](readme_materials/logic_screenshots/search-logic(1).png)
+![search term 'blood'](readme-materials/logic_screenshots/search-logic(1).png)
 <br>
-!['blood' in description](readme_materials/logic_screenshots/search-logic(2).png)
+!['blood' in description](readme-materials/logic_screenshots/search-logic(2).png)
 <br>
 I chose this logic because, due to the nature of the topics on this site, there is likely to be some overlap in name and description of products and services and category that a particular item falls into. 
 
@@ -273,7 +273,7 @@ should I add pics?
 - There is a product management option in the account link, from here admin user can add a product, via a simple product form. 
 - Update / Delete options are shown beneath each product card.
 - Update option takes the admin user to the current product form, a message also displays feedback to the user that they are editing a product.
-[updating a product](readme_materials/logic_screenshots/update(product_management.png))
+[updating a product](readme-materials/logic_screenshots/update(product_management.png))
 - If deleting a product a modal appears to double-check the validity of the request, then the user is given a success message. #picture
 - It was apparent to me that if a none admin user attempted to update or delete any of the products and services if they guessed the corresponding URLs, they would be able to. To resolve this I added some defensive code to my views. Details of this can be found in the (testing file)[testing.md]
 
@@ -522,7 +522,7 @@ The main frontend development was created using HTML, CSS, JavaScript and their 
 - [PostgreSQL](https://www.postgresql.org/) - database used for production.
 
 # Testing
-Testing was conducted and recorded in a different file: [Testing.md](https://github.com/mayasaffron/Kaur-Health/blob/master/testing.md).
+Testing was conducted and recorded in a different file: [TESTING.md](https://github.com/mayasaffron/Kaur-Health/blob/master/testing.md).
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
