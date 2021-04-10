@@ -366,7 +366,7 @@ This would give me more freedom to develop further as the site and products grow
 7 - Install AJAX requests functionality, so that users can update and make blog posts on the page, similar to the comment functionality occurring on the page, via a modal. 
 
 ### Home
-8 - Creating the carousel items in the developer as opposed to using an external tool, such as [canva](), which makes the carousel items into images. By doing this, I would be able to maximise the SEO of the content and this could be another way to drive traffic through my site. 
+8 - Creating the carousel items in the developer as opposed to using an external tool, such as [canva](https://www.canva.com/), which makes the carousel items into images. By doing this, I would be able to maximise the SEO of the content and this could be another way to drive traffic through my site. 
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
@@ -513,8 +513,9 @@ The main frontend development was created using HTML, CSS, JavaScript and their 
 - Gitpod
 - [PIP](https://pip.pypa.io/en/stable/installing/)
 - [Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/)
-- [dbdiagram.io](https://dbdiagram.io/home)
 - [AWS S3 bucket](https://aws.amazon.com/)
+- [canva](https://www.canva.com/)
+- [grammarly](https://app.grammarly.com/)
 
 ## Databases
 - [SQlite3](https://www.sqlite.org/index.html)- database used for development.

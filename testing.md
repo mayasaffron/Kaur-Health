@@ -48,30 +48,6 @@ The following validation services and linter were used to check the validity of 
 If you wish to run any of these tests for yourself, before going further please make sure you have already cloned this project from the [The House of Mouse GitHub repository](https://github.com/AJGreaves/thehouseofmouse) 
 by following the steps in the [README.md](readme.md#how-to-run-this-project-locally) under "How to run this project locally" and that you have the entire project running on your own IDE.
 
-### Jasmine
-
-- When creating this project I chose to use Python to handle almost all of the logic needed for the functionality of the site. Meaning that the javascript written was mainly to handle alert messages, fetch and ajax requests. This meant that there was not a lot of javascript for me to test with jasmine, so these tests are very short compared to previous projects I have made. I did do extensive Python unittesting on the python code however.
-
-- [Jasmine-Jquery CDN](https://github.com/velesin/jasmine-jquery) has been imported into the jasmine testing to allow for jQuery within the JavaScript functions.
-
-The files for jasmine testing The House of Mouse can be found here:
-- HTML page to run jasmine tests from: [jasmine-testing.html](testing/jasmine/jasmine-testing.html)
-- JavaScript specifications (tests): [thehouseofmouseSpec.js](testing/jasmine/spec/thehouseofmouseSpec.js)
-- The House of Mouse JavaScript functions to be tested are in the [js directory](static/js)
-
-#### How to run Jasmine tests
-
-To run the Jasmine tests: 
-1. Open [jasmine-testing.html](testing/jasmine/jasmine-testing.html).
-2. Run the html file and view it in your browser to see the test results. 
-
-#### How to create Jasmine tests
-
-To create Jasmine tests: 
-1. Open the [thehouseofmouseSpec.js](testing/jasmine/spec/thehouseofmouseSpec.js) file.
-2. Write your own tests using the jasmine 3.1 framework.
-3. Save [thehouseofmouseSpec.js](testing/jasmine/spec/thehouseofmouseSpec.js), and then run/refresh [jasmine-testing.html](testing/jasmine/jasmine-testing.html).
-
 ### Python Testing
 
 #### How to run Python tests
@@ -135,7 +111,7 @@ coverage html
 | ----------- | ----------- | ----------- |
 | Site User | Be able to easily access information about Juspreet and the services she offers | Trust the validity of her and her services. |
 
-- The about page is breif and informative, not only do users have access to inforamtion regarding Juspreet and her work, they can also find testimonies from clients too. 
+- The about page is brief and informative, not only do users have access to information regarding Juspreet and her work, but they can find testimonies from clients too. 
 - I feel the about page, fully satisfies this user story. 
 
 
@@ -143,14 +119,14 @@ coverage html
 | ----------- | ----------- | ----------- |
 | Site User | Easily navigate to the Products and services available | Find the product or service I want to purchase |
 
-- There is a searchbar on the main nav bar which says `Search Products & Services`
+- There is a search bar on the main nav bar which says `Search Products & Services`
 ![ All products and services ](readme_materials/testing_screenshots/user_stories_products(2)).png)
-- Products and services tab is clear and obvoius on the nav bar.
+- Products and services tab is clear and obvious on the nav bar.
 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
-| Site User | See a shopping cart icon on nav bar | Always check the current order and checkout when I want |
+| Site User | See a shopping cart icon on nav bar | Always check the current order and check out when I want |
 
 - The shopping cart icon is black when bag is empty, when bag has items; the bag becomes illuminated and reads the current total in bag. 
 
@@ -162,8 +138,8 @@ coverage html
 | ----------- | ----------- | ----------- |
 | Site User| Filter by a specific category | Easily find products in a specific category |
 
-- When a user clicks on ` Product and services` dropdown nav bar option, you are given a dropdown to the different categories of the products and services. I thought that the dropdown would provide better user experience than a direct link, which takes you to a page where you then have to sift through the categores that you are interested in. The nature of this site, is such that, as a user you are prpbably well aware of what you are looking and therefore which category to find it. Or, if you are new to the sites content, i felt it would be less overwhelming if you have some filtering control and could navigate to the category you were most interested in. 
-By doing this I satisfy the ease of navihation in my user stories and adhere to my wireframes. 
+- When a user clicks on ` Product and services` dropdown nav bar option, you are given a dropdown to the different categories of the products and services. I thought that the dropdown would provide better user experience than a direct link, which takes you to a page where you then have to sift through the categories that you are interested in. The nature of this site, is such that, as a user, you are probably well aware of what you are looking for and therefore which category to find it. Or, if you are new to the site's content, I felt it would be less overwhelming if you have some filtering control and could navigate to the category you were most interested in. 
+By doing this I satisfy the ease of navigation in my user stories and adhere to my wireframes. 
 ![ The dropdown distinguishes the products and services by category ](readme_materials/logic_screenshots/navbar_dropdown(products).png)
 - After clicking on your chosen category, all of the products and services under this category, will be displayed. The category name will appear just beneath the consistent title of 'products and services' and there is a banner just above the title, with the free delivery minimum spend. 
 In the top left corner the user will see a link to `Products and services home` which when clicked will take them to the `all products and services`, here all of the categories will be clickable links beneath the title, so that a user can navigate to the other categories from here as well/ instead of the navbar dropdown.
@@ -171,10 +147,10 @@ Beside the `Products and services home` there is a product and service count, ou
 ![ All products and services ](readme_materials/testing_screenshots/user_stories_products(1)).png)
 
 Originally I toyed with the idea of having the product and service count clickable links and sectioning the page so that the user would be taken to a products section if they clicked the product count link to 'products' and the same for services. However, this proved to be bad UI, as when and if the user chose to sort the products, the sections would make things very messy and hard to contain. 
-- It was through this boolean field, that i was als able to filter down to just the services. I simply added some code to my views and template so that just the services would be displayed when a user clicks on the services. 
+- It was through this boolean field, that I was also able to filter down to just the services. I simply added some code to my views and template so that just the services would be displayed when a user clicks on the services. 
 I opted to distinguish services from products in a few ways;
 1) Adding a consistent banner in each of the services' descriptions # picture
-2) When a service is added to the users bag, the success message will clearly state that the user has just added a service and should read the terms and conditions carefully. 
+2) When a service is added to the user's bag, the success message will clearly state that the user has just added a service and should read the terms and conditions carefully. 
 3) On the order receipt, I have again stated, which of the items are services and that the user should therefore read the terms and conditions. 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
@@ -182,13 +158,13 @@ I opted to distinguish services from products in a few ways;
 | Site User | View individual product pages that have prices and descriptions | Get detailed information about the product before purchasing |
 
 - The product detail page satisfies this user story. 
-- For servicess in particular, it was important that the user could access all necessary information. 
+- For services, in particular, it was important that the user could access all necessary information. 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
 | Site User | Leave/View product reviews with scores | Understand which products are popular with other customers |
 
-- Site users can view ratings of each product, however as noted in the `features left to implement` section of the readme; in production i quickly understood that he nature of this site is such that there needed to be a balance between business and community. The use of testimonies on the about page served as a review and in the future as the site grows I would consider adding a product review section and functionality.  
+- Site users can view ratings of each product, however as noted in the `features left to implement` section of the readme; in production, I quickly understood that the nature of this site is such that there needed to be a balance between business and community. The use of testimonies on the about page served as a review and in the future as the site grows I would consider adding a product review section and functionality.  
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
@@ -246,7 +222,7 @@ I opted to distinguish services from products in a few ways;
 | Site User | Be reminded to log in if I did not log in | Smoothly proceed with my purchase and prefilled form | 
 
 - Beneath the order form there are links to either register for an account or log in. 
-- I considered adding more reminders to log in for this functionality, throughout the site, howver decided against it, as I thought this could attribute to bad UX. If a user feels that it is impossible to carry out the desired action, without being authenticated, this may disuade them from visiting or more importantly, purchasing thorough the site again. 
+- I considered adding more reminders to log in for this functionality, throughout the site, however decided against it, as I thought this could attribute to bad UX. If a user feels that it is impossible to carry out the desired action, without being authenticated, this may dissuade them from visiting or more importantly, purchasing through the site again. 
 
 <br/>
 
@@ -258,10 +234,10 @@ I opted to distinguish services from products in a few ways;
 | Site User | Easily register for an account | Have a personal account where I can edit my information and access blog articles |
 
 - users with a profile can edit their delivery information. 
-- Initially, I had intended to make blog articles accessible for users only. However, during production I decided against this as i felt this would negatively impact Juspreets exposure to brands and other potential clients (brand goals). 
+- Initially, I had intended to make blog articles accessible for users only. However, during development, I decided against this as I felt this would negatively impact Juspreets exposure to brands and other potential clients (brand goals). 
 - Blogs are accessible to all, however, only authenticated users can make a post or comment on a post. 
-- To acknowledge this user story, if a user has written blog posts, when they log on and click on the blog tab in the nav bar they will see a dropdown link ` my blog posts `. Here they will find all of the posts that they have written. 
-- Whilst my original idea hasnt been executed, I feel that what exists now is a better alternative and will reuslt in a better UX. The users perosonal blogs being accessed via the nav bar is another way of satisfying the idea behind this user story. 
+- To acknowledge this user story, if a user has written blog posts when they log on and click on the blog tab in the navbar they will see a dropdown link ` my blog posts `. Here they will find all of the posts that they have written. 
+- Whilst my original idea hasn't been executed, I feel that what exists now is a better alternative and will result in a better UX. The user's personal blogs being accessed via the navbar is another way of satisfying the idea behind this user story. 
 ![ my blog posts ](readme_materials/testing_screenshots/user_stories_blog(1)).png) 
 ![ my blog posts ](readme_materials/testing_screenshots/user_stories_blog(2)).png)
 
@@ -277,14 +253,14 @@ I opted to distinguish services from products in a few ways;
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
 | Site User | Easily recover my password in case I forget it | Recover access to my account |
-- Djamgo all auth functionality covers this, i provided extra styling as default cut off the text. 
+- Django all auth functionality covers this, I provided extra styling as default cut off the text. 
 
 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
 | Site User | Receive an email confirmation after registering | Verify that my account registration was successful |
-- Django all auth and gmail functionality did most of the hdavy lifting for this. Whilst amoazon email service did not work for me in this project, in the future i hope to use it, as using gmail functionality would mean that i must always supply a gmail account in order to become authenticated. 
+- Django all auth and Gmail functionality did most of the heavy lifting for this. Whilst Amazon email service did not work for me in this project, in the future I hope to use it, as using Gmail functionality would mean that I must always supply a Gmail account to become authenticated. 
 
 
 
@@ -306,13 +282,13 @@ I opted to distinguish services from products in a few ways;
 
 - Comments of a post can be viewed by all users, however, only authenticated users can add a comment. 
 - If a user is authenticated they will see links to comment, if the user is not they will see links to `login and comment` which will direct them to the login. 
-- Initially, instead of links i had an alert message which was triggered if a none authenticated user attempted to comment. However I chnaged this, as the natire of 'topical comments' are such that, the user will want to quickly express whatever feeling/ response, the post have evoked in them. I felt an alert message was a little vague and would contribute to bad UX. the user could likely be confused as to what to do next? Whereas a link will direct them to the login page, where they are on a mission to comment. 
+- Initially, instead of links I had an alert message which was triggered if a none authenticated user attempted to comment. However, I changed this, as the nature of 'topical comments' are such that, the user will want to quickly express whatever feeling/ response, the post had evoked in them. I felt an alert message was a little vague and would contribute to bad UX. the user could likely be confused as to what to do next? Whereas a link will direct them to the login page, where they are on a mission to comment. 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
-| Site User | Have the ability to remove unsavoury comments | Protect my brand and the site visitors' experince |
+| Site User | Remove unsavoury comments | Protect my brand and the site visitors' experience |
 
-- I did not have time to add this in, however in the future i will. 
+- I did not have time to add this in, however in the future I will. 
 <br/>
 
 
@@ -420,7 +396,7 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 - Check that the invoice form is displayed correctly and clearly with all relevant values.
 - Click the "back to the shop" button, confirm that the user is taken back to the main shop page.
 - Confirm order confirmation email is received.
-- check that the relevant deciption is displayed for item type (product/ service)
+- Check that the relevant description is displayed for item type (product/ service)
 
 #### Contact Page
 1. contact form 
@@ -428,11 +404,11 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 - Try to send the form with no fields filled in, confirm that the user is alerted to fill in the required fields.
 - Try to enter a non-email address into the email field, confirm that the user is alerted to fill in an email address.
 - Send a complete form, confirm that the message is sent to my email address with all the information included.
-- Go into devtools, change the hidden form value attribute from number to something and ensure that Django honeypot field catches the spam attempt and returns user to an error page.
+- Go into dev tools, change the hidden form value attribute from number to something and ensure that Django honeypot field catches the spam attempt and returns user to an error page.
 
 2. form submission response
-- Check user recieves a success message and is redirected to response page, where they are notified that they will be receieving a response in 2-3 working days.
-- ensure user recieves a copy of their contact form by email. 
+- Check user receives a success message and is redirected to a response page, where they are notified that they will be receiving a response in 2-3 working days.
+- Ensure user receives a copy of their contact form by email. 
 
 #### Blog Page
 1. All blogs 
@@ -444,8 +420,8 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 
 #### Django Allauth pages 
 1. Register Page
-- Try to go to the register url when already logged in, confirm that the user is redirected to the home page.
-- Log out then go to the register page again. Confirm that the register form is displayed as expected.
+- Try to go to the register URL when already logged in, confirm that the user is redirected to the home page.
+- Log out then go to the register page again. Confirm that the registration form is displayed as expected.
 - Fill in the form with a username already in the database, confirm that the user is informed that they must use a unique username.
 - Fill in the email input with a non-email address, confirm the user is shown an error asking the to use an email address.
 - Go into devtools, change the type attribute on the email form to text, attempt to send the form. confirm that the Django validation catches the error and tells the user to enter an email address.
@@ -457,10 +433,10 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 - Attempt to log in with a username not in the database, confirm the relevant error message is shown.
 - Attempt to log in with a correct username but wrong password, confirm the relevant error message is shown.
 - Log in with a correct username and password, confirm that the user is logged in and that they are redirected to their cart page.
-- Try to return to the login page url when already logged in, confirm that the user is redirected to the cart page.
+- Try to return to the login page URL when already logged in, confirm that the user is redirected to the cart page.
 
 3. Account Page
-- Go to the account page of a newly created user. Confirm that the profile info form is populated with the users username and email address.
+- Go to the account page of a newly created user. Confirm that the profile info form is populated with the users' username and email address.
 - Confirm that the first name and last name fields are also available.
 - Fill in the form with a non-email address, confirm that the applicable error is shown to the user
 - Fill in the form correctly, confirm that the "Your account info has been updated." message is shown to the user and that the reloaded form is now populated with the new data.
@@ -470,7 +446,7 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 - Confirm that all data in the orders on the account page is accurate.
 
 4. Log Out Page
-- Add a new product to the users cart. Click the "log out" link in the navigation bar. Confirm that the user is logged out and their cart has been cleared.
+- Add a new product to the users' cart. Click the "log out" link in the navigation bar. Confirm that the user is logged out and their cart has been cleared.
 - Click the "Log in again" link on this page, confirm that the user is taken back to the login page.
 - Confirm that the footer stays stuck to the bottom of the screen even when there is not enough content on the page to push it down.
 
@@ -507,86 +483,23 @@ All steps below were tested in the Chrome Developer Tools device simulators on a
 - Check that all buttons, menus, forms and other elements are the correct proportions and easily clickable with a finger.
 
 
-
-
-
-
-
-
-
-updating_quantity of item from product detail:
-
-
-webhook creates the order:
-- had a small issue initially because, i had not added the json loads to the bag:
-```
-for item_id, item_data in bag.items():
-                    product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            quantity=item_data,
-                            product=product,
-                        )
-                        order_line_item.save()
-```
-changed to:
-```
-for item_id, item_data in json.loads(bag).items():
-                    product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            quantity=item_data,
-                            product=product,
-                        )
-                        order_line_item.save()
-```
-the other issue i had is; i had mistakenly carried across a dictionary object to the webhook handler context; in the condition of if a product is a service:
-```
-else:
-    for service, quantity in item_data['item_is_service'.items():
-        order_line_item = OrderLineItem(
-            order=order,
-            product=product,
-            quantity=quantity,
-            product_is_service=service,
-        )
-        order_line_item.save()
-```
-this was throwing an errror in the webhook handler, because the last line was an unexpected item, i realised that this line was unecessary here and it was only important that i distinguish between products and services, if i was adding/ updating or deleteing from the bag. 
-I changed the else statement to 
-```
-else:
-    for service, quantity in item_data['item_is_service'.items():
-        order_line_item = OrderLineItem(
-            order=order,
-            product=product,
-            quantity=quantity,
-        )
-        order_line_item.save()
-```
-this solved the issue! 
-
-
-
 # Bugs discovered
 
 ## Solved Bugs
 ## Bug 1 - Service details not showing up 
 Solution: Correct the URLs for the app
-- I have three models categories, services and products. Products and services, rely on the categories model. 
-- When i built the template for the product and service details, the product detail worked fine, but the service details would not. 
-- if i clicked on a service, i would be taken to the details of a product with the same pk as the service i had clicked on. 
-- I thought it was an issue with the primary keys, but i couldnt work out what the issue was, because the primary keys were from different models. 
+- I have three models categories, services and products. Products and services rely on the categories model. 
+- When I built the template for the product and service details, the product detail worked fine, but the service details would not. 
+- if I clicked on a service, I would be taken to the details of a product with the same pk as the service I had clicked on. 
+- I thought it was an issue with the primary keys, but I couldn't work out what the issue was because the primary keys were from different models. 
 - In an attempt to rule this out, I displayed the ids (primary keys) of each service using 
 ``` {{ service.id }} ```
-- Then i changed the pk of one of my services to a number that was entirely different to any of the pk values of the products or services. 
-- when i clicked on this service, i got an error.
+- Then I changed the pk of one of my services to a number that was entirely different to any of the pk values of the products or services. 
+- when I clicked on this service, I got an error.
 ![bug1](readme-materials/bug_screenshots/bug_1.png)
-- This told me, the service details were reliant on the product id's. The new pk of the service i had tried to access, was out of range of the current product ids.
+- This told me, the service details were reliant on the product id's. The new pk of the service I had tried to access, was out of range of the current product ids.
 - this led me to check the link path of the items when they were clicked. this revealed all items were following the ``` all_items/<pk_value> ``` path. 
-- this in turn led me to change my products and services app urls from 
+- this in turn led me to change my products and services app URLs from 
 ``` path('<int:product_id>/', ```
 ```        views.product_detail, name='product_detail'), ```
 ``` path('<int:service_id>/', ```
@@ -605,18 +518,17 @@ Solution: add if statement in the contexts.py file
 ![Multiple items added to bag](readme-materials/bug_screenshots/bug_2(a)
 ![Multiple items added to bag](readme-materials/bug_screenshots/bug_2(b)
 
-- I have 2 models that I needed to pull data from
-this means I need to specify with actions, if I am pulling data from the service_id or the product_id.
-- My Products and Services had identical pk's, i didnt think this was an issue because they were still two different models, however, with this issue arising, i decided to change the services' pks.
+- I have 2 models that I needed to pull data from, this means I need to specify with actions if I am pulling data from the service_id or the product_id.
+- My Products and Services had identical pk's, I didn't think this was an issue because they were still two different models, however, with this issue arising, I decided to change the services' pks.
 
 - First, I changed the pks of my services. To do this I, mistakenly used the `loaddata` command. This indeed added the services with new pks, however didnt UPDATE, I was left with two sets of services.. To resolve this I had to manually delete ALL of my services, via the admin on my site and then `loaddata` again. 
-I researched and found out that in order to update models, you need to update the migrations used. I will do this if the issue arise again in the future, as it saves time. 
+I researched and found out that to update models, you need to update the migrations used. I will do this if the issue arises again in the future, as it saves time. 
 - Changing the pk's led to me continually getting this error 
 ![no service matches your query](readme-materials/bug_screenshots/bug_2(c).png)
 <br>
-when i tried to add a product or service. If i added a product, the error would say 'no service matches your query' and if i added a service, the error would say 'no product matches your query'.
+when I tried to add a product or service. If I added a product, the error would say 'no service matches your query' and if I added a service, the error would say 'no product matches your query'.
 
-- I believed my issue was in my views and urls and started to seperate the logic. 
+- I believed my issue was in my views and URLs and started to separate the logic. 
 ```
  def add_product_to_bag(request, item_id):
     '''Add a quantity of the specified product to the shopping bag'''
@@ -646,10 +558,10 @@ when i tried to add a product or service. If i added a product, the error would 
          views.add_product_to_bag,
          name='add_product_to_bag'),
 ```
-- I was still getting the error, so came to the conclusion that I needed to define the item specifically to check if its a service or product. To do this I added a parameter of `product.id` in the add product to bag view, however i would get this error;
+- I was still getting the error, so concluded that I needed to define the item specifically to check if it's a service or product. To do this I added a parameter of `product.id` in the add product to bag view, however, I would get this error;
 ![type error](readme-materials/bug_screenshots/bug_2(d).png)
 
-- Eventually after I had made all of the changes I could think of, to my views and urls, i took a look at the `contexts.py` file. <strong> In hindsight, I should have loooked st this file earlier on in the process, as it was the only other file in the bag app, which handled functions specfic to the bag. </strong>  
+- Eventually, after I had made all of the changes I could think of, to my views and URLs, I took a look at the `contexts.py` file. <strong> In hindsight, I should have looked at this file earlier on in the process, as it was the only other file in the bag app, which handled functions specific to the bag. </strong>  
 - In the `contexts.py` file;
 I changed the `bag contents` method from 
 ```
@@ -747,24 +659,24 @@ def bag_contents(request):
     return context
 
 ```
-- In the original method, essentially, I had stated that in order to add an item to the bag contents, there needed to be both products and services. This is why originally, two items would simultaneously be added to the bag and thereafter i got the query error. 
+- In the original method, essentially, I had stated that 'to add an item to the bag contents, there needed to be both products and services'. This is why originally, two items would simultaneously be added to the bag and thereafter I got the query error. 
 - the change to the contexts.py solved the issue. 
 
 ## Bug 3 Unable to correctly format the bag_contents
-Solution: created empty arrays for both products and services, within bag_items and appended products to the bag_items, to help decipher which item was coming from where. Then iterrate through the new array in the template. 
+Solution: created empty arrays for both products and services, within bag_items and appended products to the bag_items, to help decipher which item was coming from where. Then iterate through the new array in the template. 
 
-- After solving the above issues, i realised that with every item added, an extra empty row was added, because the server was being told to look for a product AND service everytime, by the contexts.py file. 
+- After solving the above issues, I realised that with every item added, an extra empty row was added, because the server was being told to look for a product AND service every time, by the contexts.py file. 
 ![Rendering empty respective products and services](readme-materials/bug_screenshots/bug_3(a).png)
-- I didnt understand the lack of the seperation of the models and their end points as much as i do now, i thought that because i had seperated the products and services actions eg 
+- I didn't understand the lack of the separation of the models and their endpoints as much as I do now, I thought that because I had separated the products and services actions eg 
 ``` add_product_to_bag and add_service_to_bag ```
 that this was sufficient.
-- So i thought i could sperate the products and views from the template. 
-![template logic, trying to seperate the bag contents](readme-materials/bug_screenshots/bug_3(b).png)
-- However, this still gave the same errors that i had previously seen
+- So I thought I could separate the products and views from the template. 
+![template logic, trying to separate the bag contents](readme-materials/bug_screenshots/bug_3(b).png)
+- However, this still gave the same errors that I had previously seen
 ![item confusion](readme-materials/bug_screenshots/bug_3(c).png)
-and led to only the products or services displaying at any one time, not together and seamlesly. 
-Here you can see from the total that there are other items in the bag (services) however only the products show, until you remove the products, then the services are displayed. 
-- I realised i needed to go bag into the view_bag view and contexts.py file, both of which currently had little to no differentiation between items being products or services. 
+and led to only the products or services displaying at any one time, not together and seamlessly. 
+Here you can see from the total that there are other items in the bag (services) however only the products show until you remove the products, then the services are displayed. 
+- I realised I needed to go bag into the view_bag view and contexts.py file, both of which currently had little to no differentiation between items being products or services. 
 ![initial view_bag view](readme-materials/bug_screenshots/bug_3(f).png)
 I changed the view_bag view to 
 ``` 
@@ -777,7 +689,7 @@ def view_bag(request):
     return render(request, 'bag/bag.html', bag_items)
     print(request.session.get('bag', {})) 
 ```
-similarly the bag_contents in the contexts.py file was 
+Similarly, the bag_contents in the contexts.py file was 
 ```
 def bag_contents(request):
     bag_items = []
@@ -831,7 +743,7 @@ def bag_contents(request):
     return context
 
 ```
-Which i changed to 
+Which I changed to 
 ```
 from django.conf import settings
 from decimal import Decimal
@@ -894,7 +806,7 @@ def bag_contents(request):
     return context
 
 ```
-By adding products and services as empty arrays, i could append them to the bag_items, depending on their condition and iterrate through them in the template.
+By adding products and services as empty arrays, I could append them to the bag_items, depending on their condition and iterate through them in the template.
 
 - I changed the template logic to 
 ```
@@ -912,9 +824,9 @@ By adding products and services as empty arrays, i could append them to the bag_
 and got this error
 ![template error](readme-materials/bug_screenshots/bug_3(g).png)
 
-Django and python dont like [''], within for loops 
+Django and python don't like [''], within for loops 
 
-so i changed it to 
+so I changed it to 
 ```
                     {% for item in bag_items.products %}
                     <!--products in the bag -->
@@ -927,7 +839,7 @@ so i changed it to
                     {% endfor %}
 ```
 
-which worked and my server is no longer looking for a product AND service everytime an item is added.
+which worked and my server is no longer looking for a product AND service every time an item is added.
 ![issue solved!](readme-materials/bug_screenshots/bug_3(h).png)
 
 
@@ -964,56 +876,56 @@ solution: Typed '66' which triggered the num lock and was then able to type vali
 
 I discovered this issue after adding the intial stripe functionality. 
 
-I used dev tools to try and debug the issue, i assumed it was a styling overlap error at first. 
+I used dev tools to try and debug the issue, I assumed it was a styling overlap error at first. 
 
-I could see the input was very cluttered with styles and believed this had somehting to do with the bug. 
+I could see the input was very cluttered with styles and believed this had something to do with the bug. 
 ![Card number field not inputtable](readme-materials/bug_screenshots/bug_5(a).png)
 
-I made my port public, removed the environment variables from a previous project (in case there was confusion in the application of public and secret keys ) and looked into the ad block settings in my browser (chrome).
+I made my port public, removed the environment variables from a previous project (in case there was confusion in the application of public and secret keys ) and looked into the ad-block settings in my browser (chrome).
 
 I then tried to input a card number into the mini project deployed site and another completed MS4 site. Both of which were not working! 
-![Card number field not inputtable on other sites](readme-materials/bug_screenshots/bug_5(b).png)
-![Card number field not inputtable on other sites](readme-materials/bug_screenshots/bug_5(c).png)
+![Card number field not allowing input ](readme-materials/bug_screenshots/bug_5(b).png)
+![Card number field not allowing input](readme-materials/bug_screenshots/bug_5(c).png)
 
-I was then convinced that it must be an ad setting in chrome somewhere, however to disable all security against the pop ups, would not be wise..
+I was then convinced that it must be an ad setting in chrome somewhere, however, to disable all security against the pop-ups, would not be wise..
 
 Finally, it was suggested that I type '66' into the card number field. 
 ![66 inputted into the card number field ](readme-materials/bug_screenshots/bug_5(d).png)
 
 Initially, I thought I may have some numbers on my keyboard not working, however after typing '66' I was able to type every number. 
-I then came to the conclusion that I had been trying to enter the numbers in using the number keypad without Num Lock turned on. '66' triggered the num lock and 77, 88, would have been just as effective! 
+I then concluded that I had been trying to enter the numbers using the number keypad without Num Lock turned on. '66' triggered the num lock and 77, 88, would have been just as effective! 
 
 ## Bug 6 Unable to correctly render the checkout success page
-solution: chnage entire structure, by having one model!
+solution: change the entire structure, by having one model!
 - I was building the checkout logic, trying to replicate the logic from my contexts.py file, however, my contexts.py file was very specific to my two models. I was stumbling with the order_line_items.
 
 ![ views for checkout app ](readme-materials/bug_screenshots/bug_6(a).png)
 ![ contexts.py for bag app ](readme-materials/bug_screenshots/bug_6(b).png)
 
-- I thought i needed to create similar variable as bag_items for order_line_items. I started looking into this and realised just how complicated the logic was becoming..
+- I thought I needed to create a similar variable as bag_items for order_line_items. I started looking into this and realised just how complicated the logic was becoming..
 ![ error ](readme-materials/bug_screenshots/bug_6(c).png)
 
 - I continued to try and define the quantity, continuing to try and keep the products and services seperated. 
 ![ error ](readme-materials/bug_screenshots/bug_6(d).png)
 ![ error ](readme-materials/bug_screenshots/bug_6(e).png)
 
-- eventually, i was advised to chnage my model structure or discuss with my mentor at least. I was very disheartened by this at first, but it was a great learning curve for me. We are taught KISS from the first lessons on the course and, personally, I find myself straying and not abiding by DRY. 
+- eventually, I was advised to change my model structure or discuss it with my mentor at least. I was very disheartened by this at first, but it was a great learning curve for me. We are taught KISS from the first lessons on the course and, I find myself straying and not abiding by DRY. 
 ![ tutor advice ](readme-materials/bug_screenshots/bug_6(f).png)
 
-- in order to honour the importance of seperating the products and services, i added a boolean field to the product model
+- To honour the importance of separating the products and services, I added a boolean field to the product model
 ```
 service_category = models.BooleanField(default=False, null=True,
                                            blank=True)
 ```
-However i wasnt sure how to list this field in the order model, in the order_line_item class, in the checkout app. 
+However, I wasn't sure how to list this field in the order model, in the order_line_item class, in the checkout app. 
 ![ error ](readme-materials/bug_screenshots/bug_6(g).png)
 
-- i tried and it worked! 
+- I tried and it worked! 
 
 ## Bug 7 - updating add to bag view, so that service count is functional and messages relay service specific information
 solution: correct logic in the view
 
-- I adapted and used the logic from the mini project and tried to correctly define each evenutality of services being added to bag, with if statements. 
+- I adapted and used the logic from the mini project and tried to correctly define each eventuality of services being added to bag, with if statements. 
 ```
 def add_product_to_bag(request, item_id):
     '''Add a quantity of the specified product to the shopping bag'''
@@ -1058,33 +970,33 @@ def add_product_to_bag(request, item_id):
 ![ add to bag view ](readme-materials/bug_screenshots/bug_7(c).png)
 ![ add to bag view ](readme-materials/bug_screenshots/bug_7(d).png)
 
-- I struggled to understand how to add to the dictionary, with a sub disctionary. To better understand the logic i loaded pythin in my cli and practised 
+- I struggled to understand how to add to the dictionary, with a sub dictionary. To better understand the logic I loaded python in my cli and practised 
 ![ adding to subdictionary ](readme-materials/bug_screenshots/bug_7(e).png)
-I finally understtod that i needed to do 
+I finally understood that I needed to do 
 dict[key] = value
 
-- However, my code was still wrong and if block which handled eventualities of a service being added to the bag, was getting completely skipped and the only logic was coming from the else block. 
+- However, my code was still wrong and the if statement that handled the eventualities of a service being added to the bag, was getting completely skipped and the only logic was coming from the else block. 
 ![ adding to subdictionary ](readme-materials/bug_screenshots/bug_7(f).png)
 ![ adding to subdictionary ](readme-materials/bug_screenshots/bug_7(g).png)
 
-- I then went to my Product_detail.html template, where i passed in `product_is_service` 
-After more debugging and adjusting, i learnt that the issue was not that `product_is_service` was not being recognised/ passed in, but was definitely within my code, in views. 
+- I then went to my Product_detail.html template, where I passed in `product_is_service` 
+After more debugging and adjusting, I learnt that the issue was not that `product_is_service` was not being recognised/ passed in, but was definitely within my code, in views. 
 
-- FINALLY after trial and error, debugging and support from peers.. I was able to understand that I needed a sub dictionary WITH a sub array inside. My current subdictionary 
+- FINALLY, after trial and error, debugging and support from peers.. I was able to understand that I needed a sub dictionary WITH a sub array inside. My current subdictionary 
 ``` 
 bag["services"] = {item_id: quantity}
 ``` 
-was throwing errors becuase a) plural of service was not a wise choice for the name. b) it was not nested correctly.
-The correct sub dictionary, also had an array within it
+was throwing errors because a) plural of service was not a wise choice for the name. b) it was not nested correctly.
+The correct sub dictionary also had an array within it
 
 ```
 bag[item_id] = {'item_is_service': {product.name: quantity}}
 ```
-- After making these adjustments, the correct messages were displaying. In order to solve the service count issue, I simply added the varibale service_count into the else block for my service logic in the contexts.py file. 
+- After making these adjustments, the correct messages were displaying. To solve the service count issue, I simply added the variable service_count into the else block for my service logic in the contexts.py file. 
 
 
 ## Bug 7 - 'This is a service' message displaying on order summary 
-solution: assessed the logic necessary for desired outcome, adjusted the html template. 
+solution: assessed the logic necessary for the desired outcome, adjusted the html template. 
 - I followed the logic from the mini project to help achieve functionality for my boolean field on the product model. 
 ```
     service_category = models.BooleanField(default=False, null=True,
@@ -1096,7 +1008,7 @@ I thought it was necessary for me to also add the new subdictionary
 ```
 to the order line item model, so that it would come up on the order summary. 
 - I was trying to work out which field would be best, because I thought it was no longer a boolean field, because the boolean had already served its purpose, it was different to the example, because my boolean, did not serve as an input elsewhere. 
-- After taking heed of the errors i have already made by not adhering to KISS, i reviewed the situation and realised that i didnt need to do ANYTHING to the order line item class and instead, just needed to put an if statement in the checkout successs template. 
+- After taking heed of the errors I have already made by not adhering to KISS, I reviewed the situation and realised that I didn't need to do ANYTHING to the order line item class and instead, just needed to put an if statement in the checkout success template. 
 
 ```
 {% if item.product.service_category %}
@@ -1111,7 +1023,7 @@ to the order line item model, so that it would come up on the order summary.
 ![ no value for name ](readme-materials/bug_screenshots/bug_8(c).png)
 ![ full name field added to profiles model ](readme-materials/bug_screenshots/bug_8(d).png)
 
-after playing around with this issue some more, i came to the conclusion that, in order to automatically update the order form and subsequently, profile details, with the users full name, from their first transation; I would have had to collect that information when they signed up. 
+after playing around with this issue some more, I concluded that to automatically update the order form and subsequently, profile details, with the users full name, from their first transaction; I would have had to collect that information when they signed up. 
 
 The sign up form does not collect their full name, only username and email address. The email address was an easy fix, however full name was uncooperative. 
 
@@ -1120,7 +1032,7 @@ Then, I could use that data for the profile and the form would be prefilled from
 
 ## Bug 9 - filtering the users blog posts
 - I wanted to add a dropdown for users who are logged in, to view their blog posts. 
-- The first step to doing this was specifying in the main nav that the 'my blogs' link would pertain to author equaling the user. 
+- The first step to doing this was; specifying in the main nav that the 'my blogs' link would pertain to author equaling the user. 
 ```
             <div class="dropdown-menu border-0" aria-labelledby="#">
                 <a href="{% url 'blog' %}" class="dropdown-item">All blog posts</a>
@@ -1129,7 +1041,7 @@ Then, I could use that data for the profile and the form would be prefilled from
                 {% endif %}
             </div>
 ```
-- then i needed to do the back end work, which wasnt as simple because the blogs were displayed via a class as opposed to a method. 
+- then I needed to do the back end work, which wasn't as simple because the blogs were displayed via a class as opposed to a method. 
 - I had to use a method within the class
 ```
 class HomeView(ListView):
@@ -1141,7 +1053,7 @@ class HomeView(ListView):
         author_val = self.request.GET.get('author', '')
         if author_val:
             author_object = User.objects.get(username=author_val)
-# Here i am adding 'author' to a new context (returned if 'my blogs' in nav is selected) 
+# Here I am adding 'author' to a new context (returned if 'my blogs' in nav is selected) 
             new_context = BlogPost.objects.filter(
                 author=author_object,
             )
@@ -1156,7 +1068,7 @@ class HomeView(ListView):
  ![ lack of defensive programming, allowing user to filter to another authors blogs ](readme-materials/bug_screenshots/bug_9(d).png)
  ![ lack of defensive programming, allowing user to filter to another authors blogs ](readme-materials/bug_screenshots/bug_9(e).png)
 
-- I needed to add another method, beneath the query set, so that i could add the new object('author') onto the context 
+- I needed to add another method, beneath the query set, so that I could add the new object('author') onto the context 
 ```
 # This method was used to get the above context. 
     def get_context_data(self, **kwargs):
@@ -1167,12 +1079,12 @@ class HomeView(ListView):
 - I also needed to accompany this new logic, with some logic in the all blogs template. 
 ![ template logic ](readme-materials/bug_screenshots/bug_9(f).png)
 
-- Now the user is unable to manually change the url, to attain another users' blogs. 
+- Now the user is unable to manually change the URL, to attain another users' blogs. 
 ![ defensive programming- working ](readme-materials/bug_screenshots/bug_9(g).png)
 
 
-## Bug 10 add blog url not working, since slug implementation 
-I needed to change my blog detail page url from 
+## Bug 10 add blog URL not working, since slug implementation 
+I needed to change my blog detail page URL from 
 ```
 urlpatterns = [
     path('', HomeView.as_view(), name='blog'),
@@ -1186,27 +1098,26 @@ urlpatterns = [
     path('detail/<slug:slug>/', BlogDetailView.as_view(), name='blog_detail'),
     path('new/', views.add_blog_post, name='add_blog_post'),
 ```
-The blog detail path, with just slug:slug, was throwing django off, because the value of slug is just words and no actual path. without detail / before the slug:slug, when a user would try to add a blog post, the url, was referrring to the above view/ url. i needed to distinguish them, so. i added the 'detail/'
+The blog detail path, with just slug: slug, was throwing django off because the value of slug is just words and no actual path. without detail / before the slug:slug, when a user would try to add a blog post, the URL, was referring to the above view/ URL. I needed to distinguish them, so. I added the 'detail/'
 
 ## Bug 11 sending email attempt rejected due to the region. 
 - After setting up amazon aws SES backend email functionality, I tested an email in the python shell. It did not work. 
-- ![ message rejected ](readme-materials/bug_screenshots/bug_10(a).png)
-- I had already verfied my email, so knew it wasnt that. 
+-![ message rejected ](readme-materials/bug_screenshots/bug_10(a).png)
+- I had already verified my email, so knew it wasn't that. 
 - ![ email verified ](readme-materials/bug_screenshots/bug_10(b).png)
-- After doing some research I found two other variables that were necessary in order for amazon to know the region I was in when sending the email. 
+- After doing some research I found two other variables that were necessary for amazon to know the region I was in when sending the email. 
 - ![ added variables ](readme-materials/bug_screenshots/bug_10(c).png)
-- After changing these variables and restarting the testing process, i successfully recieved the message.
+- After changing these variables and restarting the testing process, I successfully recieved the message.
 - ![ email sent ](readme-materials/bug_screenshots/bug_10(d).png)
-- However, after reading the documentation around aws ses regions, i was aware that i needed to request to not be in a 'sandbox' that way i would be able to send emails to any email address (as opposed to solely the email address i had verified.)
-- To resove this issue, all i needed to do, was follow the given steps. 
+- However, after reading the documentation around aws ses regions, I was aware that I needed to request to not be in a 'sandbox' that way I would be able to send emails to any email address (as opposed to solely the email address I had verified.)
+- To resolve this issue, all I needed to do, was follow the given steps. 
 - ![ removal from sandbox](readme-materials/bug_screenshots/bug_10(e).png)
 
-## Bug 12 Deployment errors 
-solution: update aws keys, add static root.
-- As I already set up a user so that I could access the amazon aws SES email functoionality, I had some confusion over which aws settings to add. 
+## Bug 12 Deployment errors solution: update aws keys, add static root.
+- As I already set up a user so that I could access the amazon aws SES email functionality, I had some confusion over which aws settings to add. 
 - When I began deployment, I got the user I had made for the email purpose ( which was not in a group ), looked at the permissions of the user, and simply added that permission to the user in the group in my bucket. 
 - ![ added permission to group user ](readme-materials/bug_screenshots/bug_12(a).png)
-- When i tried to deploy i got a few errors, one being an unrecognised AWS_ACCESS_KEY_ID. This made sense because, the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY in my heroku and env settings, were that of the user I had now deleted. 
+- When i tried to deploy I got a few errors, one being an unrecognised AWS_ACCESS_KEY_ID. This made sense because, the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY in my heroku and env settings, were that of the user I had now deleted. 
 - ![ AWS_ACCESS_KEY_ID error ](readme-materials/bug_screenshots/bug_12(a).png)
 - I ran the deployment again and got another error, this time about the static root.
 - ![ STATIC ROOT error ](readme-materials/bug_screenshots/bug_12(c).png)
@@ -1215,17 +1126,17 @@ solution: update aws keys, add static root.
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 ```
 to my settings.py file. when setting your static root, a common mistake is setting the name to 'static' however, this will throw an error as 'static' will refer to your 'STATICFILES_DIRS' variable. 
-After changing these varibales, i successfully deployed. 
-On reflection, I will insure that with future projects I deploy a lot earlier into the journey than I have with this project. Although I am still not quite finished and it is a weight off my shoulders, it would have been even better to iron out these issues and learn about things like the static roote varibale , even eaelier in the project. 
+After changing these variables, I successfully deployed. 
+On reflection, I will ensure that with future projects I deploy a lot earlier into the journey than I have with this project. Although I am still not quite finished and it is a weight off my shoulders, it would have been even better to iron out these issues and learn about things like the static root variable, even earlier in the project. 
 
 ## Bug 13 modal confusion errors
-- Initially I had thought it was good UX to have the action aoptions; edit, delete and comment, accessible on all blog pages (all blogs, my blogs, blog detail).
-- This was fine for the update and comment options, but if the user hit delete, I wanted to add a modal in so that the user could double check whether they really wanted to delete. 
-- The modal relies on links that exist inside the for loop, therefore, if i placed the delete confirmation button (linked to the modal) in the loop and the modal outside the loop. The confirmation button and relative data-target, toggle etc, were not recognised and would throw a loop. 
-- An obvious solution would be to place the modal functionality inside the loop, however this would result in generating a modal for all of the products on the page, which would undoubtedly lead to many bugs. 
+- Initially, I had thought it was good UX to have the action options; edit, delete and comment, accessible on all blog pages (all blogs, my blogs, blog detail).
+- This was fine for the update and comment options, but if the user hit delete, I wanted to add a modal in so that the user could double check whether they wanted to delete. 
+- The modal relies on links that exist inside the for loop, therefore, if I placed the delete confirmation button (linked to the modal) in the loop and the modal outside the loop. The confirmation button and relative data-target, toggle etc, were not recognised and would throw a loop. 
+- An obvious solution would be to place the modal functionality inside the loop, however, this would result in generating a modal for all of the products on the page, which would undoubtedly lead to many bugs. 
 - I decided that it was arguably better to have all the action buttons in one destination and UX would not be damaged if, edit delete and comment functionality was only accessible via blog detail. 
 - However, when it came to the same logic for confirming delete modal for the store items (accessible to admin user) I felt it was none negotiable that the admin should be able to delete an item from both the all items and product detail page. 
-- again, this was straight forward on the product detail page, becuase the functionality is only referring to ONE item, however i ran into errors on the all items page. 
+- again, this was straight forward on the product detail page, because the functionality is only referring to ONE item, however, I ran into errors on the all items page. 
 - ![ URL error ](readme-materials/bug_screenshots/bug_13(a).png)
 - To solve this I added a hidden form into the modal.
 ```
@@ -1274,12 +1185,12 @@ def confirm_delete(request):
     });
     </script>
 ```
-- It has become clear throughout this project, that whilst Django is a very helpful framework, its limitations lie within the difficulty to apply specific actions to more than one item, hence why its easier to have detail pages for each item/ blog. I could have decided to simply have the delete functionality on the product detail only, however I truly beleiev it is better UX for the delete to be accessible in all items. Moving forward, I would spend more time learning AJAX, which i know would have come in handy here. 
+- It has become clear throughout this project, that whilst Django is a very helpful framework, its limitations lie within the difficulty to apply specific actions to more than one item, hence why it is easier to have detail pages for each item/ blog. I could have decided to simply have the delete functionality on the product detail only, however, I truly believe it is better UX for the delete to be accessible in all items. Moving forward, I would spend more time learning AJAX, which i know would have come in handy here. 
 
 ## Bug 14 deployed heroku site error
 - I was repeatedly getting this error after pushing to heroku master, to see the changes made to my site. 
 ![ pre-receive hook declined heroku ](readme-materials/bug_screenshots/bug_15.png)
-- I came across [this](https://stackoverflow.com/questions/63639673/heroku-deploy-error-remote-rejected-master-master-pre-receive-hook-dec) rticle on slack overflow and tried it 
+- I came across [this](https://stackoverflow.com/questions/63639673/heroku-deploy-error-remote-rejected-master-master-pre-receive-hook-dec) article on slack overflow and tried it 
 
 
 ## Unresolved Bugs
@@ -1294,10 +1205,10 @@ def confirm_delete(request):
 
 ### Bug 2 Update and delete buttons on smaller devices 
 - the udpate and delete buttons are not inline on some smaller devices.
-- i tried to rectify this by making both the buttons links with the smae classes, howver this prooved ineffective. functionality still works well! 
+- I tried to rectify this by making both the buttons links with the smae classes, howver this prooved ineffective. functionality still works well! 
 - ![ alignment bug ](readme-materials/bug_screenshots/bug_16.png)
 # Further testing 
-Used peer code review in channel in slack
+Used peer code review channel in slack
 
 Kaur Health viewed on all devices and orientations available in Chrome DevTools.
 
@@ -1306,7 +1217,7 @@ Kaur Health viewed on all devices and orientations available in Chrome DevTools.
 
 - wave test on each page revealed:
 - 2 contrast errors, when using red text on the bag and checkout pages. 
-- Inputs with class 'form-control', not having corresponding labels. I decided thatthese were not big issues as in each case, the placeholder text was there to inform a visually impaired user. 
+- Inputs with class 'form-control', not having corresponding labels. I decided that these were not big issues as in each case, the placeholder text was there to inform a visually impaired user. 
 - Empty buttons, where the button content is an icon. Again, I felt this was not a big issue, as the icon was there to indicate the action to the user, however as an extra measure, I added aria-labels to each of these icons. 
 
 
