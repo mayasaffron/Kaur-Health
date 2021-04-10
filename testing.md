@@ -20,29 +20,20 @@
     - [Testing undertaken on tablet and phone devices](#testing-undertaken-on-tablet-and-phone-devices)
 4. [Bugs discovered](#bugs-discovered)
     - [Solved bugs](#solved-bugs)
-    - [Unsolved bugs](#unsolved-bugs)
+    - [Unresolved bugs](#unsolved-bugs)
 5. [Further Testing](#further-testing)
     -[Accessibility](#Accessibility)
 
 
 
-## Validators and Linters
+## Automated Testing
 
-### WW3 HTML validation 
-As expected, each of my pages flagged errors due to my use of jinja code, I also had some warnings about the misuse of the `aria-label` attribute, however since I had added these after taking the accessibility of my site into account, I thought that the wave tool was likely to be a better judge of the use of this particular attribute and felt comfortable with my choice. 
+### Validation Services
+The following validation services and linter were used to check the validity of the website code.
 
-Other than the jinja code-related errors, I had no other HTML validation errors. 
+- [W3C Markup Validation](https://validator.w3.org/) was used to validate HTML. 
 
-### WW3 CSS validation 
-- My CSS had no errors.
-![CSS Validator](/testing/usability/CSS-Validator.png)
-
-### PEP8 validation 
-- My python code had no errors.
-![PEP8](/testing/usability/PEP8.png)
-
-
-### Javascript validation 
+- [W3C CSS validation](https://jigsaw.w3.org/css-validator/) was used to validate CSS.
 
 - [JSHint](https://jshint.com/) was used to validate JavaScript.
 
@@ -50,7 +41,7 @@ Other than the jinja code-related errors, I had no other HTML validation errors.
     - When running JSHint, the errors `undefined variable` and `unused variable` appear when one file either creates or uses a function that is utilized or created in another file. As validates one JS file at a time, it is not aware of the other files. 
     - To double-check that no errors occur with the entire files loaded I pasted in all the JavaScript code into JSHint and then it ran with no errors. 
 
-- [Python extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [Pylint-django](https://pypi.org/project/pylint-django/) was used to validate Python.
+- [Pylint-django](https://pypi.org/project/pylint-django/) was used to validate Python.
 
 **IMPORTANT**
 
@@ -125,7 +116,6 @@ coverage html
 
 - [Travis](https://travis-ci.org/) was used throughout the unit testing of this project to provide continuous integration with the deployed site. The [Travis Documentation](https://docs.travis-ci.com/) provides all the info needed to set it up.
 - I set the heroku deployment settings for this project to only allow deployment when the travis had passed the latest push to the master branch on GitHub.
-
 
 ## User stories testing
 
@@ -354,7 +344,7 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 
 3. Footer
 
-<!-- - Hover over links in the footer, confirm the color change animation works as expected. (currently not) -->
+- Hover over links in the footer, confirm the color change animation works as expected.
 - Click all links in the footer, confirm that contact icon takes the user to the contact form within the site.
 - Click the social icons, confirm that they open in a new tab and takes the user to the relevant sites.
 - Check date of copyright information, confirm year displayed matches the current year.
@@ -1292,7 +1282,7 @@ def confirm_delete(request):
 - I came across [this](https://stackoverflow.com/questions/63639673/heroku-deploy-error-remote-rejected-master-master-pre-receive-hook-dec) rticle on slack overflow and tried it 
 
 
-## Unsolved Bugs
+## Unresolved Bugs
 
 ### Bug 1 aws email 
 - Despite wanting to use aws for my email functionality, I was denied my request to leave the sandbox.
@@ -1302,6 +1292,10 @@ def confirm_delete(request):
 ![ AWS correspondance ](readme-materials/bug_screenshots/bug_14(c).png)
 ![ AWS correspondance ](readme-materials/bug_screenshots/bug_14(d).png)
 
+### Bug 2 Update and delete buttons on smaller devices 
+- the udpate and delete buttons are not inline on some smaller devices.
+- i tried to rectify this by making both the buttons links with the smae classes, howver this prooved ineffective. functionality still works well! 
+- ![ alignment bug ](readme-materials/bug_screenshots/bug_16.png)
 # Further testing 
 Used peer code review in channel in slack
 

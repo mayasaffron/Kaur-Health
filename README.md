@@ -1,21 +1,21 @@
 # Kaur Health
+![am i responsive design](readme_materials/wireframes/amiresponsive1.png)
+![am i responsive design](readme_materials/wireframes/amiresponsive2.png)
+![am i responsive design](readme_materials/wireframes/amiresponsive3.png)
+![am i responsive design](readme_materials/wireframes/amiresponsive4.png)
+This image is created with [ami.responsivedesign](http://ami.responsivedesign.is/?url=https%3A%2F%2Fkaur-health.herokuapp.com%2F).
 
-[picture]
-
-Link to [Deployed Site]()
+Link to [Deployed Site](https://kaur-health.herokuapp.com/)
 
 Juspreet Kaur is a health coach specialising in the following areas of female health; 
 
 - Health coaching for women to improve general attitude toward food
 - Natural Family Planning for couples to conceive  or avoid pregnancy (natural, non-medical contraception)
-- DIY cheimcal-free skin care products
+- DIY chemical-free skincare products
 
-[Kaur Health]() is the colation of Juspreets services, which offers the opportunity for potential clients to learn a little more about her and herjourney and how she can potentially hekp them on theirs. 
+[Kaur Health]() is the collation of Juspreets services, which offers the opportunity for potential clients to learn a little more about her, her professional journey and most importantly; how she can help clients achieve their goals. 
 The site also publishes blog posts about relevant topics, where the site visitors can leave a comment.
 
-
-
-This image is created with [ami.responsivedesign]().
 
 ## Table of Contents
 
@@ -23,18 +23,18 @@ This image is created with [ami.responsivedesign]().
     - [Project Goals](#project-goals)
     - [User Stories](#user-stories)
     - [Personas](#personas)
-    - [Design](#design)
+    - [Design](#ux-design-process) 
 
 2. [Features](#features)
     - [Existing Features](#existing-features)
         - [Landing Page](#landing-page)
-        - [Product Page](#product-page)
-        - [Cart Page](#cart-page)
-        - [Checkout Page](#checkout-page)
-        - [Contact Page](#contact-page)
-        - [Blog Page](#blog-page)
-        - [Profiles Page](#profiles-page)
+        - [Product Page](#Product-and-services-App)
         - [Admin Product Managment](#admin-product-managment)
+        - [Bag Page](#bag-app)
+        - [Checkout Page](#checkout-app)
+        - [Profiles Page](#profile-app)
+        - [Blog Page](#blog-app)
+        - [Contact Page](#contact-page)
         - [Django allauth features](#django-allauth-features)
     - [Features Left to Implement](#features-left-to-implement)
     - [Defensive Design](#defensive-design)
@@ -65,7 +65,7 @@ This image is created with [ami.responsivedesign]().
 # UX
 ## Project Goals
 ### Target Audience
-- People who are interested in gaining support with; intuitive eating; menstrual health; natural family planning and natural skin care.
+- People who are interested in gaining support with; intuitive eating; menstrual health; natural family planning and natural skincare.
 - People who want to learn more about any of these topics. 
 - People who want to read interesting blog articles about intuitive eating; menstrual health; natural family planning.
 - People who seek Juspreets services for a loved one struggling with any of the issues. 
@@ -73,15 +73,15 @@ This image is created with [ami.responsivedesign]().
 
 ### Visitor / User Goals
 - Purchase services and products in a smooth and secure way
-- Get informed on the services/products before buying, with product reviews / product information
-- Gain interesting knowledge about iintuitive eating; menstrual health; natural family planning and natural skin care, from blog articles and leave a comment on blog articles
-- have login details which provide them with prefilled forms with their information, to save time.
+- Get informed on the services/products before buying, with product reviews/product information
+- Gain interesting knowledge about intuitive eating; menstrual health; natural family planning and natural skincare, from blog articles and leave a comment on blog articles
+- have login details that provide them with prefilled forms with their information, to save time.
 
 ### Business Goals (Site Owner's Goals)
-- Provide customers with a secure and safe ecommerce shop
+- Provide customers with a secure and safe e-commerce shop
 - Establish Kaur health as a credible brand
 - Expand Kaur health effectively
-- Make profit from selling products / services
+- Make profit from selling products/services
 - Increasing client retention by providing a login and special benefits as a result
 
 <div><a href="#table-of-contents">Back to top</a></div>
@@ -95,7 +95,7 @@ This image is created with [ami.responsivedesign]().
 | Site User | Access the website on both larger and smaller screened devices | Access the website on my phone and PC |
 | Site User | Easily navigate to the Products and services available | Find the product or service I want to purchase |  
 | Site User | Read all content clearly | Enjoy using the site. |
-| Site User | See a shopping cart icon on nav bar | Always check the current order and checkout when I want |
+| Site User | See a shopping cart icon on navbar | Always check the current order and checkout when I want |
 | Site User | Be able to easily access information about Juspreet and the services she offers | Trust the validity of her and her services. |
 
 
@@ -111,7 +111,7 @@ This image is created with [ami.responsivedesign]().
 | Site User | Receive an email confirmation after registering | Verify that my account registration was successful |
 | Site User | Post a blog about any of my areas of expertise | Provide site visitors interesting information and hopefully make a sale as a result |
 | Site User | Add comments to the blog posts | Write down my thoughts on the post |
-| Site User | Have the ability to remove unsavoury comments | Protect my brand and the site visitors' experince |
+| Site User | Remove unsavoury comments | Protect my brand and the site visitors' experience |
 <br/>
 
 - Online shopping
@@ -145,9 +145,9 @@ This image is created with [ami.responsivedesign]().
 | MY NAME IS    | I AM.. | KAUR HEALTH SERVES ME BECAUSE.. |
 | ----------- | ----------- | ----------- |
 | Evelyn,  | 31, mother of 2 children under 5 | I do not want ANY more children, but hormonal contraception does not agree with my body. I need to learn how to naturally manage my fertility. |
-| Luke | 28, skincare influencer | People rely on my to tell them which brands have the best skincare products available. I have been in the industry long enough to know, DIY skincare is always better than anything shop bought, I just need to know what to do and how to do it, so that I can share with my followers! |  
-| Jocelyn | 23, University graduate | I have suffered with period pain my entire life and recently read some research about how foods can trigger PMS. There is so little out there, I want to read relevant articles/ opinions on the topic.  |
-| Kaya | 28, teacher in a committed relationship | My partner and I are trying for a baby and could really use some assistance. I want to speak to a profesional about when I am most fertile and how to navigate ovulation windows. |
+| Luke | 28, skincare influencer | People rely on me to tell them which brands have the best skin care products available. I have been in the industry long enough to know, DIY skincare is always better than anything shop bought, I just need to know what to do and how to do it, so that I can share the info with my followers! |  
+| Jocelyn | 23, University graduate | I have suffered from period pain my entire life and recently read some research about how foods can trigger PMS. There is so little out there, I want to read relevant articles/ opinions on the topic.  |
+| Kaya | 28, teacher (In a committed relationship) | My partner and I are trying for a baby and could use some assistance. I want to speak to a professional about when I am most fertile and how to navigate ovulation windows. |
 
 
 
@@ -155,24 +155,22 @@ This image is created with [ami.responsivedesign]().
 
 ### UX Research 
 
-In order for me to be able to successfully meet both the user and business goals of this project, it was vital that i usnderstoof the wokr and mission of Juspreet Mahoon. 
-I was lucky to be presented with her work and findings and used her many social media posts and videos on youtube, to get a feel of the kind of oerson she was and the message she wanted to share with the world. 
+For me to be able to successfully meet both the user and business goals of this project, I needed to understand the work and mission of Juspreet Mahoon. 
+I was lucky to be presented with her work and findings and used her many social media posts and videos on youtube, to get a feel of the kind of person she was and the message she wanted to share with the world. 
 
 After learning about her, I then underwent some learning on the topics she is passionate about and would like to share across the site. 
-I am passionate about many of the same subjects; female health is of utmost concern to me, being a woman and female only pre and post natal specialising, personal trainer. I have a unique insght into the anatomical journey women experience. 
+I am passionate about many of the same subjects; female health is of utmost concern to me. Being a female-only pre and postnatal specialising, personal trainer; I have a unique insight into the anatomical journey women experience. 
 I was able to bring this knowledge to the site. 
 
 I scoured the internet for other sites with similar target audiences, brand messages and tone of voice, to get an idea of a good colour scheme, [this](https://www.healthline.com/health/best-womens-health-blogs) blog proved very helpful. 
- feedback from my clients on colour choices and read blogs about which colours and fonts would be most appealing to women. 
-
 
 I knew that I wanted to create an app that would:
 - Engage all women, not just women with a predetermined interest in the subjects discussed. 
 - Provide a community feel, whereby users could gain information and feel acknowledged. 
-- Encourage users to create a profile, so that they could gain the benefit of start discussions on the blog and also have their order information prefilled. 
-- Ensure that my design would tell users that this site is a safe space for women, but also that this is an educational tool to hopefully enlighten women with similar interests, or those who have no idea. 
+- Encourage users to create a profile, so that they could gain the benefit of starting discussions on the blog and also have their order information prefilled. 
+- Ensure that my design would tell users that this site is a safe space for women, but also that this is an educational tool to hopefully enlighten women with similar interests or those who have no idea. 
 
-I based the checkout profiles and store functionality of the app on the module-[mini-project-boutique-ado]() expertly delivered by [code Institute](). Everything in this project is entirely fictionally and all content was created by me. 
+I based the checkout profiles and store functionality of the app on the module -mini-project-boutique-ado expertly delivered by [code Institute](). Everything in this project is entirely fictionally and all content was created by me. 
 
 
 
@@ -184,36 +182,35 @@ You can find the wireframes [here](https://github.com/mayasaffron/Kaur-Health/bl
 
 ### Brand Identity
 - Vision: Aesthetically pleasing, none pretentious site, empowering people who are in search of Kaur Health's services or curious about them.  
-- Mission: Provide clients with support on intuitive eating, menstruation, skincare and natural family planning, not jus in the UK, but worldwide. Use the site as a mechanism to bring conversations on these topics to the forefront of society and eventually use the site to host virtual consultations, webinars etc. Doing everything possoible, to minimise the distance between the user/ client and saccess to this valuable information. 
+- Mission: 
+Provide clients with support on intuitive eating, menstruation, skincare and natural family planning, not just in the UK, but worldwide. 
+Use the site as a mechanism to bring conversations on these topics to the forefront of society and eventually use the site to host virtual consultations, webinars etc. 
 - Values: 
-1. Female Health - Improving a womans understanding of her bodyily functions and how they relate to her fertility, menstrual cycle, physical appearance and ultimately mental health. 
-2. Natural is best - Whilst we are so very lucky to live in a time of technological and pharmaceutical progression, it is important that we remain as natural as possible with what we consume for bodily health. This stretches from natural fertility management to chemical free skincare.
-3. Imperfection is reality - kaur health does not exist to shame or judge people for their choices, rather inform people so that they have all the information when they go to make thier choices. 
+1. Female Health - Improving a woman's understanding of her bodily functions and how they relate to her fertility, menstrual cycle, physical appearance and ultimately mental health. 
+2. Natural is best - Whilst we are so very lucky to live in a time of technological and pharmaceutical progression, we must remain as natural as possible with what we consume for bodily health. This stretches from natural fertility management to chemical-free skincare.
+3. Imperfection is reality - Kaur Health does not exist to shame or judge people for their choices, rather inform people so that they have all the information when they go to make their choices. 
 4. The future is female - It is time for us to be counted and regarded in all spheres, especially reproductively. 
 
 ### Color Scheme
 
-Color scheme is important as this is one of the first things site visitors notice when visiting the site. In the research phase of the designing process, i noticed that most of the blogs listed in [this](https://www.healthline.com/health/best-womens-health-blogs) list, used purples, pinks and white. 
-However, I couldnt find a site which was also an ecommerce store, so for better UI, I decided to use pink, purples and white and black. 
-When you have a site which offers a community aspect and ecommerce functionality, it is important to have a balance with the aesthetic. 
-The pink and purples would be inviting and representative of the nature of the site, whilst the black and white are neutral and profesional, indicating the presence of the store.
-
-I chose persian indigo and avacado for the site's primary colors because these colors are bold and strong, not typically 'female' but statistically, very inticing for women . In addition to that, for the secondary colors of the site, I wanted to create a balance of bold to calm, whilst providing continuity in the colours too . For the secondary colour i chose medium slate blue. I used [Coolors.co](https://coolors.co/) to create a color pallet, which you can find below.
-
-[This article](https://neilpatel.com/blog/psychology-of-color-and-conversions/) explained the importance of recognising the effect of colurs on your audiences mood. the article explains that "35% of women said blue was their favorite color, followed by purple (23%) and green (14%). 33% of women confessed that orange was their least favorite color, followed by brown (33%) and gray (17%)." as the content of this site will appeal mainly to women, i decided i needed colours that would be most inviting to them. 
+A Colour scheme is important as this is one of the first things site visitors notice when visiting the site. In the research phase of the designing process, I noticed that most of the blogs listed in [this](https://www.healthline.com/health/best-womens-health-blogs) list, used purples, pinks and white. 
+However, I couldn't find a site that was also an e-commerce store, so for better UI, I decided to use pink, purples and white and black. 
+When you have a site that offers a community aspect and e-commerce functionality, it is important to have a balance with the aesthetic. 
+The pink and purples would be inviting and representative of the nature of the site, whilst the black and white are neutral and professional, indicating the presence of the store.
 
 ![This pallet](readme_materials/wireframes/kaur-health-palette.png)
-totally enages and appeals to women, however the 'english violet' stops the entire palette being sterotypically 'girly' and therefore offputtting to men! 
+engages and appeals to women, however, the 'English violet' stops the entire palette from being stereotypically 'girly' and therefore offputting to men! 
 
 ### Typography
-To reflect the kaur Health's brand identity, the typeface chosen for main headings was Mulish, (formerly known as Muli) and I coupled this with Nunito for the body text, both of these fonts fall under the sans serif family. I chose this duo, after doing some research and realising that I needed the font to reflect; strength; empowerment; practicality and most importantly readability. Due to the nature of the sites content, being quite woman centric, i was tempted to select a playful font, such as Oleo script, however i decided this woud take away from the profesional feel i was aiming to achieve. [This article]("https://piktochart.com/blog/fonts-and-colors/#:~:text=For%20subheadings%20and%20body%20text,partially%20for%20titles%20or%20headlines") by Natasya Sunarto was very insightful, as it compared a range of industries and i was able to work out where Kaur Health fits within the examples and make an informed decision about which typeface would be most fitting. 
+To reflect kaur Health's brand identity, the typeface chosen for main headings was Mulish, (formerly known as Muli) and I coupled this with Nunito for the body text, both of these fonts fall under the sans serif family. I chose this duo, after doing some research and realising that I needed the font to reflect; strength; empowerment; practicality and most importantly readability. Due to the nature of the site's content, being quite woman-centric, I was tempted to select a playful font, such as Oleo script, however, I decided this would take away from the professional feel I was aiming to achieve. [This article]("https://piktochart.com/blog/fonts-and-colors/#:~:text=For%20subheadings%20and%20body%20text,partially%20for%20titles%20or%20headlines") by Natasya Sunarto was very insightful, as it compared a range of industries and I was able to work out where Kaur Health fits within the examples and make an informed decision about which typeface would be most fitting. 
 
-- Icon: [kaur Health](readme_materials/wireframes/logo.jpg) is used for the main icon library accross the site.
-- Favicon: I got the favicon by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/).
+- Icon: [kaur Health](readme_materials/wireframes/logo.jpg) is used for the main icon library across the site.
+- Favicon: I got the favicon by uploading the logo to  [Favicon](https://favicon.io).
 
 ### Brand Logo
-Logo design is the cornerstone in your brand identity and presents a company's name, product and brand. Juspreet presented me with this logo, she felt it successfully captured a balance of vision mission and culture. The colour speak to the first brand value; female health, various shades of pink are globally used to indicate 'female' anatomy and topics. Whilst Kaur health does not want women to fell bound by 'the global norm', it was important that we recognised how we could immediately grab the attention of female identifying people. The logo font represents the final brand value, women are a force, strong and unwaivering! Finally, the subtle image of the leaf, speaks to the second barand value, nature!
+Logo design is the cornerstone of your brand identity and presents a company's name, product and brand. Juspreet presented me with this logo, she felt it successfully captured a balance of vision mission and culture. The colour speaks to the first brand value; female health, various shades of pink are globally used to indicate 'female' anatomy and topics. Whilst Kaur health does not want women to feel bound by 'the global norm', it was important that we recognised how we could immediately grab the attention of female-identifying people. The logo font represents the final brand value, women are a force, strong and unwavering! Finally, the subtle image of the leaf, speaks to the second brand value, nature!
 
+<div><a href="#table-of-contents">Back to top</a></div>
 
 # Features
 
@@ -221,33 +218,17 @@ Logo design is the cornerstone in your brand identity and presents a company's n
 This website is composed of 6 applications: `home`, `blog`, `checkout`, `products_and_services`, `bag`, `profiles`. There is a static navbar and footer throughout the site. 
 
 ### Navbar
-Navbar is fixed at the top of pages across the site, so that the site visitors easily navigate the whole site.  Navbar contains  `Brand Logo`, `Search Box`, `Site Menu`, `My Account dropdown` and `Cart icon`.
-- Search box: This search box function allows the visitors to search the products on online shop with keywords. The keywords are searched over `name` and `description` field of Product Model, `name` and `description` field of Service Model.(Details of these models will be described at the [Information Architecture](#information-architecture)) This function uses "or" condition not when searching the keywords, meaning, if the search query was "blood", the function will sesrch the names and descriptions of the products and services and return results where the search term was found in either the name or description. 
+Navbar is fixed at the top of pages across the site so that the site visitors easily navigate the whole site.  Navbar contains  `Brand Logo`, `Search Box`, `Site Menu`, `My Account dropdown` and `Cart icon`.
+- Search box: This search box function allows the visitors to search the products on the online shop with keywords. The keywords are searched over `name` and `description` field of Product Model, `name` and `description` field of Service Model. (Details of these models will be described at the [Information Architecture](#information-architecture)) This function uses the "or" condition not when searching the keywords, meaning, if the search query was "blood", the function will search the names and descriptions of the products and services and return results where the search term was found in either the name or description. 
 <br>
 ![search term 'blood'](readme_materials/logic_screenshots/search-logic(1).png)
 <br>
 !['blood' in description](readme_materials/logic_screenshots/search-logic(2).png)
 <br>
-I chose this logic because, the nature of the topics on this site, mean that there is likley to be some overlap in name and description of products and services and category that a particular item falls into. 
-
-
-- Site Menu & My Account dropdown: The site menu collapses to toggle icon less than 992px width. My Account dropdown is included to toggle menu for smaller screen.
-- Cart icon: The number next to the cart icon shows the total of items added to the cart.
-
-
-Navbar for larger screensizes (width > 992px)
-<div align="center"><img src = "" width=900></div>
-
-Navbar for smaller screensizes (width < 992px)
-<div align="center"><img src = "" width=900></div>
-
-Navbar for authenticated users
-<div align="center"><img src = "" width=900></div>
+I chose this logic because, due to the nature of the topics on this site, there is likely to be some overlap in name and description of products and services and category that a particular item falls into. 
 
 ### Footer
-The footer section is just links to Social Media with their icons. In this milestone project, Social Media icons are linked to Juspreets personal social media accounts, as her brand is consistent on her social media.
-
-<div><a href="#table-of-contents">Back to top</a></div>
+The footer section is just social media links with their icons. In this milestone project, Social Media icons are linked to Juspreets personal social media accounts, as her brand is consistent on her social media.
 
 
 ## Landing Page
@@ -258,55 +239,54 @@ Landing Page is designed as a single page website to provide site visitors with 
 
 ### Info on specialisms
 - `info on specialisms` section showcases Juspreets areas of expertise.
-- I provide 3 cards each with a picture and body, comprising of a title and expalanation. This is to give the site visitor an insight into the nature and scope of Juspreets work. I was tempted to make the text show up on hover, however, I was aware that on smaller dervices this can be difficult to function and also, likely to cause bugs and delay which is bad ux. I deceided to simply have cards with and images and body. I have learnt through this experience that its important to remember, KISS!!
+- I provide 3 cards each with a picture and body, comprising of a title and explanation. This is to give the site visitor an insight into the nature and scope of Juspreets work. I was tempted to make the text show up on hover, however, I was aware that on smaller devices this can be difficult to function and also, likely to cause bugs and delay which is bad UX. I decided to simply have cards with and images and body. I have learnt through this experience that it's important to remember, KISS!!
 
 ### Testimonials
-- `Testimonies ` section has a carousel of 3 testimonies, one from each area of exepertise. Testimonials can contribute to building the trust of potential customers and also explain the benefits of your products or services. Users can click forward and backward on the testimonies. 
+- `Testimonies ` section has a carousel of 3 testimonies, one from each area of expertise. Testimonials can contribute to building the trust of potential customers and also explain the benefits of your products or services. Users can click forward and backwards on the testimonies. 
 
 
 ## Product and services App
 
 ### Products and services 
 
-- ` Product and services ` dropdown nav bar option, provides 5 options; 'Natural family planning', 'Female health', 'chemical free skincare', 'services' and 'all products and services'. These are the categories that the products and services fall into.
-- I thought that the dropdown would provide better user experience than a direct link, which takes you to a page where you then have to sift through the categores that you are interested in. The nature of this site, is such that, as a user you are prpbably well aware of what you are looking and therefore which category to find it. Or, if you are new to the sites content, i felt it would be less overwhelming if you have some filtering control and could navigate to the category you were most interested in. 
-- Initially I had two seperate models for products and services, however this proved to be extremely complicated and halfway through the project, I changed the data structure, so that i had one model 'products' for all the products and services. In order to keep services somewhat distinguishable from the products, I added a boolean field on my products model `service_category`, the services have this field set to true.
+- ` Product and services ` dropdown navbar option, provides 5 options; 'Natural family planning', 'Female health', 'chemical free skincare', 'services' and 'all products and 'services'. These are the categories that the products and services fall into.
+- I thought that the dropdown would provide a better user experience than a direct link, which takes you to a page where you then have to sift through the categories that you are interested in. The nature of this site is such that, as a user, you are probably well aware of what you are looking for and therefore, in which category to find it. Or, if you are new to the content of the site, I felt it would be less overwhelming if you have some filtering control and could navigate to the category you were most interested in. 
+- Initially, I had two separate models for products and services, however, this proved to be extremely complicated and halfway through the project, I changed the data structure, so that I had one model 'products' for all the products and services. To keep services somewhat distinguishable from the products, I added a boolean field on my products model `service_category`, the services have this field set to true.
 - I opted to distinguish services from products in a few ways;
 1) Adding a consistent banner in each of the services' descriptions # picture
-2) When a service is added to the users bag, the success message will clearly state that the user has just added a service and should read the terms and conditions carefully. # picture
-3) On the order receipt, I have again stated, which of the items are services and that the user should therefore read the terms and conditions. # picture
+2) When a service is added to the user's bag, the success message will clearly state that the user has just added a 'service' and should read the terms and conditions carefully. (Found on the product detail page)
+3) On the order receipt, I have again stated, which of the items are services and that the user should therefore read the terms and conditions.
 
-- The products are displayed in cards that have `Product/ Service Name`, `Image`, `Category` `Price`, `rating`. As mentioned above, the product card format, ever so slightly differs if the product is a service. 
+- The products are displayed in cards that have `Product/ Service Name`, `Image`, `Category` `Price`, `rating`. As mentioned above, the product card format ever so slightly differs if the product is a service. 
 Product Card for products
-<div align="center"><img src = "" width=500></div>
+should I add pics?
 
-- Pagination Bar: Unnecessary for this site currently, however I would add this as kaur health grew as a brand and had more products on offer. 
+- Pagination Bar: Unnecessary for this site currently, however, I would add this as kaur health grew as a brand and had more products on offer. 
 
 ### Product detail
-- product detail page displays the product card of the respective product, the option to continue shopping, or add this item, with a chosen quantity to users bag. 
-# picture?
-- As mentioned above, if the product is a service, it has a small banner in the decsription explaining that this is a service and therefore there are different terms and conditions. In the future i would potentially add a modal pop up box here so that users wuld have to scroll to the bottom of the terms and condiotons before adding to the service to their bag. Howver, for the sake of time, i decided against this, as i ran into enough compications with basic functionality! 
+- product detail page displays the product card of the respective product, the option to continue shopping or add this item, with a chosen quantity to the user's bag. 
+- As mentioned above, if the product is a service, it has a small banner in the description explaining that this is a service and therefore there are different terms and conditions. In the future, I would potentially add a modal pop up box here so that users would have to scroll to the bottom of the terms and conditions before adding the service to their bag. However, for the sake of time, I decided against this, as I ran into enough complications with basic functionality! 
 
-## Admin Product Managment
+## Admin Product Management
 - Product management functionality can only be carried out by admin users and is only possible if the admin user is logged in. 
 - When admin is logged on;
 - There is a product management option in the account link, from here admin user can add a product, via a simple product form. 
 - Update / Delete options are shown beneath each product card.
-- Update option takes the admin user to the current product form, a message also displays to feedback to the user that they are editing a product.
+- Update option takes the admin user to the current product form, a message also displays feedback to the user that they are editing a product.
 [updating a product](readme_materials/logic_screenshots/update(product_management.png))
-- If deleting a product a modal appears to double check the validity of the request, then user is given a success message. #picture
-- It was apparent to me that if a none admin user attempted to update or delete any of the products and services, if they guessed the corresponding urls, they would be anble to. To resolve this i added some defensive code to my views. Details of this can be found in the (testing file)[testing.md]
+- If deleting a product a modal appears to double-check the validity of the request, then the user is given a success message. #picture
+- It was apparent to me that if a none admin user attempted to update or delete any of the products and services if they guessed the corresponding URLs, they would be able to. To resolve this I added some defensive code to my views. Details of this can be found in the (testing file)[testing.md]
 
 
 ### Adding product to bag (this functionality takes the user from the products and services app to the bag app)
-- User can add to bag from the product detail page.
+- User can add to the bag from the product detail page.
 - Before or after adding to the bag, user can adjust the quantity of product they are adding. 
-- When a user adds an item to the bag a success message appears in the top right corner. The message gives a product and service count of the items in the bag, a small picture of the items and their quantity, it also has a slightly different message if a service is added. At the bottom of the success message is the current bag total and a link to the bag.
+- When a user adds an item to the bag a success message appears in the top right corner. The message gives a product and service count of the items in the bag, a small picture of the items and their quantity, it also has a slightly different message if a service is added. At the bottom of the success message, is the current bag total and a link to the bag.
 
 
 ## Bag App
 
-- This page is simple, it outlines the products'; picture, name, price, quantity and the subtotal. As per my goals, it was important that the items were clear and readable.  
+- This page is simple, it outlines the products'; picture, name, price, quantity and subtotal. As per my goals, the items needed to be clear and readable.  
 - From here the user can adjust the quantity of the products/ services in the bag or remove them altogether, each action has corresponding feedback messages, which appear in the top right of the screen. 
 - User can also go to secure checkout or continue shopping.
 
@@ -314,7 +294,7 @@ Product Card for products
 
 - Checkout page displays an empty order form on the left, needing to be completed and a summary of their order on the right. This is more feedback to the user and an opportunity for them to make any adjustments to their shopping bag. 
 - If the user is logged in, beneath the form, there will be a checked option to save the info to their profile. 
-- When a order has gone through successfully, the user will be redirected to the checkout success page. Here they will have a summary of their order (which calls on the order line item models logic) a message to confirm that their order has gone through and an option to keep shopping. Their bag will now appear empty too. 
+- When an order has gone through successfully, the user will be redirected to the checkout success page. Here they will have a summary of their order (which calls on the order line item models logic) a message to confirm that their order has gone through and an option to keep shopping. Their bag will now appear empty too. 
 
 ## Profile app 
 
@@ -324,38 +304,38 @@ Product Card for products
 
 ## Blog app 
 
-- As mentioned in the goals and user stories, it was important that this site struck a balance of business and community. A crucial aspect of creating the community element, was to have a blog on the site. As mentioned in the research seection, when i was looking at sites with similar messaging and brand identites, I was inundated with blogs. This was even more inspiration to add blog functionality. 
+- As mentioned in the goals and user stories, this site needed to strike a balance of business and community. A crucial aspect of creating the community element was to have a blog on the site. As mentioned in the research section, when I was looking at sites with similar messaging and brand identities, I was inundated with blogs. This was even more inspiration to add blog functionality. 
 - The blogs are available for any site visitor to browse, if you are not logged in, you can view all the blog posts and then click on them and be taken to the blog detail page, where you will also be able to view the comments on the post.
 - If you are logged in;
 - you can write a blog post.
 - you will have the option to view your blog posts, alone. 
 - you will see links to edit and delete your blog posts, regardless of if you are viewing them on your blog page/ the blog detail/ all blog posts page.
 - comment on a post. 
-- Similar to the product management functionality, if a user put another users name in the url, they were able to edit their blog post. However by adding some code to my templates I was able to defend against this. 
+- Similar to the product management functionality, if a user put another users name in the URL, they were able to edit their blog post. However, by adding some code to my templates I was able to defend against this. 
 
 
 ### comment on  Blog
 
 - comments of a post can be viewed if the user clicks on the blog post and is taken to the blog detail page. Here the user can also add a comment, however, if they are not authenticated, they cannot add a comment. 
 
-- Initially i made a seperate view for the commenting functionality, however i deceided it would be better UX if the comment function could occur on the page of the blog post and not take users to a se[erate page. The nature of a comment is that it is fast and on topic, i worried that if the commenting functionality, meant that users needede to leave the page they were currently visiting, so that they could leave their on topic comment, it would ruin the flow of a users experience.
-- I havent offered the user the option to edit or delete their comments, however in the future, if developing this site further, i would look into using AJAX requests, to give the user the ability to edit and delete their comments. 
+- Initially, I made a separate view for the commenting functionality, however, I decided it would be better UX if the comment function could occur on the page of the blog post and not take users to a se[erate page. The nature of a comment is that it is fast and on topic, I worried that if the commenting functionality, meant that users needed to leave the page they were currently visiting so that they could leave their on-topic comment, it would ruin the flow of users experience.
+- I haven't offered the user the option to edit or delete their comments, however in the future, if developing this site further, I would look into using AJAX requests, to give the user the ability to edit and delete their comments. 
 
 
-## contact
+## contact page
 
-- Given that this site is not solely an ecommerce site, I thought it was necessary to have a contact form, Kaur health is multi faceted and relies on the openess of site visitors. I felt that if i didnt include a contavt form, I would lose the opportunity to create a rapport between Kaur health and the user.
-- The contact form is very simple and lives in the home app. 
-- When a user submits the form, they will be taken to a reponse page, see a success message and recieve a copy of the message they sent on the email address they provided! I felt this was a personal and 'extra-mile' feature, again leading to users feeeling acknowledged, which in turn helps build community and rapport.
-- To protect the site owner, I used a honeypot field, designed to catch and prohibit spam mail from bots. A honeypot field is a field that is hidden on your contavt form, that a bot will not be anble to distinguish. When they try to fill it out, they will reach the error page and their spam mail will not be sent! 
-- I could also use the honeypot admin functionality, which offers increased security and definsive programming. Anyone with minor developer exeprience will know that you just need to change a sites url and add admin to the end of the url to accesss the admin page. From there it would be easy to hack your way into the sites admin and cause some damage! To protect against this, honeypot admin, allows site owners to create a new admin area, whilst also providing a 'fake' admin area for bots/ hackers to attempt to login to! You will also be notified, how many login attempts there have been, so that you can guage whether this feature is fitting for your site or if you need to take extra measures to protect yourself.
-- I will definitely be using honeypot fields and honeypot admin functionality in the future, however for this project i felt that the honeypot field alone, would suffice. 
-- As i will only ever be sending a total of two emails from this view, it is not necessary, howevre if i was to develop this aspect more and send more than two emails from this view, i would opt to use the send mass mail wrapper from the django.core.mail module.
-- for the backend wiring up, i dcided to use aws email, as opposoised to gmail. I thought it made more sense as I was using aws to store the static and media files. It will be easier to track email and storage related issues, if they are all being hosted via amazon aws. 
+- Given that this site is not solely an e-commerce site, I thought it was necessary to have a contact form, Kaur health is multi-faceted and relies on the openness of site visitors. I felt that if I didn't include a contact form, I would lose the opportunity to create a rapport between Kaur health and the user.
+- The contact form is very simple and lives in the Home app. 
+- When a user submits the form, they will be taken to a response page, see a success message and receive a copy of the message they sent on the email address they provided! I felt this was a personal and 'extra mile feature, again leading to users feeling acknowledged, which in turn helps build community and rapport.
+- To protect the site owner, I used a honeypot field, designed to catch and prohibit spam mail from bots. A honeypot field is a field that is hidden on your contact form, that a bot will not be able to distinguish. When they try to fill it out, they will reach the error page and their spam mail will not be sent! 
+- I could also use the honeypot admin functionality, which offers increased security and defensive programming. Anyone with minor developer experience will know that you just need to change a sites URL and add admin to the end of the URL to access the admin page. From there it would be easy to hack your way into the site's admin and cause some damage! To protect against this, honeypot admin, allows site owners to create a new admin area, whilst also providing a 'fake' admin area for bots/ hackers to attempt to login to! You will also be notified, how many login attempts there have been so that you can gauge whether this feature is fitting for your site or if you need to take extra measures to protect yourself.
+- I will be using honeypot fields and honeypot admin functionality in the future, however for this project I felt that the honeypot field alone, would suffice. 
+- As I will only ever be sending a total of two emails from this view, it is not necessary, however, if I was to develop this aspect more and send more than two emails from this view, I would opt to use the send mass mail wrapper from the django.core.mail module.
+- for the backend wiring up, I decided to use aws email, as opposed to Gmail. I thought it made more sense as I was using aws to store the static and media files. It will be easier to track email and storage-related issues if they are all being hosted via amazon aws. 
 
 
 ## Django-allauth features
-Base template for allauth has `Back to Home` button at the end of the page, for easy navigation for users.
+The base template for allauth has `Back to Home` button at the end of the page, for easy navigation for users.
 - Sign Up: The users will be asked to fill out `E-mail`, `User Name` and `Password` to create an account. When the sign up form is submitted, a verification email will be sent to the user's email address to complete the sign up process.
 - Log In: Users will be asked to input `User Name` or `Email`, and `Password` to login. If the user successfully logged in, a success message will pop up and redirect to the landing page.
 - Log out: Log out page is accessible from the site menu. After the user successfully signed out button on the sign out page, a success message will appear and redirect to the landing page.
@@ -364,26 +344,31 @@ Base template for allauth has `Back to Home` button at the end of the page, for 
 <div><a href="#table-of-contents">Back to top</a></div>
 
 ## Features Left to Implement
-- Given the scope of this project I definitely feel the updates and modifications to the idealogy and code, could be endless! Below are the list of features I would like to impleemtn moving forward, in order of priority (1 being most important).
+- Given the scope of this project I feel the updates and modifications to the idealogy and code, could be endless! Below is the list of features I would like to implement moving forward, in order of priority (1 being most important).
 
 ### Products and services
 1 - Instead of a boolean field to distinguish whether a product is tangible or a service, I would have a field such as "product_type" with choices such as:
 a. tangible
 b. service
 This would give me more freedom to develop further as the site and products grow, to add more product types for example; discount, requires ID, requires health check. 
-6 - Review section for products, as i have testimonies i didnt think it was totally necessary, however as the site grew, i would like to add review and rating models to the products and services app's models. These models would follow similar functionality to the blog post and comment models.  
+6 - Review section for products, as I have testimonies I didn't think it was totally necessary, however as the site grew, I would like to add review and rating models to the products and services app's models. These models would follow similar functionality to the blog post and comment models.  
 
 ### Bag
 2 - A model just for the bag, if a user is authenticated and adds items to their bag. In between visits, this model would serve to save the items in the bag, saving the user time and energy if they were disrupted in their initial purchase attempt.
+3 - Adding some intuitive code which looks at what the user has in their bag and suggests some other items that would go well with current order.
 
 ### Admin
-3 - I would install Honeypot admin and apply to my code. As mentioned, with the project at the scope it currently is, I felt that the honeypot field, alone, on the contact form met the needs for my users and the site owner, however, i am aware of the sensitivity of the topics dicussed on this site and for this reason alone, as the site grew, i would be very motivated to add the honey pot admin function. 
+4 - I would install Honeypot admin and apply it to my code. As mentioned, with the project at the scope it currently is, I felt that the honeypot field, alone, on the contact form, met the needs of my users and the site owner, however, I am aware of the sensitivity of the topics discussed on this site and for this reason alone, as the site grew, I would be very motivated to add the honey pot admin function. 
 
 ### Blog
-4 - Currently due to the slug, when a user tries to add a blog post, if the title of the blog post is that of an existing blog post, the user will get an errro message. However ideally, if developing this site further, i would like to add 'title comparison/ checks' to the form validatioon, or use AJAX to esssntially check the title as the user types it and pause them there, if the title is preexitisng. 
-5 - add functionality for super user to be able to delete unsavoury comments.
-6 - Install AJAX requests functionality, so that users can update and make blog posts in the page, similar to the comment functionality occuring on the page, via a modal. 
+5 - Currently due to the slug, when a user tries to add a blog post, if the title of the blog post is that of an existing blog post, the user will get an error message. However ideally, if developing this site further, I would like to add 'title comparison/ checks' to the form validation or use AJAX to essentially check the title as the user types it and pause them there, if the title is preexisting. 
+6 - Add functionality for superuser to be able to delete unsavoury comments.
+7 - Install AJAX requests functionality, so that users can update and make blog posts on the page, similar to the comment functionality occurring on the page, via a modal. 
 
+### Home
+8 - Creating the carousel items in the developer as opposed to using an external tool, such as [canva](), which makes the carousel items into images. By doing this, I would be able to maximise the SEO of the content and this could be another way to drive traffic through my site. 
+
+<div><a href="#table-of-contents">Back to top</a></div>
 
 ## Defensive Design
 ### Error views (404 and 500 error)
@@ -399,17 +384,17 @@ This would give me more freedom to develop further as the site and products grow
 **SQLight** database was used for the development which is installed with Django. 
 
 - Deployment phase
-**PostgreSQL** was used on deployment stage, which is provided as add-on by Heroku application.
+**PostgreSQL** was used on the deployment stage, which is provided as add-on by Heroku application.
 
 - User model is provided as a default by [Django's authentication system](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/).
 
-## Data Models
+## Data Modeling
 
 #### User
 The user model utilised for this project is the standard model, provided by from django.contrib.auth.models 
 
 #### Products app models
-Within the products app, the <strong>Product</strong> model holds all the data necessary for the functionality of the store. The <strong>Category</strong> model, provides the categories for which the products depend on. 
+Within the products app, the <strong>Product</strong> model holds all the data necessary for the functionality of the store. The <strong>Category</strong> model provides the categories on which the products depend on. 
 
 ##### Category Model
 | Title | Key in db | Form validation type | Data type |
@@ -419,8 +404,6 @@ Category | friendly_name  | max_length=254, null=True, blank=True| CharField
 
 
 ##### Product Model
-
-
 | Title | Key in db | Form validation type | Data type |
 -----  | ---  | --- | ---
 Category | friendly_name | null=True,blank=True, on_delete=models.SET_NULL | ForeignKey 
@@ -488,6 +471,7 @@ Date | date | auto_now_add=True, null=True, blank=True | DateTimeField
 
 #### Profile app model
 Within the profile app, the <strong>UserProfile</strong> model holds all the data necessary for the user to have a prefilled order form, if they create a profile. This saves them time and energy, when checking out. 
+
 ##### UserProfile Model
 | Title | Key in db | Form validation type | Data type |
 -----  | ---  | --- | ---
@@ -501,14 +485,6 @@ Street address1 | default_street_address1 | max_length=80, null=True, blank=True
 Street address2 | default_street_address2 | max_length=80, null=True, blank=True | CharField
 County | default_county | max_length=80, null=True, blank=True | CharField
 
-
-### Product App
-
-### Order App
-
-### Blog App
-
-### Profile App
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
@@ -553,7 +529,7 @@ Testing was conducted and recorded in a different file: [Testing.md](https://git
 ## Heroku Deployment with AWS
 This website is deployed on [Heroku](https://www.heroku.com/), following these steps:
 1. Install these packages to your local environment, since these packages are required to deploy a Django project on Heroku.
-- [gnicorn](https://gunicorn.org/): `gnicorn` is Python WSGI(web server gataway interface) server for UNIX.
+- [gnicorn](https://gunicorn.org/): `gunicorn` is Python WSGI(web server gateway interface) server for UNIX.
 - [gninx](https://www.nginx.com/): `gninx` is a free, open-source, high-performance HTTP server and reverse proxy, as well as an IMAP/POP3 proxy server.
 - [psycopg2-binary](https://pypi.org/project/psycopg2-binary/): `psycopg2-binary` is PostgreSQL database adapter for the Python programming language.
 - [dj-database-url](https://pypi.org/project/dj-database-url/): `dj-database-url` allows you to utilize the 12factor inspired DATABASE_URL environment variable to configure your Django application.
@@ -633,7 +609,7 @@ I used CORS configuration below:
 ```
 
 - Setting for static/media files in settings.py
-1. Install `boto3` and `django-storages` with a command `pip3 install boto3` and `pip3 install django-storages` in your terminal, to connect AWS S3 bucket to Django.
+1. Install `boto3` and `django-storages` with command `pip3 install boto3` and `pip3 install django-storages` in your terminal, to connect AWS S3 bucket to Django.
 2. Add 'storages' to `INSTALLED_APPS` in settings.py.
 3. Add the following in settings.py.
 ```
@@ -684,7 +660,7 @@ For local deployment, you need to have an IDE (I used Gitpod for this project) a
 Also, you need to create account in the following services if you don't own yet:
 - Stripe, AWS (S3 bucket), Gmail
 
-1. In the IDE you are using, copy and paste the following commane into the terminal to clone this repository.
+1. In the IDE you are using, copy and paste the following command into the terminal to clone this repository.
     `git clone `
 (the other ways to clone a repository are written in this [GitHub documentation](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository))
 2. Set up environment variable in your selected IDE, or you can create `.env` file in your root directory and add `.env` to `.gitignore` file, and add the followings to the `.env` file.
@@ -697,7 +673,7 @@ os.environ["STRIPE_SECRET_KEY"] = "<Your Stripe Secret Key>"
 os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"    
 ```
 3. Install all the required packages with `pip3 install -r requirements.txt`
-4. Migrate the models to crete a database using in your IDE with `python3 manage.py makemigrations` and `python3 manage.py migrate`
+4. Migrate the models to create a database using in your IDE with `python3 manage.py makemigrations` and `python3 manage.py migrate`
 5. Load the data fixtures(color_table, flower_table, image_table, product_table) into the database using the following command:
 `python3 manage.py loaddata <fixture_name>`
 6. Create a superuser for the Postgres database by running with `python3 manage.py createsuperuser`
@@ -711,62 +687,63 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"
 - This project was based on the work of Juspreet Mahoon, however, the content is fictional and created by me. 
 - I was inspired by the flow and structure of flowery days by [Asuna Masuda](https://github.com/AsunaMasuda/FloweryDays) and used her read me as a template. 
 - I liked the structure and detail of the testing file for the project The House of Mouse by [Anna Greaves](https://github.com/AJGreaves/thehouseofmouse/blob/master/TESTING.md) and used the testing. md as a template for my testing template. 
-- This project was developed refering to the Boutique Ado Django mini-project from Code Institute course materials. The code is customized and modified to fit the purpose of this milestone project.
+- This project was developed referring to the Boutique Ado Django mini-project from Code Institute course materials. The code is customized and modified to fit the purpose of this milestone project.
 
 ### Images & Media
-- https://www.healthline.com/health/magnesium-oil-benefits
-- medlife.com/blog/5-natural-ways-relieve-menstrual-cramps/#:~:text=2.-,Fennel,honey%20and%20mix%20it%20well.
-- template tags : https://engineertodeveloper.com/a-better-way-to-route-back-to-a-section-ids-in-django/
-- <span>Photo by <a href="https://unsplash.com/@sharonmccutcheon?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sharon McCutcheon</a> on <a href="https://unsplash.com/s/photos/periods?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-- https://unsplash.com/photos/eCJiD00AJqs
-- https://unsplash.com/photos/2oegF67ikOM
-Photo by <a href="https://unsplash.com/@gabriellefaithhenderson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Gabrielle Henderson</a> on <a href="https://unsplash.com/s/photos/journal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">journal</a>
+- [copy for the 'magnesium oil' product was taken from this website](https://www.healthline.com/health/magnesium-oil-benefits)
+- [copy for the 'herbs to heal pms' service was taken from this website](medlife.com/blog/5-natural-ways-relieve-menstrual-cramps/#:~:text=2.-,Fennel,honey%20and%20mix%20it%20well.)
+
+#### Product, blog and homepage images were taken from [unsplash](unsplash.com) Below is a list of the contributors:
+-  [Sharon McCutcheon](https://unsplash.com/@sharonmccutcheon)
+-  [Noah Buscher](https://unsplash.com/@noahbuscher)
+-  [Winel Sutanto](https://unsplash.com/@weenail)   
+-  [](https://unsplash.com/@socialcut) 
+-  [](https://unsplash.com/@edgardo1987)
+-  [](https://unsplash.com/@anshu18)
+-  [](https://unsplash.com/@rhsupplies) 
+-  []() dame website 
+-  [](https://unsplash.com/@ramaissance) 
+-  [Luke Michael](https://unsplash.com/@lukemichael)
+-  [Dainis Graveris](https://unsplash.com/@dainisgraveris)
+-  [Deon Black](https://unsplash.com/@deonblack) 
+-  [Jernej Graj](https://unsplash.com/@jernejgraj) 
+-  [Saiid bel](https://unsplash.com/@saiid_bel) 
+-  [Estée Janssens](https://unsplash.com/@esteejanssens) 
+-  []() https://helloclue.com/articles/cycle-a-z/wet-sticky-what-your-discharge-is-telling-you 
+-  [Morgane Le Breton](https://unsplash.com/@morgane_lb) 
+-  [Bookblock](https://unsplash.com/@bookblock)  
+- [Daniel Öberg](https://unsplash.com/@artic_studios) 
+- [Dainis Graveris](https://unsplash.com/@dainisgraveris)
   
-- <span>Photo by <a href="https://unsplash.com/@socialcut?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">S O C I A L . C U T</a> on <a href="https://unsplash.com/s/photos/food-diary?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-- <span>Photo by <a href="https://unsplash.com/@edgardo1987?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Edgar Soto</a> on <a href="https://unsplash.com/s/photos/thermometer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-- <span>Photo by <a href="https://unsplash.com/@anshu18?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Anshu A</a> on <a href="https://unsplash.com/s/photos/oil?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-- <span>Photo by <a href="https://unsplash.com/@rhsupplies?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Reproductive Health Supplies Coalition</a> on <a href="https://unsplash.com/s/photos/fertility?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-- dame website 
-- Photo by <a href="https://unsplash.com/@ramaissance?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ramez E. Nassif</a> on <a href="https://unsplash.com/s/photos/body-temperature?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">bbt services</a>
-- Photo by <a href="https://unsplash.com/@lukemichael?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luke Michael</a> on <a href="https://unsplash.com/s/photos/natural-food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> decolonising diet 
-- Photo by <a href="https://unsplash.com/@dainisgraveris?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dainis Graveris</a> on <a href="https://unsplash.com/s/photos/fertility?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">his her ferytility </a>
-- Photo by <a href="https://unsplash.com/@deonblack?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Deon Black</a> on <a href="https://unsplash.com/s/photos/period-shame?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">period shameh</a>
-  
-- Photo by <a href="https://unsplash.com/@jernejgraj?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jernej Graj</a> on <a href="https://unsplash.com/s/photos/skin-in-water?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">skin organ</a>
-- Photo by <a href="https://unsplash.com/@saiid_bel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">saiid bel</a> on <a href="https://unsplash.com/s/photos/babies?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">natural family planning</a>
-- Photo by <a href="https://unsplash.com/@esteejanssens?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Estée Janssens</a> on <a href="https://unsplash.com/s/photos/calendar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"> period tracking</a>
-- https://helloclue.com/articles/cycle-a-z/wet-sticky-what-your-discharge-is-telling-you (cervical mucus)   
-- Photo by <a href="https://unsplash.com/@morgane_lb?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Morgane Le Breton</a> on <a href="https://unsplash.com/s/photos/herbs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">herbs</a>
-- Photo by <a href="https://unsplash.com/@bookblock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bookblock</a> on <a href="https://unsplash.com/s/photos/food-diary?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">food diary</a>
-- Photo by <a href="https://unsplash.com/@deonblack?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Deon Black</a> on <a href="https://unsplash.com/s/photos/fertility-facts?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">fertility facts</a>
-  
--Photo by <a href="https://unsplash.com/@artic_studios?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Daniel Öberg</a> on <a href="https://unsplash.com/s/photos/plants-growing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">index page - natural family planning</a>
--Photo by <a href="https://unsplash.com/@dainisgraveris?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dainis Graveris</a> on <a href="https://unsplash.com/s/photos/watermelon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">index page - female health</a>
+##### Some product pictures were borrowed from; 
+- [We are dame](https://wearedame.com)
+- [Yuyu](https://www.yuyubottle.com)
   
 
-  
-- https://pythoncircle.com/post/703/using-if-else-condition-in-django-template/
-- https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi (blog)
-- https://learndjango.com/tutorials/django-slug-tutorial (slug)
-- https://github.com/jamesturk/django-honeypot (honeypot documentation)
-- https://medium.com/hackernoon/the-easiest-way-to-send-emails-with-django-using-ses-from-aws-62f3d3d33efd (amazon ses)
-- https://shareyourstorypdx.com/2018/04/05/canva-resize-images/#:~:text=First%2C%20you%20need%20to%20log,example%20600%20x%20400%20px. (resizing images on canva)
-- https://startbootstrap.com/previews/blog-home (blog template)
-- https://codepen.io/daplo/pen/xYVQPz (invoice template - checkout success)
+### Links and tutorials
+
+- [If else conditions](https://pythoncircle.com/post/703/using-if-else-condition-in-django-template/)
+- [Blog tutorial](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
+- [Slug documentation](https://learndjango.com/tutorials/django-slug-tutorial)
+- [Honeypot documentation](https://github.com/jamesturk/django-honeypot)
+- [Amazon email service](https://medium.com/hackernoon/the-easiest-way-to-send-emails-with-django-using-ses-from-aws-62f3d3d33efd)
+- [Resizing images on canva](https://shareyourstorypdx.com/2018/04/05/canva-resize-images/#:~:text=First%2C%20you%20need%20to%20log,example%20600%20x%20400%20px.)
+- [Blog template](https://startbootstrap.com/previews/blog-home)
+- [Invoice template- Checkout success](https://codepen.io/daplo/pen/xYVQPz)
 
 
 ### Acknowledgements
-- Thanks to: my Code Institute Mentor [Anna](https://github.com/annavillanueva) for the advice throughout the development process.
-- Code Institute Slack Community that gave me a light when I was stuck in my coding.
-- A fellow student [Thomas](https://github.com/Tmuat) for the unlimited support and guidance where possible. The process of learning how to code and create a full stack wenbsite can be ever so tough and daunting. Having a peer who is willing to brainstorm and troubleshoot problems with youm is a priceless asset. 
+- Thanks to my Code Institute Mentor [Anna](https://github.com/annavillanueva) for the advice throughout the development process.
+- Code Institute Slack Community gave me a light when I was stuck in my coding.
+- A fellow student [Thomas](https://github.com/Tmuat) for unlimited support and guidance where possible. The process of learning how to code and create a full-stack website can be ever so tough and daunting. Having a peer who is willing to brainstorm and troubleshoot problems with you is a priceless asset. 
 
 ### Disclaimer
 This website is created for educational purpose only. content entirely fictional. 
 
 
 ### Reflection
-At the start of this project I had two models with items. Products and Services. 
-Having two models like this, both of equal importance to the main functionality of your site is a tremendous amount of work. I was having to cater for both models and their functionality all the way until building the checkout. It was at this point that I had to make the executive decision to change the entire structure of my project, by consolidating all of the items into one model (products). This was a great lesson, it taught me the true value of KISS and moving forward, simplicity will be at the forefront of my mind when approaching all projects. For me personally, I have found it tough to distinguish between what it necessary and what is extra. Throughout all of my projects at code Institute I have struggled to confine and adequately execute my ideas. I feel that this project, really taught me how to scale my ideas and the consequences of allowing your imagaination and ego, rule your decsions. In hindsight, I should have had one model- 'products', from the beginning. If I had made this call earlier, I would have been able to implement features 1 and 2, from my future features list. PLUS I would have avoided the time and energy spent trying to solve dual model related bugs and errors. However, if i had not had this bump in the road, it is very likely that i would have repeated this unhelpfil patterns of believeing that unecessaery ideas, should all be taken into developement. Up until this point, the idea of actually working in a tech role, alone, without the support of tutor guidance or the slack community, terrified me, however i definitely feel ready to go out into the 'real' world with my new found skills. I am grateful to code institute the mountains of helpful resources and support and cannot wait to start putting my new skills to use! 
+At the start of this project, I had two models with items. Products and Services. 
+Having two models like this, both of equal importance to the main functionality of your site is a tremendous amount of work. I was having to cater for both models and their functionality until building the checkout. It was at this point that I had to make the executive decision to change the entire structure of my project, by consolidating all of the items into one model (products). This was a great lesson, it taught me the true value of KISS and moving forward, simplicity will be at the forefront of my mind when approaching all projects. I have found it tough to distinguish between what is necessary and what is extra. Throughout all of my projects at code Institute, I have struggled to confine and adequately execute my ideas. I feel that this project really taught me how to scale my ideas and the consequences of allowing your imagination and ego, rule your decisions. In hindsight, I should have had one model- 'products', from the beginning. If I had made this call earlier, I would have been able to implement features 1 and 2, from my future features list. PLUS I would have avoided the time and energy spent trying to solve dual model related bugs and errors. However, if I had not had this bump in the road, i would likely have repeated this unhelpful pattern of believing that all unnecessary ideas, should be taken into development. Up until this point, the idea of actually working in a tech role, alone, without the support of tutor guidance or the slack community, terrified me, however, I feel ready to go out into the 'real' world with my new found skills. I am grateful to code institute the mountains of helpful resources and support and cannot wait to start putting my new skills to use! 
 
 
 
