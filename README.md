@@ -275,7 +275,7 @@ should I add pics?
 - Update option takes the admin user to the current product form, a message also displays feedback to the user that they are editing a product.
 ![updating a product](readme-materials/logic_screenshots/update(product_management).png)
 - If deleting a product a modal appears to double-check the validity of the request, then the user is given a success message. #picture
-- It was apparent to me that if a none admin user attempted to update or delete any of the products and services if they guessed the corresponding URLs, they would be able to. To resolve this I added some defensive code to my views. Details of this can be found in the (testing file)[testing.md]
+- It was apparent to me that if a none admin user attempted to update or delete any of the products and services if they guessed the corresponding URLs, they would be able to. To resolve this I added some defensive code to my views. Details of this can be found in the (Testing file)[TESTING.md]
 
 
 ### Adding product to bag (this functionality takes the user from the products and services app to the bag app)
@@ -522,7 +522,7 @@ The main frontend development was created using HTML, CSS, JavaScript and their 
 - [PostgreSQL](https://www.postgresql.org/) - database used for production.
 
 # Testing
-Testing was conducted and recorded in a different file: [TESTING.md](https://github.com/mayasaffron/Kaur-Health/blob/master/testing.md).
+Testing was conducted and recorded in a different file: [TESTING.md](TESTING.md).
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
