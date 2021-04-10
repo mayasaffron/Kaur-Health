@@ -13,7 +13,7 @@ Juspreet Kaur is a health coach specialising in the following areas of female he
 - Natural Family Planning for couples to conceive  or avoid pregnancy (natural, non-medical contraception)
 - DIY chemical-free skincare products
 
-[Kaur Health]() is the collation of Juspreets services, which offers the opportunity for potential clients to learn a little more about her, her professional journey and most importantly; how she can help clients achieve their goals. 
+[Kaur Health](https://kaur-health.herokuapp.com) is the collation of Juspreets services, which offers the opportunity for potential clients to learn a little more about her, her professional journey and most importantly; how she can help clients achieve their goals. 
 The site also publishes blog posts about relevant topics, where the site visitors can leave a comment.
 
 
@@ -198,7 +198,7 @@ However, I couldn't find a site that was also an e-commerce store, so for better
 When you have a site that offers a community aspect and e-commerce functionality, it is important to have a balance with the aesthetic. 
 The pink and purples would be inviting and representative of the nature of the site, whilst the black and white are neutral and professional, indicating the presence of the store.
 
-![This pallet](readme_materials/wireframes/kaur-health-palette.png)
+![This pallet](readme_materials/wireframes/colour-palette.png)
 engages and appeals to women, however, the 'English violet' stops the entire palette from being stereotypically 'girly' and therefore offputting to men! 
 
 ### Typography
