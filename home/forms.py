@@ -13,8 +13,10 @@ class ContactForm(forms.Form):
         ('Other', 'Other'),
     )
 
-    name = forms.CharField(required=True, label="Name", widget=forms.TextInput())
-    email = forms.EmailField(required=True, label="Email", widget=forms.EmailInput())
+    name = forms.CharField(required=True,
+                           label="Name", widget=forms.TextInput())
+    email = forms.EmailField(required=True,
+                             label="Email", widget=forms.EmailInput())
     subject = forms.CharField(
         label="Subject",
         widget=forms.Select(choices=CATEGORY),

@@ -96,7 +96,8 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Product not added, please recheck the form')
+            messages.error(request, 'Product not added, please \
+                            recheck the form')
             return redirect(reverse('add_product'))
     else:
         form = ProductForm()
@@ -124,7 +125,8 @@ def update_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update, please recheck the form')
+            messages.error(request, 'Failed to update, please \
+                            recheck the form')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')

@@ -1,3 +1,4 @@
+<!-- template adapted from mini project- boutique ado (code institue) -->
 {% extends "base.html" %}
 {% load static %}
 {% load bag_tools %}
@@ -52,6 +53,7 @@
                         <td class="py-3">
                             <p class="my-0">£{{ item.product.price }} </p>
                         </td>
+                        <!-- adjusting products in the bag -->
                         <td class="py-3 w-25">
                             <form class="form update-form" method="POST"
                                 action="{% url 'adjust_bag_product' item.item_id %}">
@@ -80,6 +82,7 @@
                                     </div>
                                 </div>
                             </form>
+                            <!-- adjusting products in the bag actions -->
                             <a class="update-link"><small> Update </small></a>
                             <a class="remove-item float-right" id="remove_{{ item.item_id }}"><small> Remove
                                 </small></a>
@@ -143,7 +146,7 @@
 <script type="text/javascript">
     // update quantity on click 
 
-    $('.update-link').click(function (e) {
+      $('.update-link').click(function (e) {
         var form = $(this).prev('.update-form');
         form.submit();
     })

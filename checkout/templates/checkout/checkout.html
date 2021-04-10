@@ -1,3 +1,5 @@
+<!-- template adapted from mini project- boutique ado (code institue) -->
+
 {% extends "base.html" %}
 {% load static %}
 {% load bag_tools %}
@@ -108,7 +110,7 @@
                     </fieldset>
                     <fieldset class="px-3">
                         <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-                        <!-- A Stripe card element will go here -->
+                        <!-- Stripe card element -->
                         <div class="mb-3" id="card-element"></div>
 
                         <!-- Used to display form errors -->
@@ -123,7 +125,7 @@
 							</span>
 							<span class="font-weight-bold">Adjust Bag</span>
 						</a>
-						<button id="submit-button" class="btn-tag rounded-0">
+						<button id="submit-button" class="btn-violet rounded-0">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>

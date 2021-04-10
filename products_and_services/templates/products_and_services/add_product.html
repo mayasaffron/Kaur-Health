@@ -1,3 +1,4 @@
+<!-- template adapted from mini project- boutique ado (code institue) -->
 {% extends "base.html" %}
 {% load static %}
 
@@ -36,7 +37,7 @@
                     {% endfor %}
                     <div class="text-right">
                     <a class="btn-violet btn-outline-black rounded-0" href="{% url 'all_items' %}">Cancel</a>
-                    <button id="submit-button" class="btn-tag rounded-0">Add Product</button>
+                    <button id="submit-button" class="btn-violet rounded-0">Add Product</button>
                     </div>
                 </form>
     
@@ -50,6 +51,7 @@
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}
+    <!-- setting product image -->
     <script type="text/javascript">
     $('#new-image').change(function(){
         var file = $('#new-image')[0].files[0];

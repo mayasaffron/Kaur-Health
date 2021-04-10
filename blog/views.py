@@ -37,11 +37,13 @@ def blog_detail(request, slug):
             new_comment = form.save(commit=False)
             new_comment.post_comment = blog
             new_comment.save()
-            messages.success(request, 'Thank you! Your comment has been added.')
+            messages.success(request, 'Thank you! Your \
+                             comment has been added.')
             return redirect(reverse('blog_detail', kwargs={'slug': blog.slug}))
 
         else:
-            messages.error(request, 'Comment cannot be added, please recheck the form')
+            messages.error(request, 'Comment cannot be added, please \
+                           recheck the form')
             return redirect(reverse('blog_detail', kwargs={'slug': blog.slug}))
     context = {
         'object': blog,
@@ -54,7 +56,8 @@ def blog_detail(request, slug):
 def add_blog_post(request):
     '''A view to allow users to add blogs'''
     if not request.user.is_authenticated:
-        messages.error(request, 'Sorry, you can only add a blog if youre logged in!')
+        messages.error(request, 'Sorry, you can only add a \
+                        blog if youre logged in!')
         return redirect(reverse('blog'))
 
     if request.method == 'POST':
@@ -66,14 +69,17 @@ def add_blog_post(request):
             qs_exists = BlogPost.objects.filter(
                     slug=new_slug).exists()
             if qs_exists:
-                messages.error(request, 'A blog with this title, already exists! Change it slightly please.')
+                messages.error(request, 'A blog with this title, already exists!\
+                                Change it slightly please.')
                 return redirect(reverse('add_blog_post'))
             new_blog.slug = new_slug
             new_blog.save()
             messages.success(request, 'Thank you! Your blog has been added.')
-            return redirect(reverse('blog_detail', kwargs={'slug': new_blog.slug}))
+            return redirect(reverse('blog_detail',
+                                    kwargs={'slug': new_blog.slug}))
         else:
-            messages.error(request, 'Blog cannot be added, please recheck the form.')
+            messages.error(request, 'Blog cannot be added, please \
+                            recheck the form.')
             return redirect(reverse('add_blog_post'))
     else:
         form = BlogPostForm()
@@ -99,7 +105,8 @@ def update_blog(request, slug):
             messages.success(request, 'Successfully updated blog!')
             return redirect(reverse('blog_detail', args=[blog.slug]))
         else:
-            messages.error(request, 'Failed to update, please recheck the form.')
+            messages.error(request, 'Failed to update, please \
+                            recheck the form.')
     else:
         form = BlogPostForm(instance=blog)
         messages.info(request, f'You are editing "{blog.title}" .')

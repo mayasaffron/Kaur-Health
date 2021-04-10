@@ -38,11 +38,11 @@ def contact_form(request):
                                                     'message': message})
             try:
                 email = EmailMessage(
-                f"Contact form submission; { name }",
-                msg_contact,
-                settings.DEFAULT_FROM_EMAIL,
-                [settings.DEFAULT_FROM_EMAIL,],
-                reply_to=[form_email],
+                                    f"Contact form submission; { name }",
+                                    msg_contact,
+                                    settings.DEFAULT_FROM_EMAIL,
+                                    [settings.DEFAULT_FROM_EMAIL, ],
+                                    reply_to=[form_email],
                 )
                 email.send(fail_silently=False)
                 email_confirm = EmailMessage(

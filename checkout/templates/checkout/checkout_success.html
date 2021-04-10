@@ -15,6 +15,7 @@
     </div>
 {% endblock %}
 
+<!-- template adapted from : https://codepen.io/daplo/pen/xYVQPz (as referenced in README) -->
 {% block content %}
     <div class="overlay"></div>
     <div class="container">
@@ -71,6 +72,7 @@ Order Number:<strong> {{ order.order_number }}</strong>
 <tr>
 {% for item in order.lineitems.all %}
     <td class="left strong">{{ item.product.name }}</td>
+    <!-- Distinguishing between products and services -->
     {% if item.product.service_category %}
         <td class="left"><strong> This is a service, you must adhere to the t's and c's</strong></td>
     {% else %}

@@ -1,3 +1,4 @@
+<!-- template adapted from mini project- boutique ado (code institue) -->
 {% extends "base.html" %}
 {% load static %}
 
@@ -52,22 +53,25 @@
             <small class="ml-3">
                 <a class="btn btn-violet" href="{% url 'update_product' product.id %}">Update</a>
  <!-- confirm delete modal -->
-                <h6 class="btn btn-violet modal-trigger delete" data-toggle="modal" data-target="#deleteModal">Delete</h6>
+                <a class="btn btn-violet modal-trigger delete" data-toggle="modal" data-target="#deleteModal">Delete</a>
             </small>
         {% endif %}
         <p class="mt-3">{{ product.description }}</p>
     <form class="form" action="{% url 'add_product_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
+                            <!-- Distinguishing between products and services -->
                             {% with product.service_category as s %}
                                 {% if s %}
                                     <div class="col-12">
                                         <input type="hidden" value="{{ product.name }}" name="product_is_service" id="id_product_is_service">
-                                        <p class="mt-3"><strong>This is a service</strong></p>
-                                    <p class="mt-3">- Juspreet reserves the rights to withdraw input at any stage. <br>
-                                        - Anti Social behaviour will not be tolerated during the delivery of the workshop.<br>
-                                        - Services must be used within 30 days of purchase.<br>
-                                        - Cancellations or reschedules of your service delivery must occur at least 48 hours before service is due to be delievered. Failure to do so will result in an unclaimed service.</p>
+                                        <h2 class="mt-3"><strong><u>Service T's & C's</u></strong></h2>
+                                    <ul class="mt-3">
+                                        <li>Juspreet reserves the rights to withdraw input at any stage.</li> <br>
+                                        <li>Anti Social behaviour will not be tolerated during the delivery of the workshop.</li><br>
+                                        <li>Services must be used within 30 days of purchase.</li><br>
+                                        <li>Cancellations or reschedules of your service delivery must occur at least 48 hours before service is due to be delivered. Failure to do so will result in an unclaimed service.</li>
+                                    </ul>
                                     </div>
                                 {% endif %}
                             <div class="col-12">

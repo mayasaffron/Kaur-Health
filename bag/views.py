@@ -4,9 +4,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 
 
 def view_bag(request):
-    print(request.session.get('bag', {}))
     return render(request, 'bag/bag.html')
-    print(request.session.get('bag', {}))
 
 
 def add_product_to_bag(request, item_id):
@@ -17,20 +15,15 @@ def add_product_to_bag(request, item_id):
     service = None
     if 'product_is_service' in request.POST:
         service = request.POST['product_is_service']
-        
-    bag = request.session.get('bag', {})
-    print(service)
+        bag = request.session.get('bag', {})
     if service:
-        print("if im a service")
         if item_id in list(bag.keys()):
-            
             bag[item_id]['item_is_service'][product.name] += quantity
             messages.success(request, f' Updated {product.name}'
                              ' quantity to'
-                             f' {bag[item_id]["item_is_service"][product.name]} !')
-            
+                             f' {bag[item_id]["item_is_service"][product.name]}!')
+
         else:
-            print("adding service to bag attempt")
             bag[item_id] = {'item_is_service': {product.name: quantity}}
             messages.success(request, f'Added {product.name}'
                              ' to your bag! Please read the'

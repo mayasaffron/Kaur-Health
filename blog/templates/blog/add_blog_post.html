@@ -1,3 +1,5 @@
+<!-- template adapted from mini project- boutique ado (code institue) -->
+
 {% extends "base.html" %}
 {% load static %}
 
@@ -17,7 +19,7 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <hr>
-                <h2 class="logo-font mb-4">new blog</h2>
+                <h2 class="logo-font mb-4">New blog</h2>
                 <hr>
             </div>
         </div>
@@ -49,6 +51,7 @@
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}
+    <!-- setting blog image -->
     <script type="text/javascript">
     $('#new-image').change(function(){
         var file = $('#new-image')[0].files[0];
