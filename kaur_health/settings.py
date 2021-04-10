@@ -67,7 +67,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-X_FRAME_OPTIONS = 'DENY'
+X_FRAME_OPTIONS = 'ALLOW'
 
 ROOT_URLCONF = 'kaur_health.urls'
 
