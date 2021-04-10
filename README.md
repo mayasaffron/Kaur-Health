@@ -204,7 +204,9 @@ engages and appeals to women, however, the 'English violet' stops the entire pal
 ### Typography
 To reflect kaur Health's brand identity, the typeface chosen for main headings was Mulish, (formerly known as Muli) and I coupled this with Nunito for the body text, both of these fonts fall under the sans serif family. I chose this duo, after doing some research and realising that I needed the font to reflect; strength; empowerment; practicality and most importantly readability. Due to the nature of the site's content, being quite woman-centric, I was tempted to select a playful font, such as Oleo script, however, I decided this would take away from the professional feel I was aiming to achieve. [This article]("https://piktochart.com/blog/fonts-and-colors/#:~:text=For%20subheadings%20and%20body%20text,partially%20for%20titles%20or%20headlines") by Natasya Sunarto was very insightful, as it compared a range of industries and I was able to work out where Kaur Health fits within the examples and make an informed decision about which typeface would be most fitting. 
 
-- Icon: ![This logo](readme-materials/wireframes/logo.jpg) is used for the main icon library across the site.
+- Icon: <img src="readme-materials/wireframes/logo.jpg" height="72px" width="72px">
+<br>
+This logo is used for the main icon library across the site.
 - Favicon: I got the favicon by uploading the logo to  [Favicon](https://favicon.io).
 
 ### Brand Logo
