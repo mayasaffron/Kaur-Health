@@ -855,7 +855,7 @@ To
                             {% endif %}
                         </td>
 ```
-![Images being rendered in bag](readme-materials/bug_scr-enshots/bug_4(b).png)
+![Images being rendered in bag](readme-materials/bug_screenshots/bug_4(b).png)
 
 I used dev tools to compare the pathway written in the image source, on all_items.html and bag.html and quickly realised that i needed to use the exact field name from my models. 
 
