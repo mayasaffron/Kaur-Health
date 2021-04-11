@@ -201,7 +201,9 @@ footer {
     padding: 4rem 0;
 }
 
-
+#specialisms .card-inner{
+    margin: .5rem 1rem 0 1rem;
+}
 .thankyou{
     margin-top: 50%;
 }
