@@ -109,7 +109,7 @@ I used [Coverage.py](https://coverage.readthedocs.io/en/v4.5.x/) to provide feed
 | Site User | Easily navigate to the Products and services available | Find the product or service I want to purchase |
 
 - There is a search bar on the main nav bar which says `Search Products & Services`
-![ All products and services ](readme_materials/testing_screenshots/user_stories_products(2).png)
+![ All products and services ](readme-materials/testing_screenshots/user_stories_products(2).png)
 - Products and services tab is clear and obvious on the nav bar.
 
 
@@ -129,11 +129,11 @@ I used [Coverage.py](https://coverage.readthedocs.io/en/v4.5.x/) to provide feed
 
 - When a user clicks on ` Product and services` dropdown nav bar option, you are given a dropdown to the different categories of the products and services. I thought that the dropdown would provide better user experience than a direct link, which takes you to a page where you then have to sift through the categories that you are interested in. The nature of this site, is such that, as a user, you are probably well aware of what you are looking for and therefore which category to find it. Or, if you are new to the site's content, I felt it would be less overwhelming if you have some filtering control and could navigate to the category you were most interested in. 
 By doing this I satisfy the ease of navigation in my user stories and adhere to my wireframes. 
-![ The dropdown distinguishes the products and services by category ](readme_materials/logic_screenshots/navbar_dropdown(products).png)
+![ The dropdown distinguishes the products and services by category ](readme-materials/logic_screenshots/navbar_dropdown(products).png)
 - After clicking on your chosen category, all of the products and services under this category, will be displayed. The category name will appear just beneath the consistent title of 'products and services' and there is a banner just above the title, with the free delivery minimum spend. 
 In the top left corner the user will see a link to `Products and services home` which when clicked will take them to the `all products and services`, here all of the categories will be clickable links beneath the title, so that a user can navigate to the other categories from here as well/ instead of the navbar dropdown.
 Beside the `Products and services home` there is a product and service count, outlining how many products and how many services belong to this category. 
-![ All products and services ](readme_materials/testing_screenshots/user_stories_products(1).png)
+![ All products and services ](readme-materials/testing_screenshots/user_stories_products(1).png)
 
 Originally I toyed with the idea of having the product and service count clickable links and sectioning the page so that the user would be taken to a products section if they clicked the product count link to 'products' and the same for services. However, this proved to be bad UI, as when and if the user chose to sort the products, the sections would make things very messy and hard to contain. 
 - It was through this boolean field, that I was also able to filter down to just the services. I simply added some code to my views and template so that just the services would be displayed when a user clicks on the services. 
@@ -160,15 +160,15 @@ I opted to distinguish services from products in a few ways;
 | Site User | Easily update and remove a product | Make sure the online site has the latest catalogue |
 
 - If the user is logged in as a superuser, Update / Delete option is also shown on each card.
-![ product management ](readme_materials/testing_screenshots/user_stories_product_management(1).png)
-![ updating product ](readme_materials/testing_screenshots/user_stories_product_management(5).png)
-![ updating product ](readme_materials/testing_screenshots/user_stories_product_management(6).png)
-![ updating product ](readme_materials/testing_screenshots/user_stories_product_management(7).png)
-![ updating product ](readme_materials/testing_screenshots/user_stories_product_management(8).png)
-![ deleting product ](readme_materials/testing_screenshots/user_stories_product_management(11).png)
-![ deleting product ](readme_materials/testing_screenshots/user_stories_product_management(9).png)
+![ product management ](readme-materials/testing_screenshots/user_stories_product_management(1).png)
+![ updating product ](readme-materials/testing_screenshots/user_stories_product_management(5).png)
+![ updating product ](readme-materials/testing_screenshots/user_stories_product_management(6).png)
+![ updating product ](readme-materials/testing_screenshots/user_stories_product_management(7).png)
+![ updating product ](readme-materials/testing_screenshots/user_stories_product_management(8).png)
+![ deleting product ](readme-materials/testing_screenshots/user_stories_product_management(11).png)
+![ deleting product ](readme-materials/testing_screenshots/user_stories_product_management(9).png)
 - It was also necessary to add some defensive programming, to inform none admin users that they are not permitted to make any changes to the products, should a none admin user attempt it.
-![ alert message for none admin user ](readme_materials/testing_screenshots/user_stories_product_management(10).png)
+![ alert message for none admin user ](readme-materials/testing_screenshots/user_stories_product_management(10).png)
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
@@ -176,9 +176,9 @@ I opted to distinguish services from products in a few ways;
 
 - As explained in readme, when superuser is logged on, product management is accessible as dropdown link from `account` in nav bar. 
 - this link will take admin straight to a new product form. 
-![ adding product ](readme_materials/testing_screenshots/user_stories_product_management(2).png)
-![ adding product ](readme_materials/testing_screenshots/user_stories_product_management(4).png)
-![ product management ](readme_materials/testing_screenshots/user_stories_product_management(3).png)
+![ adding product ](readme-materials/testing_screenshots/user_stories_product_management(2).png)
+![ adding product ](readme-materials/testing_screenshots/user_stories_product_management(4).png)
+![ product management ](readme-materials/testing_screenshots/user_stories_product_management(3).png)
 
 <br/>
 
@@ -189,11 +189,11 @@ I opted to distinguish services from products in a few ways;
 | Site User | Easily select the quantity (if applicable) of a product after adding a product to a cart | Ensure I don't accidentally select the wrong product and the quantity |
 
 - The quantity is set to a defualt of 1 and can be easily adjustable both in and out side of the bag. 
-![ updating bag items outside ](readme_materials/testing_screenshots/user_stories_cart(1).png)
-![ updating bag items ](readme_materials/testing_screenshots/user_stories_cart(2).png)
+![ updating bag items outside ](readme-materials/testing_screenshots/user_stories_cart(1).png)
+![ updating bag items ](readme-materials/testing_screenshots/user_stories_cart(2).png)
 - Users are also given feedback messages when adjusting any of the items in their bags. 
 - Items can be easily removed from the bag. 
-![ updating bag items ](readme_materials/testing_screenshots/user_stories_cart(3).png)
+![ updating bag items ](readme-materials/testing_screenshots/user_stories_cart(3).png)
 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
@@ -201,8 +201,8 @@ I opted to distinguish services from products in a few ways;
 | Site User | Have my delivery information is prefilled if logged in | Smoothly proceed with my purchase |
 
 - If users are authenticated, after their first order, their delivery information can be saved to their profiles. Users can update their details on their profile, this means the details will be updated for when the user carries out their next order.
-![ delivery info on profile ](readme_materials/testing_screenshots/user_stories_checkout(2).png)
-![ delivery info prefilled ](readme_materials/testing_screenshots/user_stories_checkout(3).png) 
+![ delivery info on profile ](readme-materials/testing_screenshots/user_stories_checkout(2).png)
+![ delivery info prefilled ](readme-materials/testing_screenshots/user_stories_checkout(3).png) 
 
 
 
@@ -227,8 +227,8 @@ I opted to distinguish services from products in a few ways;
 - Blogs are accessible to all, however, only authenticated users can make a post or comment on a post. 
 - To acknowledge this user story, if a user has written blog posts when they log on and click on the blog tab in the navbar they will see a dropdown link ` my blog posts `. Here they will find all of the posts that they have written. 
 - Whilst my original idea hasn't been executed, I feel that what exists now is a better alternative and will result in a better UX. The user's personal blogs being accessed via the navbar is another way of satisfying the idea behind this user story. 
-![ my blog posts ](readme_materials/testing_screenshots/user_stories_blog(1).png) 
-![ my blog posts ](readme_materials/testing_screenshots/user_stories_blog(2).png)
+![ my blog posts ](readme-materials/testing_screenshots/user_stories_blog(1).png) 
+![ my blog posts ](readme-materials/testing_screenshots/user_stories_blog(2).png)
 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
@@ -236,7 +236,7 @@ I opted to distinguish services from products in a few ways;
 | Site User | View my order history | Purchase the same product again in the next order |
 
 - This is achieved on the users profile page. 
-![ my blog posts ](readme_materials/testing_screenshots/user_stories_profile(1).png)
+![ my blog posts ](readme-materials/testing_screenshots/user_stories_profile(1).png)
 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
@@ -259,10 +259,10 @@ I opted to distinguish services from products in a few ways;
 
 - As aforementioned, I thought it would be a good way to encourage more users and build an online community if users were only permitted to write blogs, if they were authenticated. 
 - I convey this clearly throughout the site.
-![ authenticated users can add blogs ](readme_materials/testing_screenshots/user_stories_blog(3).png)
+![ authenticated users can add blogs ](readme-materials/testing_screenshots/user_stories_blog(3).png)
 - Adding a post is easy to do. 
-![ adding blog ](readme_materials/testing_screenshots/user_stories_blog(4).png)
-![ posted blog ](readme_materials/testing_screenshots/user_stories_blog(5).png)
+![ adding blog ](readme-materials/testing_screenshots/user_stories_blog(4).png)
+![ posted blog ](readme-materials/testing_screenshots/user_stories_blog(5).png)
 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
