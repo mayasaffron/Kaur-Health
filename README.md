@@ -170,7 +170,7 @@ I knew that I wanted to create an app that would:
 - Encourage users to create a profile, so that they could gain the benefit of starting discussions on the blog and also have their order information prefilled. 
 - Ensure that my design would tell users that this site is a safe space for women, but also that this is an educational tool to hopefully enlighten women with similar interests or those who have no idea. 
 
-I based the checkout profiles and store functionality of the app on the module -mini-project-boutique-ado expertly delivered by [code Institute](). Everything in this project is entirely fictionally and all content was created by me. 
+I based the checkout profiles and store functionality of the app on the module -mini-project-boutique-ado expertly delivered by [code Institute](https://learn.codeinstitute.net/). Everything in this project is entirely fictionally and all content was created by me. 
 
 
 
@@ -204,9 +204,7 @@ engages and appeals to women, however, the 'English violet' stops the entire pal
 ### Typography
 To reflect kaur Health's brand identity, the typeface chosen for main headings was Mulish, (formerly known as Muli) and I coupled this with Nunito for the body text, both of these fonts fall under the sans serif family. I chose this duo, after doing some research and realising that I needed the font to reflect; strength; empowerment; practicality and most importantly readability. Due to the nature of the site's content, being quite woman-centric, I was tempted to select a playful font, such as Oleo script, however, I decided this would take away from the professional feel I was aiming to achieve. [This article]("https://piktochart.com/blog/fonts-and-colors/#:~:text=For%20subheadings%20and%20body%20text,partially%20for%20titles%20or%20headlines") by Natasya Sunarto was very insightful, as it compared a range of industries and I was able to work out where Kaur Health fits within the examples and make an informed decision about which typeface would be most fitting. 
 
-- Icon: <img src="readme-materials/wireframes/logo.jpg" height="72px" width="72px">
-<br>
-This logo is used for the main icon library across the site.
+- Icon: <img src="readme-materials/wireframes/logo.jpg" height="72px" width="72px"> This logo is used for the main icon library across the site.
 - Favicon: I got the favicon by uploading the logo to  [Favicon](https://favicon.io).
 
 ### Brand Logo
@@ -532,7 +530,7 @@ Testing was conducted and recorded in a different file: [TESTING.md](TESTING.md)
 ## Heroku Deployment with AWS
 This website is deployed on [Heroku](https://www.heroku.com/), following these steps:
 1. Install these packages to your local environment, since these packages are required to deploy a Django project on Heroku.
-- [gnicorn](https://gunicorn.org/): `gunicorn` is Python WSGI(web server gateway interface) server for UNIX.
+- [gunicorn](https://gunicorn.org/): `gunicorn` is Python WSGI(web server gateway interface) server for UNIX.
 - [gninx](https://www.nginx.com/): `gninx` is a free, open-source, high-performance HTTP server and reverse proxy, as well as an IMAP/POP3 proxy server.
 - [psycopg2-binary](https://pypi.org/project/psycopg2-binary/): `psycopg2-binary` is PostgreSQL database adapter for the Python programming language.
 - [dj-database-url](https://pypi.org/project/dj-database-url/): `dj-database-url` allows you to utilize the 12factor inspired DATABASE_URL environment variable to configure your Django application.
@@ -564,7 +562,7 @@ This website is deployed on [Heroku](https://www.heroku.com/), following these s
 ```
 9. Migrate the database models to the Postgres database using the following commands in the terminal:
 `python3 manage.py migrate`
-10. Load the data fixtures(color_table, flower_table, image_table, product_table) into the Postgres database using the following command:
+10. Load the data fixtures(categories, products) into the Postgres database using the following command:
 `python3 manage.py loaddata <fixture_name>`
 11. Create a superuser for the Postgres database by running the following command:
 `python3 manage.py createsuperuser`
@@ -624,7 +622,7 @@ if 'USE_AWS' in os.environ:
     }
 
     # Bucket Config
-    AWS_STORAGE_BUCKET_NAME = 'flowerydays'
+    AWS_STORAGE_BUCKET_NAME = 'kaur-health'
     AWS_S3_REGION_NAME = 'eu-west-1'
     AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
@@ -677,7 +675,7 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"
 ```
 3. Install all the required packages with `pip3 install -r requirements.txt`
 4. Migrate the models to create a database using in your IDE with `python3 manage.py makemigrations` and `python3 manage.py migrate`
-5. Load the data fixtures(color_table, flower_table, image_table, product_table) into the database using the following command:
+5. Load the data fixtures(categories, products into the database using the following command:
 `python3 manage.py loaddata <fixture_name>`
 6. Create a superuser for the Postgres database by running with `python3 manage.py createsuperuser`
 7. Now you can access the app using the command `python3 manage.py runserver`
@@ -695,34 +693,30 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"
 ### Images & Media
 - [copy for the 'magnesium oil' product was taken from this website](https://www.healthline.com/health/magnesium-oil-benefits)
 - [copy for the 'herbs to heal pms' service was taken from this website](medlife.com/blog/5-natural-ways-relieve-menstrual-cramps/#:~:text=2.-,Fennel,honey%20and%20mix%20it%20well.)
+- [Image of 'reusable pads' was taken from this website](https://wearedame.com)
+- [Image of 'wrap around water bottle' was taken from this website](https://www.yuyubottle.com)
+- [copy for the fertility awareness tips was taken from this webiste](https://helloclue.com/articles/cycle-a-z/wet-sticky-what-your-discharge-is-telling-you )
 
 #### Product, blog and homepage images were taken from [unsplash](unsplash.com) Below is a list of the contributors:
 -  [Sharon McCutcheon](https://unsplash.com/@sharonmccutcheon)
 -  [Noah Buscher](https://unsplash.com/@noahbuscher)
 -  [Winel Sutanto](https://unsplash.com/@weenail)   
--  [](https://unsplash.com/@socialcut) 
--  [](https://unsplash.com/@edgardo1987)
--  [](https://unsplash.com/@anshu18)
--  [](https://unsplash.com/@rhsupplies) 
--  []() dame website 
--  [](https://unsplash.com/@ramaissance) 
+-  [Social Cut](https://unsplash.com/@socialcut) 
+-  [Edgar Soto](https://unsplash.com/@edgardo1987)
+-  [Anshu A](https://unsplash.com/@anshu18)
+-  [Reproductive Health Supplies Coalition](https://unsplash.com/@rhsupplies) 
+-  [Ramez E. Nassif](https://unsplash.com/@ramaissance) 
 -  [Luke Michael](https://unsplash.com/@lukemichael)
 -  [Dainis Graveris](https://unsplash.com/@dainisgraveris)
 -  [Deon Black](https://unsplash.com/@deonblack) 
 -  [Jernej Graj](https://unsplash.com/@jernejgraj) 
 -  [Saiid bel](https://unsplash.com/@saiid_bel) 
 -  [Estée Janssens](https://unsplash.com/@esteejanssens) 
--  []() https://helloclue.com/articles/cycle-a-z/wet-sticky-what-your-discharge-is-telling-you 
 -  [Morgane Le Breton](https://unsplash.com/@morgane_lb) 
 -  [Bookblock](https://unsplash.com/@bookblock)  
-- [Daniel Öberg](https://unsplash.com/@artic_studios) 
-- [Dainis Graveris](https://unsplash.com/@dainisgraveris)
+-  [Daniel Öberg](https://unsplash.com/@artic_studios) 
+-  [Dainis Graveris](https://unsplash.com/@dainisgraveris)
   
-##### Some product pictures were borrowed from; 
-- [We are dame](https://wearedame.com)
-- [Yuyu](https://www.yuyubottle.com)
-  
-
 ### Links and tutorials
 
 - [If else conditions](https://pythoncircle.com/post/703/using-if-else-condition-in-django-template/)

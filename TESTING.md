@@ -45,7 +45,7 @@ The following validation services and linter were used to check the validity of 
 
 **IMPORTANT**
 
-If you wish to run any of these tests for yourself, before going further please make sure you have already cloned this project from the [The House of Mouse GitHub repository](https://github.com/AJGreaves/thehouseofmouse) 
+If you wish to run any of these tests for yourself, before going further please make sure you have already cloned this project from the [The Kaur health GitHub repository](https://github.com/mayasaffron/Kaur-Health) 
 by following the steps in the [README.md](readme.md#how-to-run-this-project-locally) under "How to run this project locally" and that you have the entire project running on your own IDE.
 
 ### Python Testing
@@ -69,29 +69,18 @@ _NOTE: The `python` part of these commands assumes you are working with a window
 
 ### A note about TDD
 
-This project did not utilize Test Driven Development. The reason for this was that I was learning how Django works and functions and found it impossible to write tests for methods and classes that I did not understand well as I went along. 
-
-The automated tests for this project were created after the vast majority of the project was already complete, once I had a firmer grasp of how my code was working and what its expected output was. Now that I have a better understanding of how automated tests work, I intend to attempt TDD with my next project.
+This project did not utilize Test Driven Development. 
+Given the amount of work and building on recent knowledge this project required, I dint have the capacity to write tests for methods and classes, whilst simultaneously trying to simply get them to function! 
+The automated tests for this project were created after the vast majority of the project was already complete. However, whilst writing the few tests I have, I do understand how they are essential to real life projects and I intend to implement TDD with my next project.
 
 ### Coverage
 
-[Coverage.py](https://coverage.readthedocs.io/en/v4.5.x/) was used to provide feedback during testing to check that enough of my code had been tested.
+I used [Coverage.py](https://coverage.readthedocs.io/en/v4.5.x/) to provide feedback during testing to check that enough of my code had been tested.
 
-#### How to run coverage
-
-1. Activate your virtual environment.
-2. In the terminal enter the following command:
-```
-coverage html
-```
-3. Open the newly created `htmlcov` directory in the root of your project folder. 
-4. Open the `index.html` file inside it.
-5. Run the file in the browser to see the output.
 
 ### Travis
 
-- [Travis](https://travis-ci.org/) was used throughout the unit testing of this project to provide continuous integration with the deployed site. The [Travis Documentation](https://docs.travis-ci.com/) provides all the info needed to set it up.
-- I set the heroku deployment settings for this project to only allow deployment when the travis had passed the latest push to the master branch on GitHub.
+- I used [Travis](https://travis-ci.org/) throughout the unit testing of this project. The [Travis Documentation](https://docs.travis-ci.com/) provides all the info needed to set it up.
 
 ## User stories testing
 
@@ -120,7 +109,7 @@ coverage html
 | Site User | Easily navigate to the Products and services available | Find the product or service I want to purchase |
 
 - There is a search bar on the main nav bar which says `Search Products & Services`
-![ All products and services ](readme_materials/testing_screenshots/user_stories_products(2)).png)
+![ All products and services ](readme_materials/testing_screenshots/user_stories_products(2).png)
 - Products and services tab is clear and obvious on the nav bar.
 
 
@@ -144,7 +133,7 @@ By doing this I satisfy the ease of navigation in my user stories and adhere to 
 - After clicking on your chosen category, all of the products and services under this category, will be displayed. The category name will appear just beneath the consistent title of 'products and services' and there is a banner just above the title, with the free delivery minimum spend. 
 In the top left corner the user will see a link to `Products and services home` which when clicked will take them to the `all products and services`, here all of the categories will be clickable links beneath the title, so that a user can navigate to the other categories from here as well/ instead of the navbar dropdown.
 Beside the `Products and services home` there is a product and service count, outlining how many products and how many services belong to this category. 
-![ All products and services ](readme_materials/testing_screenshots/user_stories_products(1)).png)
+![ All products and services ](readme_materials/testing_screenshots/user_stories_products(1).png)
 
 Originally I toyed with the idea of having the product and service count clickable links and sectioning the page so that the user would be taken to a products section if they clicked the product count link to 'products' and the same for services. However, this proved to be bad UI, as when and if the user chose to sort the products, the sections would make things very messy and hard to contain. 
 - It was through this boolean field, that I was also able to filter down to just the services. I simply added some code to my views and template so that just the services would be displayed when a user clicks on the services. 
@@ -171,15 +160,15 @@ I opted to distinguish services from products in a few ways;
 | Site User | Easily update and remove a product | Make sure the online site has the latest catalogue |
 
 - If the user is logged in as a superuser, Update / Delete option is also shown on each card.
-![ product management ](readme_materials/testing_screenshots/user_stories_product_management(1)).png)
-![ updating product ](readme_materials/testing_screenshots/user_stories_product_management(5)).png)
-![ updating product ](readme_materials/testing_screenshots/user_stories_product_management(6)).png)
-![ updating product ](readme_materials/testing_screenshots/user_stories_product_management(7)).png)
-![ updating product ](readme_materials/testing_screenshots/user_stories_product_management(8)).png)
-![ deleting product ](readme_materials/testing_screenshots/user_stories_product_management(11)).png)
-![ deleting product ](readme_materials/testing_screenshots/user_stories_product_management(9)).png)
+![ product management ](readme_materials/testing_screenshots/user_stories_product_management(1).png)
+![ updating product ](readme_materials/testing_screenshots/user_stories_product_management(5).png)
+![ updating product ](readme_materials/testing_screenshots/user_stories_product_management(6).png)
+![ updating product ](readme_materials/testing_screenshots/user_stories_product_management(7).png)
+![ updating product ](readme_materials/testing_screenshots/user_stories_product_management(8).png)
+![ deleting product ](readme_materials/testing_screenshots/user_stories_product_management(11).png)
+![ deleting product ](readme_materials/testing_screenshots/user_stories_product_management(9).png)
 - It was also necessary to add some defensive programming, to inform none admin users that they are not permitted to make any changes to the products, should a none admin user attempt it.
-![ alert message for none admin user ](readme_materials/testing_screenshots/user_stories_product_management(10)).png)
+![ alert message for none admin user ](readme_materials/testing_screenshots/user_stories_product_management(10).png)
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
@@ -187,9 +176,9 @@ I opted to distinguish services from products in a few ways;
 
 - As explained in readme, when superuser is logged on, product management is accessible as dropdown link from `account` in nav bar. 
 - this link will take admin straight to a new product form. 
-![ adding product ](readme_materials/testing_screenshots/user_stories_product_management(2)).png)
-![ adding product ](readme_materials/testing_screenshots/user_stories_product_management(4)).png)
-![ product management ](readme_materials/testing_screenshots/user_stories_product_management(3)).png)
+![ adding product ](readme_materials/testing_screenshots/user_stories_product_management(2).png)
+![ adding product ](readme_materials/testing_screenshots/user_stories_product_management(4).png)
+![ product management ](readme_materials/testing_screenshots/user_stories_product_management(3).png)
 
 <br/>
 
@@ -200,11 +189,11 @@ I opted to distinguish services from products in a few ways;
 | Site User | Easily select the quantity (if applicable) of a product after adding a product to a cart | Ensure I don't accidentally select the wrong product and the quantity |
 
 - The quantity is set to a defualt of 1 and can be easily adjustable both in and out side of the bag. 
-![ updating bag items outside ](readme_materials/testing_screenshots/user_stories_cart(1)).png)
-![ updating bag items ](readme_materials/testing_screenshots/user_stories_cart(2)).png)
+![ updating bag items outside ](readme_materials/testing_screenshots/user_stories_cart(1).png)
+![ updating bag items ](readme_materials/testing_screenshots/user_stories_cart(2).png)
 - Users are also given feedback messages when adjusting any of the items in their bags. 
 - Items can be easily removed from the bag. 
-![ updating bag items ](readme_materials/testing_screenshots/user_stories_cart(3)).png)
+![ updating bag items ](readme_materials/testing_screenshots/user_stories_cart(3).png)
 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
@@ -212,8 +201,8 @@ I opted to distinguish services from products in a few ways;
 | Site User | Have my delivery information is prefilled if logged in | Smoothly proceed with my purchase |
 
 - If users are authenticated, after their first order, their delivery information can be saved to their profiles. Users can update their details on their profile, this means the details will be updated for when the user carries out their next order.
-![ delivery info on profile ](readme_materials/testing_screenshots/user_stories_checkout(2)).png)
-![ delivery info prefilled ](readme_materials/testing_screenshots/user_stories_checkout(3)).png) 
+![ delivery info on profile ](readme_materials/testing_screenshots/user_stories_checkout(2).png)
+![ delivery info prefilled ](readme_materials/testing_screenshots/user_stories_checkout(3).png) 
 
 
 
@@ -238,8 +227,8 @@ I opted to distinguish services from products in a few ways;
 - Blogs are accessible to all, however, only authenticated users can make a post or comment on a post. 
 - To acknowledge this user story, if a user has written blog posts when they log on and click on the blog tab in the navbar they will see a dropdown link ` my blog posts `. Here they will find all of the posts that they have written. 
 - Whilst my original idea hasn't been executed, I feel that what exists now is a better alternative and will result in a better UX. The user's personal blogs being accessed via the navbar is another way of satisfying the idea behind this user story. 
-![ my blog posts ](readme_materials/testing_screenshots/user_stories_blog(1)).png) 
-![ my blog posts ](readme_materials/testing_screenshots/user_stories_blog(2)).png)
+![ my blog posts ](readme_materials/testing_screenshots/user_stories_blog(1).png) 
+![ my blog posts ](readme_materials/testing_screenshots/user_stories_blog(2).png)
 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
@@ -247,7 +236,7 @@ I opted to distinguish services from products in a few ways;
 | Site User | View my order history | Purchase the same product again in the next order |
 
 - This is achieved on the users profile page. 
-![ my blog posts ](readme_materials/testing_screenshots/user_stories_profile(1)).png)
+![ my blog posts ](readme_materials/testing_screenshots/user_stories_profile(1).png)
 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
@@ -270,10 +259,10 @@ I opted to distinguish services from products in a few ways;
 
 - As aforementioned, I thought it would be a good way to encourage more users and build an online community if users were only permitted to write blogs, if they were authenticated. 
 - I convey this clearly throughout the site.
-![ authenticated users can add blogs ](readme_materials/testing_screenshots/user_stories_blog(3)).png)
+![ authenticated users can add blogs ](readme_materials/testing_screenshots/user_stories_blog(3).png)
 - Adding a post is easy to do. 
-![ adding blog ](readme_materials/testing_screenshots/user_stories_blog(4)).png)
-![ posted blog ](readme_materials/testing_screenshots/user_stories_blog(5)).png)
+![ adding blog ](readme_materials/testing_screenshots/user_stories_blog(4).png)
+![ posted blog ](readme_materials/testing_screenshots/user_stories_blog(5).png)
 
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
@@ -515,8 +504,8 @@ Solution: Correct the URLs for the app
 ## Bug 2 - Multiple items added to the bag each time a product/ service was added.  
 Solution: add if statement in the contexts.py file
 
-![Multiple items added to bag](readme-materials/bug_screenshots/bug_2(a)
-![Multiple items added to bag](readme-materials/bug_screenshots/bug_2(b)
+![Multiple items added to bag](readme-materials/bug_screenshots/bug_2(a).png)
+![Multiple items added to bag](readme-materials/bug_screenshots/bug_2(b).png)
 
 - I have 2 models that I needed to pull data from, this means I need to specify with actions if I am pulling data from the service_id or the product_id.
 - My Products and Services had identical pk's, I didn't think this was an issue because they were still two different models, however, with this issue arising, I decided to change the services' pks.
@@ -1221,4 +1210,4 @@ Kaur Health viewed on all devices and orientations available in Chrome DevTools.
 - Empty buttons, where the button content is an icon. Again, I felt this was not a big issue, as the icon was there to indicate the action to the user, however as an extra measure, I added aria-labels to each of these icons. 
 
 
-> [To return to the previous document please click here](https://github.com/mayasaffron/self-isolation-watch/blob/master/README.md) 
+> [To return to the previous document please click here](https://github.com/mayasaffron/kaur-health/blob/master/README.md) 
