@@ -13,6 +13,7 @@ def add_product_to_bag(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     quantity = int(request.POST.get('quantity'))
     service = None
+    bag = request.session.get('bag', {})
     if 'product_is_service' in request.POST:
         service = request.POST['product_is_service']
         bag = request.session.get('bag', {})
